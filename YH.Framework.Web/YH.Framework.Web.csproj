@@ -1,0 +1,1031 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0C546F16-30B9-4BDD-B5A5-405DE1CBA390}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>YH.Framework.Web</RootNamespace>
+    <AssemblyName>YH.Framework.Web</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <Use64BitIISExpress />
+    <TypeScriptToolsVersion>3.1</TypeScriptToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Antlr3.Runtime, Version=3.5.0.2, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="AutoMapper, Version=8.1.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.8.1.1\lib\net461\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="EPPlus, Version=4.5.3.2, Culture=neutral, PublicKeyToken=ea159fdaa78159a1, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPPlus.4.5.3.2\lib\net40\EPPlus.dll</HintPath>
+    </Reference>
+    <Reference Include="FluentValidation, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7de548da2fbae0f0, processorArchitecture=MSIL">
+      <HintPath>..\packages\FluentValidation.8.4.0\lib\net45\FluentValidation.dll</HintPath>
+    </Reference>
+    <Reference Include="FluentValidation.Mvc, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7de548da2fbae0f0, processorArchitecture=MSIL">
+      <HintPath>..\packages\FluentValidation.Mvc5.8.4.0\lib\net45\FluentValidation.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="FluentValidation.ValidatorAttribute, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7de548da2fbae0f0, processorArchitecture=MSIL">
+      <HintPath>..\packages\FluentValidation.ValidatorAttribute.8.4.0\lib\net45\FluentValidation.ValidatorAttribute.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.DependencyInjection.Abstractions.2.2.0\lib\netstandard2.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common, Version=6.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\EnterpriseLibrary.Common.6.0.1304.0\lib\NET45\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.ExceptionHandling, Version=6.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\EnterpriseLibrary.ExceptionHandling.6.0.1304.0\lib\NET45\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Logging, Version=6.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\EnterpriseLibrary.Logging.6.0.1304.0\lib\NET45\Microsoft.Practices.EnterpriseLibrary.Logging.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="Quartz, Version=3.0.7.0, Culture=neutral, PublicKeyToken=f6b8c98a402cc8a4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Quartz.3.0.7\lib\net452\Quartz.dll</HintPath>
+    </Reference>
+    <Reference Include="Quartz.Jobs, Version=3.0.7.0, Culture=neutral, PublicKeyToken=f6b8c98a402cc8a4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Quartz.Jobs.3.0.7\lib\net452\Quartz.Jobs.dll</HintPath>
+    </Reference>
+    <Reference Include="Quartz.Plugins, Version=3.0.7.0, Culture=neutral, PublicKeyToken=f6b8c98a402cc8a4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Quartz.Plugins.3.0.7\lib\net452\Quartz.Plugins.dll</HintPath>
+    </Reference>
+    <Reference Include="Senparc.CO2NET, Version=0.8.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Senparc.CO2NET.0.8.2\lib\net45\Senparc.CO2NET.dll</HintPath>
+    </Reference>
+    <Reference Include="Senparc.CO2NET.APM, Version=0.4.1.1, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Senparc.CO2NET.APM.0.4.1.1\lib\net45\Senparc.CO2NET.APM.dll</HintPath>
+    </Reference>
+    <Reference Include="Senparc.NeuChar, Version=0.7.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Senparc.NeuChar.0.7.4\lib\net45\Senparc.NeuChar.dll</HintPath>
+    </Reference>
+    <Reference Include="Senparc.NeuChar.App, Version=0.5.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Senparc.NeuChar.App.0.5.4\lib\net45\Senparc.NeuChar.App.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Annotations, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ComponentModel.Annotations.4.5.0\lib\net461\System.ComponentModel.Annotations.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Primitives, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ComponentModel.Primitives.4.3.0\lib\net45\System.ComponentModel.Primitives.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Configuration.ConfigurationManager, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Configuration.ConfigurationManager.4.5.0\lib\net461\System.Configuration.ConfigurationManager.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=4.0.3.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Diagnostics.DiagnosticSource.4.5.1\lib\net46\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.7\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Caching" />
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.2\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Remoting" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Security.AccessControl, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.AccessControl.4.5.0\lib\net461\System.Security.AccessControl.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Permissions, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Permissions.4.5.0\lib\net461\System.Security.Permissions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Principal.Windows, Version=4.1.1.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Principal.Windows.4.5.1\lib\net461\System.Security.Principal.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.2\lib\netstandard2.0\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net461\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.7\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.7\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.7\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.7\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Abstractions, Version=5.11.1.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.Abstractions.5.11.1\lib\net46\Unity.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.AspNet.WebApi, Version=5.11.1.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.AspNet.WebApi.5.11.1\lib\net46\Unity.AspNet.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Configuration, Version=5.11.1.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.Configuration.5.11.1\lib\net46\Unity.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Container, Version=5.11.1.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.Container.5.11.1\lib\net46\Unity.Container.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Mvc, Version=5.11.1.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.Mvc.5.11.1\lib\net46\Unity.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="WebActivatorEx, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7b26dc2a43f6a0d4, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebActivatorEx.2.2.0\lib\net40\WebActivatorEx.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="WebGrease, Version=1.6.5135.21930, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\DataInitializer.cs" />
+    <Compile Include="App_Start\QuartzActivator.cs" />
+    <Compile Include="App_Start\EntLibActivator.cs" />
+    <Compile Include="App_Start\ErrorHandlingActivator.cs" />
+    <Compile Include="App_Start\ExtensionsActivator.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\UnityConfig.cs" />
+    <Compile Include="App_Start\UnityMvcActivator.cs" />
+    <Compile Include="App_Start\UnityWebApiActivator.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Areas\CmsAdmin\CmsAdminAreaRegistration.cs" />
+    <Compile Include="Areas\CmsAdmin\Controllers\BusinessController.cs" />
+    <Compile Include="Areas\CmsAdmin\Controllers\ErrorController.cs" />
+    <Compile Include="Areas\CmsAdmin\Controllers\HomeController.cs" />
+    <Compile Include="Areas\CmsAdmin\Controllers\LogController.cs" />
+    <Compile Include="Areas\CmsAdmin\Controllers\MemberController.cs" />
+    <Compile Include="Areas\CmsAdmin\Controllers\NavigateController.cs" />
+    <Compile Include="Areas\CmsAdmin\Controllers\PermissionController.cs" />
+    <Compile Include="Areas\CmsAdmin\Controllers\PictureController.cs" />
+    <Compile Include="Areas\CmsAdmin\Controllers\ProductApiController.cs" />
+    <Compile Include="Areas\CmsAdmin\Controllers\MenuController.cs" />
+    <Compile Include="Areas\CmsAdmin\Controllers\RoleController.cs" />
+    <Compile Include="Areas\CmsAdmin\Controllers\TestController.cs" />
+    <Compile Include="Areas\CmsAdmin\Controllers\UserController.cs" />
+    <Compile Include="Areas\CmsAdmin\Exceptions\ErrorMessageHandler.cs" />
+    <Compile Include="Areas\CmsAdmin\Exceptions\ErrorMessageHandlerData.cs" />
+    <Compile Include="Areas\CmsAdmin\Exceptions\ExceptionHandlingAttribute.cs" />
+    <Compile Include="Areas\CmsAdmin\Exceptions\HttpContextExtensions.cs" />
+    <Compile Include="Areas\CmsAdmin\Exceptions\LoggingHandler.cs" />
+    <Compile Include="Areas\CmsAdmin\Exceptions\LoggingHandlerData.cs" />
+    <Compile Include="Areas\CmsAdmin\Extensions\Quartz\QuartzUnityExtension.cs" />
+    <Compile Include="Areas\CmsAdmin\Extensions\Quartz\UnityJobFactory.cs" />
+    <Compile Include="Areas\CmsAdmin\Extensions\Quartz\UnitySchedulerFactory.cs" />
+    <Compile Include="Areas\CmsAdmin\Infrastructure\AutoMapperProfile.cs" />
+    <Compile Include="Areas\CmsAdmin\Infrastructure\AutoMapperRegister.cs" />
+    <Compile Include="Areas\CmsAdmin\Infrastructure\CustomBundleOrderer.cs" />
+    <Compile Include="Areas\CmsAdmin\Infrastructure\CustomModelMetadataProvider.cs" />
+    <Compile Include="Areas\CmsAdmin\Infrastructure\Excel\ExcelColumnAttribute.cs" />
+    <Compile Include="Areas\CmsAdmin\Infrastructure\Excel\ExcelController.cs" />
+    <Compile Include="Areas\CmsAdmin\Infrastructure\Excel\ExcelFileResult.cs" />
+    <Compile Include="Areas\CmsAdmin\Infrastructure\Excel\ExcelIgnoreAttribute.cs" />
+    <Compile Include="Areas\CmsAdmin\Infrastructure\Excel\ExcelSheetAttribute.cs" />
+    <Compile Include="Areas\CmsAdmin\Infrastructure\NavigateHelper.cs" />
+    <Compile Include="Areas\CmsAdmin\Infrastructure\PermissionProvider.cs" />
+    <Compile Include="Areas\CmsAdmin\Infrastructure\WebViewPage.cs" />
+    <Compile Include="Areas\CmsAdmin\Logging\ServiceFormattedTraceListener.cs" />
+    <Compile Include="Areas\CmsAdmin\Logging\ServiceFormattedTraceListenerData.cs" />
+    <Compile Include="Areas\CmsAdmin\Models\Configuration\SettingModel.cs" />
+    <Compile Include="Areas\CmsAdmin\Models\Logging\LogModel.cs" />
+    <Compile Include="Areas\CmsAdmin\Models\Navigates\NavigateModel.cs" />
+    <Compile Include="Areas\CmsAdmin\Models\Business\MenuModel.cs" />
+    <Compile Include="Areas\CmsAdmin\Models\Users\LoginModel.cs" />
+    <Compile Include="Areas\CmsAdmin\Models\Users\PermissionModel.cs" />
+    <Compile Include="Areas\CmsAdmin\Models\Users\RoleModel.cs" />
+    <Compile Include="Areas\CmsAdmin\Models\Users\UserModel.cs" />
+    <Compile Include="Areas\CmsAdmin\Scheduler\ClearLogJob.cs" />
+    <Compile Include="Areas\CmsAdmin\Scheduler\EntLibLogProvider.cs" />
+    <Compile Include="Areas\CmsAdmin\Scheduler\SampleJob1.cs" />
+    <Compile Include="Areas\CmsAdmin\Scheduler\SampleJob2.cs" />
+    <Compile Include="Areas\CmsAdmin\Validator\Configuration\SettingValidator.cs" />
+    <Compile Include="Areas\CmsAdmin\Validator\CustomClientDataTypeModelValidatorProvider.cs" />
+    <Compile Include="Areas\CmsAdmin\Validator\CustomLanguageManager.cs" />
+    <Compile Include="Areas\CmsAdmin\Validator\Navigates\NavigateValidator.cs" />
+    <Compile Include="Areas\CmsAdmin\Validator\Business\MenuValidator.cs" />
+    <Compile Include="Areas\CmsAdmin\Validator\UnityValidatorFactory.cs" />
+    <Compile Include="Areas\CmsAdmin\Validator\Users\LoginValidator.cs" />
+    <Compile Include="Areas\CmsAdmin\Validator\Users\RoleValidator.cs" />
+    <Compile Include="Areas\CmsAdmin\Validator\Users\UserValidator.cs" />
+    <Compile Include="Areas\CmsAdmin\Validator\ValidatorRegister.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Scripts\ueditor-1.4.3\net\App_Code\Config.cs" />
+    <Compile Include="Scripts\ueditor-1.4.3\net\App_Code\ConfigHandler.cs" />
+    <Compile Include="Scripts\ueditor-1.4.3\net\App_Code\CrawlerHandler.cs" />
+    <Compile Include="Scripts\ueditor-1.4.3\net\App_Code\Handler.cs" />
+    <Compile Include="Scripts\ueditor-1.4.3\net\App_Code\ListFileHandler.cs" />
+    <Compile Include="Scripts\ueditor-1.4.3\net\App_Code\NotSupportedHandler.cs" />
+    <Compile Include="Scripts\ueditor-1.4.3\net\App_Code\PathFormater.cs" />
+    <Compile Include="Scripts\ueditor-1.4.3\net\App_Code\UploadHandler.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\CmsAdmin\Content\adminlte-skins.css" />
+    <Content Include="Areas\CmsAdmin\Content\adminlte-skins.min.css" />
+    <Content Include="Areas\CmsAdmin\Content\adminlte.css" />
+    <Content Include="Areas\CmsAdmin\Content\adminlte.min.css" />
+    <Content Include="Areas\CmsAdmin\Content\bootstrap-theme.css" />
+    <Content Include="Areas\CmsAdmin\Content\bootstrap-theme.min.css" />
+    <Content Include="Areas\CmsAdmin\Content\bootstrap.css" />
+    <Content Include="Areas\CmsAdmin\Content\bootstrap.min.css" />
+    <Content Include="Areas\CmsAdmin\Content\dashboard.css" />
+    <Content Include="Areas\CmsAdmin\Content\Images\user-default-avatar.png" />
+    <Content Include="Areas\CmsAdmin\Content\Images\zhang-di-logo.jpg" />
+    <Content Include="Areas\CmsAdmin\Content\Site.css" />
+    <Content Include="Areas\CmsAdmin\Scripts\adminlte-customize.js" />
+    <Content Include="Areas\CmsAdmin\Scripts\adminlte.js" />
+    <Content Include="Areas\CmsAdmin\Scripts\adminlte.min.js" />
+    <Content Include="Areas\CmsAdmin\Scripts\bootstrap.js" />
+    <Content Include="Areas\CmsAdmin\Scripts\bootstrap.min.js" />
+    <Content Include="Areas\CmsAdmin\Scripts\dashboard.js" />
+    <None Include="Areas\CmsAdmin\Scripts\jquery-1.10.2.intellisense.js" />
+    <None Include="Areas\CmsAdmin\Scripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="Areas\CmsAdmin\Scripts\jquery-3.3.1.js" />
+    <Content Include="Areas\CmsAdmin\Scripts\jquery-3.3.1.min.js" />
+    <Content Include="Areas\CmsAdmin\Scripts\jquery-3.3.1.slim.js" />
+    <Content Include="Areas\CmsAdmin\Scripts\jquery-3.3.1.slim.min.js" />
+    <Content Include="Areas\CmsAdmin\Scripts\jquery.scrollbox.js" />
+    <Content Include="Areas\CmsAdmin\Scripts\jquery.scrollbox.min.js" />
+    <Content Include="Areas\CmsAdmin\Scripts\jquery.unobtrusive-ajax-paging.js" />
+    <Content Include="Areas\CmsAdmin\Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Areas\CmsAdmin\Scripts\jquery.unobtrusive-ajax.min.js" />
+    <None Include="Areas\CmsAdmin\Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Areas\CmsAdmin\Scripts\jquery.validate.js" />
+    <Content Include="Areas\CmsAdmin\Scripts\jquery.validate.min.js" />
+    <Content Include="Areas\CmsAdmin\Scripts\jquery.validate.unobtrusive.bootstrap.js" />
+    <Content Include="Areas\CmsAdmin\Scripts\jquery.validate.unobtrusive.bootstrap.min.js" />
+    <Content Include="Areas\CmsAdmin\Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Areas\CmsAdmin\Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Areas\CmsAdmin\Scripts\layui\css\admin.css" />
+    <Content Include="Areas\CmsAdmin\Scripts\layui\css\layui.css" />
+    <Content Include="Areas\CmsAdmin\Scripts\layui\css\layui.mobile.css" />
+    <Content Include="Areas\CmsAdmin\Scripts\layui\css\modules\code.css" />
+    <Content Include="Areas\CmsAdmin\Scripts\layui\css\modules\laydate\default\laydate.css" />
+    <Content Include="Areas\CmsAdmin\Scripts\layui\css\modules\layer\default\icon-ext.png" />
+    <Content Include="Areas\CmsAdmin\Scripts\layui\css\modules\layer\default\icon.png" />
+    <Content Include="Areas\CmsAdmin\Scripts\layui\css\modules\layer\default\layer.css" />
+    <Content Include="Areas\CmsAdmin\Scripts\layui\css\modules\layer\default\loading-0.gif" />
+    <Content Include="Areas\CmsAdmin\Scripts\layui\css\modules\layer\default\loading-1.gif" />
+    <Content Include="Areas\CmsAdmin\Scripts\layui\css\modules\layer\default\loading-2.gif" />
+    <Content Include="Areas\CmsAdmin\Scripts\layui\font\iconfont.svg" />
+    <Content Include="Areas\CmsAdmin\Scripts\layui\images\face\0.gif" />
+    <Content Include="Areas\CmsAdmin\Scripts\layui\images\face\1.gif" />
+    <Content Include="Areas\CmsAdmin\Scripts\layui\images\face\10.gif" />
+    <Content Include="Areas\CmsAdmin\Scripts\layui\images\face\11.gif" />
+    <Content Include="Areas\CmsAdmin\Scripts\layui\images\face\12.gif" />
+    <Content Include="Areas\CmsAdmin\Scripts\layui\images\face\13.gif" />
+    <Content Include="Areas\CmsAdmin\Scripts\layui\images\face\14.gif" />
+    <Content Include="Areas\CmsAdmin\Scripts\layui\images\face\15.gif" />
+    <Content Include="Areas\CmsAdmin\Scripts\layui\images\face\16.gif" />
+    <Content Include="Areas\CmsAdmin\Scripts\layui\images\face\17.gif" />
+    <Content Include="Areas\CmsAdmin\Scripts\layui\images\face\18.gif" />
+    <Content Include="Areas\CmsAdmin\Scripts\layui\images\face\19.gif" />
+    <Content Include="Areas\CmsAdmin\Scripts\layui\images\face\2.gif" />
+    <Content Include="Areas\CmsAdmin\Scripts\layui\images\face\20.gif" />
+    <Content Include="Areas\CmsAdmin\Scripts\layui\images\face\21.gif" />
+    <Content Include="Areas\CmsAdmin\Scripts\layui\images\face\22.gif" />
+    <Content Include="Areas\CmsAdmin\Scripts\layui\images\face\23.gif" />
+    <Content Include="Areas\CmsAdmin\Scripts\layui\images\face\24.gif" />
+    <Content Include="Areas\CmsAdmin\Scripts\layui\images\face\25.gif" />
+    <Content Include="Areas\CmsAdmin\Scripts\layui\images\face\26.gif" />
+    <Content Include="Areas\CmsAdmin\Scripts\layui\images\face\27.gif" />
+    <Content Include="Areas\CmsAdmin\Scripts\layui\images\face\28.gif" />
+    <Content Include="Areas\CmsAdmin\Scripts\layui\images\face\29.gif" />
+    <Content Include="Areas\CmsAdmin\Scripts\layui\images\face\3.gif" />
+    <Content Include="Areas\CmsAdmin\Scripts\layui\images\face\30.gif" />
+    <Content Include="Areas\CmsAdmin\Scripts\layui\images\face\31.gif" />
+    <Content Include="Areas\CmsAdmin\Scripts\layui\images\face\32.gif" />
+    <Content Include="Areas\CmsAdmin\Scripts\layui\images\face\33.gif" />
+    <Content Include="Areas\CmsAdmin\Scripts\layui\images\face\34.gif" />
+    <Content Include="Areas\CmsAdmin\Scripts\layui\images\face\35.gif" />
+    <Content Include="Areas\CmsAdmin\Scripts\layui\images\face\36.gif" />
+    <Content Include="Areas\CmsAdmin\Scripts\layui\images\face\37.gif" />
+    <Content Include="Areas\CmsAdmin\Scripts\layui\images\face\38.gif" />
+    <Content Include="Areas\CmsAdmin\Scripts\layui\images\face\39.gif" />
+    <Content Include="Areas\CmsAdmin\Scripts\layui\images\face\4.gif" />
+    <Content Include="Areas\CmsAdmin\Scripts\layui\images\face\40.gif" />
+    <Content Include="Areas\CmsAdmin\Scripts\layui\images\face\41.gif" />
+    <Content Include="Areas\CmsAdmin\Scripts\layui\images\face\42.gif" />
+    <Content Include="Areas\CmsAdmin\Scripts\layui\images\face\43.gif" />
+    <Content Include="Areas\CmsAdmin\Scripts\layui\images\face\44.gif" />
+    <Content Include="Areas\CmsAdmin\Scripts\layui\images\face\45.gif" />
+    <Content Include="Areas\CmsAdmin\Scripts\layui\images\face\46.gif" />
+    <Content Include="Areas\CmsAdmin\Scripts\layui\images\face\47.gif" />
+    <Content Include="Areas\CmsAdmin\Scripts\layui\images\face\48.gif" />
+    <Content Include="Areas\CmsAdmin\Scripts\layui\images\face\49.gif" />
+    <Content Include="Areas\CmsAdmin\Scripts\layui\images\face\5.gif" />
+    <Content Include="Areas\CmsAdmin\Scripts\layui\images\face\50.gif" />
+    <Content Include="Areas\CmsAdmin\Scripts\layui\images\face\51.gif" />
+    <Content Include="Areas\CmsAdmin\Scripts\layui\images\face\52.gif" />
+    <Content Include="Areas\CmsAdmin\Scripts\layui\images\face\53.gif" />
+    <Content Include="Areas\CmsAdmin\Scripts\layui\images\face\54.gif" />
+    <Content Include="Areas\CmsAdmin\Scripts\layui\images\face\55.gif" />
+    <Content Include="Areas\CmsAdmin\Scripts\layui\images\face\56.gif" />
+    <Content Include="Areas\CmsAdmin\Scripts\layui\images\face\57.gif" />
+    <Content Include="Areas\CmsAdmin\Scripts\layui\images\face\58.gif" />
+    <Content Include="Areas\CmsAdmin\Scripts\layui\images\face\59.gif" />
+    <Content Include="Areas\CmsAdmin\Scripts\layui\images\face\6.gif" />
+    <Content Include="Areas\CmsAdmin\Scripts\layui\images\face\60.gif" />
+    <Content Include="Areas\CmsAdmin\Scripts\layui\images\face\61.gif" />
+    <Content Include="Areas\CmsAdmin\Scripts\layui\images\face\62.gif" />
+    <Content Include="Areas\CmsAdmin\Scripts\layui\images\face\63.gif" />
+    <Content Include="Areas\CmsAdmin\Scripts\layui\images\face\64.gif" />
+    <Content Include="Areas\CmsAdmin\Scripts\layui\images\face\65.gif" />
+    <Content Include="Areas\CmsAdmin\Scripts\layui\images\face\66.gif" />
+    <Content Include="Areas\CmsAdmin\Scripts\layui\images\face\67.gif" />
+    <Content Include="Areas\CmsAdmin\Scripts\layui\images\face\68.gif" />
+    <Content Include="Areas\CmsAdmin\Scripts\layui\images\face\69.gif" />
+    <Content Include="Areas\CmsAdmin\Scripts\layui\images\face\7.gif" />
+    <Content Include="Areas\CmsAdmin\Scripts\layui\images\face\70.gif" />
+    <Content Include="Areas\CmsAdmin\Scripts\layui\images\face\71.gif" />
+    <Content Include="Areas\CmsAdmin\Scripts\layui\images\face\8.gif" />
+    <Content Include="Areas\CmsAdmin\Scripts\layui\images\face\9.gif" />
+    <Content Include="Areas\CmsAdmin\Scripts\layui\layui.all.js" />
+    <Content Include="Areas\CmsAdmin\Scripts\layui\layui.js" />
+    <Content Include="Areas\CmsAdmin\Scripts\layui\lay\modules\carousel.js" />
+    <Content Include="Areas\CmsAdmin\Scripts\layui\lay\modules\code.js" />
+    <Content Include="Areas\CmsAdmin\Scripts\layui\lay\modules\colorpicker.js" />
+    <Content Include="Areas\CmsAdmin\Scripts\layui\lay\modules\element.js" />
+    <Content Include="Areas\CmsAdmin\Scripts\layui\lay\modules\flow.js" />
+    <Content Include="Areas\CmsAdmin\Scripts\layui\lay\modules\form.js" />
+    <Content Include="Areas\CmsAdmin\Scripts\layui\lay\modules\jquery.js" />
+    <Content Include="Areas\CmsAdmin\Scripts\layui\lay\modules\laydate.js" />
+    <Content Include="Areas\CmsAdmin\Scripts\layui\lay\modules\layedit.js" />
+    <Content Include="Areas\CmsAdmin\Scripts\layui\lay\modules\layer.js" />
+    <Content Include="Areas\CmsAdmin\Scripts\layui\lay\modules\laypage.js" />
+    <Content Include="Areas\CmsAdmin\Scripts\layui\lay\modules\laytpl.js" />
+    <Content Include="Areas\CmsAdmin\Scripts\layui\lay\modules\mobile.js" />
+    <Content Include="Areas\CmsAdmin\Scripts\layui\lay\modules\rate.js" />
+    <Content Include="Areas\CmsAdmin\Scripts\layui\lay\modules\slider.js" />
+    <Content Include="Areas\CmsAdmin\Scripts\layui\lay\modules\table.js" />
+    <Content Include="Areas\CmsAdmin\Scripts\layui\lay\modules\tree.js" />
+    <Content Include="Areas\CmsAdmin\Scripts\layui\lay\modules\upload.js" />
+    <Content Include="Areas\CmsAdmin\Scripts\layui\lay\modules\util.js" />
+    <Content Include="Areas\CmsAdmin\Scripts\modernizr-2.6.2.js" />
+    <Content Include="Areas\CmsAdmin\Scripts\modernizr-2.8.3.js" />
+    <Content Include="Areas\CmsAdmin\Scripts\respond.js" />
+    <Content Include="Areas\CmsAdmin\Scripts\respond.min.js" />
+    <Content Include="Areas\CmsAdmin\Scripts\layui\font\iconfont.eot" />
+    <Content Include="Areas\CmsAdmin\Scripts\layui\font\iconfont.ttf" />
+    <Content Include="Areas\CmsAdmin\Scripts\layui\font\iconfont.woff" />
+    <None Include="Areas\CmsAdmin\Scripts\_references.js" />
+    <Content Include="Content\adminlte.css" />
+    <Content Include="Content\adminlte.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\dashboard.css" />
+    <Content Include="Content\Images\user-default-avatar.png" />
+    <Content Include="Content\adminlte-skins.css" />
+    <Content Include="Content\adminlte-skins.min.css" />
+    <Content Include="Content\Images\zhang-di-logo.jpg" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Areas\CmsAdmin\CodeTemplates\ApiControllerEmpty\Controller.cs.t4" />
+    <Content Include="Areas\CmsAdmin\CodeTemplates\ApiControllerWithActions\Controller.cs.t4" />
+    <Content Include="Areas\CmsAdmin\CodeTemplates\ApiControllerWithContext\Controller.cs.t4" />
+    <Content Include="Areas\CmsAdmin\CodeTemplates\MvcArea\Area.cs.t4" />
+    <Content Include="Areas\CmsAdmin\CodeTemplates\MvcArea\web.cs.t4" />
+    <Content Include="Areas\CmsAdmin\CodeTemplates\MvcControllerEmpty\Controller.cs.t4" />
+    <Content Include="Areas\CmsAdmin\CodeTemplates\MvcControllerWithActions\Controller.cs.t4" />
+    <Content Include="Areas\CmsAdmin\CodeTemplates\MvcControllerWithContext\Controller.cs.t4" />
+    <Content Include="Areas\CmsAdmin\CodeTemplates\MvcViewWithoutModel\Empty.cs.t4" />
+    <Content Include="Areas\CmsAdmin\CodeTemplates\MvcViewWithoutModel\Imports.include.t4" />
+    <Content Include="Areas\CmsAdmin\CodeTemplates\MvcView\Create.cs.t4" />
+    <Content Include="Areas\CmsAdmin\CodeTemplates\MvcView\Delete.cs.t4" />
+    <Content Include="Areas\CmsAdmin\CodeTemplates\MvcView\Details.cs.t4" />
+    <Content Include="Areas\CmsAdmin\CodeTemplates\MvcView\Edit.cs.t4" />
+    <Content Include="Areas\CmsAdmin\CodeTemplates\MvcView\Empty.cs.t4" />
+    <Content Include="Areas\CmsAdmin\CodeTemplates\MvcView\Imports.include.t4" />
+    <Content Include="Areas\CmsAdmin\CodeTemplates\MvcView\List.cs.t4" />
+    <Content Include="Areas\CmsAdmin\CodeTemplates\MvcView\ModelMetadataFunctions.cs.include.t4" />
+    <Content Include="Areas\CmsAdmin\CodeTemplates\ODataControllerWithActions\Controller.cs.t4" />
+    <Content Include="Areas\CmsAdmin\CodeTemplates\ODataControllerWithContext\Controller.cs.t4" />
+    <Content Include="EntLib.config" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Areas\CmsAdmin\Content\bootstrap-theme.css.map" />
+    <Content Include="Areas\CmsAdmin\Content\bootstrap-theme.min.css.map" />
+    <Content Include="Areas\CmsAdmin\Scripts\jquery-3.3.1.min.map" />
+    <Content Include="Areas\CmsAdmin\Scripts\jquery-3.3.1.slim.min.map" />
+    <Content Include="Areas\CmsAdmin\Scripts\jquery.validate.unobtrusive.bootstrap.min.js.map" />
+    <Content Include="Areas\CmsAdmin\Scripts\README.md" />
+    <Content Include="Areas\CmsAdmin\Views\Error\Forbidden.cshtml" />
+    <Content Include="Areas\CmsAdmin\Views\Error\InternalError.cshtml" />
+    <Content Include="Areas\CmsAdmin\Views\Error\NotFound.cshtml" />
+    <Content Include="Areas\CmsAdmin\Views\Home\About.cshtml" />
+    <Content Include="Areas\CmsAdmin\Views\Home\Contact.cshtml" />
+    <Content Include="Areas\CmsAdmin\Views\Home\Index.cshtml" />
+    <Content Include="Areas\CmsAdmin\Views\Log\Details.cshtml" />
+    <Content Include="Areas\CmsAdmin\Views\Log\Index.cshtml" />
+    <Content Include="Areas\CmsAdmin\Views\Log\LogListPartial.cshtml" />
+    <Content Include="Areas\CmsAdmin\Views\Navigate\Create.cshtml" />
+    <Content Include="Areas\CmsAdmin\Views\Navigate\Edit.cshtml" />
+    <Content Include="Areas\CmsAdmin\Views\Navigate\Icons.cshtml" />
+    <Content Include="Areas\CmsAdmin\Views\Navigate\Index.cshtml" />
+    <Content Include="Areas\CmsAdmin\Views\Menu\Create.cshtml" />
+    <Content Include="Areas\CmsAdmin\Views\Menu\Index.cshtml" />
+    <Content Include="Areas\CmsAdmin\Views\Role\Authorize.cshtml" />
+    <Content Include="Areas\CmsAdmin\Views\Role\Create.cshtml" />
+    <Content Include="Areas\CmsAdmin\Views\Role\Edit.cshtml" />
+    <Content Include="Areas\CmsAdmin\Views\Role\Index.cshtml" />
+    <Content Include="Areas\CmsAdmin\Views\Shared\DisplayTemplates\Active.cshtml" />
+    <Content Include="Areas\CmsAdmin\Views\Shared\DisplayTemplates\DateTime.cshtml" />
+    <Content Include="Areas\CmsAdmin\Views\Shared\Error.cshtml" />
+    <Content Include="Areas\CmsAdmin\Views\Shared\Lockout.cshtml" />
+    <Content Include="Areas\CmsAdmin\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\CmsAdmin\Views\Shared\_Layout.Original.cshtml" />
+    <Content Include="Areas\CmsAdmin\Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Areas\CmsAdmin\Views\Shared\_MainFooterPartial.cshtml" />
+    <Content Include="Areas\CmsAdmin\Views\Shared\_MainHeaderPartial.cshtml" />
+    <Content Include="Areas\CmsAdmin\Views\Shared\_MainSidebarPartial.cshtml" />
+    <Content Include="Areas\CmsAdmin\Views\Test\Index.cshtml" />
+    <Content Include="Areas\CmsAdmin\Views\User\ChangePassword.cshtml" />
+    <Content Include="Areas\CmsAdmin\Views\User\Create.cshtml" />
+    <Content Include="Areas\CmsAdmin\Views\User\Edit.cshtml" />
+    <Content Include="Areas\CmsAdmin\Views\User\Index.cshtml" />
+    <Content Include="Areas\CmsAdmin\Views\User\Login.cshtml" />
+    <Content Include="Areas\CmsAdmin\Views\User\UserListPartial.cshtml" />
+    <Content Include="Areas\CmsAdmin\Views\Web.config" />
+    <Content Include="Areas\CmsAdmin\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\CmsAdmin\Views\Permission\Index.cshtml" />
+    <Content Include="Areas\CmsAdmin\Views\Permission\Edit.cshtml" />
+    <Content Include="Areas\CmsAdmin\Views\Permission\Create.cshtml" />
+    <Content Include="Areas\CmsAdmin\Views\Menu\Edit.cshtml" />
+    <Content Include="Areas\CmsAdmin\Views\Business\Project.cshtml" />
+    <Content Include="Areas\CmsAdmin\Views\Member\Member.cshtml" />
+    <None Include="Properties\PublishProfiles\MyPublish.pubxml" />
+    <Content Include="Quartz.config" />
+    <Content Include="Quartz.Jobs.config" />
+    <Content Include="Quartz.Unity.config" />
+    <Content Include="Scripts\ueditor-1.4.3\dialogs\anchor\anchor.html" />
+    <Content Include="Scripts\ueditor-1.4.3\dialogs\attachment\attachment.css" />
+    <Content Include="Scripts\ueditor-1.4.3\dialogs\attachment\attachment.html" />
+    <Content Include="Scripts\ueditor-1.4.3\dialogs\attachment\attachment.js" />
+    <Content Include="Scripts\ueditor-1.4.3\dialogs\attachment\fileTypeImages\icon_chm.gif" />
+    <Content Include="Scripts\ueditor-1.4.3\dialogs\attachment\fileTypeImages\icon_default.png" />
+    <Content Include="Scripts\ueditor-1.4.3\dialogs\attachment\fileTypeImages\icon_doc.gif" />
+    <Content Include="Scripts\ueditor-1.4.3\dialogs\attachment\fileTypeImages\icon_exe.gif" />
+    <Content Include="Scripts\ueditor-1.4.3\dialogs\attachment\fileTypeImages\icon_jpg.gif" />
+    <Content Include="Scripts\ueditor-1.4.3\dialogs\attachment\fileTypeImages\icon_mp3.gif" />
+    <Content Include="Scripts\ueditor-1.4.3\dialogs\attachment\fileTypeImages\icon_mv.gif" />
+    <Content Include="Scripts\ueditor-1.4.3\dialogs\attachment\fileTypeImages\icon_pdf.gif" />
+    <Content Include="Scripts\ueditor-1.4.3\dialogs\attachment\fileTypeImages\icon_ppt.gif" />
+    <Content Include="Scripts\ueditor-1.4.3\dialogs\attachment\fileTypeImages\icon_psd.gif" />
+    <Content Include="Scripts\ueditor-1.4.3\dialogs\attachment\fileTypeImages\icon_rar.gif" />
+    <Content Include="Scripts\ueditor-1.4.3\dialogs\attachment\fileTypeImages\icon_txt.gif" />
+    <Content Include="Scripts\ueditor-1.4.3\dialogs\attachment\fileTypeImages\icon_xls.gif" />
+    <Content Include="Scripts\ueditor-1.4.3\dialogs\attachment\images\alignicon.gif" />
+    <Content Include="Scripts\ueditor-1.4.3\dialogs\attachment\images\alignicon.png" />
+    <Content Include="Scripts\ueditor-1.4.3\dialogs\attachment\images\bg.png" />
+    <Content Include="Scripts\ueditor-1.4.3\dialogs\attachment\images\file-icons.gif" />
+    <Content Include="Scripts\ueditor-1.4.3\dialogs\attachment\images\file-icons.png" />
+    <Content Include="Scripts\ueditor-1.4.3\dialogs\attachment\images\icons.gif" />
+    <Content Include="Scripts\ueditor-1.4.3\dialogs\attachment\images\icons.png" />
+    <Content Include="Scripts\ueditor-1.4.3\dialogs\attachment\images\image.png" />
+    <Content Include="Scripts\ueditor-1.4.3\dialogs\attachment\images\progress.png" />
+    <Content Include="Scripts\ueditor-1.4.3\dialogs\attachment\images\success.gif" />
+    <Content Include="Scripts\ueditor-1.4.3\dialogs\attachment\images\success.png" />
+    <Content Include="Scripts\ueditor-1.4.3\dialogs\background\background.css" />
+    <Content Include="Scripts\ueditor-1.4.3\dialogs\background\background.html" />
+    <Content Include="Scripts\ueditor-1.4.3\dialogs\background\background.js" />
+    <Content Include="Scripts\ueditor-1.4.3\dialogs\background\images\bg.png" />
+    <Content Include="Scripts\ueditor-1.4.3\dialogs\background\images\success.png" />
+    <Content Include="Scripts\ueditor-1.4.3\dialogs\charts\chart.config.js" />
+    <Content Include="Scripts\ueditor-1.4.3\dialogs\charts\charts.css" />
+    <Content Include="Scripts\ueditor-1.4.3\dialogs\charts\charts.html" />
+    <Content Include="Scripts\ueditor-1.4.3\dialogs\charts\charts.js" />
+    <Content Include="Scripts\ueditor-1.4.3\dialogs\charts\images\charts0.png" />
+    <Content Include="Scripts\ueditor-1.4.3\dialogs\charts\images\charts1.png" />
+    <Content Include="Scripts\ueditor-1.4.3\dialogs\charts\images\charts2.png" />
+    <Content Include="Scripts\ueditor-1.4.3\dialogs\charts\images\charts3.png" />
+    <Content Include="Scripts\ueditor-1.4.3\dialogs\charts\images\charts4.png" />
+    <Content Include="Scripts\ueditor-1.4.3\dialogs\charts\images\charts5.png" />
+    <Content Include="Scripts\ueditor-1.4.3\dialogs\emotion\emotion.css" />
+    <Content Include="Scripts\ueditor-1.4.3\dialogs\emotion\emotion.html" />
+    <Content Include="Scripts\ueditor-1.4.3\dialogs\emotion\emotion.js" />
+    <Content Include="Scripts\ueditor-1.4.3\dialogs\emotion\images\0.gif" />
+    <Content Include="Scripts\ueditor-1.4.3\dialogs\emotion\images\bface.gif" />
+    <Content Include="Scripts\ueditor-1.4.3\dialogs\emotion\images\cface.gif" />
+    <Content Include="Scripts\ueditor-1.4.3\dialogs\emotion\images\fface.gif" />
+    <Content Include="Scripts\ueditor-1.4.3\dialogs\emotion\images\jxface2.gif" />
+    <Content Include="Scripts\ueditor-1.4.3\dialogs\emotion\images\neweditor-tab-bg.png" />
+    <Content Include="Scripts\ueditor-1.4.3\dialogs\emotion\images\tface.gif" />
+    <Content Include="Scripts\ueditor-1.4.3\dialogs\emotion\images\wface.gif" />
+    <Content Include="Scripts\ueditor-1.4.3\dialogs\emotion\images\yface.gif" />
+    <Content Include="Scripts\ueditor-1.4.3\dialogs\gmap\gmap.html" />
+    <Content Include="Scripts\ueditor-1.4.3\dialogs\help\help.css" />
+    <Content Include="Scripts\ueditor-1.4.3\dialogs\help\help.html" />
+    <Content Include="Scripts\ueditor-1.4.3\dialogs\help\help.js" />
+    <Content Include="Scripts\ueditor-1.4.3\dialogs\image\image.css" />
+    <Content Include="Scripts\ueditor-1.4.3\dialogs\image\image.html" />
+    <Content Include="Scripts\ueditor-1.4.3\dialogs\image\image.js" />
+    <Content Include="Scripts\ueditor-1.4.3\dialogs\image\images\alignicon.jpg" />
+    <Content Include="Scripts\ueditor-1.4.3\dialogs\image\images\bg.png" />
+    <Content Include="Scripts\ueditor-1.4.3\dialogs\image\images\icons.gif" />
+    <Content Include="Scripts\ueditor-1.4.3\dialogs\image\images\icons.png" />
+    <Content Include="Scripts\ueditor-1.4.3\dialogs\image\images\image.png" />
+    <Content Include="Scripts\ueditor-1.4.3\dialogs\image\images\progress.png" />
+    <Content Include="Scripts\ueditor-1.4.3\dialogs\image\images\success.gif" />
+    <Content Include="Scripts\ueditor-1.4.3\dialogs\image\images\success.png" />
+    <Content Include="Scripts\ueditor-1.4.3\dialogs\insertframe\insertframe.html" />
+    <Content Include="Scripts\ueditor-1.4.3\dialogs\internal.js" />
+    <Content Include="Scripts\ueditor-1.4.3\dialogs\link\link.html" />
+    <Content Include="Scripts\ueditor-1.4.3\dialogs\map\map.html" />
+    <Content Include="Scripts\ueditor-1.4.3\dialogs\map\show.html" />
+    <Content Include="Scripts\ueditor-1.4.3\dialogs\music\music.css" />
+    <Content Include="Scripts\ueditor-1.4.3\dialogs\music\music.html" />
+    <Content Include="Scripts\ueditor-1.4.3\dialogs\music\music.js" />
+    <Content Include="Scripts\ueditor-1.4.3\dialogs\preview\preview.html" />
+    <Content Include="Scripts\ueditor-1.4.3\dialogs\scrawl\images\addimg.png" />
+    <Content Include="Scripts\ueditor-1.4.3\dialogs\scrawl\images\brush.png" />
+    <Content Include="Scripts\ueditor-1.4.3\dialogs\scrawl\images\delimg.png" />
+    <Content Include="Scripts\ueditor-1.4.3\dialogs\scrawl\images\delimgH.png" />
+    <Content Include="Scripts\ueditor-1.4.3\dialogs\scrawl\images\empty.png" />
+    <Content Include="Scripts\ueditor-1.4.3\dialogs\scrawl\images\emptyH.png" />
+    <Content Include="Scripts\ueditor-1.4.3\dialogs\scrawl\images\eraser.png" />
+    <Content Include="Scripts\ueditor-1.4.3\dialogs\scrawl\images\redo.png" />
+    <Content Include="Scripts\ueditor-1.4.3\dialogs\scrawl\images\redoH.png" />
+    <Content Include="Scripts\ueditor-1.4.3\dialogs\scrawl\images\scale.png" />
+    <Content Include="Scripts\ueditor-1.4.3\dialogs\scrawl\images\scaleH.png" />
+    <Content Include="Scripts\ueditor-1.4.3\dialogs\scrawl\images\size.png" />
+    <Content Include="Scripts\ueditor-1.4.3\dialogs\scrawl\images\undo.png" />
+    <Content Include="Scripts\ueditor-1.4.3\dialogs\scrawl\images\undoH.png" />
+    <Content Include="Scripts\ueditor-1.4.3\dialogs\scrawl\scrawl.css" />
+    <Content Include="Scripts\ueditor-1.4.3\dialogs\scrawl\scrawl.html" />
+    <Content Include="Scripts\ueditor-1.4.3\dialogs\scrawl\scrawl.js" />
+    <Content Include="Scripts\ueditor-1.4.3\dialogs\searchreplace\searchreplace.html" />
+    <Content Include="Scripts\ueditor-1.4.3\dialogs\searchreplace\searchreplace.js" />
+    <Content Include="Scripts\ueditor-1.4.3\dialogs\snapscreen\snapscreen.html" />
+    <Content Include="Scripts\ueditor-1.4.3\dialogs\spechars\spechars.html" />
+    <Content Include="Scripts\ueditor-1.4.3\dialogs\spechars\spechars.js" />
+    <Content Include="Scripts\ueditor-1.4.3\dialogs\table\dragicon.png" />
+    <Content Include="Scripts\ueditor-1.4.3\dialogs\table\edittable.css" />
+    <Content Include="Scripts\ueditor-1.4.3\dialogs\table\edittable.html" />
+    <Content Include="Scripts\ueditor-1.4.3\dialogs\table\edittable.js" />
+    <Content Include="Scripts\ueditor-1.4.3\dialogs\table\edittd.html" />
+    <Content Include="Scripts\ueditor-1.4.3\dialogs\table\edittip.html" />
+    <Content Include="Scripts\ueditor-1.4.3\dialogs\template\config.js" />
+    <Content Include="Scripts\ueditor-1.4.3\dialogs\template\images\bg.gif" />
+    <Content Include="Scripts\ueditor-1.4.3\dialogs\template\images\pre0.png" />
+    <Content Include="Scripts\ueditor-1.4.3\dialogs\template\images\pre1.png" />
+    <Content Include="Scripts\ueditor-1.4.3\dialogs\template\images\pre2.png" />
+    <Content Include="Scripts\ueditor-1.4.3\dialogs\template\images\pre3.png" />
+    <Content Include="Scripts\ueditor-1.4.3\dialogs\template\images\pre4.png" />
+    <Content Include="Scripts\ueditor-1.4.3\dialogs\template\template.css" />
+    <Content Include="Scripts\ueditor-1.4.3\dialogs\template\template.html" />
+    <Content Include="Scripts\ueditor-1.4.3\dialogs\template\template.js" />
+    <Content Include="Scripts\ueditor-1.4.3\dialogs\video\images\bg.png" />
+    <Content Include="Scripts\ueditor-1.4.3\dialogs\video\images\center_focus.jpg" />
+    <Content Include="Scripts\ueditor-1.4.3\dialogs\video\images\file-icons.gif" />
+    <Content Include="Scripts\ueditor-1.4.3\dialogs\video\images\file-icons.png" />
+    <Content Include="Scripts\ueditor-1.4.3\dialogs\video\images\icons.gif" />
+    <Content Include="Scripts\ueditor-1.4.3\dialogs\video\images\icons.png" />
+    <Content Include="Scripts\ueditor-1.4.3\dialogs\video\images\image.png" />
+    <Content Include="Scripts\ueditor-1.4.3\dialogs\video\images\left_focus.jpg" />
+    <Content Include="Scripts\ueditor-1.4.3\dialogs\video\images\none_focus.jpg" />
+    <Content Include="Scripts\ueditor-1.4.3\dialogs\video\images\progress.png" />
+    <Content Include="Scripts\ueditor-1.4.3\dialogs\video\images\right_focus.jpg" />
+    <Content Include="Scripts\ueditor-1.4.3\dialogs\video\images\success.gif" />
+    <Content Include="Scripts\ueditor-1.4.3\dialogs\video\images\success.png" />
+    <Content Include="Scripts\ueditor-1.4.3\dialogs\video\video.css" />
+    <Content Include="Scripts\ueditor-1.4.3\dialogs\video\video.html" />
+    <Content Include="Scripts\ueditor-1.4.3\dialogs\video\video.js" />
+    <Content Include="Scripts\ueditor-1.4.3\dialogs\webapp\webapp.html" />
+    <Content Include="Scripts\ueditor-1.4.3\dialogs\wordimage\fClipboard_ueditor.swf" />
+    <Content Include="Scripts\ueditor-1.4.3\dialogs\wordimage\imageUploader.swf" />
+    <Content Include="Scripts\ueditor-1.4.3\dialogs\wordimage\tangram.js" />
+    <Content Include="Scripts\ueditor-1.4.3\dialogs\wordimage\wordimage.html" />
+    <Content Include="Scripts\ueditor-1.4.3\dialogs\wordimage\wordimage.js" />
+    <Content Include="Scripts\ueditor-1.4.3\index.html" />
+    <Content Include="Scripts\ueditor-1.4.3\lang\en\en.js" />
+    <Content Include="Scripts\ueditor-1.4.3\lang\en\images\addimage.png" />
+    <Content Include="Scripts\ueditor-1.4.3\lang\en\images\alldeletebtnhoverskin.png" />
+    <Content Include="Scripts\ueditor-1.4.3\lang\en\images\alldeletebtnupskin.png" />
+    <Content Include="Scripts\ueditor-1.4.3\lang\en\images\background.png" />
+    <Content Include="Scripts\ueditor-1.4.3\lang\en\images\button.png" />
+    <Content Include="Scripts\ueditor-1.4.3\lang\en\images\copy.png" />
+    <Content Include="Scripts\ueditor-1.4.3\lang\en\images\deletedisable.png" />
+    <Content Include="Scripts\ueditor-1.4.3\lang\en\images\deleteenable.png" />
+    <Content Include="Scripts\ueditor-1.4.3\lang\en\images\listbackground.png" />
+    <Content Include="Scripts\ueditor-1.4.3\lang\en\images\localimage.png" />
+    <Content Include="Scripts\ueditor-1.4.3\lang\en\images\music.png" />
+    <Content Include="Scripts\ueditor-1.4.3\lang\en\images\rotateleftdisable.png" />
+    <Content Include="Scripts\ueditor-1.4.3\lang\en\images\rotateleftenable.png" />
+    <Content Include="Scripts\ueditor-1.4.3\lang\en\images\rotaterightdisable.png" />
+    <Content Include="Scripts\ueditor-1.4.3\lang\en\images\rotaterightenable.png" />
+    <Content Include="Scripts\ueditor-1.4.3\lang\en\images\upload.png" />
+    <Content Include="Scripts\ueditor-1.4.3\lang\zh-cn\images\copy.png" />
+    <Content Include="Scripts\ueditor-1.4.3\lang\zh-cn\images\localimage.png" />
+    <Content Include="Scripts\ueditor-1.4.3\lang\zh-cn\images\music.png" />
+    <Content Include="Scripts\ueditor-1.4.3\lang\zh-cn\images\upload.png" />
+    <Content Include="Scripts\ueditor-1.4.3\lang\zh-cn\zh-cn.js" />
+    <Content Include="Scripts\ueditor-1.4.3\net\Bin\Newtonsoft.Json.dll" />
+    <Content Include="Scripts\ueditor-1.4.3\net\Bin\Newtonsoft.Json.pdb" />
+    <Content Include="Scripts\ueditor-1.4.3\net\Bin\Newtonsoft.Json.xml" />
+    <Content Include="Scripts\ueditor-1.4.3\net\net.sln" />
+    <Content Include="Scripts\ueditor-1.4.3\net\upload\image\20190401\6368974057394447205600542.jpg" />
+    <Content Include="Scripts\ueditor-1.4.3\net\upload\image\20190401\6368974067857515883337016.jpg" />
+    <Content Include="Scripts\ueditor-1.4.3\net\upload\image\20190401\6368974069178011498569825.jpg" />
+    <Content Include="Scripts\ueditor-1.4.3\net\upload\image\20190401\6368974070270264877933359.png" />
+    <Content Include="Scripts\ueditor-1.4.3\net\upload\image\20190401\6368974076552564797372118.png" />
+    <Content Include="Scripts\ueditor-1.4.3\net\upload\image\20190401\6368974084217989297686078.png" />
+    <Content Include="Scripts\ueditor-1.4.3\net\upload\image\20190410\6369049166415453433880369.jpg" />
+    <Content Include="Scripts\ueditor-1.4.3\net\upload\image\20190410\6369049185431516299882019.jpg" />
+    <Content Include="Scripts\ueditor-1.4.3\net\upload\image\20190419\6369129444028672583222152.PNG" />
+    <Content Include="Scripts\ueditor-1.4.3\net\upload\image\20190419\6369129444072908031622740.PNG" />
+    <Content Include="Scripts\ueditor-1.4.3\net\upload\image\20190419\6369129444074763383379403.PNG" />
+    <Content Include="Scripts\ueditor-1.4.3\net\upload\image\20190419\6369129444149270337521029.PNG" />
+    <Content Include="Scripts\ueditor-1.4.3\net\upload\image\20190419\6369129444166749689464660.PNG" />
+    <Content Include="Scripts\ueditor-1.4.3\net\upload\image\20190419\6369129444183643134949801.PNG" />
+    <Content Include="Scripts\ueditor-1.4.3\net\upload\image\20190419\6369129541776420235909639.PNG" />
+    <Content Include="Scripts\ueditor-1.4.3\net\upload\image\20190419\6369129541779252087666301.PNG" />
+    <Content Include="Scripts\ueditor-1.4.3\net\upload\image\20190419\6369129541917719781679564.PNG" />
+    <Content Include="Scripts\ueditor-1.4.3\net\upload\image\20190419\6369129542026697186479208.PNG" />
+    <Content Include="Scripts\ueditor-1.4.3\net\upload\image\20190419\6369129555372229732737543.PNG" />
+    <Content Include="Scripts\ueditor-1.4.3\net\upload\image\20190419\6369129558251928235273498.PNG" />
+    <Content Include="Scripts\ueditor-1.4.3\net\upload\image\20190419\6369129562853684488880990.PNG" />
+    <Content Include="Scripts\ueditor-1.4.3\net\upload\image\20190419\6369129563825204333945647.PNG" />
+    <Content Include="Scripts\ueditor-1.4.3\net\upload\image\20190419\6369129565842067437216587.PNG" />
+    <Content Include="Scripts\ueditor-1.4.3\net\upload\image\20190419\6369129588960900239915836.PNG" />
+    <Content Include="Scripts\ueditor-1.4.3\net\upload\image\20190419\6369129588996151887344608.PNG" />
+    <Content Include="Scripts\ueditor-1.4.3\net\upload\image\20190419\6369129589116261382643485.PNG" />
+    <Content Include="Scripts\ueditor-1.4.3\net\upload\image\20190419\6369129589280899283870368.PNG" />
+    <Content Include="Scripts\ueditor-1.4.3\net\upload\image\20190419\6369129589369956088198962.PNG" />
+    <Content Include="Scripts\ueditor-1.4.3\net\upload\image\20190419\6369129589562228939112047.PNG" />
+    <Content Include="Scripts\ueditor-1.4.3\net\upload\image\20190419\6369129589677260635195771.PNG" />
+    <Content Include="Scripts\ueditor-1.4.3\net\upload\image\20190419\6369129589789265182752077.PNG" />
+    <Content Include="Scripts\ueditor-1.4.3\net\upload\image\20190419\6369129589955953737208205.PNG" />
+    <Content Include="Scripts\ueditor-1.4.3\net\upload\image\20190421\6369145247587491225559092.PNG" />
+    <Content Include="Scripts\ueditor-1.4.3\net\upload\image\20190421\6369145258644263449047379.PNG" />
+    <Content Include="Scripts\ueditor-1.4.3\net\upload\image\20190421\6369145265415812521126043.PNG" />
+    <Content Include="Scripts\ueditor-1.4.3\net\upload\image\20190421\6369145275591593888107512.PNG" />
+    <Content Include="Scripts\ueditor-1.4.3\net\upload\image\20190421\6369145280290700104786168.PNG" />
+    <Content Include="Scripts\ueditor-1.4.3\net\upload\image\20190421\6369145293885265088857411.PNG" />
+    <Content Include="Scripts\ueditor-1.4.3\net\upload\image\20190421\6369145294885596462135688.PNG" />
+    <Content Include="Scripts\ueditor-1.4.3\net\upload\image\20190421\6369145297501028927144349.PNG" />
+    <Content Include="Scripts\ueditor-1.4.3\net\upload\image\20190421\6369147277995346615286083.png" />
+    <Content Include="Scripts\ueditor-1.4.3\net\upload\image\20190421\6369147284006582965156806.png" />
+    <Content Include="Scripts\ueditor-1.4.3\net\upload\image\20190421\6369147295132726312030056.png" />
+    <Content Include="Scripts\ueditor-1.4.3\net\upload\image\20190421\6369147313402162462308905.png" />
+    <Content Include="Scripts\ueditor-1.4.3\net\upload\image\20190421\6369147315071391568709866.png" />
+    <Content Include="Scripts\ueditor-1.4.3\net\upload\image\20190421\6369147317073900111724911.png" />
+    <Content Include="Scripts\ueditor-1.4.3\net\upload\image\20190421\6369147318204980067801298.png" />
+    <Content Include="Scripts\ueditor-1.4.3\net\upload\image\20190421\6369147378243324864669262.png" />
+    <Content Include="Scripts\ueditor-1.4.3\net\upload\image\20190421\6369147381071464162062058.png" />
+    <Content Include="Scripts\ueditor-1.4.3\net\upload\image\20190421\6369147382462390765381658.png" />
+    <Content Include="Scripts\ueditor-1.4.3\net\upload\image\20190421\6369147383706549419014351.png" />
+    <Content Include="Scripts\ueditor-1.4.3\net\upload\image\20190421\6369147385357322663402753.png" />
+    <Content Include="Scripts\ueditor-1.4.3\net\upload\image\20190421\6369147386383721819665404.png" />
+    <Content Include="Scripts\ueditor-1.4.3\net\upload\image\20190421\6369147387743009818312894.png" />
+    <Content Include="Scripts\ueditor-1.4.3\net\upload\image\20190421\6369147421409116768091302.png" />
+    <Content Include="Scripts\ueditor-1.4.3\net\upload\image\20190421\6369147424600709366839218.png" />
+    <Content Include="Scripts\ueditor-1.4.3\net\upload\video\20190401\6368974088958999868536078.mp4" />
+    <Content Include="Scripts\ueditor-1.4.3\net\upload\video\20190401\6368974088968079119507894.mp4" />
+    <Content Include="Scripts\ueditor-1.4.3\net\upload\video\20190401\6368974098280400668224349.mp4" />
+    <Content Include="Scripts\ueditor-1.4.3\themes\default\css\ueditor.css" />
+    <Content Include="Scripts\ueditor-1.4.3\themes\default\css\ueditor.min.css" />
+    <Content Include="Scripts\ueditor-1.4.3\themes\default\dialogbase.css" />
+    <Content Include="Scripts\ueditor-1.4.3\themes\default\images\anchor.gif" />
+    <Content Include="Scripts\ueditor-1.4.3\themes\default\images\arrow.png" />
+    <Content Include="Scripts\ueditor-1.4.3\themes\default\images\arrow_down.png" />
+    <Content Include="Scripts\ueditor-1.4.3\themes\default\images\arrow_up.png" />
+    <Content Include="Scripts\ueditor-1.4.3\themes\default\images\button-bg.gif" />
+    <Content Include="Scripts\ueditor-1.4.3\themes\default\images\cancelbutton.gif" />
+    <Content Include="Scripts\ueditor-1.4.3\themes\default\images\charts.png" />
+    <Content Include="Scripts\ueditor-1.4.3\themes\default\images\cursor_h.gif" />
+    <Content Include="Scripts\ueditor-1.4.3\themes\default\images\cursor_h.png" />
+    <Content Include="Scripts\ueditor-1.4.3\themes\default\images\cursor_v.gif" />
+    <Content Include="Scripts\ueditor-1.4.3\themes\default\images\cursor_v.png" />
+    <Content Include="Scripts\ueditor-1.4.3\themes\default\images\dialog-title-bg.png" />
+    <Content Include="Scripts\ueditor-1.4.3\themes\default\images\filescan.png" />
+    <Content Include="Scripts\ueditor-1.4.3\themes\default\images\highlighted.gif" />
+    <Content Include="Scripts\ueditor-1.4.3\themes\default\images\icons-all.gif" />
+    <Content Include="Scripts\ueditor-1.4.3\themes\default\images\icons.gif" />
+    <Content Include="Scripts\ueditor-1.4.3\themes\default\images\icons.png" />
+    <Content Include="Scripts\ueditor-1.4.3\themes\default\images\loaderror.png" />
+    <Content Include="Scripts\ueditor-1.4.3\themes\default\images\loading.gif" />
+    <Content Include="Scripts\ueditor-1.4.3\themes\default\images\lock.gif" />
+    <Content Include="Scripts\ueditor-1.4.3\themes\default\images\neweditor-tab-bg.png" />
+    <Content Include="Scripts\ueditor-1.4.3\themes\default\images\pagebreak.gif" />
+    <Content Include="Scripts\ueditor-1.4.3\themes\default\images\scale.png" />
+    <Content Include="Scripts\ueditor-1.4.3\themes\default\images\sortable.png" />
+    <Content Include="Scripts\ueditor-1.4.3\themes\default\images\spacer.gif" />
+    <Content Include="Scripts\ueditor-1.4.3\themes\default\images\sparator_v.png" />
+    <Content Include="Scripts\ueditor-1.4.3\themes\default\images\table-cell-align.png" />
+    <Content Include="Scripts\ueditor-1.4.3\themes\default\images\tangram-colorpicker.png" />
+    <Content Include="Scripts\ueditor-1.4.3\themes\default\images\toolbar_bg.png" />
+    <Content Include="Scripts\ueditor-1.4.3\themes\default\images\unhighlighted.gif" />
+    <Content Include="Scripts\ueditor-1.4.3\themes\default\images\upload.png" />
+    <Content Include="Scripts\ueditor-1.4.3\themes\default\images\videologo.gif" />
+    <Content Include="Scripts\ueditor-1.4.3\themes\default\images\word.gif" />
+    <Content Include="Scripts\ueditor-1.4.3\themes\default\images\wordpaste.png" />
+    <Content Include="Scripts\ueditor-1.4.3\themes\iframe.css" />
+    <Content Include="Scripts\ueditor-1.4.3\third-party\codemirror\codemirror.css" />
+    <Content Include="Scripts\ueditor-1.4.3\third-party\codemirror\codemirror.js" />
+    <Content Include="Scripts\ueditor-1.4.3\third-party\highcharts\adapters\mootools-adapter.js" />
+    <Content Include="Scripts\ueditor-1.4.3\third-party\highcharts\adapters\mootools-adapter.src.js" />
+    <Content Include="Scripts\ueditor-1.4.3\third-party\highcharts\adapters\prototype-adapter.js" />
+    <Content Include="Scripts\ueditor-1.4.3\third-party\highcharts\adapters\prototype-adapter.src.js" />
+    <Content Include="Scripts\ueditor-1.4.3\third-party\highcharts\adapters\standalone-framework.js" />
+    <Content Include="Scripts\ueditor-1.4.3\third-party\highcharts\adapters\standalone-framework.src.js" />
+    <Content Include="Scripts\ueditor-1.4.3\third-party\highcharts\highcharts-more.js" />
+    <Content Include="Scripts\ueditor-1.4.3\third-party\highcharts\highcharts-more.src.js" />
+    <Content Include="Scripts\ueditor-1.4.3\third-party\highcharts\highcharts.js" />
+    <Content Include="Scripts\ueditor-1.4.3\third-party\highcharts\highcharts.src.js" />
+    <Content Include="Scripts\ueditor-1.4.3\third-party\highcharts\modules\annotations.js" />
+    <Content Include="Scripts\ueditor-1.4.3\third-party\highcharts\modules\annotations.src.js" />
+    <Content Include="Scripts\ueditor-1.4.3\third-party\highcharts\modules\canvas-tools.js" />
+    <Content Include="Scripts\ueditor-1.4.3\third-party\highcharts\modules\canvas-tools.src.js" />
+    <Content Include="Scripts\ueditor-1.4.3\third-party\highcharts\modules\data.js" />
+    <Content Include="Scripts\ueditor-1.4.3\third-party\highcharts\modules\data.src.js" />
+    <Content Include="Scripts\ueditor-1.4.3\third-party\highcharts\modules\drilldown.js" />
+    <Content Include="Scripts\ueditor-1.4.3\third-party\highcharts\modules\drilldown.src.js" />
+    <Content Include="Scripts\ueditor-1.4.3\third-party\highcharts\modules\exporting.js" />
+    <Content Include="Scripts\ueditor-1.4.3\third-party\highcharts\modules\exporting.src.js" />
+    <Content Include="Scripts\ueditor-1.4.3\third-party\highcharts\modules\funnel.js" />
+    <Content Include="Scripts\ueditor-1.4.3\third-party\highcharts\modules\funnel.src.js" />
+    <Content Include="Scripts\ueditor-1.4.3\third-party\highcharts\modules\heatmap.js" />
+    <Content Include="Scripts\ueditor-1.4.3\third-party\highcharts\modules\heatmap.src.js" />
+    <Content Include="Scripts\ueditor-1.4.3\third-party\highcharts\modules\map.js" />
+    <Content Include="Scripts\ueditor-1.4.3\third-party\highcharts\modules\map.src.js" />
+    <Content Include="Scripts\ueditor-1.4.3\third-party\highcharts\modules\no-data-to-display.js" />
+    <Content Include="Scripts\ueditor-1.4.3\third-party\highcharts\modules\no-data-to-display.src.js" />
+    <Content Include="Scripts\ueditor-1.4.3\third-party\highcharts\themes\dark-blue.js" />
+    <Content Include="Scripts\ueditor-1.4.3\third-party\highcharts\themes\dark-green.js" />
+    <Content Include="Scripts\ueditor-1.4.3\third-party\highcharts\themes\gray.js" />
+    <Content Include="Scripts\ueditor-1.4.3\third-party\highcharts\themes\grid.js" />
+    <Content Include="Scripts\ueditor-1.4.3\third-party\highcharts\themes\skies.js" />
+    <Content Include="Scripts\ueditor-1.4.3\third-party\jquery-1.10.2.js" />
+    <Content Include="Scripts\ueditor-1.4.3\third-party\jquery-1.10.2.min.js" />
+    <Content Include="Scripts\ueditor-1.4.3\third-party\snapscreen\UEditorSnapscreen.exe" />
+    <Content Include="Scripts\ueditor-1.4.3\third-party\SyntaxHighlighter\shCore.js" />
+    <Content Include="Scripts\ueditor-1.4.3\third-party\SyntaxHighlighter\shCoreDefault.css" />
+    <Content Include="Scripts\ueditor-1.4.3\third-party\video-js\font\vjs.svg" />
+    <Content Include="Scripts\ueditor-1.4.3\third-party\video-js\video-js.css" />
+    <Content Include="Scripts\ueditor-1.4.3\third-party\video-js\video-js.min.css" />
+    <Content Include="Scripts\ueditor-1.4.3\third-party\video-js\video-js.swf" />
+    <Content Include="Scripts\ueditor-1.4.3\third-party\video-js\video.dev.js" />
+    <Content Include="Scripts\ueditor-1.4.3\third-party\video-js\video.js" />
+    <Content Include="Scripts\ueditor-1.4.3\third-party\webuploader\Uploader.swf" />
+    <Content Include="Scripts\ueditor-1.4.3\third-party\webuploader\webuploader.css" />
+    <Content Include="Scripts\ueditor-1.4.3\third-party\webuploader\webuploader.custom.js" />
+    <Content Include="Scripts\ueditor-1.4.3\third-party\webuploader\webuploader.custom.min.js" />
+    <Content Include="Scripts\ueditor-1.4.3\third-party\webuploader\webuploader.flashonly.js" />
+    <Content Include="Scripts\ueditor-1.4.3\third-party\webuploader\webuploader.flashonly.min.js" />
+    <Content Include="Scripts\ueditor-1.4.3\third-party\webuploader\webuploader.html5only.js" />
+    <Content Include="Scripts\ueditor-1.4.3\third-party\webuploader\webuploader.html5only.min.js" />
+    <Content Include="Scripts\ueditor-1.4.3\third-party\webuploader\webuploader.js" />
+    <Content Include="Scripts\ueditor-1.4.3\third-party\webuploader\webuploader.min.js" />
+    <Content Include="Scripts\ueditor-1.4.3\third-party\webuploader\webuploader.withoutimage.js" />
+    <Content Include="Scripts\ueditor-1.4.3\third-party\webuploader\webuploader.withoutimage.min.js" />
+    <Content Include="Scripts\ueditor-1.4.3\third-party\zeroclipboard\ZeroClipboard.js" />
+    <Content Include="Scripts\ueditor-1.4.3\third-party\zeroclipboard\ZeroClipboard.min.js" />
+    <Content Include="Scripts\ueditor-1.4.3\third-party\zeroclipboard\ZeroClipboard.swf" />
+    <Content Include="Scripts\ueditor-1.4.3\ueditor.all.js" />
+    <Content Include="Scripts\ueditor-1.4.3\ueditor.all.min.js" />
+    <Content Include="Scripts\ueditor-1.4.3\ueditor.config.js" />
+    <Content Include="Scripts\ueditor-1.4.3\ueditor.parse.js" />
+    <Content Include="Scripts\ueditor-1.4.3\ueditor.parse.min.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Role\Index.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\DateTime.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\Active.cshtml" />
+    <Content Include="Views\Role\Create.cshtml" />
+    <Content Include="Views\Role\Edit.cshtml" />
+    <Content Include="Views\Navigate\Index.cshtml" />
+    <Content Include="Views\Navigate\Create.cshtml" />
+    <Content Include="Views\Navigate\Icons.cshtml" />
+    <Content Include="Views\Navigate\Edit.cshtml" />
+    <Content Include="Views\Role\Authorize.cshtml" />
+    <Content Include="Views\Error\NotFound.cshtml" />
+    <Content Include="Views\Error\Forbidden.cshtml" />
+    <Content Include="Views\Error\InternalError.cshtml" />
+    <Content Include="Views\Log\LogListPartial.cshtml" />
+    <Content Include="Views\Log\Index.cshtml" />
+    <Content Include="Views\Log\Details.cshtml" />
+    <Content Include="Views\Product\Index.cshtml" />
+    <Content Include="Views\Product\Create.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Shared\Lockout.cshtml" />
+    <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\User\Login.cshtml" />
+    <Content Include="Views\Shared\_MainHeaderPartial.cshtml" />
+    <Content Include="Views\Shared\_MainSidebarPartial.cshtml" />
+    <Content Include="Views\Shared\_MainFooterPartial.cshtml" />
+    <Content Include="Unity.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Views\User\UserListPartial.cshtml" />
+    <Content Include="Views\User\Index.cshtml" />
+    <Content Include="Views\User\Create.cshtml" />
+    <Content Include="Views\User\Edit.cshtml" />
+    <Content Include="Views\User\ChangePassword.cshtml" />
+    <Content Include="Scripts\ueditor-1.4.3\net\config.json" />
+    <Content Include="Scripts\ueditor-1.4.3\net\controller.ashx" />
+    <Content Include="Scripts\ueditor-1.4.3\net\README.md" />
+    <Content Include="Scripts\ueditor-1.4.3\net\upload\image\20190426\6369188326890278506680975" />
+    <Content Include="Scripts\ueditor-1.4.3\net\upload\image\20190426\6369188327198493466907029" />
+    <Content Include="Scripts\ueditor-1.4.3\net\Web.config" />
+    <Content Include="Scripts\ueditor-1.4.3\third-party\jquery-1.10.2.min.map" />
+    <Content Include="Scripts\ueditor-1.4.3\third-party\video-js\font\vjs.eot" />
+    <Content Include="Scripts\ueditor-1.4.3\third-party\video-js\font\vjs.ttf" />
+    <Content Include="Scripts\ueditor-1.4.3\third-party\video-js\font\vjs.woff" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Areas\CmsAdmin\Views\Shared\EditorTemplates\" />
+    <Folder Include="Models\" />
+    <Folder Include="Views\Shared\EditorTemplates\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+    <None Include="Project_Readme.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\YH.Framework.Core\YH.Framework.Core.csproj">
+      <Project>{75507FAE-1FC7-417F-9B45-B0103BEA84D7}</Project>
+      <Name>YH.Framework.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\YH.Framework.Data\YH.Framework.Data.csproj">
+      <Project>{a304fd0c-68b0-47fc-a76e-cdb84d81702e}</Project>
+      <Name>YH.Framework.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\YH.Framework.Service\YH.Framework.Service.csproj">
+      <Project>{4E39F8A2-B96A-4AC5-AA9C-2E15D2702A03}</Project>
+      <Name>YH.Framework.Service</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\YH.Framework.Web.Core\YH.Framework.Web.Core.csproj">
+      <Project>{8122B4D8-E86C-43AC-AB73-8C42387E8070}</Project>
+      <Name>YH.Framework.Web.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>52471</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:52471/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

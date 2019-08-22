@@ -1,0 +1,171 @@
+﻿@model  YH.Framework.Core.Paging.IPagedList<YH.Framework.Web.Areas.CmsAdmin.Models.Users.PermissionModel>
+
+@{
+    ViewBag.Title = "权限管理";
+}
+
+<section class="content-header">
+    <h1>
+        权限管理<small>@T("List")</small>
+    </h1>
+</section>
+<section class="content">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="box">
+                <div class="box-header">
+                    @using (Ajax.BeginForm("Index", null, new AjaxOptions { UpdateTargetId = "pager" }, new { @class = "search" }))
+                    {
+                        <div class="btn-toolbar" role="toolbar" aria-label="btn-toolbar">
+                            <div class="btn-group" role="group" aria-label="btn-group">
+                                <a class="btn btn-default" aria-label="Left Align" href="@Url.Action("Create")">
+                                    <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> 创建
+                                </a>
+                                <button id="check-all" type="button" class="btn btn-default" aria-label="Left Align">
+                                    <span class="glyphicon glyphicon-check" aria-hidden="true"></span> <span>全选</span>
+                                </button>
+                                <button type="button" class="btn btn-default" aria-label="Left Align" id="delete">
+                                    <span class="glyphicon glyphicon-trash" aria-hidden="true"></span> 删除
+                                </button>
+                            </div>
+                            <div class="input-group pull-right">
+                                <div class="input-group">
+                                    @Html.TextBox("keyword", "", new { @class = "form-control" })
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-default" autofocus aria-label="Left Align" type="submit">
+                                            <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                                        </button>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+                <div class="box-body">
+                    <form id="pager" action="@Url.Action("Deletes")" method="post">
+                        <table class="table table-bordered table-hover">
+                            <tr>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.ID)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Name)
+                                </th>
+
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Category)
+                                </th>
+
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Description)
+                                </th>
+                                <th>相关操作</th>
+                            </tr>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+
+                                    <td>
+                                        <input type="checkbox" id="check" name="check" value="@item.ID" />@Html.DisplayFor(modelItem => item.ID)
+                                    </td>
+
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Name)
+                                    </td>
+
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Category)
+                                    </td>
+
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Description)
+                                    </td>
+                                    <td>
+                                        @Html.ActionLink(T("Edit"), "Edit", new { id = item.ID }) |
+                                        @*@Html.ActionLink(T("Details"), "Details", new { id = item.ID }) |*@
+                                        <a href="#" data-toggle="modal" data-target="#deleteConfirmModal" data-id="@item.ID">删除</a>
+                                    </td>
+                                </tr>
+                            }
+                        </table>
+                    </form>
+                    @Html.Pager(Model, page => Url.FormParameters(Url.Action("Index", new { page })))
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+@using (Html.BeginForm("Delete", ViewContext.RouteData.GetRequiredString("controller"), null, FormMethod.Post, new { id = "notificationForm" }))
+{
+    @Html.Hidden("id", null, new { id = "notificationFormItemId" })
+}
+<div class="modal fade" id="deleteConfirmModal" tabindex="-1" role="dialog" aria-labelledby="deleteLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="deleteLabel">删除确认</h4>
+            </div>
+            <div class="modal-body" id="notificationPreview">
+                <p>确认要删除该数据吗？</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success" data-dismiss="modal"><i class="fa fa-times"></i> 取消</button>
+                <button type="button" class="btn btn-danger" id="deleteConfirm"><i class="fa fa-check"></i> 确定</button>
+            </div>
+        </div>
+    </div>
+</div>
+@section Scripts{
+    @Scripts.Render("~/scripts/jquery-unobtrusive-ajax-paging")
+    <script>
+        $(".content-wrapper").on("click", "#check-all", function () {
+            var checkBoxs = $('input:checkbox[name=check]');
+            var checkAll = $(this).children().last();
+            if (checkAll.text() == "全选") {
+                checkBoxs.prop('checked', true);
+                $(this).children().first().removeClass("glyphicon-unchecked").addClass("glyphicon-checked");
+                $(this).children().last().text("取消");
+            }
+            else {
+                checkBoxs.prop('checked', false);
+                $(this).children().first().removeClass("glyphicon-checked").addClass("glyphicon-unchecked");
+                $(this).children().last().text("全选");
+            }
+        });
+
+        $('#deleteConfirmModal').on('show.bs.modal', function (event) {
+            var button = $(event.relatedTarget);
+            $("#notificationFormItemId").val(button.data('id'));
+        })
+
+        $("#deleteConfirmModal").on('click', "#deleteConfirm", function () {
+            $("#notificationForm").submit();
+        });
+
+        $("#delete").click(function () {
+            var checkBoxs = $('input:checkbox[name=check]:checked');
+            if (checkBoxs.length == 0) {
+                bootbox.warning('请先勾选要删除的数据');
+                return;
+            }
+            bootbox.confirm({
+                title: "操作提示",
+                message: "确认删除选中的记录？",
+                buttons: {
+                    cancel: {
+                        label: '<i class="fa fa-times"></i> 取消'
+                    },
+                    confirm: {
+                        label: '<i class="fa fa-check"></i> 确认'
+                    }
+                },
+                callback: function (result) {
+                    if (result) {
+                        $("#pager").submit();
+                    }
+                }
+            });
+        });
+    </script>
+}
+

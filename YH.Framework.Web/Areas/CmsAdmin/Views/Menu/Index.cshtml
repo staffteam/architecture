@@ -1,0 +1,121 @@
+﻿@model IEnumerable<YH.Framework.Web.Areas.CmsAdmin.Models.Business.MenuModel>
+@{
+    ViewBag.Title = "菜单管理";
+}
+@helper RenderNavigateRow(YH.Framework.Web.Areas.CmsAdmin.Models.Business.MenuModel menu, int level)
+{
+<tr>
+    <td><input type="checkbox" id="check" name="check" value="@menu.ID" /></td>
+    <td><span style="display:inline-block;width:@Html.Raw(level * 24)px"></span>|--@Html.DisplayFor(m => menu.Name)</td>
+    <td>@Html.DisplayFor(m => menu.En_Name)</td>
+    <td>@Html.DisplayFor(m => menu.Controller)</td>
+    <td>@Html.DisplayFor(m => menu.Action)</td>
+    <td>@Html.DisplayFor(m => menu.Creator.Name)</td>
+    <td>@Html.DisplayFor(m => menu.CreatedTime)</td>
+    <td style="width:80px">@Html.TextBox("nav-" + menu.ID, menu.SortOrder, new { style = "width:50px", maxlength = "2" })</td>
+    <td>
+        @Html.ActionLink("创建子级", "Create", new { parentID = menu.ID }) |
+        @Html.ActionLink(T("Edit"), "Edit", new { id = menu.ID })
+    </td>
+</tr>
+    if (menu.Childrens.Any())
+    {
+        foreach (var childNavigate in menu.Childrens.OrderBy(nav => nav.SortOrder))
+        {
+            @RenderNavigateRow(childNavigate, level + 1)
+        }
+    }
+}
+<section class="content-header"><h1>导航<small>@T("List")</small></h1></section>
+<section class="content">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="box">
+                <div class="box-header">
+                    @using (Html.BeginForm(null, null, FormMethod.Get))
+                    {
+                        <div class="btn-toolbar" role="toolbar" aria-label="btn-toolbar">
+                            <div class="btn-group" role="group" aria-label="btn-group">
+                                <a class="btn btn-default" aria-label="Left Align" href="@Url.Action("Create")">
+                                    <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>新增
+                                </a>
+                                <button id="check-all" type="button" class="btn btn-default" aria-label="Left Align">
+                                    <span class="glyphicon glyphicon-check" aria-hidden="true"></span> <span>全选</span>
+                                </button>
+                                <button type="button" class="btn btn-default" aria-label="Left Align" id="delete">
+                                    <span class="glyphicon glyphicon-trash" aria-hidden="true"></span> 删除
+                                </button>
+                                <button type="button" class="btn btn-default" aria-label="Left Align" id="save">
+                                    <span class="fa fa-save" aria-hidden="true"></span> 保存
+                                </button>
+                            </div>
+                        </div>
+                    }
+                </div>
+                <div class="box-body">
+                    <form id="table-form" action="@Url.Action("delete")" method="post">
+                        <table class="table table-bordered table-hover">
+                            <tr>
+                                <th>@Html.DisplayNameFor(model => model.ID)</th>
+                                <th>@Html.DisplayNameFor(model => model.Name)</th>
+                                <th>@Html.DisplayNameFor(model => model.En_Name)</th>
+                                <th>@Html.DisplayNameFor(model => model.Controller)</th>
+                                <th>@Html.DisplayNameFor(model => model.Action)</th>
+                                <td>@Html.DisplayNameFor(model => model.Creator)</td>
+                                <td>@Html.DisplayNameFor(model => model.CreatedTime)</td>
+                                <th>@Html.DisplayNameFor(model => model.SortOrder)</th>
+                                <th>相关操作</th>
+                            </tr>
+                            @foreach (var item in Model.Where(model => model.ParentID == null))
+                            {
+                                @RenderNavigateRow(item, 0)
+                            }
+                        </table>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+@section Scripts{
+    <script>
+        $(".content-wrapper").on("click", "#check-all", function () {
+            var checkBoxs = $('input:checkbox[name=check]');
+            var checkAll = $(this).children().last();
+            if (checkAll.text() == "全选") {
+                checkBoxs.prop('checked', true);
+                $(this).children().first().removeClass("glyphicon-unchecked").addClass("glyphicon-checked");
+                $(this).children().last().text("取消");
+            }
+            else {
+                checkBoxs.prop('checked', false);
+                $(this).children().first().removeClass("glyphicon-checked").addClass("glyphicon-unchecked");
+                $(this).children().last().text("全选");
+            }
+        })
+
+        $("#delete").click(function () {
+            bootbox.confirm({
+                title: "操作提示",
+                message: "本操作会删除本导航及下属子导航，是否继续？",
+                buttons: {
+                    cancel: {
+                        label: '<i class="fa fa-times"></i> 取消'
+                    },
+                    confirm: {
+                        label: '<i class="fa fa-check"></i> 确认'
+                    }
+                },
+                callback: function (result) {
+                    if (result) {
+                        $("#table-form").submit();
+                    }
+                }
+            });
+        });
+
+        $("#save").click(function () {
+            $("#table-form").attr("action",'@Url.Action("Save")').submit();
+        });
+    </script>
+}

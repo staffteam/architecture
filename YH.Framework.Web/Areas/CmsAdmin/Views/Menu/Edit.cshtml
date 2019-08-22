@@ -1,0 +1,97 @@
+﻿@using YH.Framework.Web.Areas.CmsAdmin.Models.Business
+@model YH.Framework.Web.Areas.CmsAdmin.Models.Business.MenuModel
+@{
+    var ModelDisplayName = Html.DisplayNameForModel();
+    ViewBag.Title = String.Concat(T("Edit"), ModelDisplayName);
+}
+
+@helper RenderParentMenuOptions(MenuModel menu, int level)
+{
+<option value="@menu.ID" @(ViewBag.ParentID==menu.ID ? Html.Raw("selected") : null)>
+    @for (int i = 0; i < level * 2; i++)
+    {
+    @:&nbsp;
+    }
+    |--@menu.Name
+</option>
+    if (menu.Childrens.Any())
+    {
+        foreach (var childNavigate in menu.Childrens.OrderBy(nav => nav.SortOrder))
+        {
+            @RenderParentMenuOptions(childNavigate, level + 1)
+        }
+    }
+}
+<section class="content-header">
+    <h1>
+        @ModelDisplayName<small>@T("Edit")</small>
+    </h1>
+</section>
+<section class="content">
+    <div class="box">
+        @using (Html.BeginForm())
+        {
+        @Html.AntiForgeryToken()
+        <div class="box-body">
+            <div class="form-group">
+                @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label" })
+                @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Name, "", new { @class = "help-block" })
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.En_Name, htmlAttributes: new { @class = "control-label" })
+                @Html.EditorFor(model => model.En_Name, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.En_Name, "", new { @class = "help-block" })
+            </div>
+            <div class="form-group">
+                <label class="control-label">上级菜单</label>
+                <select class="form-control" name="ParentID" data-val="true">
+                    <option value="">顶级菜单</option>
+                    @foreach (var item in (ViewBag.Menus as IEnumerable<MenuModel>).Where(menu => menu.ParentID == null))
+                    {
+                        @RenderParentMenuOptions(item, 0)
+                    }
+                </select>
+                @Html.ValidationMessageFor(model => model.ParentID, "", new { @class = "help-block" })
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.Code, htmlAttributes: new { @class = "control-label" })
+                @Html.EditorFor(model => model.Code, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Code, "", new { @class = "help-block" })
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.Controller, htmlAttributes: new { @class = "control-label" })
+                @Html.EditorFor(model => model.Controller, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Controller, "", new { @class = "help-block" })
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.Action, htmlAttributes: new { @class = "control-label" })
+                @Html.EditorFor(model => model.Action, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Action, "", new { @class = "help-block" })
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.SeoWords, htmlAttributes: new { @class = "control-label" })
+                @Html.EditorFor(model => model.SeoWords, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.SeoWords, "", new { @class = "help-block" })
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.SeoDescription, htmlAttributes: new { @class = "control-label" })
+                @Html.EditorFor(model => model.SeoDescription, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.SeoDescription, "", new { @class = "help-block" })
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.SortOrder, htmlAttributes: new { @class = "control-label" })
+                @Html.EditorFor(model => model.SortOrder, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.SortOrder, "", new { @class = "help-block" })
+            </div>
+        </div>
+        <div class="box-footer">
+            <input type="submit" value="@T("Save")" class="btn btn-primary" />
+            @Html.ActionLink(T("Back"), "Index", null, new { @class = "btn btn-default" })
+        </div>
+        }
+    </div>
+</section>
+@section Scripts{
+    @Scripts.Render("~/scripts/jquery-validate-unobtrusive-bootstrap")
+}
