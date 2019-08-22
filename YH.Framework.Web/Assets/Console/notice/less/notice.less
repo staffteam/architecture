@@ -1,0 +1,58 @@
+@import '../../public/less/puls.less';
+.notice-details {
+    background: white;
+    border-radius: 4px;
+
+    div.title {
+        padding: 24px 20px 0 20px;
+
+        h2 {
+            font-size: 24px;
+            color: rgba(51, 51, 51, 1);
+            line-height: 33px;
+            font-weight: 600;
+        }
+
+        span {
+            display: block;
+            font-size: 14px;
+            color: rgba(153, 153, 153, 1);
+            line-height: 20px;
+            margin-top: 16px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #dddddd;
+        }
+    }
+
+    .notice-body {
+        padding: 25px;
+        line-height: 1.5;
+        border-bottom: 1px solid #dddddd;
+        min-height: 63vh;
+    }
+
+    .notice-page {
+        padding: 30px 2%;
+        overflow: hidden;
+        a {
+            height: 38px;
+            background: rgba(255, 255, 255, 1);
+            border: 1px solid rgba(219, 219, 219, 1);
+            display: block;
+            line-height: 38px;
+            font-size: 14px;
+            color: rgba(51, 51, 51, 1);
+            padding:0 10px;
+            &:first-child{
+                float:left;
+            }
+            &:last-child{
+                float:right;
+            }
+            &:hover{
+                color: @c;
+                border: 1px solid @c;
+            }
+        }
+    }
+}

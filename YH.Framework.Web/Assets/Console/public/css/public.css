@@ -1,0 +1,397 @@
+body,
+ul,
+ol,
+li,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+form,
+table,
+td,
+img,
+div {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+body {
+  background: #fff;
+  color: #333;
+  font-size: 14px;
+  font-family: "微软雅黑";
+}
+ul,
+ol {
+  list-style-type: none;
+}
+select,
+input,
+img,
+select {
+  vertical-align: middle;
+}
+a {
+  text-decoration: none;
+}
+a:link {
+  color: #333;
+}
+a:visited {
+  color: #333;
+}
+a:hover,
+a:active,
+a:focus {
+  color: #333;
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+@font-face {
+  font-family: 'iconfont';
+  /* project id 1119181 */
+  src: url('//at.alicdn.com/t/font_1119181_7m3py25lubj.eot');
+  src: url('//at.alicdn.com/t/font_1119181_7m3py25lubj.eot?#iefix') format('embedded-opentype'), url('//at.alicdn.com/t/font_1119181_7m3py25lubj.woff2') format('woff2'), url('//at.alicdn.com/t/font_1119181_7m3py25lubj.woff') format('woff'), url('//at.alicdn.com/t/font_1119181_7m3py25lubj.ttf') format('truetype'), url('//at.alicdn.com/t/font_1119181_7m3py25lubj.svg#iconfont') format('svg');
+}
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+input {
+  border: 1px solid #dddddd;
+  outline: none;
+  font-family: "微软雅黑";
+}
+input:focus {
+  border: 1px solid #dddddd;
+}
+.l {
+  float: left;
+}
+.r {
+  float: right;
+}
+* {
+  box-sizing: border-box;
+}
+.layui-btn .layui-icon {
+  float: left;
+}
+.breadcrumb {
+  padding: 14px 24px;
+  background: #ffffff;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.05);
+}
+body {
+  min-width: 1400px;
+}
+.layui-layer.layui-layer-msg {
+  min-width: 200px;
+  border: 0px;
+}
+.layui-layer.layui-layer-msg .layui-layer-content {
+  color: white;
+  font-size: 14px;
+  line-height: 30px;
+  padding: 10px;
+}
+.layui-layer.layui-layer-msg .layui-layer-content i {
+  color: white;
+  font-size: 18px;
+  float: left;
+  margin-right: 8px;
+}
+.layui-layer.layer-ext-tips {
+  background-color: #f39b12;
+}
+.layui-layer.layer-ext-success {
+  background-color: #00ba9b;
+}
+.layui-layer.layer-ext-error {
+  background-color: #e85445;
+}
+.main .layui-table-view {
+  border-color: white;
+}
+.main .layui-table-header {
+  border-color: #f1f1f6;
+}
+.main .layui-table tr {
+  border-color: #f1f1f6;
+}
+.main .layui-table th {
+  border-color: #f1f1f6;
+  background-color: #f1f1f6;
+}
+.main .layui-table td {
+  border-color: white;
+  transition: 0.1s border-color;
+  border-bottom: 1px solid #dddddd;
+}
+.main .layui-table-cell {
+  height: 40px;
+  line-height: 40px;
+}
+.main .layui-table-cell .layui-form-checkbox[lay-skin=primary] {
+  top: 50%;
+  transform: translateY(-50%);
+}
+.main .layui-table-cell .layui-btn {
+  background-color: rgba(0, 0, 0, 0) !important;
+  color: #489DFC !important;
+  position: relative;
+  padding: 0 15px 0 13px;
+  margin: 0px !important;
+}
+.main .layui-table-cell .layui-btn::before {
+  position: absolute;
+  right: 0;
+  top: 20%;
+  height: 60%;
+  border-right: 1px solid #dddddd;
+  content: '';
+  display: block;
+}
+.main .layui-table-cell .layui-btn:last-child::before {
+  display: none;
+}
+.main .layui-table-hover td {
+  border-color: #f2f2f2;
+}
+.main .layui-bg-black {
+  background-color: #252A2E !important;
+}
+.main .layui-layout-admin .layui-body {
+  position: absolute;
+  bottom: 0;
+  overflow: hidden;
+  transition: 0.3s left;
+  min-width: 1200px;
+}
+.main .layui-layout-admin .layui-body .content {
+  height: calc(100vh - 107px);
+  overflow: auto;
+  background-color: #f4f4f4;
+}
+.main .layui-layout-admin .layui-body .content .container {
+  padding: 15px;
+}
+.main .layui-layout-admin .layui-logo {
+  transition: 0.3s width;
+  background-color: #252A2E;
+  color: white;
+}
+.main .layui-layout-admin .layui-header {
+  background-color: #489DFC;
+}
+.main .layui-layout-admin .layui-header .layui-nav {
+  padding: 0 0;
+}
+.main .layui-layout-admin .layui-header .layui-nav .layui-nav-item a i.flexible {
+  font-size: 20px;
+}
+.main .layui-layout-admin .layui-header .layui-nav .layui-nav-item.message a i {
+  position: relative;
+  top: 1px;
+  font-size: 16px;
+}
+.main .layui-layout-admin .layui-side {
+  transition: 0.3s width;
+  position: absolute;
+}
+.main .layui-layout-admin .layui-side-scroll .layui-nav {
+  background-color: #252A2E !important;
+}
+.main .layui-layout-admin .layui-nav .layui-this:after,
+.main .layui-layout-admin .layui-nav-bar,
+.main .layui-layout-admin .layui-nav-tree .layui-nav-itemed:after {
+  background-color: rgba(0, 0, 0, 0);
+}
+.main .layui-nav-tree {
+  transition: 0.3s width;
+}
+.main .layui-nav-tree .layui-nav-item.layui-this > a {
+  background-color: #252A2E;
+  position: relative;
+}
+.main .layui-nav-tree .layui-nav-item.layui-this > a cite {
+  color: #489DFC;
+}
+.main .layui-nav-tree .layui-nav-item.layui-this > a:hover {
+  background-color: #252A2E;
+}
+.main .layui-nav-tree .layui-nav-item.layui-this > a::before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 4px;
+  height: 100%;
+  background-color: #489DFC;
+  content: '';
+  display: block;
+}
+.main .layui-nav-tree .layui-nav-item.layui-this > a i {
+  color: #489DFC;
+}
+.main .layui-nav-tree .layui-nav-item a {
+  height: 60px;
+  line-height: 60px;
+}
+.main .layui-nav-tree .layui-nav-item a cite {
+  color: white;
+}
+.main .layui-nav-tree .layui-nav-item a i {
+  color: white;
+  font-size: 18px;
+  float: left;
+  margin-right: 10px;
+}
+.main .layui-nav-tree .layui-nav-item a:hover {
+  background-color: #252A2E;
+}
+.main .layui-layout-left {
+  transition: 0.3s left;
+}
+.main .layui-tab-title li {
+  border-top: 4px solid white;
+  border-bottom: 2px solid rgba(0, 0, 0, 0);
+  line-height: 35px;
+}
+.main .layui-tab-title li.layui-this {
+  border-top: 4px solid #489DFC;
+  border-bottom: 2px solid white;
+}
+.main .layui-tab-title li.layui-this:after {
+  height: 35px;
+}
+.main .layui-table-view {
+  margin: 10px 0 0 0;
+}
+.main .layui-form-label {
+  width: auto;
+}
+.main .layui-form-item .layui-input-inline {
+  width: 120px;
+}
+.main .layui-table-page {
+  text-align: right;
+  padding: 15px 0;
+  height: auto;
+}
+.main .layui-form-item {
+  margin-bottom: 0px;
+}
+.main .layui-table-tool {
+  padding: 0 0 20px 0;
+  background-color: white;
+}
+.main .layui-table-tool-self {
+  display: none;
+}
+.main table {
+  width: 100%;
+}
+.main .layui-btn-white {
+  background-color: white;
+  border: 1px solid #489DFC;
+  color: #489DFC;
+}
+.main .layui-btn-white:hover {
+  background-color: white;
+  border: 1px solid #489DFC;
+  color: #489DFC;
+}
+.main .layui-card {
+  padding: 0 18px;
+}
+.main .layui-card .layui-card-header {
+  font-size: 18px;
+  color: #333333;
+  position: relative;
+  font-weight: 600;
+  border-bottom: 1px solid #e5e5e5;
+  line-height: 25px;
+  height: auto;
+  padding: 12px 20px;
+}
+.main .layui-card .layui-card-header::before {
+  width: 4px;
+  height: 16px;
+  background: #489DFC;
+  border-radius: 3px;
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.main .layui-card .layui-card-body {
+  padding: 25px 0;
+}
+.side-shrink .layui-layout-admin .layui-logo {
+  width: 60px;
+}
+.side-shrink .layui-layout-admin .layui-logo span {
+  display: none;
+}
+.side-shrink .layui-layout-admin .layui-body {
+  left: 60px;
+}
+.side-shrink .layui-nav-tree {
+  width: 60px;
+}
+.side-shrink .layui-nav-tree .layui-nav-item a cite {
+  display: none;
+}
+.side-shrink .layui-nav-tree .layui-nav-more {
+  display: none;
+}
+.side-shrink .layui-layout-left {
+  left: 60px;
+}
+.side-shrink .layui-layout-admin .layui-side {
+  width: 60px;
+}
+.updata {
+  width: 120px;
+  height: 120px;
+  background: white;
+  border: 1px dashed #489DFC;
+  padding-top: 30px;
+  cursor: pointer;
+}
+.updata i {
+  font-size: 30px;
+  display: block;
+  text-align: center;
+  line-height: 30px;
+  color: #489DFC;
+}
+.updata span {
+  display: block;
+  text-align: center;
+  margin-top: 15px;
+  font-size: 16px;
+  color: #489DFC;
+  line-height: 22px;
+}
+.verify-tips {
+  font-size: 12px;
+  color: red;
+  position: absolute;
+  left: 0;
+  top: 100%;
+}

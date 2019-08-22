@@ -1,0 +1,1005 @@
+@import '../../public/less/puls.less';
+
+.looking-for {
+    div.t {
+        overflow: hidden;
+
+        &.three {
+            div.l {
+                width: 39.5%;
+                float: left;
+            }
+
+            div.r {
+                width: 39.5%;
+                float: left;
+                margin-left: 1%;
+            }
+
+            div.talents {
+                width: 19%;
+                float: right;
+
+                .talentsContent {
+                    padding: 12px 0;
+
+                    p {
+                        width: 172px;
+                        height: 67px;
+                        background: rgba(246, 247, 251, 1);
+                        border-radius: 5px;
+                        border: 1px solid rgba(213, 214, 220, 1);
+                        margin: 0 auto;
+                        padding: 12px;
+                        line-height: 45px;
+                        font-size: 19px;
+                        color: rgba(153, 153, 153, 1);
+                        cursor: pointer;
+
+                        i {
+                            width: 44px;
+                            height: 43px;
+                            background: rgba(72, 157, 252, 1);
+                            border-radius: 5px;
+                            font-size: 25px;
+                            text-align: center;
+                            line-height: 43px;
+                            color: white;
+                            display: block;
+                            float: left;
+                            margin-right: 20px;
+                        }
+                    }
+
+                    span {
+                        display: block;
+                        margin-top: 17px;
+                        text-align: center;
+                        font-size: 12px;
+                        color: rgba(153, 153, 153, 1);
+                        line-height: 17px;
+                    }
+                }
+            }
+        }
+
+        div.l {
+            width: 49.5%;
+            float: left;
+
+            .layui-card {
+                padding: 0 0 0 18px;
+
+                .layui-card-body {
+                    height: 176px;
+
+                    .usermsg {
+                        overflow: hidden;
+
+                        .username {
+                            float: left;
+                            overflow: hidden;
+
+                            h2 {
+                                font-size: 16px;
+                                color: rgba(102, 102, 102, 1);
+                                line-height: 24px;
+                                float: left;
+                            }
+
+                            p {
+                                margin-left: 8px;
+                                float: left;
+                                background: url(../images/icon_vip_back.jpg) no-repeat center;
+                                width: 52px;
+                                height: 24px;
+                                background-size: cover;
+                                position: relative;
+
+                                span {
+                                    font-size: 12px;
+                                    color: rgba(72, 157, 252, 1);
+                                    position: absolute;
+                                    right: 0;
+                                    line-height: 24px;
+                                    width: 35px;
+                                    text-align: center;
+                                }
+                            }
+                        }
+
+                        .grade {
+                            float: left;
+                            margin-left: 40px;
+                            line-height: 24px;
+                            font-size: 14px;
+                            color: rgba(102, 102, 102, 1);
+
+                            a {
+                                font-size: 14px;
+                                color: rgba(72, 157, 252, 1);
+                            }
+                        }
+
+                    }
+
+                    .link {
+                        margin-top: 20px;
+                        overflow: hidden;
+                        line-height: 20px;
+
+                        a {
+                            display: block;
+                            float: left;
+                            font-size: 14px;
+
+                            span {
+                                color: @c;
+                            }
+
+                            position: relative;
+                            padding-right: 10px;
+                            margin-right: 10px;
+
+                            &::before {
+                                height: 60%;
+                                position: absolute;
+                                top: 20%;
+                                right: 0;
+                                content: '';
+                                display: block;
+                                border-right: 1px solid #dddddd;
+                            }
+
+                            &:last-child {
+                                &::before {
+                                    display: none;
+                                }
+                            }
+                        }
+                    }
+
+                    .btn {
+                        margin-top: 24px;
+                        overflow: hidden;
+
+                        button {
+                            &:first-child {
+                                background-color: @c;
+                                color: white;
+                                a{color: white;}
+                            }
+
+                            &:last-child {
+                                background-color: white;
+                                color: @c;
+                                border: 1px solid @c;
+                                margin-left: 48px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        div.r {
+            width: 49.5%;
+            float: right;
+
+            .layui-card {
+                padding: 0 18px 0 0;
+
+                .layui-card-header {
+                    padding: 12px 38px;
+
+                    &::before {
+                        left: 18px;
+                    }
+                }
+
+                .layui-card-body {
+                    padding: 25px 0 25px 18px;
+                    height: 176px;
+
+                    ul.notice {
+                        li {
+                            line-height: 20px;
+                            position: relative;
+                            padding-left: 20px;
+                            overflow: hidden;
+                            margin-top: 15px;
+
+                            &:before {
+                                position: absolute;
+                                top: 50%;
+                                left: 0px;
+                                transform: translateY(-50%);
+                                width: 8px;
+                                height: 8px;
+                                background: rgba(229, 229, 229, 1);
+                                display: block;
+                                content: '';
+                                border-radius: 50%;
+                            }
+
+                            &:first-child {
+                                margin-top: 0px;
+                            }
+
+                            a:hover {
+                                h2 {
+                                    color: @c;
+                                }
+                            }
+
+                            h2 {
+                                font-size: 14px;
+                                color: rgba(102, 102, 102, 1);
+                                float: left;
+
+                                font {
+                                    height: 22px;
+                                    background: @c;
+                                    border-radius: 2px;
+                                    color: white;
+                                    padding: 0 10px;
+                                    display: inline-block;
+                                    margin-left: 10px;
+                                    font-size: 12px;
+                                    line-height: 22px;
+                                }
+                            }
+
+                            span {
+                                float: right;
+                                display: block;
+                                font-size: 14px;
+                                color: rgba(102, 102, 102, 1);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    div.b {
+        margin-top: 16px;
+        background-color: white;
+        border-radius: 4px;
+        padding: 60px 0;
+        overflow: hidden;
+
+        div.listContent {
+            text-align: center;
+
+            div.list {
+                width: 367px;
+                color: white;
+                padding: 30px;
+                box-shadow: 0px 2px 10px 0px rgba(72, 157, 252, 0.31);
+                border-radius: 5px;
+                border: 2px solid white;
+                display: inline-block;
+                margin: 0 85px;
+
+                &:hover {
+                    border: 2px solid @c;
+                }
+
+                &>h2 {
+                    font-size: 24px;
+                    color: rgba(72, 157, 252, 1);
+                    line-height: 33px;
+                    text-align: center;
+                }
+
+                &>p {
+                    width: 135px;
+                    height: 105px;
+                    margin: 30px auto 0 auto;
+
+                    img {
+                        width: 100%;
+                    }
+                }
+
+                &>span {
+                    display: block;
+                    margin-top: 25px;
+                    text-align: center;
+                    color: rgba(153, 153, 153, 1);
+                    line-height: 20px;
+                    font-size: 14px;
+                }
+
+                div.tip {
+                    margin-top: 50px;
+                    text-align: left;
+
+                    h2 {
+                        font-size: 16px;
+                        font-weight: 500;
+                        color: rgba(153, 153, 153, 1);
+                        line-height: 22px;
+                    }
+
+                    p {
+                        margin-top: 8px;
+                        font-size: 14px;
+                        color: @c;
+                        line-height: 20px;
+                        position: relative;
+                        padding-left: 16px;
+
+                        &::before {
+                            width: 8px;
+                            height: 8px;
+                            background: rgba(72, 157, 252, 1);
+                            position: absolute;
+                            display: block;
+                            content: '';
+                            top: 50%;
+                            left: 0;
+                            transform: translateY(-50%);
+                            border-radius: 50%;
+                        }
+                    }
+                }
+
+                div.btn {
+                    margin-top: 45px;
+
+                    button {
+                        width: 262px;
+                        height: 40px;
+                        background: @c;
+                        box-shadow: 0px 2px 10px 0px rgba(72, 157, 252, 0.5);
+                        border-radius: 2px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//寻找项目列表
+.looking-for-list {
+    div.t {
+        .layui-card {
+            .layui-card-body {
+                overflow: hidden;
+
+                div.l {
+                    float: left;
+                    margin: 0 50px 0 12px;
+
+                    p {
+                        width: 72px;
+                        height: 72px;
+                        overflow: hidden;
+                        border-radius: 50%;
+
+                        img {
+                            width: 100%;
+                        }
+                    }
+                }
+
+                div.r {
+                    float: left;
+
+                    &>h2 {
+                        font-size: 20px;
+                        color: rgba(0, 0, 0, 0.85);
+                        line-height: 28px;
+                    }
+
+                    .usermsg {
+                        overflow: hidden;
+                        margin-top: 17px;
+
+                        .username {
+                            float: left;
+                            overflow: hidden;
+
+                            h2 {
+                                font-size: 16px;
+                                color: rgba(102, 102, 102, 1);
+                                line-height: 24px;
+                                float: left;
+                            }
+
+                            p {
+                                margin-left: 8px;
+                                float: left;
+                                background: url(../images/icon_vip_back.jpg) no-repeat center;
+                                width: 52px;
+                                height: 24px;
+                                background-size: cover;
+                                position: relative;
+
+                                span {
+                                    font-size: 12px;
+                                    color: rgba(72, 157, 252, 1);
+                                    position: absolute;
+                                    right: 0;
+                                    line-height: 24px;
+                                    width: 35px;
+                                    text-align: center;
+                                }
+                            }
+                        }
+
+                        .grade {
+                            float: left;
+                            margin-left: 40px;
+                            line-height: 24px;
+                            font-size: 14px;
+                            color: rgba(102, 102, 102, 1);
+
+                            a {
+                                font-size: 14px;
+                                color: rgba(72, 157, 252, 1);
+                            }
+                        }
+
+                    }
+
+                    .btn {
+                        margin-top: 17px;
+                        overflow: hidden;
+
+                        button {
+                            &:first-child {
+                                background-color: @c;
+                                color: white;
+                            }
+
+                            &:last-child {
+                                background-color: white;
+                                color: @c;
+                                border: 1px solid @c;
+                                margin-left: 48px;
+                            }
+                        }
+                    }
+                }
+
+                div.num {
+                    float: right;
+                    padding: 25px 0;
+
+                    a {
+                        display: block;
+                        float: left;
+                        position: relative;
+                        padding-right: 30px;
+                        margin-right: 30px;
+
+                        span {
+                            display: block;
+                            text-align: center;
+                            font-size: 14px;
+                            color: rgba(0, 0, 0, 0.45);
+                            line-height: 22px;
+                        }
+
+                        h2 {
+                            font-size: 30px;
+                            color: rgba(0, 0, 0, 0.85);
+                            line-height: 38px;
+                            margin-top: 4px;
+                            text-align: center;
+                        }
+
+                        &::before {
+                            height: 60%;
+                            position: absolute;
+                            top: 20%;
+                            right: 0;
+                            content: '';
+                            display: block;
+                            border-right: 1px solid #dddddd;
+                        }
+
+                        &:last-child {
+                            &::before {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+
+    div.b {
+        margin-top: 15px;
+
+        .layui-card-body {
+            padding: 25px 0 0 0;
+
+            &>div.list {
+                padding: 0 0 30px 0;
+
+                ul {
+                    overflow: hidden;
+
+                    li {
+                        float: left;
+                        margin-top: 30px;
+                        margin-right: 40px;
+                        width: 310px;
+                        padding: 7px;
+                        border-radius: 4px;
+                        border: 1px solid rgba(222, 226, 230, 1);
+
+                        &.no {
+                            div.t {
+                                background-color: #FF8585;
+                            }
+                        }
+
+                        &.be {
+                            div.t {
+                                background-color: #489DFC;
+                            }
+                        }
+
+                        &.pass {
+                            div.t {
+                                background-color: #75D2B2;
+                            }
+                        }
+
+                        &.off {
+                            div.t {
+                                background-color: #A1B1C4;
+                            }
+                        }
+
+                        &.warn {
+                            div.t {
+                                background-color: #FADA8A;
+                            }
+                        }
+
+                        div.t {
+                            padding: 14px 10px;
+                            overflow: hidden;
+                            border-radius: 4px;
+
+                            &>h2 {
+                                font-size: 18px;
+                                font-weight: 600;
+                                color: white;
+                                line-height: 25px;
+                                float: left;
+                            }
+
+                            div {
+                                float: right;
+
+                                &>h2 {
+                                    font-size: 16px;
+                                    font-weight: 500;
+                                    color: white;
+                                }
+
+                                &>p {
+                                    font-size: 16px;
+                                    color: white;
+                                    text-align: right;
+                                    margin-top: 8px;
+
+                                    span {
+                                        font-size: 25px;
+                                        color: white;
+                                        font-weight: 600;
+                                        margin-right: 5px;
+                                    }
+                                }
+                            }
+                        }
+
+                        div.b {
+                            margin-top: 25px;
+                            padding: 0 3px;
+
+                            &>h2 {
+                                font-size: 18px;
+                                color: rgba(51, 51, 51, 1);
+                                line-height: 25px;
+                            }
+
+                            &>div.two {
+                                margin-top: 23px;
+                                overflow: hidden;
+
+                                p {
+                                    font-size: 14px;
+                                    color: rgba(153, 153, 153, 1);
+                                    line-height: 20px;
+
+                                    span {
+                                        color: #333333;
+                                    }
+
+                                    &:first-child {
+                                        float: left;
+                                    }
+
+                                    &:last-child {
+                                        float: right;
+                                    }
+                                }
+                            }
+
+                            &>div.bar {
+                                margin-top: 18px;
+                                overflow: hidden;
+                                position: relative;
+
+                                label {
+                                    font-size: 14px;
+                                    color: rgba(153, 153, 153, 1);
+                                    line-height: 20px;
+                                    float: left;
+                                    display: block;
+                                }
+
+                                .layui-progress {
+                                    position: absolute;
+                                    left: 70px;
+                                    top: 2px;
+                                    right: 30px;
+                                }
+
+                                &>p {
+                                    float: right;
+                                    display: block;
+                                    font-size: 16px;
+                                    color: #999999;
+                                    line-height: 22px;
+
+                                    span {
+                                        color: #333333;
+                                    }
+                                }
+                            }
+
+                            &>span {
+                                font-size: 14px;
+                                color: rgba(72, 157, 252, 1);
+                                line-height: 20px;
+                                display: block;
+                                text-align: center;
+                                margin-top: 20px;
+                                padding-bottom: 13px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//项目详情
+.look-details {
+    .project-info {
+        div.title {
+            overflow: hidden;
+
+            p {
+                font-size: 14px;
+                color: rgba(102, 102, 102, 1);
+                line-height: 22px;
+                float: left;
+                padding-right: 30px;
+                margin-right: 30px;
+
+                span {
+                    color: #333333;
+                }
+
+                .rline(80%);
+            }
+        }
+
+        div.desc {
+            margin-top: 25px;
+            overflow: hidden;
+
+            span {
+                font-size: 14px;
+                color: rgba(102, 102, 102, 1);
+                line-height: 22px;
+                float: left;
+                display: block;
+                width: 70px;
+            }
+
+            p {
+                margin-left: 70px;
+                font-size: 14px;
+                color: rgba(153, 153, 153, 1);
+                line-height: 22px;
+                width: 592px;
+            }
+        }
+
+        div.state {
+            margin-top: 40px;
+            overflow: hidden;
+
+            span {
+                font-size: 14px;
+                color: rgba(102, 102, 102, 1);
+                line-height: 22px;
+                float: left;
+                display: block;
+                width: 70px;
+            }
+
+            p {
+                margin-left: 70px;
+                color: rgba(51, 51, 51, 1);
+                line-height: 22px;
+                padding-left: 24px;
+                position: relative;
+
+                span {
+                    color: @c;
+                }
+
+                &:before {
+                    width: 16px;
+                    height: 16px;
+                    border-radius: 50%;
+                    position: absolute;
+                    left: 0;
+                    top: 3px;
+                    content: '';
+                }
+
+                &.be {
+                    &::before {
+                        background: rgba(72, 157, 252, 1);
+                    }
+                }
+
+                &.off {
+                    &::before {
+                        background: #A1B1C4;
+                    }
+                }
+
+                &.pass {
+                    &::before {
+                        background: #75D2B2;
+                    }
+                }
+            }
+        }
+
+        div.obj {
+            margin-top: 24px;
+            overflow: hidden;
+
+            &>span {
+                font-size: 14px;
+                color: rgba(102, 102, 102, 1);
+                line-height: 22px;
+                float: left;
+                display: block;
+                width: 70px;
+            }
+
+            p {
+                margin-left: 70px;
+                line-height: 22px;
+                position: relative;
+
+                span {
+                    color: @c;
+                    font-weight: 600;
+                    margin: 0 5px;
+                }
+            }
+        }
+
+        div.btn {
+            margin-top: 24px;
+            overflow: hidden;
+
+            button {
+                width: 154px;
+                height: 50px;
+                background: rgba(72, 157, 252, 1);
+                box-shadow: 0px 2px 10px 0px rgba(72, 157, 252, 0.5);
+                border-radius: 4px;
+                line-height: 50px;
+            }
+
+            span {
+                position: relative;
+                top: 15px;
+                color: #999999;
+                display: inline-block;
+                margin-left: 20px;
+            }
+        }
+    }
+
+    .project-info {
+        margin-top: 15px;
+    }
+}
+
+//报名详情
+.apply-details {
+    .apply-info {
+        .title {
+            overflow: hidden;
+
+            h2 {
+                font-size: 18px;
+                color: rgba(51, 51, 51, 1);
+                line-height: 25px;
+                float: left;
+            }
+
+            span {
+                width: 108px;
+                height: 25px;
+                text-align: center;
+                margin-left: 10px;
+                display: block;
+                float: left;
+                background: rgba(72, 157, 252, 0.2);
+                border-radius: 4px;
+                font-size: 14px;
+                color: rgba(72, 157, 252, 1);
+                line-height: 25px;
+            }
+        }
+
+        .hint {
+            margin-top: 15px;
+
+            i {
+                font-size: 14px;
+                color: rgba(245, 91, 91, 1);
+                margin-right: 5px;
+            }
+
+            font-size: 14px;
+            color: rgba(245, 91, 91, 1);
+            line-height: 20px;
+
+            span {
+                font-size: 18px;
+                font-weight: 600;
+            }
+        }
+
+        .form {
+            margin-top: 30px;
+            height: 40px;
+
+            .layui-btn {
+                border: 1px solid @c;
+            }
+
+            div.l {
+                width: 30%;
+                float: left;
+
+                &.mytaskl {
+                    width: 40%;
+
+                    div.rbtn {
+                        margin-left: 60px;
+                        display: inline-block;
+                    }
+                }
+            }
+
+            div.r {
+                float: right;
+
+                div.link {
+                    float: right;
+
+                    p {
+                        display: inline-block;
+                        font-size: 14px;
+                        line-height: 20px;
+                        margin-left: 40px;
+                        cursor: pointer;
+
+                        a {
+                            color: rgba(153, 153, 153, 1);
+
+                            &:hover {
+                                color: @c;
+                            }
+                        }
+
+                        i {
+                            font-size: 20px;
+                            margin-right: 5px;
+                            color: @c;
+                            float: left;
+                        }
+                    }
+                }
+
+                &>span {
+                    float: left;
+                    width: 70px;
+                    line-height: 40px;
+                    height: 40px;
+                    font-size: 14px;
+                    color: rgba(51, 51, 51, 1);
+                }
+
+                .layui-input-block {
+                    float: left;
+                    height: 16px;
+                    margin-top: 12px;
+                    margin-left: 15px;
+                }
+
+                .money {
+                    float: left;
+                    margin-left: 45px;
+                    display: block;
+                    font-size: 14px;
+                    color: rgba(51, 51, 51, 1);
+                    line-height: 40px;
+                    height: 40px;
+
+                    span {
+                        font-size: 24px;
+                        color: rgba(245, 91, 91, 1);
+                        line-height: 33px;
+                    }
+                }
+
+                button {
+                    float: right;
+                    margin-left: 25px;
+                }
+            }
+        }
+    }
+
+    .apply-list {
+        margin-top: 10px;
+    }
+
+    .mytask-file {
+        padding: 20px 24px;
+        background: rgba(72, 157, 252, 0.05);
+        border: 1px solid rgba(72, 157, 252, 1);
+        overflow: hidden;
+
+        ul {
+            li {
+                font-size: 14px;
+                line-height: 24px;
+                float: left;
+                margin-right: 70px;
+
+                a {
+                    color: rgba(51, 123, 183, 1);
+                }
+            }
+        }
+    }
+
+}

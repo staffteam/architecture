@@ -1,0 +1,166 @@
+@import '../../public/less/puls.less';
+
+body {
+    background: rgba(249, 251, 255, 1);
+    height: 100vh;
+}
+
+.fill-out {
+    position: relative;
+    margin: 0 auto;
+    padding: 10% 0;
+    width: 478px;
+    &#login {
+        display: none;
+    }
+    &#register {
+        display: none;
+    }
+    &#find {
+        display: none;
+    }
+    div.t {
+        width: 478px;
+        padding-bottom: 36px;
+        background: rgba(255, 255, 255, 1);
+        box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.05);
+        border-radius: 6px;
+        border: 1px solid rgba(231, 231, 235, 1);
+
+        &>h2 {
+            height: 33px;
+            font-size: 24px;
+            font-family: PingFangSC;
+            font-weight: 500;
+            color: @c;
+            line-height: 33px;
+            padding: 47px 0 0 50px;
+        }
+
+        &>div.layui-form {
+            width: 378px;
+            margin: 0 auto;
+            margin-top: 22px;
+
+            .layui-form-item {
+                margin-bottom: 0px;
+
+                .layui-input-block {
+                    margin-left: 0px;
+
+                    input {
+                        height: 50px;
+                        background: rgba(255, 255, 255, 1);
+                        border: 1px solid rgba(231, 231, 235, 1);
+                        font-size: 14px;
+                    }
+                }
+
+                .layui-form-checkbox[lay-skin=primary] {
+                    height: 20px !important;
+                    margin-top: 20px;
+                    em{
+                        color: @c;
+                        padding-right: 0;
+                        font-style: normal;
+                        position: relative;
+                        top: -1px;
+                    }
+                }
+
+                span.retrieve {
+                    margin-top: 20px;
+                    font-size: 14px;
+                    color: rgba(102, 102, 102, 1);
+                    line-height: 20px;
+                    float: right;
+                    cursor: pointer;
+                    &:hover{
+                        color: @c;
+                    }
+                }
+                .get-code{
+                    position: absolute;
+                    right: 10px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    cursor: pointer;
+                    color: @c;
+                }
+            }
+
+            .submit {
+                margin-top: 29px;
+
+                button {
+                    width: 378px;
+                    height: 50px;
+                    background: @c;
+                    border-radius: 2px;
+                    &.off{
+                        background-color: #999999;
+                        cursor: no-drop;
+                    }
+                }
+            }
+        }
+    }
+
+    div.b {
+        margin-top: 20px;
+        width: 478px;
+        height: 53px;
+        line-height: 53px;
+        background: rgba(255, 255, 255, 1);
+        box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.05);
+        border-radius: 6px;
+        border: 1px solid rgba(231, 231, 235, 1);
+        text-align: center;
+
+        i {
+            font-size: 21px;
+            color: #999999;
+        }
+
+        span {
+            font-size: 14px;
+            color: rgba(153, 153, 153, 1);
+            line-height: 20px;
+
+            a {
+                color: @c;
+            }
+        }
+    }
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 0;
+
+    div.t {
+        text-align: center;
+
+        a {
+            font-size: 14px;
+            color: rgba(153, 153, 153, 1);
+            line-height: 20px;
+            margin: 0 20px;
+
+            &:hover {
+                color: @c;
+            }
+        }
+    }
+
+    div.b {
+        margin-top: 12px;
+        text-align: center;
+        font-size: 12px;
+        color: rgba(153, 153, 153, 1);
+        line-height: 17px;
+    }
+}

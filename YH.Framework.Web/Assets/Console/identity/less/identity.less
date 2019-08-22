@@ -1,0 +1,351 @@
+@import '../../public/less/puls.less';
+
+.identity {
+    .layui-card-body {
+        min-height: 80vh;
+    }
+
+    .hint {
+        height: 46px;
+        background: rgba(245, 245, 245, 1);
+        line-height: 46px;
+        font-size: 14px;
+        color: rgba(102, 102, 102, 1);
+        padding: 0 10px;
+    }
+
+    .entrance {
+        margin-top: 45px;
+
+        &>h2 {
+            font-size: 14px;
+            font-weight: 500;
+            color: rgba(51, 51, 51, 1);
+            line-height: 20px;
+        }
+
+        &>ul {
+            padding: 20px 0;
+            height: 256px;
+
+            li {
+                width: 442px;
+                height: 256px;
+                background: rgba(255, 255, 255, 1);
+                box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+                float: left;
+                padding-top: 50px;
+                margin-right: 24px;
+                padding-bottom: 28px;
+                border: 2px solid white;
+
+                &:hover {
+                    border: 2px solid @c;
+                }
+
+                p {
+                    width: 135px;
+                    height: 105px;
+                    margin: 0 auto 0 auto;
+
+                    img {
+                        width: 100%;
+                    }
+                }
+
+                h2 {
+                    font-size: 16px;
+                    color: rgba(72, 157, 252, 1);
+                    line-height: 22px;
+                    text-align: center;
+                    margin-top: 35px;
+                }
+
+                span {
+                    display: block;
+                    margin-top: 5px;
+                    font-size: 12px;
+                    color: rgba(153, 153, 153, 1);
+                    line-height: 17px;
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+    .layui-card-body.auto {
+        min-height: auto;
+    }
+
+    .identity-step {
+        overflow: hidden;
+
+        div.l {
+            width: 450px;
+            height: 48px;
+            font-size: 14px;
+            color: rgba(153, 153, 153, 1);
+            line-height: 24px;
+        }
+
+        div.r {
+            float: left;
+            font-size: 14px;
+            color: rgba(102, 102, 102, 1);
+            line-height: 30px;
+            overflow: hidden;
+            padding: 5px 0;
+
+            li {
+                float: left;
+                margin-right: 30px;
+                padding-right: 30px;
+                position: relative;
+
+                &:last-child {
+                    &::before {
+                        display: none;
+                    }
+                }
+
+                &::before {
+                    content: '';
+                    border-bottom: 1px solid rgba(216, 216, 216, 1);
+                    width: 30px;
+                    right: -15px;
+                    top: 50%;
+                    transform: translateY(50%);
+                    display: block;
+                    position: absolute;
+                }
+
+                &.on {
+                    i {
+                        background: rgba(72, 157, 252, 1);
+                        color: white;
+                        border: 1px solid rgba(72, 157, 252, 1);
+                    }
+                }
+
+                i {
+                    width: 30px;
+                    height: 30px;
+                    border: 1px solid rgba(151, 151, 151, 1);
+                    text-align: center;
+                    line-height: 30px;
+                    display: block;
+                    float: left;
+                    font-size: 18px;
+                    color: rgba(151, 151, 151, 1);
+                    border-radius: 50%;
+                    font-style: normal;
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+
+    .identity-form {
+        .layui-form-item {
+            margin-bottom: 30px;
+
+            .layui-input-inline {
+                width: 300px;
+                position: relative;
+            }
+        }
+
+        .updata-tip {
+            height: 48px;
+            font-size: 14px;
+            color: rgba(153, 153, 153, 1);
+            line-height: 24px;
+            display: inline-block;
+            margin-top: 10px;
+        }
+    }
+
+    .identity-type {
+        &>h2 {
+            font-size: 16px;
+            color: rgba(51, 51, 51, 1);
+            line-height: 22px;
+            margin-top: 28px;
+            font-weight: 600;
+        }
+
+        min-height: 28vw;
+
+        div.type-content {
+            padding: 40px 28px 30px 28px;
+            overflow: hidden;
+            div.l {
+                float: left;
+                height: 526px;
+                width: 75%;
+                ul {
+                    li {
+                        width: 31.33%;
+                        height: 526px;
+                        background: rgba(255, 255, 255, 1);
+                        border-radius: 5px;
+                        border: 1px solid rgba(221, 221, 221, 1);
+                        float: left;
+                        padding: 33px 40px;
+                        margin-right: 3%;
+                        transition: 0.3s all;
+                        &:last-child{
+                            margin-right: 0;
+                        }
+                        &:hover {
+                            background: rgba(255, 255, 255, 1);
+                            box-shadow: 0px 0px 20px 0px rgba(72, 157, 252, 0.8);
+                            border-radius: 6px;
+                            border: 1px solid rgba(72, 157, 252, 0.8);
+                        }
+
+                        &>h2 {
+                            font-size: 17px;
+                            color: rgba(51, 51, 51, 1);
+                            line-height: 24px;
+                            text-align: center;
+                            font-weight: 600;
+                        }
+
+                        &>p {
+                            max-width: 178px;
+                            margin: 0 auto;
+                            margin-top: 3.5vw;
+                        }
+
+                        &>div {
+                            margin-top: 3vw;
+
+                            h2 {
+                                font-size: 19px;
+                                color: rgba(51, 51, 51, 1);
+                                line-height: 28px;
+                            }
+
+                            div {
+                                font-size: 15px;
+                                color: rgba(153, 153, 153, 1);
+                                line-height: 21px;
+                                margin-top: 12px;
+                            }
+                        }
+
+                        &>a {
+                            display: block;
+                            width: 90%;
+                            height: 40px;
+                            margin: 0 auto;
+                            margin-top: 2vw;
+                        }
+                    }
+                }
+            }
+
+            div.r {
+                float: right;
+                width: 22.5%;
+                ul {
+                    li {
+                        width: 100%;
+                        height: 160px;
+                        background: rgba(255, 255, 255, 1);
+                        border-radius: 5px;
+                        border: 1px solid rgba(221, 221, 221, 1);
+                        padding: 20px;
+                        margin-top: 23px;
+                        &:first-child{
+                            margin-top: 0px;
+                        }
+                        h2 {
+                            font-size: 17px;
+                            color: rgba(51, 51, 51, 1);
+                            line-height: 24px;
+                            text-align: center;
+                            font-weight: 600;
+                        }
+
+                        p {
+                            font-size: 13px;
+                            color: rgba(153, 153, 153, 1);
+                            line-height: 18px;
+                            margin-top: 10px;
+                            text-align: center;
+                        }
+
+                        a {
+                            width: 60%;
+                            display: block;
+                            margin: 0 auto;
+                            margin-top: 1vw;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.dientity-success {
+    min-height: 56vh;
+
+    div.t {
+        height: 46px;
+        background: rgba(255, 255, 255, 1);
+        border: 1px solid rgba(72, 157, 252, 1);
+        font-size: 14px;
+        color: rgba(72, 157, 252, 1);
+        line-height: 46px;
+        padding: 0 15px;
+    }
+
+    div.b {
+        margin-top: 80px;
+        text-align: center;
+
+        h2 {
+            display: inline-block;
+            font-size: 24px;
+            color: rgba(102, 102, 102, 1);
+            line-height: 40px;
+
+            i {
+                width: 40px;
+                height: 40px;
+                color: rgba(117, 210, 178, 1);
+                border: 3px solid rgba(117, 210, 178, 1);
+                border-radius: 50%;
+                text-align: center;
+                line-height: 36px;
+                display: block;
+                float: left;
+                font-size: 25px;
+                font-weight: 600;
+                margin-right: 13px;
+            }
+        }
+
+        &>span {
+            display: block;
+            margin-top: 25px;
+            text-align: center;
+            font-size: 14px;
+            color: rgba(102, 102, 102, 1);
+            line-height: 20px;
+        }
+
+        &>div {
+            margin-top: 45px;
+            padding-right: 50px;
+
+            button {
+                box-shadow: 0px 2px 10px 0px rgba(72, 157, 252, 0.5);
+                margin-right: 40px;
+            }
+        }
+    }
+}

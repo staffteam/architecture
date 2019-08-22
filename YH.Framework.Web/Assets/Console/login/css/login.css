@@ -1,0 +1,145 @@
+body {
+  background: #f9fbff;
+  height: 100vh;
+}
+.fill-out {
+  position: relative;
+  margin: 0 auto;
+  padding: 10% 0;
+  width: 478px;
+}
+.fill-out#login {
+  display: none;
+}
+.fill-out#register {
+  display: none;
+}
+.fill-out#find {
+  display: none;
+}
+.fill-out div.t {
+  width: 478px;
+  padding-bottom: 36px;
+  background: #ffffff;
+  box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.05);
+  border-radius: 6px;
+  border: 1px solid #e7e7eb;
+}
+.fill-out div.t > h2 {
+  height: 33px;
+  font-size: 24px;
+  font-family: PingFangSC;
+  font-weight: 500;
+  color: #489DFC;
+  line-height: 33px;
+  padding: 47px 0 0 50px;
+}
+.fill-out div.t > div.layui-form {
+  width: 378px;
+  margin: 0 auto;
+  margin-top: 22px;
+}
+.fill-out div.t > div.layui-form .layui-form-item {
+  margin-bottom: 0px;
+}
+.fill-out div.t > div.layui-form .layui-form-item .layui-input-block {
+  margin-left: 0px;
+}
+.fill-out div.t > div.layui-form .layui-form-item .layui-input-block input {
+  height: 50px;
+  background: #ffffff;
+  border: 1px solid #e7e7eb;
+  font-size: 14px;
+}
+.fill-out div.t > div.layui-form .layui-form-item .layui-form-checkbox[lay-skin=primary] {
+  height: 20px !important;
+  margin-top: 20px;
+}
+.fill-out div.t > div.layui-form .layui-form-item .layui-form-checkbox[lay-skin=primary] em {
+  color: #489DFC;
+  padding-right: 0;
+  font-style: normal;
+  position: relative;
+  top: -1px;
+}
+.fill-out div.t > div.layui-form .layui-form-item span.retrieve {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #666666;
+  line-height: 20px;
+  float: right;
+  cursor: pointer;
+}
+.fill-out div.t > div.layui-form .layui-form-item span.retrieve:hover {
+  color: #489DFC;
+}
+.fill-out div.t > div.layui-form .layui-form-item .get-code {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #489DFC;
+}
+.fill-out div.t > div.layui-form .submit {
+  margin-top: 29px;
+}
+.fill-out div.t > div.layui-form .submit button {
+  width: 378px;
+  height: 50px;
+  background: #489DFC;
+  border-radius: 2px;
+}
+.fill-out div.t > div.layui-form .submit button.off {
+  background-color: #999999;
+  cursor: no-drop;
+}
+.fill-out div.b {
+  margin-top: 20px;
+  width: 478px;
+  height: 53px;
+  line-height: 53px;
+  background: #ffffff;
+  box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.05);
+  border-radius: 6px;
+  border: 1px solid #e7e7eb;
+  text-align: center;
+}
+.fill-out div.b i {
+  font-size: 21px;
+  color: #999999;
+}
+.fill-out div.b span {
+  font-size: 14px;
+  color: #999999;
+  line-height: 20px;
+}
+.fill-out div.b span a {
+  color: #489DFC;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 40px 0;
+}
+.footer div.t {
+  text-align: center;
+}
+.footer div.t a {
+  font-size: 14px;
+  color: #999999;
+  line-height: 20px;
+  margin: 0 20px;
+}
+.footer div.t a:hover {
+  color: #489DFC;
+}
+.footer div.b {
+  margin-top: 12px;
+  text-align: center;
+  font-size: 12px;
+  color: #999999;
+  line-height: 17px;
+}
