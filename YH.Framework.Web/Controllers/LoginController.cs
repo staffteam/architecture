@@ -3,15 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using WaterMonitor.Web.Core.Mvc;
+using YH.Framework.Web.Core.Mvc;
 
-namespace WaterMonitor.Web.Controllers
+namespace YH.Framework.Web.Controllers
 {
-    public class TestController : BaseController
+    public class LoginController : BaseController
     {
-        public ActionResult Index()
+
+        public ActionResult Login()
         {
             return View();
         }
+
     }
 }

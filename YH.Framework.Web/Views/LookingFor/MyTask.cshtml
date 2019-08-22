@@ -1,0 +1,73 @@
+﻿@{
+    ViewBag.Title = "我的任务";
+}
+@Styles.Render("~/Assets/Console/lookingFor/css/lookingFor.css")
+<div class="breadcrumb">
+    <span class="layui-breadcrumb">
+        <a href="../index/index.html">首页</a>
+        <a href="../lookingFor/lookingFor.html">寻找项目</a>
+        <a><cite>项目报名</cite></a>
+    </span>
+</div>
+<div class="content" id="content">
+    <div class="container">
+        <div class="apply-details">
+            <div class="layui-card" style="margin-bottom: 0px;">
+                <div class="layui-card-header">我的任务栏 </div>
+                <div class="layui-card-body" style="padding-bottom:0px;">
+                    <div class="apply-info">
+                        <div class="title">
+                            <h2>世茂五里河超高层住宅</h2>
+                            <span>项目进行中</span>
+                        </div>
+                        <div class="hint">
+                            <i class="layui-icon layui-icon-about"></i>
+                            提醒：今日还有成果表未提交！距离最后提交时间还剩
+                            <span>5</span>
+                            小时
+                        </div>
+                        <div class="form layui-form" id="myTaskform">
+                            <div class="l mytaskl">
+                                <div class="layui-btn-group">
+                                    <button type="button" data-id="0" class="layui-btn">初步设计阶段</button>
+                                    <button type="button" data-id="1"
+                                            class="layui-btn layui-btn-white">
+                                        施工图阶段
+                                    </button>
+                                </div>
+                                <div class="rbtn">
+                                    <button class="layui-btn layui-btn-normal">显示我的任务</button>
+                                </div>
+                            </div>
+                            <div class="r">
+                                <div class="link">
+                                    <p><a href="javascript:"><i class="layui-icon layui-icon-dialogue"></i>项目沟通</a></p>
+                                    <p><a href="javascript:"><i class="layui-icon layui-icon-user"></i>项目成员</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="apply-list">
+                        <table id="applyList" lay-filter="applyList"></table>
+                    </div>
+                </div>
+            </div>
+            <div class="layui-card">
+                <div class="layui-card-header">公共成果附件 </div>
+                <div class="layui-card-body">
+                    <div class="mytask-file">
+                        <ul>
+                            <li><a href="javascript:">建筑条件消化确认表（一）.docx</a></li>
+                            <li><a href="javascript:">建筑条件消化确认表（一）.docx</a></li>
+                            <li><a href="javascript:">建筑条件消化确认表（一）.docx</a></li>
+                            <li><a href="javascript:">建筑条件消化确认表（一）.docx</a></li>
+                            <li><a href="javascript:">建筑条件消化确认表（一）.docx</a></li>
+                            <li><a href="javascript:">建筑条件消化确认表（一）.docx</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@Scripts.Render("~/Assets/Console/lookingFor/js/lookingFor.js")

@@ -115,21 +115,34 @@ $(function () {
     });
 
     $('.get-code').click(function () {
-        if (!$(this).hasClass('on')) {
-            $(this).addClass('on');
-            $(this).html('60s后重新获取');
-            var the = this;
-            var i = 60;
-            var _time = setInterval(function () {
-                i--;
-                if (i == 0) {
-                    $(the).html('重新获取验证码');
-                    $(the).removeClass('on');
-                    clearInterval(_time);
-                } else {
-                    $(the).html(i + 's后重新获取');
-                }
-            }, 1000)
+        var _val = $(this).closest('.fill-out').find('input[name="phoneoremail"]').val();
+        if(_val != '' && isPhone.test(_val)){
+            if (!$(this).hasClass('on')) {
+                $(this).addClass('on');
+                $(this).html('60s后重新获取');
+                var the = this;
+                var i = 60;
+                var _time = setInterval(function () {
+                    i--;
+                    if (i == 0) {
+                        $(the).html('重新获取验证码');
+                        $(the).removeClass('on');
+                        clearInterval(_time);
+                    } else {
+                        $(the).html(i + 's后重新获取');
+                    }
+                }, 1000)
+            }
+        }else if(_val == ''){
+            $msg({
+                content: '请输入手机或邮箱',
+                icon: 2
+            });
+        }else if(isPhone.test(_val)){
+            $msg({
+                content: '请输入有效的手机或邮箱',
+                icon: 2
+            });
         }
     });
 })

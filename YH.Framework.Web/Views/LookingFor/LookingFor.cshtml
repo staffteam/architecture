@@ -1,19 +1,20 @@
 ﻿@{
-    ViewBag.Title = "首页";
+    ViewBag.Title = "寻找项目首页";
 }
-
+@Styles.Render("~/Assets/Console/lookingFor/css/lookingFor.css")
 <div class="breadcrumb">
     <span class="layui-breadcrumb">
-        <a><cite>首页</cite></a>
+        <a href="../index/index.html">首页</a>
+        <a><cite>寻找项目</cite></a>
     </span>
 </div>
 <div class="content" id="content">
     <div class="container">
         <div class="looking-for">
-            <div class="t three">
+            <div class="t">
                 <div class="l">
                     <div class="layui-card">
-                        <div class="layui-card-header">企业信息</div>
+                        <div class="layui-card-header">个人信息</div>
                         <div class="layui-card-body">
                             <div class="usermsg">
                                 <div class="username">
@@ -21,16 +22,25 @@
                                     <p><span>111</span></p>
                                 </div>
                                 <div class="grade">
+                                    岗位等级
+                                    <a href="javascript:">设计师助理</a>
+                                </div>
+                                <div class="grade">
                                     联系方式
                                     <a href="javascript:">15073231615</a>
                                 </div>
                             </div>
                             <div class="link">
+                                <a href="javascript:">参与项目 <span>5</span></a>
                                 <a href="javascript:">发布项目 <span>0</span></a>
+                                <a href="javascript:">收藏项目 <span>13</span></a>
                                 <a href="javascript:">关注人才 <span>5</span></a>
                             </div>
                             <div class="btn">
-                                <button type="button" class="layui-btn" style="margin-left: 0px;">
+                                <button type="button" class="layui-btn">
+                                    <a href="../identity/identityEntrance.html"><i class="layui-icon layui-icon-username"></i> 身份认证</a>
+                                </button>
+                                <button type="button" class="layui-btn">
                                     <i class="layui-icon layui-icon-list"></i> 完善资料
                                 </button>
                             </div>
@@ -43,7 +53,7 @@
                         <div class="layui-card-body">
                             <ul class="notice">
                                 <li>
-                                    <a href="../notice/noticeDetails.html" target="_blank">
+                                    <a href="http://" target="_blank">
                                         <h2>
                                             开化县1101工程及城市档案馆 / 浙江大学建筑设计研究院<font>置顶</font>
                                         </h2>
@@ -51,15 +61,15 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="../notice/noticeDetails.html" target="_blank">
+                                    <a href="http://" target="_blank">
                                         <h2>
-                                            粼”岛 – 泾河景观竞赛方案<font>置顶</font>
+                                            粼”岛 – 泾河景观竞赛方案
                                         </h2>
                                         <span>2019/12/14</span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="../notice/noticeDetails.html" target="_blank">
+                                    <a href="http://" target="_blank">
                                         <h2>
                                             汤山矿坑公园，江苏 / 张唐景观
                                         </h2>
@@ -67,7 +77,7 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="../notice/noticeDetails.html" target="_blank">
+                                    <a href="http://" target="_blank">
                                         <h2>
                                             BnA Alter Museum美术馆酒店
                                         </h2>
@@ -78,24 +88,13 @@
                         </div>
                     </div>
                 </div>
-                <div class="talents">
-                    <div class="layui-card">
-                        <div class="layui-card-header">人才库</div>
-                        <div class="layui-card-body">
-                            <div class="talentsContent">
-                                <p><i class="layui-icon layui-icon-form"></i>寻找项目</p>
-                                <span>已有25万个人才加入！</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
             <div class="b">
                 <div class="listContent">
                     <div class="list">
-                        <h2>我参与的项目</h2>
+                        <h2>项目报名</h2>
                         <p>
-                            <img src="~/Assets/Console/lookingFor/images/icon_look_list_1.jpg" alt="">
+                            <img src="/ContentWeb/console/lookingFor/images/icon_look_list_1.jpg" alt="">
                         </p>
                         <span>适用于个人进行报名项目</span>
                         <div class="tip">
@@ -105,7 +104,7 @@
                             <p>C建筑结构设计项目还有4个任务可报名！</p>
                         </div>
                         <div class="btn">
-                            <a href="../lookingFor/myProject.html">
+                            <a href="../lookingFor/lookingForList.html">
                                 <button type="button"
                                         class="layui-btn layui-btn-fluid">
                                     进入
@@ -114,9 +113,9 @@
                         </div>
                     </div>
                     <div class="list">
-                        <h2>我发布的项目</h2>
+                        <h2>我参与的任务</h2>
                         <p>
-                            <img src="~/Assets/Console/lookingFor/images/icon_look_list_2.jpg" alt="">
+                            <img src="/ContentWeb/console/lookingFor/images/icon_look_list_2.jpg" alt="">
                         </p>
                         <span>管理参与的任务，即时进行任务提交</span>
                         <div class="tip">
@@ -126,12 +125,7 @@
                             <p>C建筑结构设计项目中还有1个任务未提交！</p>
                         </div>
                         <div class="btn">
-                            <a href="../lookingFor/myProject.html">
-                                <button type="button"
-                                        class="layui-btn layui-btn-fluid">
-                                    进入
-                                </button>
-                            </a>
+                            <a href="../lookingFor/myProject.html"><button type="button" class="layui-btn layui-btn-fluid">进入</button></a>
                         </div>
                     </div>
                 </div>
@@ -139,4 +133,4 @@
         </div>
     </div>
 </div>
-
+@Scripts.Render("~/Assets/Console/lookingFor/js/lookingFor.js")

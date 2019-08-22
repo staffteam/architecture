@@ -2,6 +2,9 @@ body {
   background: #f9fbff;
   height: 100vh;
 }
+* {
+  box-sizing: initial;
+}
 .fill-out {
   position: relative;
   margin: 0 auto;

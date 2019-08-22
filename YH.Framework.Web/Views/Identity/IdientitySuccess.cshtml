@@ -1,0 +1,55 @@
+﻿@{
+    ViewBag.Title = "企业认证成功";
+}
+@Styles.Render("~/Assets/Console/identity/css/identity.css")
+
+<div class="breadcrumb">
+    <span class="layui-breadcrumb">
+        <a href="../index/index.html">首页</a>
+        <a><cite>身份认证</cite></a>
+    </span>
+</div>
+<div class="content" id="content">
+    <div class="container">
+        <div class="identity">
+            <div class="layui-card">
+                <div class="layui-card-header">企业认证</div>
+                <div class="layui-card-body auto">
+                    <div class="identity-step">
+                        <div class="l">
+                            1.企业信息请严格按照相关证件信息进行确认填写； <br />2.以下所需上传电子版自制仅支持JPG、PNG，大小不超过1M。
+                        </div>
+                        <div class="r">
+                            <ul>
+                                <li class="on"><i class="layui-icon layui-icon-ok"></i>选择身份类型</li>
+                                <li class="on"><i class="layui-icon layui-icon-ok"></i>完善企业资料</li>
+                                <li class="on"><i class="layui-icon layui-icon-ok"></i>等待平台审核</li>
+                                <li class="on"><i class="layui-icon layui-icon-ok"></i>入驻成功</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="layui-card">
+                <div class="layui-card-header">审核成功</div>
+                <div class="layui-card-body auto">
+                    <div class="dientity-success">
+                        <div class="t">
+                            审核通过！入驻成功
+                        </div>
+                        <div class="b">
+                            <h2><i class="layui-icon layui-icon-ok"></i>恭喜您，您的企业认证信息已通过！</h2>
+                            <span>认证信息已通过，您可以选择寻找项目或者发布项目。</span>
+                            <div>
+                                <button class="layui-btn" lay-submit>发布项目</button>
+                                <button class="layui-btn" lay-submit>返回首页</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@Scripts.Render("~/Assets/Console/identity/js/identity.js")
