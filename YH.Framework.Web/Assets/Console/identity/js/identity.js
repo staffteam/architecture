@@ -1,4 +1,5 @@
 $(function () {
+    verify.upgradesInit();
     var upload = layui.upload;
     //普通图片上传
     var uploadInst = upload.render({

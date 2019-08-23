@@ -26,5 +26,9 @@ namespace YH.Framework.Web.Controllers
         {
             return View();
         }
+        public ActionResult PostTheCertification()
+        {
+            return View();
+        }
     }
 }

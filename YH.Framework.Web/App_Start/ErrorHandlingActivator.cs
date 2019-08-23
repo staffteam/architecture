@@ -53,7 +53,14 @@ namespace YH.Framework.Web.App_Start
                 IController errorController = new Areas.CmsAdmin.Controllers.ErrorController();
                 var httpContextWrapper = new HttpContextWrapper(context);
                 var requestContext = new RequestContext(httpContextWrapper, routeData);
-                errorController.Execute(requestContext);
+                try
+                {
+                    errorController.Execute(requestContext);
+                }
+                catch
+                {
+
+                }
             }
 
             public void Dispose() { }

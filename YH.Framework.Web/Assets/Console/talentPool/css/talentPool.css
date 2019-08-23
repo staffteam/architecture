@@ -1,0 +1,24 @@
+.import-search {
+  margin-top: 20px;
+  overflow: hidden;
+  width: 460px;
+}
+.import-search input {
+  width: 364px;
+  height: 38px;
+  font-size: 14px;
+  float: left;
+}
+.import-search p {
+  width: 96px;
+  height: 38px;
+  background: #489dfc;
+  float: right;
+  color: white;
+  text-align: center;
+  line-height: 38px;
+  font-size: 14px;
+}
+.layui-card .layui-tab.talent-pool-list {
+  margin-top: 40px;
+}

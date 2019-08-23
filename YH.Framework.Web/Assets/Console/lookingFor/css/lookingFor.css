@@ -231,6 +231,7 @@
   border: 2px solid white;
   display: inline-block;
   margin: 0 85px;
+  transition: 0.3s all;
 }
 .looking-for div.b div.listContent div.list:hover {
   border: 2px solid #489DFC;

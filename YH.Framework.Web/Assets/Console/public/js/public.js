@@ -67,7 +67,6 @@ $(function () {
 // 表单验证
 $(function () {
     verify.init();
-    verify.upgradesInit();
 });
 var isPhone = /^1[3456789]\d{9}$/;
 var isEmail = /^[A-Za-z0-9\u4e00-\u9fa5]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/;
@@ -198,7 +197,7 @@ var verify = {
                             case 'required':
                                 the.$fn[_key].required = function (value,$this) {
                                     if (value == "") {
-                                        the.tips($this, ($($this).hasClass('upcode')?'请上传':'请输入') + _tips);
+                                        the.tips($this, ($($this).hasClass('upcode')?'请上传':$($this).hasClass('selects')?'请选择':'请输入') + _tips);
                                         return false;
                                     } else {
                                         return true;

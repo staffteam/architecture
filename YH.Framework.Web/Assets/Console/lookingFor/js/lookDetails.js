@@ -3,7 +3,7 @@ $(function () {
     table.render({
         elem: '#lookDetailsList',
         height: 378,
-        url: '/ContentWeb/console/lookingFor/js/test.json' //数据接口
+        url: '/Assets/console/lookingFor/js/test.json' //数据接口
             ,
         page: true //开启分页
             ,
@@ -58,7 +58,7 @@ $(function () {
         var data = obj.data;
         //console.log(obj)
         if (obj.event === 'down') {
-           location.href="/Views/console/lookingFor/lookDetails.html"
+           location.href="/lookingFor/lookDetails"
         }
     });
 })

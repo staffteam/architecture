@@ -4,7 +4,7 @@ $(function () {
         elem: '#table1',
         height: 378,
         toolbar: '#table1Btn',
-        url: '/ContentWeb/console/lookingFor/js/test.json' //数据接口
+        url: '/Assets/console/lookingFor/js/test.json' //数据接口
             ,
         page: true //开启分页
             ,
@@ -82,7 +82,7 @@ $(function () {
         var data = obj.data;
         //console.log(obj)
         if (obj.event === 'look') {
-           location.href="/Views/console/lookingFor/lookDetails.html"
+           location.href="/lookingFor/lookDetails"
         } else if (obj.event === 'task') {
             
         } else if (obj.event === 'collect') {

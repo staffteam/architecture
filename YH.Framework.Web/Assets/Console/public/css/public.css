@@ -144,10 +144,6 @@ body {
   height: 40px;
   line-height: 40px;
 }
-.main .layui-table-cell .layui-form-checkbox[lay-skin=primary] {
-  top: 50%;
-  transform: translateY(-50%);
-}
 .main .layui-table-cell .layui-btn {
   background-color: rgba(0, 0, 0, 0) !important;
   color: #489DFC !important;
@@ -372,21 +368,65 @@ body {
   border: 1px dashed #489DFC;
   padding-top: 30px;
   cursor: pointer;
+  position: relative;
 }
-.updata i {
+.updata > i {
   font-size: 30px;
   display: block;
   text-align: center;
   line-height: 30px;
   color: #489DFC;
 }
-.updata span {
+.updata > span {
   display: block;
   text-align: center;
   margin-top: 15px;
   font-size: 16px;
   color: #489DFC;
   line-height: 22px;
+}
+.updata p.img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 9;
+  display: none;
+}
+.updata p.img img {
+  width: 100%;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.updata p.done {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 99;
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  line-height: 120px;
+  font-size: 16px;
+  color: #00ba9b;
+  display: none;
+}
+.updata p.done i {
+  font-size: 16px;
+  font-weight: 600;
+}
+.updata .layui-progress {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  transform: translateY(-50%);
+  left: 0;
+  z-index: 19;
+  display: none;
 }
 .verify-tips {
   font-size: 12px;

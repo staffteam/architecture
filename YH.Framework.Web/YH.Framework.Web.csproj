@@ -17,9 +17,10 @@
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
-    <IISExpressSSLPort />
-    <IISExpressAnonymousAuthentication />
-    <IISExpressWindowsAuthentication />
+    <IISExpressSSLPort>
+    </IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication>enabled</IISExpressAnonymousAuthentication>
+    <IISExpressWindowsAuthentication>enabled</IISExpressWindowsAuthentication>
     <IISExpressUseClassicPipelineMode />
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
@@ -303,6 +304,10 @@
     <Compile Include="Areas\CmsAdmin\Validator\Users\UserValidator.cs" />
     <Compile Include="Areas\CmsAdmin\Validator\ValidatorRegister.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\IdentityControllers.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\LookingForController.cs" />
+    <Compile Include="Controllers\TalentPoolController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -471,6 +476,8 @@
     <Content Include="Areas\CmsAdmin\Scripts\layui\font\iconfont.ttf" />
     <Content Include="Areas\CmsAdmin\Scripts\layui\font\iconfont.woff" />
     <None Include="Areas\CmsAdmin\Scripts\_references.js" />
+    <Content Include="Assets\Console\lookingFor\js\postTheCertification.js" />
+    <Content Include="Assets\Console\talentPool\js\TalentPool.js" />
     <Content Include="Content\adminlte.css" />
     <Content Include="Content\adminlte.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -905,39 +912,10 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Role\Index.cshtml" />
-    <Content Include="Views\Shared\DisplayTemplates\DateTime.cshtml" />
-    <Content Include="Views\Shared\DisplayTemplates\Active.cshtml" />
-    <Content Include="Views\Role\Create.cshtml" />
-    <Content Include="Views\Role\Edit.cshtml" />
-    <Content Include="Views\Navigate\Index.cshtml" />
-    <Content Include="Views\Navigate\Create.cshtml" />
-    <Content Include="Views\Navigate\Icons.cshtml" />
-    <Content Include="Views\Navigate\Edit.cshtml" />
-    <Content Include="Views\Role\Authorize.cshtml" />
-    <Content Include="Views\Error\NotFound.cshtml" />
-    <Content Include="Views\Error\Forbidden.cshtml" />
-    <Content Include="Views\Error\InternalError.cshtml" />
-    <Content Include="Views\Log\LogListPartial.cshtml" />
-    <Content Include="Views\Log\Index.cshtml" />
-    <Content Include="Views\Log\Details.cshtml" />
-    <Content Include="Views\Product\Index.cshtml" />
-    <Content Include="Views\Product\Create.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Shared\Lockout.cshtml" />
-    <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\User\Login.cshtml" />
-    <Content Include="Views\Shared\_MainHeaderPartial.cshtml" />
-    <Content Include="Views\Shared\_MainSidebarPartial.cshtml" />
-    <Content Include="Views\Shared\_MainFooterPartial.cshtml" />
     <Content Include="Unity.config">
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="Views\User\UserListPartial.cshtml" />
-    <Content Include="Views\User\Index.cshtml" />
-    <Content Include="Views\User\Create.cshtml" />
-    <Content Include="Views\User\Edit.cshtml" />
-    <Content Include="Views\User\ChangePassword.cshtml" />
     <Content Include="Scripts\ueditor-1.4.3\net\config.json" />
     <Content Include="Scripts\ueditor-1.4.3\net\controller.ashx" />
     <Content Include="Scripts\ueditor-1.4.3\net\README.md" />
@@ -948,12 +926,27 @@
     <Content Include="Scripts\ueditor-1.4.3\third-party\video-js\font\vjs.eot" />
     <Content Include="Scripts\ueditor-1.4.3\third-party\video-js\font\vjs.ttf" />
     <Content Include="Scripts\ueditor-1.4.3\third-party\video-js\font\vjs.woff" />
+    <Content Include="Views\Shared\_LeftMenu.cshtml" />
+    <Content Include="Views\Login\Login.cshtml" />
+    <Content Include="Views\Identity\IdientitySuccess.cshtml" />
+    <Content Include="Views\Identity\IdentityEntrance.cshtml" />
+    <Content Include="Views\Identity\IdentityInfo.cshtml" />
+    <Content Include="Views\Identity\PersonalCertificate.cshtml" />
+    <Content Include="Views\LookingFor\Apply.cshtml" />
+    <Content Include="Views\LookingFor\LookDetails.cshtml" />
+    <Content Include="Views\LookingFor\LookingFor.cshtml" />
+    <Content Include="Views\LookingFor\LookingForList.cshtml" />
+    <Content Include="Views\LookingFor\MyProject.cshtml" />
+    <Content Include="Views\LookingFor\MyTask.cshtml" />
+    <Content Include="Views\Notice\NoticeDetails.cshtml" />
+    <Content Include="Views\TalentPool\TalentPoolList.cshtml" />
+    <Content Include="Views\Identity\PostTheCertification.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\CmsAdmin\Views\Shared\EditorTemplates\" />
+    <Folder Include="Assets\Console\talentPool\less\" />
     <Folder Include="Models\" />
-    <Folder Include="Views\Shared\EditorTemplates\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

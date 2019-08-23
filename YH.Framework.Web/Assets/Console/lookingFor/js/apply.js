@@ -3,7 +3,7 @@ $(function () {
     table.render({
         elem: '#applyList',
         height: 569,
-        url: '/ContentWeb/console/lookingFor/js/test.json' //数据接口
+        url: '/Assets/console/lookingFor/js/test.json' //数据接口
             ,
         page: true //开启分页
             ,
