@@ -1,8 +1,10 @@
 @import '../../public/less/puls.less';
+
 .import-search {
     margin-top: 20px;
     overflow: hidden;
-    width:460px;
+    width: 460px;
+
     input {
         width: 364px;
         height: 38px;
@@ -13,16 +15,106 @@
     p {
         width: 96px;
         height: 38px;
-        background: rgba(72,157,252,1);
-        float:right;
-        color:white;
-        text-align:center;
-        line-height:38px;
-        font-size:14px;
+        background: @c;
+        float: right;
+        color: white;
+        text-align: center;
+        line-height: 38px;
+        font-size: 14px;
     }
 }
-.layui-card{
-    .layui-tab.talent-pool-list{
+
+.layui-card {
+    .layui-tab.talent-pool-list {
         margin-top: 40px;
+    }
+}
+
+tr div.sketch {
+    padding: 15px 0;
+    overflow: hidden;
+
+    div.c {
+        width: 80%;
+        position: relative;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+
+    div.list {
+        overflow: hidden;
+
+        span {
+            display: block;
+            float: left;
+            font-size: 14px;
+            color: rgba(153, 153, 153, 1);
+            line-height: 20px;
+        }
+
+        p {
+            margin-left: 160px;
+            font-size: 14px;
+            color: rgba(102, 102, 102, 1);
+            line-height: 20px;
+        }
+
+        &:last-child {
+            margin-top: 15px;
+        }
+    }
+
+    div.l {
+        width: 40%;
+        float: left;
+    }
+
+    div.r {
+        float: left;
+        width: 45%;
+    }
+
+    div.btn {
+        float: right;
+        width: 15%;
+        text-align: right;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 0%;
+    }
+}
+
+.serviceWin {
+    padding: 10px;
+    text-align: center;
+    &>h2 {
+        font-size: 18px;
+        color: rgba(51, 51, 51, 1);
+        line-height: 25px;
+        font-weight: 600;
+    }
+
+    &>p {
+        font-size: 14px;
+        color: #999999;
+    }
+
+    &>div {
+        margin-top: 22px;
+
+        p {
+            width: 100px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            font-size: 20px;
+            font-weight: 500;
+            color: @c;
+            line-height: 24px;
+            margin-top: 20px;
+            font-weight: 600;
+        }
     }
 }

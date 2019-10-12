@@ -55,10 +55,17 @@ namespace YH.Framework.Data
             {
                 throw new ArgumentNullException("entity");
             }
+            try
+            {
+                this.DbSet.Add(entity);
 
-            this.DbSet.Add(entity);
+                this.dbContext.SaveChanges();
+            }
+            catch
+            {
 
-            this.dbContext.SaveChanges();
+            }
+            
         }
 
         /// <summary>

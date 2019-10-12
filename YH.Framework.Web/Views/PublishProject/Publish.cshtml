@@ -1,0 +1,75 @@
+﻿@{
+    ViewBag.Title = "发布项目";
+}
+@Styles.Render("~/Assets/Console/identity/css/identity.css")
+@Styles.Render("~/Assets/Console/publish/css/publish.css")
+<div class="breadcrumb">
+    <span class="layui-breadcrumb">
+        <a href="~/index/index">首页</a>
+        <a><cite>发布项目</cite></a>
+    </span>
+</div>
+<div class="content" id="content">
+    <div class="container">
+        <div class="identity">
+            <div class="layui-card">
+                <div class="layui-card-header">发布流程</div>
+                <div class="layui-card-body auto">
+                    <div class="identity-step">
+                        <div class="r">
+                            <ul>
+                                <li class="on"><i>1</i>填写项目初审信息</li>
+                                <li><i>2</i>上传项目资料附件</li>
+                                <li><i>3</i>平台审核</li>
+                                <li><i>4</i>签署项目合同/缴纳费用</li>
+                                <li><i>5</i>招募项目人员</li>
+                                <li><i>6</i>项目发布成功</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="layui-card">
+                <div class="layui-card-header">发布项目</div>
+                <div class="layui-card-body auto">
+                    <div class="matter-remind">
+                        <i class="layui-icon layui-icon-tips"></i>
+                        重要提醒：发布项目订单有效期为45天(自提交当天开始计算)，订单超期后自动失效，请您尽快提交并完成发布。为避免影响项目发布及访问，请注意项目发布期限。
+                    </div>
+                    <div class="layui-tab" style="margin-top:30px;">
+                        <ul class="layui-tab-title">
+                            <li class="layui-this">正在发布的项目</li>
+                            <li>已发布项目</li>
+                        </ul>
+                        <div class="layui-tab-content">
+                            <div class="layui-tab-item layui-show">
+                                <script type="text/html" id="table1Bar">
+                                    <a class="layui-btn layui-btn-xs" lay-event="look">修改信息</a>
+                                    <a class="layui-btn layui-btn-danger layui-btn-xs"
+                                       lay-event="task">放弃发布</a>
+                                    <a class="layui-btn layui-btn-danger layui-btn-xs"
+                                       lay-event="collect">审核历史</a>
+                                </script>
+                                <table id="table1" lay-filter="table1"></table>
+                            </div>
+                            <div class="layui-tab-item">
+                                <script type="text/html" id="table2Bar">
+                                    <a class="layui-btn layui-btn-xs" lay-event="look">查看进度</a>
+                                    <a class="layui-btn layui-btn-danger layui-btn-xs"
+                                       lay-event="task">终止项目</a>
+                                    <a class="layui-btn layui-btn-danger layui-btn-xs"
+                                       lay-event="collect">审核历史</a>
+                                </script>
+                                <table id="table2" lay-filter="test"></table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="publish-btn" >
+                        <a href="/PublishProject/SubmitInfo"><button class="layui-btn layui-btn-normal layui-btn-lg">发布新项目</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@Scripts.Render("~/Assets/Console/Publish/js/publish.js")

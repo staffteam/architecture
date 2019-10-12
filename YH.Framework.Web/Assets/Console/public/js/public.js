@@ -189,15 +189,16 @@ var verify = {
             var _tips = $(this)[0].getAttribute('tips');
             $(this)[0].setAttribute("data-index", _key);
             _tips = _tips == "" ? "该字段" : _tips;
-            if (_verify != "") {
+            if (_verify != "" && !$(this).hasClass('not-verifys')) {
+                $(this).addClass('not-verifys');
                 var _list = _verify.split('&&');
                 _list.forEach(function (value, index) {
                     if (value.indexOf('||') == -1) {
                         switch (value) {
                             case 'required':
-                                the.$fn[_key].required = function (value,$this) {
+                                the.$fn[_key].required = function (value, $this) {
                                     if (value == "") {
-                                        the.tips($this, ($($this).hasClass('upcode')?'请上传':$($this).hasClass('selects')?'请选择':'请输入') + _tips);
+                                        the.tips($this, ($($this).hasClass('upcode') ? '请上传' : $($this).hasClass('selects') ? '请选择' : '请输入') + _tips);
                                         return false;
                                     } else {
                                         return true;
@@ -205,7 +206,7 @@ var verify = {
                                 };
                                 break;
                             case 'email':
-                                the.$fn[_key].email = function (value,$this) {
+                                the.$fn[_key].email = function (value, $this) {
                                     if (value != '' && !isEmail.test(value)) {
                                         the.tips($this, _tips + '格式错误');
                                         return false;
@@ -215,7 +216,7 @@ var verify = {
                                 };
                                 break;
                             case 'phone':
-                                the.$fn[_key].phone = function (value,$this) {
+                                the.$fn[_key].phone = function (value, $this) {
                                     if (value != '' && !isPhone.test(value)) {
                                         the.tips($this, _tips + '格式错误');
                                         return false;
@@ -227,7 +228,7 @@ var verify = {
                         }
                     } else {
                         the.$fn[_key].orList = value.split('||');
-                        the.$fn[_key].or = function (value,$this) {
+                        the.$fn[_key].or = function (value, $this) {
                             var _is_ = false;
                             this.orList.forEach(function (time, key) {
                                 switch (time) {
@@ -251,21 +252,29 @@ var verify = {
                     }
                 });
                 $(_this).blur(function () {
-                    var _is_ = true;
-                    var _this = this;
-                    var _index = +$(this)[0].getAttribute('data-index');
-                    $.each(the.$fn[_index], function (name) {
-                        if (_is_ && name != "orList" && !the.$fn[_index][name]($(_this).val(),_this)) {
-                            _is_ = false;
+                    var _verify = $(this)[0].getAttribute('verifys');
+                    if (_verify != '') {
+                        var _is_ = true;
+                        var _this = this;
+                        var _index = +$(this)[0].getAttribute('data-index');
+                        $.each(the.$fn[_index], function (name) {
+                            if (_is_ && name != "orList" && !the.$fn[_index][name]($(_this).val(), _this)) {
+                                _is_ = false;
+                            }
+                        });
+                        if (!_is_) {
+                            $(this).addClass('layui-form-danger');
+                        } else {
+                            $(this).removeClass('layui-form-danger');
+                            $(this).parent().find('.verify-tips').remove();
                         }
-                    });
-                    if (!_is_) {
-                        $(this).addClass('layui-form-danger');
                     } else {
                         $(this).removeClass('layui-form-danger');
                         $(this).parent().find('.verify-tips').remove();
                     }
                 })
+            }else{
+                $(_this).blur();
             }
         });
     },
@@ -278,7 +287,7 @@ var verify = {
                 var _this = this;
                 var _index = +$(this)[0].getAttribute('data-index');
                 $.each(the.$fn[_index], function (name) {
-                    if (_is_ && name != "orList" && !the.$fn[_index][name]($(_this).val(),_this)) {
+                    if (_is_ && name != "orList" && !the.$fn[_index][name]($(_this).val(), _this)) {
                         _is_ = false;
                     }
                 });
@@ -294,6 +303,6 @@ var verify = {
         return _if;
     },
     tips: function (o, v) {
-        $(o).parent().find('.verify-tips').length==0?$(o).after("<p class='verify-tips' >" + v + "</p>"):$(o).parent().find('.verify-tips').html(v);
+        $(o).parent().find('.verify-tips').length == 0 ? $(o).after("<p class='verify-tips' >" + v + "</p>") : $(o).parent().find('.verify-tips').html(v);
     }
 }

@@ -1,0 +1,102 @@
+﻿@{
+    ViewBag.Title = "填写项目信息";
+}
+@Styles.Render("~/Assets/Console/identity/css/identity.css")
+@Styles.Render("~/Assets/Console/publish/css/publish.css")
+<div class="breadcrumb">
+    <span class="layui-breadcrumb">
+        <a href="~/index/index">首页</a>
+        <a><cite>填写项目信息</cite></a>
+    </span>
+</div>
+<div class="content" id="content">
+    <div class="container">
+        <div class="identity">
+            <div class="layui-card">
+                <div class="layui-card-header">发布流程</div>
+                <div class="layui-card-body auto">
+                    <div class="identity-step">
+                        <div class="r">
+                            <ul>
+                                <li class="on"><i>1</i>填写项目初审信息</li>
+                                <li><i>2</i>上传项目资料附件</li>
+                                <li><i>3</i>平台审核</li>
+                                <li><i>4</i>签署项目合同/缴纳费用</li>
+                                <li><i>5</i>招募项目人员</li>
+                                <li><i>6</i>项目发布成功</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="layui-card">
+                <div class="layui-card-header">发布项目</div>
+                <div class="layui-card-body auto">
+                    <div class="matter-remind">
+                        <i class="layui-icon layui-icon-tips"></i>
+                        工信部要求发布信息必须完成实名认证，未完成实名认证、实名信息与真实信息不一致等将会被驳回。
+                    </div>
+                     <div class="layui-form identity-form" id="identityApply" style="margin-top:30px;">
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">项目名称 <i style="color:red;" >*</i></label>
+                            <div class="layui-input-block">
+                                <div class="layui-input-inline">
+                                <input type="text" name="name" required verifys="required" tips="请输入项目名称"
+                                       placeholder="企业名称" autocomplete="off" class="layui-input">
+                                       </div>
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">项目规模 <i style="color:red;" >*</i></label>
+                            <div class="layui-input-block">
+                                <div class="layui-input-inline">
+                                <input type="text" name="site" required verifys="required" tips="项目规模"
+                                       placeholder="项目规模" autocomplete="off" class="layui-input">
+                            </div>
+                            <div class="layui-form-mid layui-word-aux">平方米</div></div>
+                            
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">项目高度 <i style="color:red;" >*</i></label>
+                            <div class="layui-input-block"><div class="layui-input-inline">
+                                <input type="text" name="sitedetails" required verifys="required" tips="请输入项目高度"
+                                       placeholder="请输入项目高度" autocomplete="off" class="layui-input">
+                            </div> <div class="layui-form-mid layui-word-aux">米</div></div>
+                            
+                        </div>
+                        <div class="layui-form-item" id="provinces" style="margin-bottom:15px;">
+
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">项目概况 <i style="color:red;" >*</i></label>
+                            <div class="layui-input-block">
+                                <div class="layui-input-inline" style="width:600px;">
+                                <textarea name="desc" placeholder="请输入内容" class="layui-textarea"></textarea>
+                            </div></div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">验证码</label>
+                            <div class="layui-input-block">
+                                <div class="layui-input-inline" style="width:120px;">
+                                    <input type="text" name="inputCode" id="inputCode" required verifys="required" tips="请输入验证码"
+                                        placeholder="请输入验证码" autocomplete="off" class="layui-input">
+                                </div>
+                                <div class="layui-input-inline vcode">
+                                    <p id="checkCode"></p>
+                                    <span onclick="createCode(4)" >看不清？</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <div class="layui-input-block">
+                                <button class="layui-btn" lay-submit lay-filter="identityApply">下一步</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@Scripts.Render("~/Assets/Console/common/provinces/provincesPlus.js")
+@Scripts.Render("~/Assets/Console/Publish/js/submitInfo.js")

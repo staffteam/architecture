@@ -55,7 +55,7 @@
 
                 h2 {
                     font-size: 16px;
-                    color: rgba(72, 157, 252, 1);
+                    color: @c;
                     line-height: 22px;
                     text-align: center;
                     margin-top: 35px;
@@ -121,9 +121,9 @@
 
                 &.on {
                     i {
-                        background: rgba(72, 157, 252, 1);
+                        background: @c;
                         color: white;
-                        border: 1px solid rgba(72, 157, 252, 1);
+                        border: 1px solid @c;
                     }
                 }
 
@@ -150,7 +150,7 @@
             margin-bottom: 30px;
 
             .layui-input-inline {
-                width: 300px;
+                width: 15vw;
                 position: relative;
             }
         }
@@ -179,10 +179,12 @@
         div.type-content {
             padding: 40px 28px 30px 28px;
             overflow: hidden;
+
             div.l {
                 float: left;
                 height: 526px;
                 width: 75%;
+
                 ul {
                     li {
                         width: 31.33%;
@@ -194,9 +196,11 @@
                         padding: 33px 40px;
                         margin-right: 3%;
                         transition: 0.3s all;
-                        &:last-child{
+
+                        &:last-child {
                             margin-right: 0;
                         }
+
                         &:hover {
                             background: rgba(255, 255, 255, 1);
                             box-shadow: 0px 0px 20px 0px rgba(72, 157, 252, 0.8);
@@ -249,6 +253,7 @@
             div.r {
                 float: right;
                 width: 22.5%;
+
                 ul {
                     li {
                         width: 100%;
@@ -258,9 +263,11 @@
                         border: 1px solid rgba(221, 221, 221, 1);
                         padding: 20px;
                         margin-top: 23px;
-                        &:first-child{
+
+                        &:first-child {
                             margin-top: 0px;
                         }
+
                         h2 {
                             font-size: 17px;
                             color: rgba(51, 51, 51, 1);
@@ -296,9 +303,9 @@
     div.t {
         height: 46px;
         background: rgba(255, 255, 255, 1);
-        border: 1px solid rgba(72, 157, 252, 1);
+        border: 1px solid @c;
         font-size: 14px;
-        color: rgba(72, 157, 252, 1);
+        color: @c;
         line-height: 46px;
         padding: 0 15px;
     }
@@ -346,6 +353,206 @@
                 box-shadow: 0px 2px 10px 0px rgba(72, 157, 252, 0.5);
                 margin-right: 40px;
             }
+        }
+    }
+}
+
+.icon-add {
+    display: inline-block;
+    font-size: 14px;
+    color: rgba(102, 102, 102, 1);
+    line-height: 24px;
+    cursor: pointer;
+
+    i {
+        font-size: 16px;
+        float: left;
+        color: rgba(102, 102, 102, 1);
+        line-height: 24px;
+        display: block;
+        margin-right: 5px;
+        font-weight: 600;
+    }
+}
+
+.delCertify {
+    display: inline-block;
+    font-size: 14px;
+    color: rgba(102, 102, 102, 1);
+    line-height: 24px;
+    cursor: pointer;
+
+    i {
+        font-size: 12px;
+        text-align: center;
+        float: left;
+        color: rgba(102, 102, 102, 1);
+        width: 15px;
+        height: 15px;
+        margin: 4.5px 0;
+        line-height: 13px;
+        display: block;
+        margin-right: 5px;
+        font-weight: 600;
+        border: 1px solid rgba(102, 102, 102, 1);
+        border-radius: 50%;
+    }
+}
+
+.main {
+    .layui-card.assess {
+        background-color: #dddddd;
+
+        .layui-card-header {
+            border-bottom: 0px;
+        }
+
+        .assess-content {
+            padding: 20px 0;
+
+            div.title {
+                font-size: 28px;
+                color: rgba(51, 51, 51, 1);
+                line-height: 40px;
+                text-align: center;
+            }
+
+            div.tab {
+                width: 1100px;
+                margin: 0 auto;
+                margin-top: 33px;
+
+                div.t {
+                    overflow: hidden;
+                    text-align: center;
+                    height: 62px;
+
+                    ul {
+                        li {
+                            display: inline-block;
+                            padding: 10px 35px 8px 35px;
+                            overflow: hidden;
+                            text-align: center;
+                            line-height: 1.5;
+                            font-size: 16px;
+                            color: rgba(255, 255, 255, 1);
+                            line-height: 22px;
+                            width: 150px;
+                            position: relative;
+                            cursor: pointer;
+
+                            span {
+                                position: relative;
+                                z-index: 9;
+                            }
+
+                            &:before {
+                                content: '';
+                                position: absolute;
+                                width: 150%;
+                                left: 0%;
+                                top: -65%;
+                                height: 300%;
+                                transform: rotate(-45deg);
+                                background-color: #A1B1C4;
+                                display: block;
+                                z-index: 1;
+                            }
+
+                            &.on {
+                                &::before {
+                                    background-color: @c;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                div.b {
+                    background: white;
+                    border-radius: 15px;
+                    border: 4px solid rgba(161, 177, 196, 1);
+                    overflow: hidden;
+
+                    div.list {
+                        padding: 30px;
+                        overflow-y: auto;
+                        height: 400px;
+
+                        div.title {
+                            text-align: center;
+
+                            h2 {
+                                font-size: 20px;
+                                color: rgba(51, 51, 51, 1);
+                                line-height: 28px;
+                                display: inline-block;
+                            }
+
+                            p.title-notice {
+                                float: right;
+                                font-size: 14px;
+                                color: @c;
+                                line-height: 20px;
+
+                                i {
+                                    float: left;
+                                    font-size: 16px;
+                                    color: @c;
+                                    margin-right: 5px;
+                                }
+
+                                cursor: pointer;
+                                .notsel();
+                            }
+                        }
+
+                        div.details {
+                            width: 80%;
+                            margin: 0 auto;
+
+                            div.ol {
+                                margin-top: 37px;
+
+                                &>h2 {
+                                    font-size: 16px;
+                                    color: rgba(51, 51, 51, 1);
+                                    line-height: 22px;
+                                    position: relative;
+                                    padding: 5px 16px;
+
+                                    &:before {
+                                        position: absolute;
+                                        content: '';
+                                        left: 0;
+                                        top: 50%;
+                                        transform: translateY(-50%);
+                                        width: 8px;
+                                        height: 8px;
+                                        border-radius: 50%;
+                                        display: block;
+                                        background-color: @c;
+                                    }
+                                }
+
+                                div.ol-list {
+                                    p {
+                                        font-size: 14px;
+                                        color: rgba(51, 51, 51, 1);
+                                        line-height: 20px;
+                                        padding: 8px 0;
+                                        border-top: 1px solid #dddddd;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .assess-btn{
+            margin-top: 40px;
+            text-align: center;
         }
     }
 }

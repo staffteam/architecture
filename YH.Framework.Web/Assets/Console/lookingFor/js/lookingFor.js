@@ -1,5 +1,5 @@
 $(function () {
-    var element = layui.element;
+    form.render('select');
     table.render({
         elem: '#table1',
         height: 378,
@@ -89,4 +89,5 @@ $(function () {
             
         }
     });
+    element.init();
 })

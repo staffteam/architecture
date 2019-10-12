@@ -30,5 +30,9 @@ namespace YH.Framework.Web.Controllers
         {
             return View();
         }
+        public ActionResult Assess()
+        {
+            return View();
+        }
     }
 }

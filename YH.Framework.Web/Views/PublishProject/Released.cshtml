@@ -1,0 +1,182 @@
+﻿@{
+    ViewBag.Title = "已发布项目";
+}
+@Styles.Render("~/Assets/Console/lookingFor/css/lookingFor.css")
+@Styles.Render("~/Assets/Console/released/css/released.css")
+<div class="breadcrumb">
+    <span class="layui-breadcrumb">
+        <a href="~/index/index">首页</a>
+        <a href="~/lookingFor/lookingFor">寻找项目</a>
+        <a><cite>已发布项目</cite></a>
+    </span>
+</div>
+<div class="content" id="content">
+    <div class="container">
+        <div class="looking-for-list">
+            <div class="t">
+                <div class="layui-card">
+                    <div class="layui-card-header">个人信息</div>
+                    <div class="layui-card-body">
+                        <div class="l">
+                            <a href="javascript:">
+                                <p>
+                                    <img src="~/Assets/console/public/images/top.png" alt="">
+                                </p>
+                            </a>
+                        </div>
+                        <div class="r">
+                            <h2>早安，欢迎来到工作台，祝你开心每一天！</h2>
+                            <div class="usermsg">
+                                <div class="username">
+                                    <h2>刘小姐</h2>
+                                    <p><span>111</span></p>
+                                </div>
+                                <div class="grade">
+                                    岗位等级
+                                    <a href="javascript:">设计师助理</a>
+                                </div>
+                                <div class="grade">
+                                    联系方式
+                                    <a href="javascript:">15073231615</a>
+                                </div>
+                            </div>
+                            <div class="btn">
+                                <button type="button" class="layui-btn">
+                                    <i class="layui-icon layui-icon-username"></i> 身份认证
+                                </button>
+                                <button type="button" class="layui-btn">
+                                    <i class="layui-icon layui-icon-list"></i> 完善资料
+                                </button>
+                            </div>
+                        </div>
+                        <div class="num">
+                            <a href="javascript:">
+                                <span>项目数</span>
+                                <h2>15</h2>
+                            </a>
+                            <a href="javascript:">
+                                <span>发布项目</span>
+                                <h2>15</h2>
+                            </a>
+                            <a href="javascript:">
+                                <span>收藏项目</span>
+                                <h2>15</h2>
+                            </a>
+                            <a href="javascript:">
+                                <span>关注人才</span>
+                                <h2>15</h2>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="b">
+                <div class="layui-card">
+                    <div class="layui-card-header">我参与的项目</div>
+                    <div class="layui-card-body">
+                        <div class="layui-form">
+                            <div class="layui-form-item">
+                                <div class="layui-inline">
+                                    <div class="layui-input-inline">
+                                        <select name="quiz">
+                                            <option value="">项目阶段</option>
+                                            <option value="0">开始</option>
+                                            <option value="1">结束</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="layui-inline">
+                                    <div class="layui-input-inline">
+                                        <input type="text" name="date" id="date" lay-verify="date"
+                                               placeholder="发布时间" autocomplete="off" class="layui-input">
+                                    </div>
+                                </div>
+                                <div class="layui-inline">
+                                    <div class="layui-input-inline">
+                                        <input type="text" name="" placeholder="岗位需求" autocomplete="off"
+                                               class="layui-input">
+                                    </div>
+                                </div>
+                                <div class="layui-inline">
+                                    <div class="layui-input-inline">
+                                        <button class="layui-btn"
+                                                lay-event="getCheckData">
+                                            搜索
+                                        </button>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="released-list">
+                            <ul>
+                                <li>
+                                    <h2>世茂龙河D地块商业项目</h2>
+                                    <div>
+                                        <div class="l" >
+                                            <label>项目进展：</label>
+                                            <div class="sliding" >
+                                                <div class="li on" >
+                                                    <h2></h2>
+                                                    <div class="t" ><p></p></div>
+                                                    <p>项目启动</p>
+                                                </div>
+                                                <div class="li on" >
+                                                    <h2></h2>
+                                                    <div class="t" ><p></p></div>
+                                                    <p>项目启动</p>
+                                                </div>
+                                                <div class="li on" >
+                                                    <h2></h2>
+                                                    <div class="t" ><p></p></div>
+                                                    <p>项目启动</p>
+                                                </div>
+                                                <div class="li on" >
+                                                    <h2>已打款</h2>
+                                                    <div class="t" ><p></p></div>
+                                                    <p>项目启动</p>
+                                                </div>
+                                                <div class="li on" >
+                                                    <h2>已打款</h2>
+                                                    <div class="t" ><p></p></div>
+                                                    <p>施工图设计 <span>进行中</span><br/>预计 2019-09-01 完成</p>
+                                                </div>
+                                                <div class="li" >
+                                                    <h2>未打款</h2>
+                                                    <div class="t" ><p></p></div>
+                                                    <p>施工配合 未完成</p>
+                                                </div>
+                                                <div class="li" >
+                                                    <h2>未打款</h2>
+                                                    <div class="t" ><p></p></div>
+                                                    <p>竣工图 未完成</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="r" >
+                                            <label>参与人员：</label>
+                                            <span>专业负责人</span>
+                                            <div class="a" >
+                                                <p>刘</p>
+                                                刘小姐
+                                            </div>
+                                            <div class="b" >
+                                                <i class="layui-icon layui-icon-dialogue" ></i>
+                                                <span>项目沟通</span>
+                                            </div>
+                                            <div class="b" >
+                                                <i class="layui-icon layui-icon-user" ></i>
+                                                <span>团队成员</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@Scripts.Render("~/Assets/Console/lookingFor/js/lookingFor.js")

@@ -46,7 +46,7 @@
 }
 .identity .entrance > ul li h2 {
   font-size: 16px;
-  color: #489dfc;
+  color: #489DFC;
   line-height: 22px;
   text-align: center;
   margin-top: 35px;
@@ -100,9 +100,9 @@
   position: absolute;
 }
 .identity .identity-step div.r li.on i {
-  background: #489dfc;
+  background: #489DFC;
   color: white;
-  border: 1px solid #489dfc;
+  border: 1px solid #489DFC;
 }
 .identity .identity-step div.r li i {
   width: 30px;
@@ -122,7 +122,7 @@
   margin-bottom: 30px;
 }
 .identity .identity-form .layui-form-item .layui-input-inline {
-  width: 300px;
+  width: 15vw;
   position: relative;
 }
 .identity .identity-form .updata-tip {
@@ -247,9 +247,9 @@
 .dientity-success div.t {
   height: 46px;
   background: #ffffff;
-  border: 1px solid #489dfc;
+  border: 1px solid #489DFC;
   font-size: 14px;
-  color: #489dfc;
+  color: #489DFC;
   line-height: 46px;
   padding: 0 15px;
 }
@@ -292,4 +292,175 @@
 .dientity-success div.b > div button {
   box-shadow: 0px 2px 10px 0px rgba(72, 157, 252, 0.5);
   margin-right: 40px;
+}
+.icon-add {
+  display: inline-block;
+  font-size: 14px;
+  color: #666666;
+  line-height: 24px;
+  cursor: pointer;
+}
+.icon-add i {
+  font-size: 16px;
+  float: left;
+  color: #666666;
+  line-height: 24px;
+  display: block;
+  margin-right: 5px;
+  font-weight: 600;
+}
+.delCertify {
+  display: inline-block;
+  font-size: 14px;
+  color: #666666;
+  line-height: 24px;
+  cursor: pointer;
+}
+.delCertify i {
+  font-size: 12px;
+  text-align: center;
+  float: left;
+  color: #666666;
+  width: 15px;
+  height: 15px;
+  margin: 4.5px 0;
+  line-height: 13px;
+  display: block;
+  margin-right: 5px;
+  font-weight: 600;
+  border: 1px solid #666666;
+  border-radius: 50%;
+}
+.main .layui-card.assess {
+  background-color: #dddddd;
+}
+.main .layui-card.assess .layui-card-header {
+  border-bottom: 0px;
+}
+.main .layui-card.assess .assess-content {
+  padding: 20px 0;
+}
+.main .layui-card.assess .assess-content div.title {
+  font-size: 28px;
+  color: #333333;
+  line-height: 40px;
+  text-align: center;
+}
+.main .layui-card.assess .assess-content div.tab {
+  width: 1100px;
+  margin: 0 auto;
+  margin-top: 33px;
+}
+.main .layui-card.assess .assess-content div.tab div.t {
+  overflow: hidden;
+  text-align: center;
+  height: 62px;
+}
+.main .layui-card.assess .assess-content div.tab div.t ul li {
+  display: inline-block;
+  padding: 10px 35px 8px 35px;
+  overflow: hidden;
+  text-align: center;
+  line-height: 1.5;
+  font-size: 16px;
+  color: #ffffff;
+  line-height: 22px;
+  width: 150px;
+  position: relative;
+  cursor: pointer;
+}
+.main .layui-card.assess .assess-content div.tab div.t ul li span {
+  position: relative;
+  z-index: 9;
+}
+.main .layui-card.assess .assess-content div.tab div.t ul li:before {
+  content: '';
+  position: absolute;
+  width: 150%;
+  left: 0%;
+  top: -65%;
+  height: 300%;
+  transform: rotate(-45deg);
+  background-color: #A1B1C4;
+  display: block;
+  z-index: 1;
+}
+.main .layui-card.assess .assess-content div.tab div.t ul li.on::before {
+  background-color: #489DFC;
+}
+.main .layui-card.assess .assess-content div.tab div.b {
+  background: white;
+  border-radius: 15px;
+  border: 4px solid #a1b1c4;
+  overflow: hidden;
+}
+.main .layui-card.assess .assess-content div.tab div.b div.list {
+  padding: 30px;
+  overflow-y: auto;
+  height: 400px;
+}
+.main .layui-card.assess .assess-content div.tab div.b div.list div.title {
+  text-align: center;
+}
+.main .layui-card.assess .assess-content div.tab div.b div.list div.title h2 {
+  font-size: 20px;
+  color: #333333;
+  line-height: 28px;
+  display: inline-block;
+}
+.main .layui-card.assess .assess-content div.tab div.b div.list div.title p.title-notice {
+  float: right;
+  font-size: 14px;
+  color: #489DFC;
+  line-height: 20px;
+  cursor: pointer;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.main .layui-card.assess .assess-content div.tab div.b div.list div.title p.title-notice i {
+  float: left;
+  font-size: 16px;
+  color: #489DFC;
+  margin-right: 5px;
+}
+.main .layui-card.assess .assess-content div.tab div.b div.list div.details {
+  width: 80%;
+  margin: 0 auto;
+}
+.main .layui-card.assess .assess-content div.tab div.b div.list div.details div.ol {
+  margin-top: 37px;
+}
+.main .layui-card.assess .assess-content div.tab div.b div.list div.details div.ol > h2 {
+  font-size: 16px;
+  color: #333333;
+  line-height: 22px;
+  position: relative;
+  padding: 5px 16px;
+}
+.main .layui-card.assess .assess-content div.tab div.b div.list div.details div.ol > h2:before {
+  position: absolute;
+  content: '';
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: block;
+  background-color: #489DFC;
+}
+.main .layui-card.assess .assess-content div.tab div.b div.list div.details div.ol div.ol-list p {
+  font-size: 14px;
+  color: #333333;
+  line-height: 20px;
+  padding: 8px 0;
+  border-top: 1px solid #dddddd;
+}
+.main .layui-card.assess .assess-btn {
+  margin-top: 40px;
+  text-align: center;
 }

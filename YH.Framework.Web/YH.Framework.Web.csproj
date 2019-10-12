@@ -307,6 +307,7 @@
     <Compile Include="Controllers\IdentityControllers.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\LookingForController.cs" />
+    <Compile Include="Controllers\PublishProjectController.cs" />
     <Compile Include="Controllers\TalentPoolController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -941,6 +942,14 @@
     <Content Include="Views\Notice\NoticeDetails.cshtml" />
     <Content Include="Views\TalentPool\TalentPoolList.cshtml" />
     <Content Include="Views\Identity\PostTheCertification.cshtml" />
+    <Content Include="Views\Identity\Assess.cshtml" />
+    <Content Include="Views\PublishProject\Released.cshtml" />
+    <Content Include="Views\PublishProject\Publish.cshtml" />
+    <Content Include="Views\PublishProject\SubmitInfo.cshtml" />
+    <Content Include="Views\PublishProject\UpInfo.cshtml" />
+    <Content Include="Views\PublishProject\MapDepot.cshtml" />
+    <Content Include="Views\PublishProject\History.cshtml" />
+    <Content Include="Views\PublishProject\Feedback.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

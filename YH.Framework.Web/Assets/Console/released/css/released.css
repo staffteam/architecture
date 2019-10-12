@@ -1,0 +1,161 @@
+.released-list {
+  margin-top: 30px;
+}
+.released-list ul li {
+  padding: 40px;
+}
+.released-list ul li h2 {
+  font-size: 18px;
+  color: #333333;
+  line-height: 25px;
+}
+.released-list ul li > div {
+  margin-top: 20px;
+  overflow: hidden;
+}
+.released-list ul li > div div.l {
+  float: left;
+  width: 1025px;
+  overflow: hidden;
+}
+.released-list ul li > div div.l label {
+  font-size: 14px;
+  color: #333333;
+  line-height: 200px;
+  float: left;
+  height: 200px;
+}
+.released-list ul li > div div.l div.sliding {
+  overflow: hidden;
+}
+.released-list ul li > div div.l div.sliding div.li {
+  float: left;
+  height: 200px;
+  width: 140px;
+  position: relative;
+  padding-top: 59px;
+}
+.released-list ul li > div div.l div.sliding div.li:first-child {
+  margin-left: -2vw;
+}
+.released-list ul li > div div.l div.sliding div.li:first-child::before {
+  display: none;
+}
+.released-list ul li > div div.l div.sliding div.li::before {
+  content: '';
+  left: -35%;
+  top: 50%;
+  height: 0px;
+  transform: translateY(-50%);
+  border-top: 1px dashed #999999;
+  display: block;
+  width: 70%;
+  position: absolute;
+}
+.released-list ul li > div div.l div.sliding div.li h2 {
+  font-size: 14px;
+  color: #999999;
+  line-height: 20px;
+  height: 20px;
+  text-align: center;
+}
+.released-list ul li > div div.l div.sliding div.li > p {
+  font-size: 14px;
+  color: #666666;
+  line-height: 20px;
+  text-align: center;
+  margin-top: 16px;
+}
+.released-list ul li > div div.l div.sliding div.li > p span {
+  color: #489DFC;
+}
+.released-list ul li > div div.l div.sliding div.li.on:before {
+  border-top: 1px dashed #489DFC;
+}
+.released-list ul li > div div.l div.sliding div.li.on div.t {
+  background: rgba(41, 120, 255, 0.5);
+}
+.released-list ul li > div div.l div.sliding div.li.on div.t p {
+  background: #2978ff;
+}
+.released-list ul li > div div.l div.sliding div.li div.t {
+  width: 28px;
+  height: 28px;
+  background: #f0f0f0;
+  border-radius: 50%;
+  margin: 0 auto;
+  margin-top: 7px;
+}
+.released-list ul li > div div.l div.sliding div.li div.t p {
+  width: 16px;
+  height: 16px;
+  margin: 6px;
+  float: left;
+  background: #cccccc;
+  border-radius: 50%;
+}
+.released-list ul li > div div.r {
+  float: right;
+}
+.released-list ul li > div div.r label {
+  font-size: 14px;
+  color: #333333;
+  line-height: 200px;
+  float: left;
+  height: 200px;
+}
+.released-list ul li > div div.r > span {
+  font-size: 14px;
+  color: #333333;
+  line-height: 200px;
+  float: left;
+  height: 200px;
+  margin-left: 15px;
+}
+.released-list ul li > div div.r div.a {
+  float: left;
+  margin-left: 20px;
+  font-size: 12px;
+  color: #333333;
+  line-height: 36px;
+  margin-top: 82px;
+}
+.released-list ul li > div div.r div.a p {
+  width: 36px;
+  height: 36px;
+  text-align: center;
+  line-height: 36px;
+  color: white;
+  float: left;
+  background: #489dfc;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.released-list ul li > div div.r div.b {
+  float: left;
+  margin-left: 15px;
+  margin-top: 0px;
+  margin-left: 10px;
+  font-size: 14px;
+  color: #999999;
+  line-height: 200px;
+}
+.released-list ul li > div div.r div.b i {
+  font-size: 24px;
+  color: #489DFC;
+  float: left;
+  display: block;
+  line-height: 200px;
+  margin-right: 5px;
+}
+@media screen and (max-width: 1850px) {
+  .released-list ul li > div div.l {
+    width: 100%;
+  }
+  .released-list ul li > div div.l div.sliding div.li {
+    width: 10vw;
+  }
+  .released-list ul li > div div.r {
+    width: 100%;
+  }
+}

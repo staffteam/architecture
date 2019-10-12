@@ -33,7 +33,7 @@
 .looking-for div.t.three div.talents .talentsContent p i {
   width: 44px;
   height: 43px;
-  background: #489dfc;
+  background: #489DFC;
   border-radius: 5px;
   font-size: 25px;
   text-align: center;
@@ -85,7 +85,7 @@
 }
 .looking-for div.t div.l .layui-card .layui-card-body .usermsg .username p span {
   font-size: 12px;
-  color: #489dfc;
+  color: #489DFC;
   position: absolute;
   right: 0;
   line-height: 24px;
@@ -101,7 +101,7 @@
 }
 .looking-for div.t div.l .layui-card .layui-card-body .usermsg .grade a {
   font-size: 14px;
-  color: #489dfc;
+  color: #489DFC;
 }
 .looking-for div.t div.l .layui-card .layui-card-body .link {
   margin-top: 20px;
@@ -238,7 +238,7 @@
 }
 .looking-for div.b div.listContent div.list > h2 {
   font-size: 24px;
-  color: #489dfc;
+  color: #489DFC;
   line-height: 33px;
   text-align: center;
 }
@@ -279,7 +279,7 @@
 .looking-for div.b div.listContent div.list div.tip p::before {
   width: 8px;
   height: 8px;
-  background: #489dfc;
+  background: #489DFC;
   position: absolute;
   display: block;
   content: '';
@@ -347,7 +347,7 @@
 }
 .looking-for-list div.t .layui-card .layui-card-body div.r .usermsg .username p span {
   font-size: 12px;
-  color: #489dfc;
+  color: #489DFC;
   position: absolute;
   right: 0;
   line-height: 24px;
@@ -363,7 +363,7 @@
 }
 .looking-for-list div.t .layui-card .layui-card-body div.r .usermsg .grade a {
   font-size: 14px;
-  color: #489dfc;
+  color: #489DFC;
 }
 .looking-for-list div.t .layui-card .layui-card-body div.r .btn {
   margin-top: 17px;
@@ -541,7 +541,7 @@
 }
 .looking-for-list div.b .layui-card-body > div.list ul li div.b > span {
   font-size: 14px;
-  color: #489dfc;
+  color: #489DFC;
   line-height: 20px;
   display: block;
   text-align: center;
@@ -627,7 +627,7 @@
   content: '';
 }
 .look-details .project-info div.state p.be::before {
-  background: #489dfc;
+  background: #489DFC;
 }
 .look-details .project-info div.state p.off::before {
   background: #A1B1C4;
@@ -664,7 +664,7 @@
 .look-details .project-info div.btn button {
   width: 154px;
   height: 50px;
-  background: #489dfc;
+  background: #489DFC;
   box-shadow: 0px 2px 10px 0px rgba(72, 157, 252, 0.5);
   border-radius: 4px;
   line-height: 50px;
@@ -698,7 +698,7 @@
   background: rgba(72, 157, 252, 0.2);
   border-radius: 4px;
   font-size: 14px;
-  color: #489dfc;
+  color: #489DFC;
   line-height: 25px;
 }
 .apply-details .apply-info .hint {
@@ -797,7 +797,7 @@
 .apply-details .mytask-file {
   padding: 20px 24px;
   background: rgba(72, 157, 252, 0.05);
-  border: 1px solid #489dfc;
+  border: 1px solid #489DFC;
   overflow: hidden;
 }
 .apply-details .mytask-file ul li {

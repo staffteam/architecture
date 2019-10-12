@@ -391,8 +391,8 @@ D:\GitHub\architectureGit\YH.Framework.Core\bin\Debug\System.Threading.Channels.
 D:\GitHub\architectureGit\YH.Framework.Core\bin\Debug\System.Threading.Tasks.Extensions.xml
 D:\GitHub\architectureGit\YH.Framework.Core\bin\Debug\Unity.Abstractions.pdb
 D:\GitHub\architectureGit\YH.Framework.Core\bin\Debug\Unity.Container.pdb
-D:\GitHub\architectureGit\YH.Framework.Core\obj\Debug\YH.Framework.Core.csprojAssemblyReference.cache
 D:\GitHub\architectureGit\YH.Framework.Core\obj\Debug\YH.Framework.Core.csproj.CoreCompileInputs.cache
 D:\GitHub\architectureGit\YH.Framework.Core\obj\Debug\YH.Framework.Core.csproj.CopyComplete
 D:\GitHub\architectureGit\YH.Framework.Core\obj\Debug\YH.Framework.Core.dll
 D:\GitHub\architectureGit\YH.Framework.Core\obj\Debug\YH.Framework.Core.pdb
+D:\GitHub\architectureGit\YH.Framework.Core\obj\Debug\YH.Framework.Core.csprojAssemblyReference.cache
