@@ -57,9 +57,9 @@ img {
 }
 @font-face {
   font-family: 'iconfont';
-  /* project id 1119181 */
-  src: url('//at.alicdn.com/t/font_1119181_7m3py25lubj.eot');
-  src: url('//at.alicdn.com/t/font_1119181_7m3py25lubj.eot?#iefix') format('embedded-opentype'), url('//at.alicdn.com/t/font_1119181_7m3py25lubj.woff2') format('woff2'), url('//at.alicdn.com/t/font_1119181_7m3py25lubj.woff') format('woff'), url('//at.alicdn.com/t/font_1119181_7m3py25lubj.ttf') format('truetype'), url('//at.alicdn.com/t/font_1119181_7m3py25lubj.svg#iconfont') format('svg');
+  /* project id 1343358 */
+  src: url('//at.alicdn.com/t/font_1343358_jhcp9w6zk9i.eot');
+  src: url('//at.alicdn.com/t/font_1343358_jhcp9w6zk9i.eot?#iefix') format('embedded-opentype'), url('//at.alicdn.com/t/font_1343358_jhcp9w6zk9i.woff2') format('woff2'), url('//at.alicdn.com/t/font_1343358_jhcp9w6zk9i.woff') format('woff'), url('//at.alicdn.com/t/font_1343358_jhcp9w6zk9i.ttf') format('truetype'), url('//at.alicdn.com/t/font_1343358_jhcp9w6zk9i.svg#iconfont') format('svg');
 }
 .iconfont {
   font-family: "iconfont" !important;
@@ -125,6 +125,44 @@ body {
 .layui-layer.layer-ext-error {
   background-color: #e85445;
 }
+.main .layui-upload-drag.layui-upload-flow {
+  width: 100%;
+  padding: 20px;
+  background: #ffffff;
+  border: 2px dashed #dee2e6;
+}
+.main .layui-upload-drag.layui-upload-flow .upload-content {
+  padding: 30px;
+}
+.main .layui-upload-drag.layui-upload-flow .upload-content i {
+  font-size: 50px;
+}
+.main .layui-upload-drag.layui-upload-flow .upload-content p {
+  font-size: 22px;
+  margin-top: 10px;
+}
+.main .hint-success {
+  width: 100%;
+  height: 46px;
+  background: #e6f7ff;
+  border: 1px solid #91d5ff;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.65);
+  line-height: 46px;
+  padding: 0 20px;
+  margin-bottom: 10px;
+}
+.main .hint-error {
+  width: 100%;
+  height: 46px;
+  background: #fff1f0;
+  border: 1px solid #ffa39e;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.65);
+  line-height: 46px;
+  padding: 0 20px;
+  margin-bottom: 10px;
+}
 .main .matter-remind {
   height: 46px;
   background: #fffbe6;
@@ -141,6 +179,20 @@ body {
   color: #FAAD14;
   font-size: 14px;
   margin-right: 10px;
+}
+.main .matter-remind label {
+  display: block;
+  float: left;
+  color: #8E7241;
+  font-size: 14px;
+  margin-right: 10px;
+}
+.main .matter-remind a {
+  font-size: 14px;
+  color: #337bb7;
+  line-height: 24px;
+  display: inline-block;
+  margin-left: 20px;
 }
 .main .layui-table-view {
   border-color: white;

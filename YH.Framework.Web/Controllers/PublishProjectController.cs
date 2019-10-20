@@ -30,12 +30,17 @@ namespace YH.Framework.Web.Controllers
             return View();
         }
         //上传资料
-        public ActionResult UpInfo()
+        public ActionResult SubmitInfoUp()
         {
             return View();
         }
         //图库
-        public ActionResult MapDepot()
+        public ActionResult SubmitInfoImg()
+        {
+            return View();
+        }
+        //平台审核
+        public ActionResult Audit()
         {
             return View();
         }
@@ -46,6 +51,26 @@ namespace YH.Framework.Web.Controllers
         }
         //系统反馈
         public ActionResult Feedback()
+        {
+            return View();
+        }
+        //缴纳费用
+        public ActionResult PayTheFees()
+        {
+            return View();
+        }
+        //招募人员
+        public ActionResult Recruit()
+        {
+            return View();
+        }
+        //发布成功
+        public ActionResult ReleaseSuccess()
+        {
+            return View();
+        }
+        //任务拆分
+        public ActionResult TaskSplit()
         {
             return View();
         }

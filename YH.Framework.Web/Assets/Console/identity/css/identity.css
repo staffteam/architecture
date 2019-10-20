@@ -65,6 +65,11 @@
 .identity .identity-step {
   overflow: hidden;
 }
+.identity .identity-step.error div.r li.on i {
+  background: #F55B5B;
+  color: white;
+  border: 1px solid #F55B5B;
+}
 .identity .identity-step div.l {
   width: 450px;
   height: 48px;

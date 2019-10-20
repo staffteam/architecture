@@ -1,0 +1,326 @@
+@import '../../public/less/puls.less';
+
+em,
+i {
+    font-style: normal;
+}
+
+.start-project {
+    width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 40px 0;
+
+    &>div.l {
+        width: 850px;
+        float: left;
+
+        &>div.t {
+            background: rgba(255, 255, 255, 1);
+            border: 1px solid rgba(240, 240, 240, 1);
+            padding: 24px;
+
+            div.list {
+                overflow: hidden;
+                margin-top: 24px;
+
+                &:first-child {
+                    margin-top: 0;
+                }
+
+                label {
+                    font-size: 14px;
+                    color: rgba(51, 51, 51, 1);
+                    line-height: 20px;
+                    display: block;
+                    float: left;
+                }
+
+                p {
+                    margin-left: 100px;
+
+                    span {
+                        font-size: 14px;
+                        color: rgba(153, 153, 153, 1);
+                        line-height: 20px;
+                        cursor: pointer;
+                        margin-right: 30px;
+
+                        &:hover,
+                        &.on {
+                            color: @c;
+                        }
+                    }
+                }
+            }
+        }
+
+        &>div.b {
+            margin-top: 20px;
+
+            div.title {
+                height: 58px;
+                line-height: 58px;
+                background: rgba(255, 255, 255, 1);
+
+                span {
+                    margin: 0 24px;
+                    display: block;
+                    float: left;
+                    font-size: 14px;
+                    color: rgba(51, 51, 51, 1);
+                    cursor: pointer;
+
+                    &:hover,
+                    &.on {
+                        color: @c;
+                    }
+                }
+
+                em {
+                    display: block;
+                    float: left;
+                    line-height: 55px;
+                }
+            }
+
+            div.b-list {
+                background-color: white;
+
+                ul {
+                    li {
+                        padding: 24px 30px;
+                        overflow: hidden;
+                        border-top: 1px solid #e5e5e5;
+
+                        div.l {
+                            float: left;
+                            width: 88%;
+
+                            h2 {
+                                font-size: 18px;
+                                font-weight: 600;
+                                color: rgba(51, 51, 51, 1);
+                                line-height: 25px;
+
+                                span {
+                                    display: inline-block;
+                                    width: 34px;
+                                    height: 18px;
+                                    line-height: 18px;
+                                    background: rgba(245, 91, 91, 1);
+                                    border-radius: 4px;
+                                    font-size: 12px;
+                                    text-align: center;
+                                    color: white;
+                                    position: relative;
+                                    top: -2px;
+                                }
+                            }
+
+                            div {
+                                margin-top: 20px;
+
+
+
+                                p {
+                                    margin-top: 10px;
+
+                                    &:first-child {
+                                        margin-top: 0px;
+                                    }
+
+                                    span {
+                                        margin-right: 40px;
+                                        font-size: 14px;
+                                        color: rgba(153, 153, 153, 1);
+                                        line-height: 20px;
+
+                                        em {
+                                            color: #666666;
+                                        }
+
+                                        i {
+                                            color: @c;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        div.r {
+                            float: right;
+                            width: 12%;
+                            text-align: center;
+
+                            span {
+                                font-size: 16px;
+                                color: #DDDDDD;
+                                display: inline-block;
+                                cursor: pointer;
+                                .notsel();
+                                i {
+                                    float: left;
+                                    display: block;
+                                    line-height: 20px;
+
+                                    &:first-child {
+                                        display: block;
+                                    }
+
+                                    &:nth-child(2) {
+                                        display: none;
+                                        color: #F7B500;
+                                    }
+                                }
+                                &.on{
+                                    em{
+                                        color: #F7B500;
+                                    }
+                                    i{
+                                        &:first-child{
+                                            display: none;
+                                        }
+                                        &:nth-child(2) {
+                                            display: block;
+                                        }
+                                    }
+                                }
+                                em {
+                                    font-size: 14px;
+                                    color: rgba(102, 102, 102, 1);
+                                    line-height: 20px;
+                                    margin-left: 5px;
+                                }
+                            }
+
+                            a {
+                                width: 100px;
+                                height: 32px;
+                                background: @c;
+                                box-shadow: 0px 2px 10px 0px @c;
+                                border-radius: 16px;
+                                display: block;
+                                margin-top: 28px;
+                                font-size: 14px;
+                                color: rgba(255, 255, 255, 1);
+                                line-height: 32px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &>div.r {
+        width: 330px;
+        float: right;
+
+        &>div {
+            background-color: white;
+            margin-top: 20px;
+
+            &:first-child {
+                margin-top: 0px;
+            }
+
+            &>h2 {
+                margin: 0 30px;
+                border-bottom: 1px solid #e5e5e5;
+                height: 50px;
+                line-height: 50px;
+                font-size: 14px;
+                font-weight: 600;
+                color: rgba(51, 51, 51, 1);
+            }
+        }
+
+        div.t {
+            &>div {
+                overflow: hidden;
+                padding: 23px 50px;
+
+                div {
+                    h2 {
+                        font-size: 12px;
+                        color: rgba(102, 102, 102, 1);
+                        line-height: 22px;
+
+                        span {
+                            font-size: 18px;
+                            font-weight: bold;
+                            color: rgba(72, 157, 252, 1);
+                            line-height: 22px;
+                        }
+                    }
+
+                    p {
+                        font-size: 12px;
+                        color: rgba(102, 102, 102, 1);
+                        line-height: 17px;
+                    }
+                }
+            }
+
+            &>P {
+                font-size: 14px;
+                color: rgba(153, 153, 153, 1);
+                line-height: 20px;
+                padding: 5px 30px 44px;
+            }
+        }
+
+        div.c {
+            padding-bottom: 35px;
+
+            ul {
+                li {
+                    margin-top: 20px;
+
+                    a {
+                        display: block;
+                        overflow: hidden;
+                        padding: 0 30px;
+
+                        img {
+                            width: 41px;
+                            height: 41px;
+                            float: left;
+                            display: block;
+                        }
+
+                        h2 {
+                            float: left;
+                            font-size: 14px;
+                            color: rgba(102, 102, 102, 1);
+                            line-height: 41px;
+                            margin-left: 20px;
+                        }
+                    }
+                }
+            }
+        }
+
+        div.help {
+            ul {
+                padding: 30px 35px 35px;
+
+                li {
+                    &:first-child{
+                        margin-top: 0;
+                    }
+                    margin-top: 15px;
+                    font-size: 14px;
+                    color: rgba(102, 102, 102, 1);
+                    line-height: 20px;
+                    a{
+                        &:hover{
+                            color: @c;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

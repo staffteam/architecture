@@ -1,0 +1,181 @@
+﻿@{
+    ViewBag.Title = "缴纳费用";
+}
+@Styles.Render("~/Assets/Console/identity/css/identity.css")
+@Styles.Render("~/Assets/Console/publish/css/publish.css")
+@Styles.Render("~/Assets/Console/publish/css/submitInfo.css")
+<div class="breadcrumb">
+    <span class="layui-breadcrumb">
+        <a href="~/index/index">首页</a>
+        <a><cite>缴纳费用</cite></a>
+    </span>
+</div>
+<div class="content" id="content">
+    <div class="container">
+        <div class="identity">
+            <div class="layui-card">
+                <div class="layui-card-header">发布流程</div>
+                <div class="layui-card-body auto">
+                    <div class="identity-step">
+                        <div class="r">
+                            <ul>
+                                <li class="on"><i>1</i>填写项目初审信息</li>
+                                <li class="on"><i>2</i>上传项目资料附件</li>
+                                <li class="on"><i>3</i>平台审核</li>
+                                <li class="on"><i>4</i>签署项目合同/缴纳费用</li>
+                                <li><i>5</i>招募项目人员</li>
+                                <li><i>6</i>项目发布成功</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="layui-card">
+                <div class="layui-card-header">缴纳费用</div>
+                <div class="layui-card-body auto">
+                    <div class="pay-step-one">
+                        <div class="matter-remind">
+                            <i class="layui-icon layui-icon-tips"></i>
+                            请输入您的合同编号，方便我们进行合同缴费操作
+                        </div>
+                        <div class="layui-form identity-form" id="identityApply" style="margin-top:30px;">
+                            <div class="layui-form-item">
+                                <div class="layui-inline">
+                                    <label class="layui-form-label">合同编号</label>
+                                    <div class="layui-input-inline" style="width: 200px;">
+                                        <input type="text" name="" autocomplete="off" class="layui-input" placeholder="输入编号">
+                                    </div>
+                                    <div class="layui-input-inline" style="width: 100px;"><button class="layui-btn" style="width: 80px;">查询</button></div>
+                                    <div class="layui-form-mid layui-word-aux"><i class="layui-icon layui-icon-tips"></i> 没有合同编号请与客服联系！</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="paythefees">
+                            <h2>项目缴费总额</h2>
+                            <div>
+                                <table>
+                                    <tr>
+                                        <th style="width:30%;">付款阶段</th>
+                                        <th style="width:30%;">支付金额</th>
+                                        <th>付款状态 <p><i class="iconfont">&#xe685;</i> 付款说明</p></th>
+                                    </tr>
+                                    <tr>
+                                        <td>项目预付款</td>
+                                        <td>金额：<span>22013</span></td>
+                                        <td>
+                                            <button class="layui-btn layui-btn-sm" onclick="pay('1')">立即付款</button>
+                                            <span class="s"><i class="layui-icon layui-icon-tips"></i> 本次必须支付款项</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>项目预付款</td>
+                                        <td>金额：<span>22013</span></td>
+                                        <td>
+                                            <p onclick="pay('2')">立即付款</p>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pay-step-two" style="display:none;" >
+                        <div class="title">
+                            项目付款<span>接受协议，马上结算</span>
+                        </div>
+                        <div class="pay-main" >
+                            <table>
+                                <tr>
+                                    <th>项目编号</th>
+                                    <th>项目名称</th>
+                                    <th>付款内容</th>
+                                    <th>金额</th>
+                                </tr>
+                                <tbody class="" >
+                                    <tr>
+                                        <td><div>27921792</div></td>
+                                        <td><div>酒店结构结构设计项目</div></td>
+                                        <td><div>项目预付款</div></td>
+                                        <td><div>¥21913.00</div></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="pay-all" >
+                            <p>总金额：<span>￥21913.00</span></p>
+                        </div>
+                        <div class="pay-bottom layui-form">
+                            <p><span onclick="payAgreement('1')">项目规范协议</span> | <span onclick="payAgreement('2')">项目规范协议</span></p>
+                            <input type="checkbox" name="pay-agreement" lay-filter="upimgnotcheck" lay-skin="primary" title="我已阅读，理解并接受以上协议">
+                            <div class="btn">
+                                <button class="layui-btn" lay-submit onclick="payTwo()">立即结算</button>
+                                <a href="javascript:" onclick="backOne()">返回上一步</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pay-step-three layui-form" style="display:none;" >
+                        <div class="title" >
+                            <h2><i class="iconfont">&#xe60a;</i> 订单提交成功，请尽快完成付款！订单号：23291487384279578</h2>
+                            <p>订单详情<span>请在提交订单后 <em>48</em> 小时内完成支付，否则订单会自动取消</span></p>
+                        </div>
+                        <div class="price" >
+                            <div class="list" >
+                                <h2>酒店结构结构设计项目 项目预付款</h2>
+                                <p>小计：<span>¥21913.00</span></p>
+                            </div>
+                            <div class="all-price">
+                                <p>总金额：<span>¥21913.00</span></p>
+                            </div>
+                        </div>
+                        <div class="paylist" >
+                            <h2>选择支付方式</h2>
+                            <div>
+                                <div class="t">
+                                    <div class="pay-list">
+                                        <input type="radio" name="pays" value="nan" title="" checked>
+                                        <p><img src="~/Assets/Console/public/images/pay_zfb.png" alt="" /></p>
+                                    </div>
+                                    <div class="pay-list">
+                                        <input type="radio" name="pays" value="nan" title="">
+                                        <p><img src="~/Assets/Console/public/images/pay_wx.png" alt="" /></p>
+                                    </div>
+                                    <div class="pay-list">
+                                        <input type="radio" name="pays" value="nan" title="">
+                                        <p><img src="~/Assets/Console/public/images/pay_yl.png" alt="" /></p>
+                                    </div>
+                                </div>
+                                <div class="b">
+                                    <div class="pay-list">
+                                        <input type="radio" name="pays" value="nan" title="">
+                                        <p>线下汇款 / 转款</p>
+                                    </div>
+                                    <div class="esle">
+                                        汇款后1-3个工作日会到账
+                                        <a href="#">查看帮助>></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="pay-bottom">
+                            <div class="btn">
+                                <button class="layui-btn" lay-submit onclick="payThree()">确定支付</button>
+                                <a href="javascript:" onclick="backTwo()">返回上一步</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pay-step-four layui-form" style="display:none;" >
+                        <div class="title" >
+                            <h2><i class="iconfont">&#xe60a;</i> 支付成功</h2>
+                            <p>您的预付款已支付成功，您可以开始招募招募项目人员。</p>
+                        </div>
+                        <div class="bottom" >
+                            <button class="layui-btn" lay-submit onclick="backThree()">上一步</button>
+                            <button class="layui-btn" lay-submit onclick="payFour()">下一步</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@Scripts.Render("~/Assets/Console/common/provinces/provincesPlus.js")
+@Scripts.Render("~/Assets/Console/Publish/js/payTheFees.js")

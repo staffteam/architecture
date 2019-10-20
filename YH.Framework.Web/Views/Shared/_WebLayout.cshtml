@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Assets/Web/public/css/public.css")
+    @Styles.Render("~/Assets/Console/common/layui/css/layui.css")
+    @Styles.Render("~/Assets/Console/index/css/index.css")
+    @RenderSection("styles", required: false)
+    @Scripts.Render("~/Assets/Console/common/jquery/jquery.min.js")
+    @Scripts.Render("~/Assets/Console/common/layui/layui.all.js")
+    @Scripts.Render("~/Assets/Web/public/js/public.js")
+    @RenderSection("scripts", required: false)
+</head>
+<body>
+    <div class="main">
+        <!-- 顶部 -->
+        @Html.Partial("_WebHeader")
+        @RenderBody()
+        @Html.Partial("_WebFooter")
+    </div>
+    <script>
+        var element = layui.element;
+    </script>
+</body>
+</html>

@@ -1,0 +1,155 @@
+﻿@{
+    ViewBag.Title = "招募人员";
+}
+@Styles.Render("~/Assets/Console/identity/css/identity.css")
+@Styles.Render("~/Assets/Console/publish/css/publish.css")
+@Styles.Render("~/Assets/Console/publish/css/submitInfo.css")
+<div class="breadcrumb">
+    <span class="layui-breadcrumb">
+        <a href="~/index/index">首页</a>
+        <a><cite>招募人员</cite></a>
+    </span>
+</div>
+<div class="content" id="content">
+    <div class="container">
+        <div class="identity">
+            <div class="layui-card">
+                <div class="layui-card-header">发布流程</div>
+                <div class="layui-card-body auto">
+                    <div class="identity-step">
+                        <div class="r">
+                            <ul>
+                                <li class="on"><i>1</i>填写项目初审信息</li>
+                                <li class="on"><i>2</i>上传项目资料附件</li>
+                                <li class="on"><i>3</i>平台审核</li>
+                                <li class="on"><i>4</i>签署项目合同/缴纳费用</li>
+                                <li class="on"><i>5</i>招募项目人员</li>
+                                <li><i>6</i>项目发布成功</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="layui-card recruit-step-one">
+                <div class="layui-card-header">绑定人员</div>
+                <div class="layui-card-body auto">
+                    <div class="layui-form identity-form" id="identityApply" style="margin-top:30px;">
+                        <div class="layui-form-item">
+                            <div class="layui-inline">
+                                <label class="layui-form-label" style="width: 110px; text-align:left;">项目负责人</label>
+                                <div class="layui-input-inline" style="width: 200px;">
+                                    <input type="text" name="fzrId" autocomplete="off" class="layui-input" placeholder="输入人员ID">
+                                </div>
+                                <div class="layui-input-inline" style="width: 110px;"><button class="layui-btn recruit-btn" onclick="fzrClick(this)">立即绑定</button></div>
+                                <div class="layui-form-mid layui-word-aux"><span class="recruit-me" onclick="fzrMeClick(this)">绑定本人</span></div>
+                            </div>
+                            <div id="fzrList" class="bd-list">
+                                <ul>
+                                    <li>项目负责人</li>
+                                    <li>戴含伶</li>
+                                    <li>建筑结构设计师</li>
+                                    <li>广东省深圳市福田区</li>
+                                    <li>24</li>
+                                    <li>3年</li>
+                                    <li>本科</li>
+                                    <li>上海交通大学</li>
+                                    <li>建筑结构设计学</li>
+                                    <li><span onclick="fzrRelieve(this)">解除绑定</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <div class="layui-inline">
+                                <label class="layui-form-label" style="width: 110px; text-align:left;">审核人</label>
+                                <div class="layui-input-inline" style="width: 200px;">
+                                    <input type="text" name="shrId" autocomplete="off" class="layui-input" placeholder="输入人员ID">
+                                </div>
+                                <div class="layui-input-inline" style="width: 110px;"><button class="layui-btn recruit-btn" onclick="shrClick(this)">立即绑定</button></div>
+                                <div class="layui-form-mid layui-word-aux"><span class="recruit-me" onclick="shrMeClick(this)">绑定本人</span></div>
+                            </div>
+                            <div id="shrList" class="bd-list">
+                                <ul>
+                                    <li>项目负责人</li>
+                                    <li>戴含伶</li>
+                                    <li>建筑结构设计师</li>
+                                    <li>广东省深圳市福田区</li>
+                                    <li>24</li>
+                                    <li>3年</li>
+                                    <li>本科</li>
+                                    <li>上海交通大学</li>
+                                    <li>建筑结构设计学</li>
+                                    <li><span onclick="fzrRelieve(this)">解除绑定</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="layui-card-header">招募人员</div>
+                <div class="layui-card-body" style="min-height:33vh;">
+
+                    <div class="layui-form identity-form" id="identityApply" style="margin-top:30px;">
+                        <div class="layui-form-item">
+                            <div class="layui-inline">
+                                <label class="layui-form-label">专业负责人</label>
+                                <div class="layui-input-inline" style="width: 110px;">
+                                    <button class="layui-btn recruit-btn" onclick="zmClick(this)">发布招募</button>
+                                </div>
+                            </div>
+                            <div id="zmList" class="bd-list">
+                                <ul>
+                                    <li>项目负责人</li>
+                                    <li>戴含伶</li>
+                                    <li>建筑结构设计师</li>
+                                    <li>广东省深圳市福田区</li>
+                                    <li>24</li>
+                                    <li>3年</li>
+                                    <li>本科</li>
+                                    <li>上海交通大学</li>
+                                    <li>建筑结构设计学</li>
+                                    <li><span onclick="zmRelieve(this)">解除绑定</span></li>
+                                </ul>
+                            </div>
+                            <div class="zm-next"><button class="layui-btn" lay-submit lay-filter="identityApply" onclick="recruitNext()">下一步</button></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="layui-card recruit-step-two" style="display:none;">
+                <div class="layui-card-header">四方主体确认</div>
+                <div class="layui-card-body">
+                    <div class="recreit-two-list">
+                        <ul>
+                            <li class="on">
+                                <span>项目负责人</span>
+                                <p><i class="iconfont">&#xe60a;</i><span>项目细节已确定</span></p>
+                                <div>
+                                    <a href="#">查看任务详情</a>
+                                    <a href="#">查看方案报告</a>
+                                    <button class="layui-btn btn-affirm" onclick="recruitTwoAffirm(this)">已确认</button>
+                                </div>
+                            </li>
+                            <li class="on">
+                                <span>审核人</span>
+                                <p><i class="iconfont">&#xe60a;</i><span>项目细节已确定</span></p>
+                            </li>
+                            <li>
+                                <span>专业负责人</span>
+                                <p><i class="iconfont not">&#xe685;</i><span>项目细节未确定</span></p>
+                                <div>
+                                    <a href="#">查看任务详情</a>
+                                    <a href="#">查看方案报告</a>
+                                    <button class="layui-btn" onclick="recruitTwoAffirm(this)">提交确认</button>
+                                </div>
+                            </li>
+                        </ul>
+                        <p>提醒：还有 5 天未确认项目发布将会失败!</p>
+                    </div>
+                    <div class="recreit-two-next"><button class="layui-btn" lay-submit lay-filter="identityApply" onclick="recruitTwoNext()">下一步</button></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@Scripts.Render("~/Assets/Console/common/provinces/provincesPlus.js")
+@Scripts.Render("~/Assets/Console/Publish/js/recruit.js")

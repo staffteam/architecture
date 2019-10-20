@@ -10,6 +10,14 @@ $(function(){
     });
 })
 
+//提交方法
+function submitInfo(){
+    $('#identityApply input').blur();
+    if($('#identityApply .verify-tips').length==0){
+        location.href = location.protocol + '//' + location.host + '/PublishProject/SubmitInfoUp'
+    }
+}
+
 //生成验证码的方法
 function createCode(length) {
     var code = "";
@@ -37,7 +45,7 @@ function createCode(length) {
 }
 
 //检查验证码是否正确
-function validateCode()
+function validateCode(obj)
 {
     //获取显示区生成的验证码
     var checkCode = document.getElementById("checkCode").innerHTML;
@@ -47,15 +55,23 @@ function validateCode()
     console.log(inputCode);
     if (inputCode.length <= 0)
     {
-        alert("请输入验证码！");
+        if($(obj).parent().find('.verify-tips').length>0){
+            $(obj).parent().find('.verify-tips').html('请输入请输入验证码').show();
+        }else{
+            $(obj).parent().append('<p class="verify-tips">请输入请输入验证码</p>');
+        }
     }
     else if (inputCode.toUpperCase() != checkCode.toUpperCase())
     {
-        alert("验证码输入有误！");
+        if($(obj).parent().find('.verify-tips').length>0){
+            $(obj).parent().find('.verify-tips').html('验证码输入有误').show();
+        }else{
+            $(obj).parent().append('<p class="verify-tips">验证码输入有误</p>');
+        }
         createCode(4);
     }
     else
     {
-        alert("验证码正确！");
+        $(obj).parent().find('.verify-tips').remove();
     }       
 }    

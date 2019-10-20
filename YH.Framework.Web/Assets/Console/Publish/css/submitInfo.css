@@ -1,0 +1,837 @@
+.layui-upload-flow {
+  margin-top: 20px;
+}
+.layui-upload-flow .else {
+  display: none;
+}
+.updatalist {
+  overflow: hidden;
+  width: 100%;
+  padding: 20px;
+  background: #ffffff;
+  border: 2px dashed #dee2e6;
+  margin-top: 20px;
+}
+.updatalist > div {
+  width: 138px;
+  height: 150px;
+  background: #fafafa;
+  border: 1px solid #f5f5f5;
+  float: left;
+  margin-right: 10px;
+  position: relative;
+  padding: 0 5px;
+}
+.updatalist > div div {
+  text-align: center;
+  padding: 36px 0 0;
+}
+.updatalist > div div i {
+  font-size: 40px;
+  color: #489DFC;
+}
+.updatalist > div h2 {
+  font-size: 12px;
+  color: #333333;
+  margin-top: 8px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  line-height: 30px;
+  line-height: 17px;
+}
+.updatalist > div p {
+  font-size: 12px;
+  color: #999999;
+  line-height: 17px;
+  margin-top: 5px;
+}
+.updatalist > div span {
+  width: 20px;
+  height: 20px;
+  background: #e5e5e5;
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  display: block;
+  border-radius: 50%;
+  line-height: 20px;
+  text-align: center;
+  cursor: pointer;
+}
+.updatalist > div span i {
+  font-size: 12px;
+  color: white;
+}
+.updatalist > div.layui-upload-drag.layui-upload-flow {
+  text-align: center;
+  line-height: 150px;
+  width: 138px;
+  height: 150px;
+  background: #fafafa;
+  border: 1px solid #f5f5f5;
+  float: left;
+  margin: 0;
+  margin-right: 10px;
+  position: relative;
+  padding: 0 5px;
+  cursor: pointer;
+}
+.updatalist > div.layui-upload-drag.layui-upload-flow .upload-content {
+  display: none;
+}
+.updatalist > div.layui-upload-drag.layui-upload-flow .else {
+  display: block;
+  padding: 0;
+}
+.updatalist > div.layui-upload-drag.layui-upload-flow i {
+  font-size: 50px;
+  color: #999;
+}
+.up-img-main {
+  padding: 20px 0;
+}
+.up-img-main > p {
+  padding: 0 20px;
+}
+.up-img-main > .up-img-list ul {
+  overflow: hidden;
+}
+.up-img-main > .up-img-list ul li {
+  float: left;
+  margin: 20px;
+}
+.up-img-main > .up-img-list ul li > div {
+  width: 154px;
+  height: 154px;
+  background: #f5f5f5;
+  border: 1px solid #e5e5e5;
+  position: relative;
+}
+.up-img-main > .up-img-list ul li > div > p {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.up-img-main > .up-img-list ul li > div .layui-form-checkbox {
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+  z-index: 9;
+  padding-left: 0;
+}
+.up-img-main > .up-img-list ul li > h2 {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333333;
+  line-height: 20px;
+  margin-top: 10px;
+}
+.up-img-main .up-img-notcheck {
+  padding: 0 20px;
+}
+.up-img-main .up-img-check {
+  height: 58px;
+  background: #f5f5f5;
+  line-height: 58px;
+  padding: 0 20px;
+  margin: 20px;
+}
+.up-img-main .up-img-check span {
+  color: #489DFC;
+}
+.up-img-main .up-img-check span em {
+  color: #333;
+  font-style: normal;
+}
+.info-img-list > p {
+  padding: 0 20px;
+}
+.info-img-list ul {
+  overflow: hidden;
+}
+.info-img-list ul li {
+  margin: 20px;
+  float: left;
+  cursor: pointer;
+}
+.info-img-list ul li p {
+  width: 154px;
+  height: 154px;
+  background: #f5f5f5;
+  border: 1px solid #e5e5e5;
+  overflow: hidden;
+}
+.info-img-list ul li p img {
+  width: 100%;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.info-img-list ul li h2 {
+  font-size: 14px;
+  color: #333333;
+  line-height: 20px;
+  margin-top: 8px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+#swipers {
+  height: 100%;
+}
+#swipers .swiper-button-prev,
+#swipers .swiper-button-next {
+  background-image: none;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 43px;
+  height: 43px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 43px;
+}
+#swipers .swiper-button-prev i,
+#swipers .swiper-button-next i {
+  font-size: 22px;
+  font-weight: 400;
+}
+#swipers .swiper-button-prev {
+  padding-right: 3px;
+}
+#swipers .swiper-button-next {
+  padding-left: 3px;
+}
+#swipers .swiper-slide {
+  height: 100%;
+  overflow: hidden;
+}
+#swipers .swiper-slide img {
+  width: 100%;
+}
+.audit-underway {
+  padding: 170px 0;
+  text-align: center;
+}
+.audit-underway .underway-main {
+  display: inline-block;
+  overflow: hidden;
+}
+.audit-underway .underway-main > p {
+  float: left;
+  width: 164px;
+  height: 190px;
+}
+.audit-underway .underway-main > p img {
+  width: 100%;
+}
+.audit-underway .underway-main > div {
+  margin-left: 30px;
+  padding: 40px 0;
+  float: left;
+}
+.audit-underway .underway-main > div h2 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #666666;
+  line-height: 33px;
+}
+.audit-underway .underway-main > div p {
+  font-size: 14px;
+  color: #999999;
+  line-height: 20px;
+  margin-top: 12px;
+}
+.audit-underway .underway-main > div div {
+  margin-top: 16px;
+}
+.audit-underway .underway-main > div div span {
+  font-size: 14px;
+  color: #666666;
+  line-height: 20px;
+  display: inline-block;
+  margin-right: 30px;
+}
+.audit-underway .underway-main > div div span em {
+  color: #F55B5B;
+  font-style: normal;
+}
+.audit-underway .underway-main > div div p {
+  display: inline-block;
+  color: #489DFC;
+}
+.audit-underway .underway-main > div div p a {
+  font-size: 14px;
+  color: #489DFC;
+  line-height: 20px;
+  margin: 0 10px;
+}
+.audit-success .title,
+.audit-error .title {
+  text-align: center;
+}
+.audit-success .title > h2,
+.audit-error .title > h2 {
+  display: inline-block;
+  font-size: 24px;
+  color: #666666;
+  line-height: 40px;
+}
+.audit-success .title > h2 i,
+.audit-error .title > h2 i {
+  font-size: 35px;
+  color: #75D2B2;
+  float: left;
+  margin-right: 13px;
+}
+.audit-success .title > p,
+.audit-error .title > p {
+  width: 375px;
+  height: 42px;
+  font-size: 14px;
+  color: #666666;
+  line-height: 20px;
+  margin: 0 auto;
+  margin-top: 10px;
+  text-align: left;
+}
+.audit-success .audit-info,
+.audit-error .audit-info {
+  margin-top: 30px;
+}
+.audit-success .audit-info h2,
+.audit-error .audit-info h2 {
+  margin: 0 auto;
+  width: 80%;
+  background: #f1f1f6;
+  border: 1px solid #e5e5e5;
+  line-height: 28px;
+  font-size: 16px;
+  color: #333333;
+  padding: 10px 40px;
+  font-weight: 600;
+}
+.audit-success .audit-info div.list,
+.audit-error .audit-info div.list {
+  margin: 0 auto;
+  width: 80%;
+  background: #f8f8fc;
+  border: 1px solid #e5e5e5;
+  border-bottom: 0px;
+  font-size: 14px;
+  color: #333333;
+  line-height: 28px;
+  padding: 10px 40px;
+  overflow: hidden;
+}
+.audit-success .audit-info div.list:nth-child(2),
+.audit-error .audit-info div.list:nth-child(2) {
+  border-top: 0px;
+}
+.audit-success .audit-info div.list p,
+.audit-error .audit-info div.list p {
+  width: 50%;
+  float: left;
+}
+.audit-success .audit-info div.list.blod,
+.audit-error .audit-info div.list.blod {
+  background-color: #F1F1F6;
+}
+.audit-success .audit-info div.list.blod label,
+.audit-error .audit-info div.list.blod label {
+  font-weight: 600;
+}
+.audit-success .audit-info div.list.blod a,
+.audit-error .audit-info div.list.blod a {
+  color: #337BB7;
+  margin-left: 10px;
+}
+.audit-success .audit-info div.list.blod a.err,
+.audit-error .audit-info div.list.blod a.err {
+  color: #F55B5B;
+}
+.audit-success .audit-btn,
+.audit-error .audit-btn {
+  margin: 40px 0;
+  text-align: center;
+}
+.audit-error .title > h2 i {
+  color: #F55B5B;
+}
+.audit-error .title > h2 a {
+  color: #F55B5B;
+}
+.audit-error .title > div {
+  text-align: left;
+  width: 582px;
+  margin: 0 auto;
+  margin-top: 15px;
+}
+.audit-error .title > div h2 {
+  font-size: 14px;
+  color: #f55b5b;
+  line-height: 20px;
+}
+.audit-error .title > div p {
+  font-size: 14px;
+}
+.audit-error .title > div p span {
+  color: #f55b5b;
+}
+.audit-error .title > div p a {
+  color: #489DFC;
+}
+.paythefees {
+  padding-top: 50px;
+  margin-top: 50px;
+  border-top: 1px solid #dddddd;
+}
+.paythefees > h2 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #666666;
+  line-height: 28px;
+}
+.paythefees > div {
+  width: 1100px;
+  margin-top: 20px;
+}
+.paythefees > div table {
+  width: 100%;
+}
+.paythefees > div table tr {
+  background: #f1f1f6;
+  border: 1px solid #e5e5e5;
+}
+.paythefees > div table tr th {
+  height: 48px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #333333;
+  line-height: 48px;
+  text-align: left;
+  padding: 0 40px;
+}
+.paythefees > div table tr th p {
+  float: right;
+  font-size: 14px;
+  color: #333333;
+  font-weight: 500;
+  padding: 0 20px;
+  cursor: pointer;
+}
+.paythefees > div table tr th p i {
+  font-size: 20px;
+  float: left;
+  margin-right: 10px;
+}
+.paythefees > div table tr td {
+  height: 48px;
+  font-size: 14px;
+  color: #333333;
+  line-height: 48px;
+  padding: 0 40px;
+}
+.paythefees > div table tr td p {
+  height: 30px;
+  line-height: 30px;
+  padding: 0 10px;
+  font-size: 12px;
+  color: #489DFC;
+  cursor: pointer;
+}
+.paythefees > div table tr td span {
+  display: inline-block;
+  font-size: 16px;
+  color: #f55b5b;
+  line-height: 20px;
+  font-weight: 600;
+}
+.paythefees > div table tr td span.s {
+  font-weight: 500;
+  margin-left: 10px;
+  font-size: 14px;
+}
+.paythefees > div table tr td span i {
+  float: left;
+  font-size: 14px;
+  margin-right: 8px;
+}
+.pay-step-two {
+  padding: 20px 0;
+}
+.pay-step-two div.title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333333;
+  line-height: 25px;
+}
+.pay-step-two div.title span {
+  font-size: 14px;
+  color: #666666;
+  line-height: 20px;
+  margin-left: 10px;
+  font-weight: 500;
+}
+.pay-step-two .pay-main {
+  margin-top: 25px;
+}
+.pay-step-two .pay-main th {
+  background: #F1F1F6;
+  height: 52px;
+  line-height: 52px;
+  font-weight: 600;
+  font-size: 14px;
+  text-align: left;
+  padding: 0 20px;
+}
+.pay-step-two .pay-main td {
+  padding-top: 10px;
+}
+.pay-step-two .pay-main td div {
+  background-color: #F8F8FC;
+  font-size: 14px;
+  padding: 0 20px;
+  height: 96px;
+  line-height: 96px;
+}
+.pay-step-two .pay-all {
+  padding: 30px 0 15px 0;
+  border-bottom: 1px solid #dddddd;
+  text-align: right;
+}
+.pay-step-two .pay-all p {
+  font-size: 16px;
+  display: inline-block;
+}
+.pay-step-two .pay-all p span {
+  font-size: 26px;
+  font-weight: 600;
+  color: #f55b5b;
+  line-height: 37px;
+}
+.pay-bottom {
+  padding: 12px 0;
+  text-align: right;
+}
+.pay-bottom p {
+  margin-bottom: 25px;
+  color: #999999;
+}
+.pay-bottom p span {
+  font-size: 14px;
+  color: #999999;
+  line-height: 20px;
+  cursor: pointer;
+}
+.pay-bottom div.btn {
+  margin-top: 25px;
+}
+.pay-bottom div.btn a {
+  font-size: 14px;
+  color: #489dfc;
+  line-height: 20px;
+  margin-left: 30px;
+  display: inline-block;
+}
+.pay-step-three .title > h2 {
+  font-size: 24px;
+  color: #666666;
+  line-height: 40px;
+}
+.pay-step-three .title > h2 i {
+  font-size: 35px;
+  color: #75D2B2;
+  float: left;
+  margin-right: 13px;
+}
+.pay-step-three .title > p {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333333;
+  line-height: 25px;
+  margin-top: 40px;
+}
+.pay-step-three .title > p span {
+  margin-left: 10px;
+  font-size: 14px;
+  color: #666666;
+  line-height: 20px;
+}
+.pay-step-three .title > p span em {
+  font-size: 14px;
+  color: #F55B5B;
+  font-style: normal;
+}
+.pay-step-three .price {
+  margin-top: 20px;
+}
+.pay-step-three .price .list {
+  height: 96px;
+  background: #f8f8fc;
+  line-height: 96px;
+  padding: 0 30px;
+}
+.pay-step-three .price .list h2 {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333333;
+  float: left;
+}
+.pay-step-three .price .list p {
+  font-size: 14px;
+  font-weight: 600;
+  color: #666666;
+  float: right;
+}
+.pay-step-three .price .list p span {
+  font-size: 20px;
+  font-weight: 600;
+  color: #f55b5b;
+}
+.pay-step-three .price .all-price {
+  font-size: 16px;
+  color: #333333;
+  line-height: 22px;
+  text-align: right;
+  margin-top: 30px;
+  padding: 0 30px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid #dddddd;
+}
+.pay-step-three .price .all-price span {
+  font-size: 26px;
+  font-weight: 600;
+  color: #f55b5b;
+  line-height: 37px;
+}
+.pay-step-three .paylist {
+  padding: 30px 0 50px 0;
+  border-bottom: 1px solid #dddddd;
+}
+.pay-step-three .paylist > h2 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333333;
+  line-height: 25px;
+}
+.pay-step-three .paylist > div {
+  margin-top: 20px;
+}
+.pay-step-three .paylist > div div.t .pay-list {
+  display: inline-block;
+  margin-right: 10px;
+  cursor: pointer;
+}
+.pay-step-three .paylist > div div.t .pay-list .layui-form-radio {
+  padding-right: 0;
+  margin-right: 0;
+  margin-top: 16px;
+}
+.pay-step-three .paylist > div div.t .pay-list .layui-form-radioed + p {
+  border: 1px solid #F55B5B;
+}
+.pay-step-three .paylist > div div.t .pay-list p {
+  margin-left: 10px;
+  width: 120px;
+  height: 60px;
+  float: right;
+  border: 1px solid white;
+}
+.pay-step-three .paylist > div div.t .pay-list p img {
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.pay-step-three .paylist > div div.b {
+  margin-top: 40px;
+}
+.pay-step-three .paylist > div div.b .pay-list {
+  display: inline-block;
+  margin-right: 10px;
+  cursor: pointer;
+}
+.pay-step-three .paylist > div div.b .pay-list .layui-form-radio {
+  padding-right: 0;
+  margin-right: 0;
+  margin-top: 1px;
+}
+.pay-step-three .paylist > div div.b .pay-list .layui-form-radioed + p {
+  border: 1px solid #F55B5B;
+}
+.pay-step-three .paylist > div div.b .pay-list p {
+  margin-left: 10px;
+  font-size: 16px;
+  padding: 0 10px;
+  font-weight: 600;
+  color: #333333;
+  line-height: 30px;
+  float: right;
+  border: 1px solid white;
+}
+.pay-step-three .paylist > div div.b .esle {
+  font-size: 14px;
+  color: #666666;
+  line-height: 30px;
+  display: inline-block;
+  margin-left: 30px;
+}
+.pay-step-three .paylist > div div.b .esle a {
+  font-size: 14px;
+  color: #489DFC;
+  line-height: 30px;
+}
+.pay-step-four {
+  padding: 150px 0;
+}
+.pay-step-four .title {
+  text-align: center;
+}
+.pay-step-four .title > h2 {
+  font-size: 24px;
+  color: #666666;
+  line-height: 40px;
+  display: inline-block;
+  padding-right: 290px;
+  padding-bottom: 20px;
+}
+.pay-step-four .title > h2 i {
+  font-size: 35px;
+  color: #75D2B2;
+  float: left;
+  margin-right: 13px;
+}
+.pay-step-four .title > p {
+  font-size: 14px;
+  color: #666666;
+  line-height: 20px;
+  width: 375px;
+  margin: 0 auto;
+}
+.pay-step-four .bottom {
+  margin-top: 40px;
+  text-align: center;
+}
+.recruit-me {
+  color: #489DFC;
+  cursor: pointer;
+}
+.recruit-me.off {
+  color: #a1b1c4;
+}
+.recruit-btn.on {
+  background: #a1b1c4;
+}
+.recruit-btn.success {
+  background: #75d2b2;
+}
+.zm-next {
+  display: none;
+  text-align: right;
+  margin-top: 50px;
+}
+.bd-list {
+  height: 48px;
+  line-height: 48px;
+  background: #f8f8fc;
+  margin-top: 20px;
+  display: none;
+}
+.bd-list ul li {
+  width: 9%;
+  float: left;
+  font-size: 14px;
+  color: #666666;
+  text-align: center;
+}
+.bd-list ul li:last-child {
+  float: right;
+}
+.bd-list ul li:last-child span {
+  color: #489DFC;
+  cursor: pointer;
+}
+.recreit-two-list ul li {
+  height: 48px;
+  background: #f8f8fc;
+  line-height: 48px;
+  margin-top: 5px;
+}
+.recreit-two-list ul li:first-child {
+  margin-top: 0;
+}
+.recreit-two-list ul li > span {
+  width: 100px;
+  font-size: 14px;
+  color: #333333;
+  display: block;
+  float: left;
+  padding-left: 14px;
+}
+.recreit-two-list ul li p {
+  display: inline-block;
+  font-size: 14px;
+  color: #333333;
+}
+.recreit-two-list ul li p i {
+  float: left;
+  font-size: 24px;
+  margin-right: 10px;
+  color: #75D2B2;
+}
+.recreit-two-list ul li p i.not {
+  color: #A1B1C4;
+}
+.recreit-two-list ul li div {
+  float: right;
+  padding-right: 24px;
+}
+.recreit-two-list ul li div a {
+  font-size: 14px;
+  color: #489dfc;
+  line-height: 20px;
+  display: inline-block;
+  margin-right: 24px;
+}
+.recreit-two-list ul li div .layui-btn.btn-affirm {
+  background-color: #A1B1C4;
+}
+.recreit-two-list > p {
+  font-size: 14px;
+  color: #f55b5b;
+  line-height: 20px;
+  margin-top: 15px;
+}
+.recreit-two-next {
+  text-align: right;
+  margin-top: 60px;
+}
+.task-split .title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333333;
+  line-height: 25px;
+}
+.task-split .btns {
+  margin: 24px 0;
+}
+.task-split .add-task {
+  text-align: center;
+}
+.task-split .add-task a {
+  line-height: 50px;
+  font-size: 16px;
+  display: inline-block;
+  color: #489dfc;
+  line-height: 40px;
+}
+.task-split .add-task a i {
+  display: block;
+  font-size: 30px;
+  float: left;
+  margin-right: 10px;
+}

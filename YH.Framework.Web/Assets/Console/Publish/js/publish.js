@@ -60,9 +60,9 @@ $(function () {
         if (obj.event === 'look') {
            location.href="/lookingFor/lookDetails"
         } else if (obj.event === 'task') {
-            
+           
         } else if (obj.event === 'collect') {
-            
+            location.href = location.protocol + '//' + location.host +"/PublishProject/History" 
         }
     });
 

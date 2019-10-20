@@ -16,7 +16,7 @@ function Provinces(init){
                 _html3+='<option value="'+value.label+'">'+value.value+'</option>';
                 _name3[value.label]={index:index,name:value.value};
             });
-            $('#'+init.elem).append('<label class="layui-form-label">'+init.label+'</label>'+
+            $('#'+init.elem).append('<label class="layui-form-label">'+init.label+' '+(init.required?'<i style="color:red;" >*</i>':'')+'</label>'+
             '<div class="layui-input-block"><div class="layui-input-inline" style="width:150px;" >'+
             '<select name="province" lay-filter="province"  ><option value="">请选择</option>'+_html1+'</select>'+
             '<input type="hidden" name="site" value="" class="selects" '+(init.required?'verifys="required"':'')+' tips="'+init.label+'"></div>'+

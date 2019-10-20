@@ -1,0 +1,50 @@
+﻿@{
+    ViewBag.Title = "任务拆分";
+}
+@Styles.Render("~/Assets/Console/identity/css/identity.css")
+@Styles.Render("~/Assets/Console/publish/css/publish.css")
+@Styles.Render("~/Assets/Console/publish/css/submitInfo.css")
+<div class="breadcrumb">
+    <span class="layui-breadcrumb">
+        <a href="~/index/index">首页</a>
+        <a><cite>任务拆分</cite></a>
+    </span>
+</div>
+<div class="content" id="content">
+    <div class="container">
+        <div class="identity">
+            <div class="layui-card">
+                <div class="layui-card-header">任务及费用拆分表</div>
+                <div class="layui-card-body">
+                    <div class="task-split" >
+                        <div class="title">
+                            世茂五里河超高层住宅
+                        </div>
+                        <div class="btns">
+                            <button class="layui-btn"><i class="iconfont">&#xe600;</i> 新增</button>
+                            <button class="layui-btn"><i class="iconfont">&#xe601;</i> 新增</button>
+                            <button class="layui-btn">导入excel</button>
+                            <button class="layui-btn">导出excel</button>
+                        </div>
+                        <div class="list">
+                            <script type="text/html" id="table1Bar">
+                                <a class="layui-btn layui-btn-xs" lay-event="look" title="编辑"><i class="iconfont">&#xe791;</i></a>
+                                <a class="layui-btn layui-btn-xs" lay-event="look" title="上移"><i class="iconfont">&#xe690;</i> </a>
+                                <a class="layui-btn layui-btn-xs" lay-event="look" title="下移"><i class="iconfont">&#xe605;</i> </a>
+                                <a class="layui-btn layui-btn-xs" lay-event="look" title="置顶"><i class="iconfont">&#xe640;</i> </a>
+                                <a class="layui-btn layui-btn-xs" lay-event="look" title="置底"><i class="iconfont">&#xe604;</i> </a>
+                                <a class="layui-btn layui-btn-xs" lay-event="del" title="删除"><i class="iconfont">&#xe601;</i> </a>
+                            </script>
+                            <table id="table1" lay-filter="table1"></table>
+                        </div>
+                        <div class="add-task" >
+                            <a href="#"><i class="iconfont">&#xe74a;</i> 添加新的任务</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@Scripts.Render("~/Assets/Console/common/provinces/provincesPlus.js")
+@Scripts.Render("~/Assets/Console/Publish/js/taskSplit.js")

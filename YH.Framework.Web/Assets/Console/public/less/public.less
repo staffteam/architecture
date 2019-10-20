@@ -9,9 +9,11 @@
  .layui-btn .layui-icon {
      float: left;
  }
-textarea{
-    resize:none !important;
-}
+
+ textarea {
+     resize: none !important;
+ }
+
  // 面包屑
  .breadcrumb {
      padding: 14px 24px;
@@ -58,6 +60,49 @@ textarea{
 
  // 顶部导航
  .main {
+     .layui-upload-drag.layui-upload-flow {
+         width: 100%;
+         padding: 20px;
+         background: rgba(255, 255, 255, 1);
+         border: 2px dashed rgba(222, 226, 230, 1);
+
+         .upload-content {
+             padding: 30px;
+
+             i {
+                 font-size: 50px;
+             }
+
+             p {
+                 font-size: 22px;
+                 margin-top: 10px;
+             }
+         }
+     }
+
+     .hint-success {
+         width: 100%;
+         height: 46px;
+         background: rgba(230, 247, 255, 1);
+         border: 1px solid rgba(145, 213, 255, 1);
+         font-size: 14px;
+         color: rgba(0, 0, 0, 0.65);
+         line-height: 46px;
+         padding: 0 20px;
+         margin-bottom: 10px;
+     }
+
+     .hint-error {
+         width: 100%;
+         height: 46px;
+         background: rgba(255, 241, 240, 1);
+         border: 1px solid rgba(255, 163, 158, 1);
+         font-size: 14px;
+         color: rgba(0, 0, 0, 0.65);
+         line-height: 46px;
+         padding: 0 20px;
+         margin-bottom: 10px;
+     }
 
      //重要提示模块
      .matter-remind {
@@ -69,12 +114,29 @@ textarea{
          padding: 0 20px;
          overflow: hidden;
          color: rgba(142, 114, 65, 1);
-         i{
+
+         i {
              display: block;
              float: left;
              color: #FAAD14;
              font-size: 14px;
              margin-right: 10px;
+         }
+
+         label {
+             display: block;
+             float: left;
+             color: #8E7241;
+             font-size: 14px;
+             margin-right: 10px;
+         }
+
+         a {
+             font-size: 14px;
+             color: rgba(51, 123, 183, 1);
+             line-height: 24px;
+             display: inline-block;
+             margin-left: 20px;
          }
      }
 

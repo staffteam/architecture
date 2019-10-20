@@ -1,17 +1,59 @@
 ﻿@{
-    Layout = null;
+    ViewBag.Title = "审核历史";
 }
+@Styles.Render("~/Assets/Console/Publish/css/history.css")
+<div class="breadcrumb">
+    <span class="layui-breadcrumb">
+        <a href="~/index/index">首页</a>
+        <a><cite>审核历史</cite></a>
+    </span>
+</div>
+<div class="content" id="content">
+    <div class="container">
+        <div class="looking-for-list">
+            <div class="layui-card">
+                <div class="layui-card-header">审核历史</div>
+                <div class="layui-card-body">
+                    <script type="text/html" id="table1Btn">
+                        <div class="layui-form-item">
+                            <div class="layui-inline">
+                                <div class="layui-input-inline">
+                                    <select name="quiz">
+                                        <option value="">项目阶段</option>
+                                        <option value="0">开始</option>
+                                        <option value="1">结束</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="layui-inline">
+                                <div class="layui-input-inline">
+                                    <input type="text" name="date" id="date"
+                                           lay-verify="date" placeholder="发布时间"
+                                           autocomplete="off" class="layui-input">
+                                </div>
+                            </div>
+                            <div class="layui-inline">
+                                <div class="layui-input-inline">
+                                    <input type="text" name="" placeholder="岗位需求"
+                                           autocomplete="off" class="layui-input">
+                                </div>
+                            </div>
+                            <div class="layui-inline">
+                                <div class="layui-btn-container">
+                                    <button class="layui-btn"
+                                            lay-event="getCheckData">
+                                        搜索
+                                    </button>
+                                </div>
+                            </div>
 
-<!DOCTYPE html>
+                        </div>
+                    </script>
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title></title>
-</head>
-<body>
-    <div>
-    
+                    <table id="table1" lay-filter="table1"></table>
+                </div>
+            </div>
+        </div>
     </div>
-</body>
-</html>
+</div>
+@Scripts.Render("~/Assets/Console/Publish/js/history.js")

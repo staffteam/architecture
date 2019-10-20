@@ -1,0 +1,140 @@
+﻿@{
+    ViewBag.Title = "平台审核";
+}
+@Styles.Render("~/Assets/Console/identity/css/identity.css")
+@Styles.Render("~/Assets/Console/publish/css/publish.css")
+@Styles.Render("~/Assets/Console/publish/css/submitInfo.css")
+<div class="breadcrumb">
+    <span class="layui-breadcrumb">
+        <a href="~/index/index">首页</a>
+        <a><cite>平台审核</cite></a>
+    </span>
+</div>
+<div class="content" id="content">
+    <div class="container">
+        <div class="identity">
+            <div class="layui-card">
+                <div class="layui-card-header">发布流程</div>
+                <div class="layui-card-body auto">
+                    <div id="auditSuccess" class="hint-success" style="display:none;">恭喜您，您所提交的初审信息审核通过！</div>
+                    <div id="auditError" class="hint-error" style="display:none;">您所提交的初审信息审核失败！请重新提交项目信息，如有疑问，请联系客服人员。</div>
+                    <div class="identity-step">
+                        <div class="r">
+                            <ul>
+                                <li class="on"><i>1</i>填写项目初审信息</li>
+                                <li class="on"><i>2</i>上传项目资料附件</li>
+                                <li class="on"><i>3</i>平台审核</li>
+                                <li><i>4</i>签署项目合同/缴纳费用</li>
+                                <li><i>5</i>招募项目人员</li>
+                                <li><i>6</i>项目发布成功</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="layui-card">
+                <div class="layui-card-header" id="auditTitle">平台审核中</div>
+                <div class="layui-card-body auto">
+                    <div class="audit-underway">
+                        <div class="underway-main">
+                            <p><img src="~/Assets/Console/public/images/audit.png" /></p>
+                            <div>
+                                <h2>成功提交项目信息，将在1个工作日内进行项目初审</h2>
+                                <p>请耐心等候，审核结果及下一步操作说明将在本页更新，可稍后进行查询</p>
+                                <div>
+                                    <span>项目编号：<em>1212133937</em></span>
+                                    <span>当前发布进度：：<em>等待初审</em></span>
+                                    <p><a href="#">浏览项目信息</a>|<a href="#">查看审核历史</a>|<a href="#">返回首页</a> </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="audit-success" style="display:none;">
+                        <div class="title">
+                            <h2><i class="iconfont">&#xe60a;</i>您的项目初审通过，请保持信息中的联系电话</h2>
+                            <p>1.平台可能会拨打您个人信息中的电话进行核实并签署项目合同，请注意接听，平台外呼电话为83733、2321313。</p>
+                        </div>
+                        <div class="audit-info">
+                            <h2>项目信息</h2>
+                            <div class="list">
+                                <p><label>项目编号：</label><span>131434144</span></p>
+                            </div>
+                            <div class="list">
+                                <p><label>项目名称：</label><span>酒店建筑结构设计项目</span></p>
+                                <p><label>项目地址：</label><span>深圳市龙岗区</span></p>
+                            </div>
+                            <div class="list">
+                                <p><label>项目规模：</label><span>23.1万平米</span></p>
+                                <p><label>项目高度：</label><span>1000米</span></p>
+                            </div>
+                            <div class="list">
+                                <label>项目概述：</label><span>这是一条对项目的简单概述这是一条对项目的简单概述这是一条对项目的简单概述这是一条对项目的简单概述这是一条对项目的简单概述这是一条对项目的简单概述</span>
+                            </div>
+                            <div class="list blod">
+                                <label>提交资料：</label>
+                                <a href="#">项目申请报告.docx</a>
+                                <a href="#">项目资料附件2.docx</a>
+                                <a href="#">项目资料附件3.docx</a>
+                            </div>
+                        </div>
+                        <div class="audit-btn">
+                            <a href="/PublishProject/PayTheFees"><button class="layui-btn" lay-submit lay-filter="identityApply">下一步</button></a>
+                        </div>
+                    </div>
+                    <div class="audit-error" style="display:none;">
+                        <div class="title">
+                            <h2><i class="iconfont">&#xe610;</i>您的项目初审未通过，请查看原因并<a href="/PublishProject/SubmitInfo">重新提交项目信息</a></h2>
+                            <div>
+                                <h2>审核失败原因：</h2>
+                                <p>
+                                    1.项目负责人联系方式 <br />
+                                    已联系手机号码非本人接听，请您填写正确的手机号码并保持畅通，以便我们对您提交的申请进行电话核实 <br /><br />
+                                    2.真实性检验 <br />
+                                    您填写的项目部分信息不属实，请您进行修改。<br /><br />
+                                    项目编号：<span>1212133937</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    当前发布进度：<span>初审失败</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <a href="/PublishProject/History">查看审核历史</a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="audit-info">
+                            <h2>项目信息</h2>
+                            <div class="list">
+                                <p><label>项目编号：</label><span>131434144</span></p>
+                            </div>
+                            <div class="list">
+                                <p><label>项目名称：</label><span>酒店建筑结构设计项目</span></p>
+                                <p><label>项目地址：</label><span>深圳市龙岗区</span></p>
+                            </div>
+                            <div class="list">
+                                <p><label>项目规模：</label><span>23.1万平米</span></p>
+                                <p><label>项目高度：</label><span>1000米</span></p>
+                            </div>
+                            <div class="list">
+                                <label>项目概述：</label><span>这是一条对项目的简单概述这是一条对项目的简单概述这是一条对项目的简单概述这是一条对项目的简单概述这是一条对项目的简单概述这是一条对项目的简单概述</span>
+                            </div>
+                        </div>
+                        <div class="audit-btn">
+                            <a href="/PublishProject/submitInfo"><button class="layui-btn" lay-submit lay-filter="identityApply">修改主题内容</button></a>
+                        </div>
+                        <div class="audit-info">
+                            <div class="list blod">
+                                <label>提交资料：</label>
+                                <a href="#" class="err">项目申请报告.docx</a>
+                                <a href="#">项目资料附件2.docx</a>
+                                <a href="#">项目资料附件3.docx</a>
+                            </div>
+                        </div>
+                        <div class="audit-btn">
+                            <a href="/PublishProject/submitInfoUp"><button class="layui-btn" lay-submit lay-filter="identityApply">修改上传资料</button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
+@Scripts.Render("~/Assets/Console/common/provinces/provincesPlus.js")
+@Scripts.Render("~/Assets/Console/Publish/js/audit.js")
