@@ -58,8 +58,8 @@ img {
 @font-face {
   font-family: 'iconfont';
   /* project id 1343358 */
-  src: url('//at.alicdn.com/t/font_1343358_acy9wlypedm.eot');
-  src: url('//at.alicdn.com/t/font_1343358_acy9wlypedm.eot?#iefix') format('embedded-opentype'), url('//at.alicdn.com/t/font_1343358_acy9wlypedm.woff2') format('woff2'), url('//at.alicdn.com/t/font_1343358_acy9wlypedm.woff') format('woff'), url('//at.alicdn.com/t/font_1343358_acy9wlypedm.ttf') format('truetype'), url('//at.alicdn.com/t/font_1343358_acy9wlypedm.svg#iconfont') format('svg');
+  src: url('//at.alicdn.com/t/font_1343358_up72a2bjhj8.eot');
+  src: url('//at.alicdn.com/t/font_1343358_up72a2bjhj8.eot?#iefix') format('embedded-opentype'), url('//at.alicdn.com/t/font_1343358_up72a2bjhj8.woff2') format('woff2'), url('//at.alicdn.com/t/font_1343358_up72a2bjhj8.woff') format('woff'), url('//at.alicdn.com/t/font_1343358_up72a2bjhj8.ttf') format('truetype'), url('//at.alicdn.com/t/font_1343358_up72a2bjhj8.svg#iconfont') format('svg');
 }
 .iconfont {
   font-family: "iconfont" !important;
@@ -100,6 +100,9 @@ textarea {
   background: #ffffff;
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.05);
 }
+.main {
+  background: url(../images/main-back.png) no-repeat right bottom;
+}
 body {
   min-width: 1400px;
 }
@@ -134,6 +137,7 @@ body {
   left: 0;
   width: 100%;
   height: 70px;
+  z-index: 999;
   background: #ffffff;
   box-shadow: 0px 5px 12px 0px rgba(0, 0, 0, 0.05);
 }
@@ -352,4 +356,95 @@ body {
   color: #888888;
   line-height: 21px;
   text-align: center;
+}
+.footer div.content div.b p img {
+  position: relative;
+  top: -2px;
+  margin: 0 2px 0 5px;
+}
+#loginWin > h2 {
+  text-align: center;
+  padding-top: 30px;
+  font-size: 16px;
+  color: #999999;
+  line-height: 20px;
+}
+#loginWin > div.logo {
+  text-align: center;
+  width: 140px;
+  margin: 23px auto;
+}
+#loginWin > div.layui-form {
+  width: 80%;
+  margin: 30px auto;
+}
+#loginWin > div.layui-form .layui-form-item .layui-input-inline {
+  width: 100%;
+}
+#loginWin > div.layui-form .layui-form-item .layui-input-inline input {
+  border: 0px;
+  border-bottom: 1px solid #979797;
+}
+#loginWin > div.layui-form .layui-form-item .layui-input-inline .login-box {
+  overflow: hidden;
+}
+#loginWin > div.layui-form .layui-form-item .layui-input-inline .login-box div.l {
+  height: 38px;
+}
+#loginWin > div.layui-form .layui-form-item .layui-input-inline .link {
+  text-align: right;
+  font-size: 14px;
+  color: #999999;
+}
+#loginWin > div.layui-form .layui-form-item .layui-input-inline .link span {
+  color: #489DFC;
+  cursor: pointer;
+}
+#loginWin > div.third-party {
+  width: 80%;
+  margin: 0 auto;
+}
+#loginWin > div.third-party > h2 {
+  position: relative;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+}
+#loginWin > div.third-party > h2 span {
+  display: inline-block;
+  padding: 0 20px;
+  font-size: 14px;
+  color: #999999;
+  position: relative;
+  z-index: 9;
+  background-color: white;
+}
+#loginWin > div.third-party > h2::before {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 100%;
+  border-bottom: 1px solid #999999;
+  content: '';
+  display: block;
+  z-index: 0;
+}
+#loginWin > div.third-party > div {
+  text-align: center;
+  padding: 25px 0 0;
+}
+#loginWin > div.third-party > div a i {
+  font-size: 25px;
+  line-height: 40px;
+  padding: 0 30px;
+}
+#loginWin > div.third-party > div a:first-child {
+  color: #7FBBE8;
+}
+#loginWin > div.third-party > div a:nth-child(2) {
+  color: #97D36B;
+}
+#loginWin > div.third-party > div a:nth-child(3) {
+  color: #E67772;
 }

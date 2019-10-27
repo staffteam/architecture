@@ -12,6 +12,10 @@ i {
   width: 850px;
   float: left;
 }
+.start-project > div.l #pages {
+  text-align: center;
+  margin-top: 50px;
+}
 .start-project > div.l > div.t {
   background: #ffffff;
   border: 1px solid #f0f0f0;
@@ -182,6 +186,27 @@ i {
   width: 330px;
   float: right;
 }
+.start-project > div.r div.up div {
+  padding: 16px 30px 23px;
+}
+.start-project > div.r div.up div h2 {
+  font-size: 14px;
+  color: #999999;
+  line-height: 20px;
+}
+.start-project > div.r div.up div a {
+  width: 250px;
+  height: 38px;
+  background: #489DFC;
+  border-radius: 2px;
+  border: 1px solid #489DFC;
+  margin-top: 13px;
+  display: block;
+  font-size: 14px;
+  color: #ffffff;
+  line-height: 38px;
+  text-align: center;
+}
 .start-project > div.r > div {
   background-color: white;
   margin-top: 20px;
@@ -262,4 +287,76 @@ i {
 }
 .start-project > div.r div.help ul li a:hover {
   color: #489DFC;
+}
+.tablelist table {
+  width: 100%;
+  margin-top: 20px;
+}
+.tablelist table:first-child {
+  margin-top: 0;
+}
+.tablelist table:first-child tr {
+  border-bottom: 0px;
+}
+.tablelist table tr {
+  background-color: white;
+  border-bottom: 1px solid #e5e5e5;
+}
+.tablelist table tr th {
+  padding: 10px 30px;
+  line-height: 30px;
+  text-align: left;
+  font-size: 16px;
+  color: #333333;
+}
+.tablelist table tr td {
+  font-size: 14px;
+  color: #666666;
+  padding: 10px 30px;
+  line-height: 30px;
+}
+.tablelist table tr td:first-child {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333333;
+  line-height: 25px;
+}
+.tablelist table tr td span {
+  font-size: 16px;
+  color: #DDDDDD;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.tablelist table tr td span i {
+  float: left;
+  display: block;
+  line-height: 30px;
+}
+.tablelist table tr td span i:first-child {
+  display: block;
+}
+.tablelist table tr td span i:nth-child(2) {
+  display: none;
+  color: #F7B500;
+}
+.tablelist table tr td span.on em {
+  color: #F7B500;
+}
+.tablelist table tr td span.on i:first-child {
+  display: none;
+}
+.tablelist table tr td span.on i:nth-child(2) {
+  display: block;
+}
+.tablelist table tr td span em {
+  font-size: 14px;
+  color: #666666;
+  line-height: 30px;
+  margin-left: 5px;
 }

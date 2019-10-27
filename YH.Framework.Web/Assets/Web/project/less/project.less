@@ -15,6 +15,11 @@ i {
         width: 850px;
         float: left;
 
+        #pages {
+            text-align: center;
+            margin-top: 50px;
+        }
+
         &>div.t {
             background: rgba(255, 255, 255, 1);
             border: 1px solid rgba(240, 240, 240, 1);
@@ -159,6 +164,7 @@ i {
                                 display: inline-block;
                                 cursor: pointer;
                                 .notsel();
+
                                 i {
                                     float: left;
                                     display: block;
@@ -173,19 +179,23 @@ i {
                                         color: #F7B500;
                                     }
                                 }
-                                &.on{
-                                    em{
+
+                                &.on {
+                                    em {
                                         color: #F7B500;
                                     }
-                                    i{
-                                        &:first-child{
+
+                                    i {
+                                        &:first-child {
                                             display: none;
                                         }
+
                                         &:nth-child(2) {
                                             display: block;
                                         }
                                     }
                                 }
+
                                 em {
                                     font-size: 14px;
                                     color: rgba(102, 102, 102, 1);
@@ -216,6 +226,33 @@ i {
     &>div.r {
         width: 330px;
         float: right;
+
+        div.up {
+            
+
+            div {
+                padding: 16px 30px 23px;
+                h2 {
+                    font-size: 14px;
+                    color: rgba(153, 153, 153, 1);
+                    line-height: 20px;
+                }
+
+                a {
+                    width: 250px;
+                    height: 38px;
+                    background: @c;
+                    border-radius: 2px;
+                    border: 1px solid @c;
+                    margin-top: 13px;
+                    display: block;
+                    font-size: 14px;
+                    color: rgba(255, 255, 255, 1);
+                    line-height: 38px;
+                    text-align: center;
+                }
+            }
+        }
 
         &>div {
             background-color: white;
@@ -307,15 +344,17 @@ i {
                 padding: 30px 35px 35px;
 
                 li {
-                    &:first-child{
+                    &:first-child {
                         margin-top: 0;
                     }
+
                     margin-top: 15px;
                     font-size: 14px;
                     color: rgba(102, 102, 102, 1);
                     line-height: 20px;
-                    a{
-                        &:hover{
+
+                    a {
+                        &:hover {
                             color: @c;
                         }
                     }
@@ -323,4 +362,94 @@ i {
             }
         }
     }
+}
+
+
+.tablelist {
+    table {
+        width: 100%;
+        margin-top: 20px;
+
+        &:first-child {
+            margin-top: 0;
+
+            tr {
+                border-bottom: 0px;
+            }
+        }
+
+        tr {
+            background-color: white;
+            border-bottom: 1px solid #e5e5e5;
+
+            th {
+                padding: 10px 30px;
+                line-height: 30px;
+                text-align: left;
+                font-size: 16px;
+                color: rgba(51, 51, 51, 1);
+            }
+
+            td {
+                &:first-child {
+                    font-size: 18px;
+                    font-weight: 600;
+                    color: rgba(51, 51, 51, 1);
+                    line-height: 25px;
+                }
+
+                font-size:14px;
+                color:rgba(102, 102, 102, 1);
+                padding: 10px 30px;
+                line-height: 30px;
+
+                span {
+                    font-size: 16px;
+                    color: #DDDDDD;
+                    display: inline-block;
+                    cursor: pointer;
+                    .notsel();
+
+                    i {
+                        float: left;
+                        display: block;
+                        line-height: 30px;
+
+                        &:first-child {
+                            display: block;
+                        }
+
+                        &:nth-child(2) {
+                            display: none;
+                            color: #F7B500;
+                        }
+                    }
+
+                    &.on {
+                        em {
+                            color: #F7B500;
+                        }
+
+                        i {
+                            &:first-child {
+                                display: none;
+                            }
+
+                            &:nth-child(2) {
+                                display: block;
+                            }
+                        }
+                    }
+
+                    em {
+                        font-size: 14px;
+                        color: rgba(102, 102, 102, 1);
+                        line-height: 30px;
+                        margin-left: 5px;
+                    }
+                }
+            }
+        }
+    }
+
 }

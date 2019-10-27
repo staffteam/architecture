@@ -17,12 +17,14 @@
     @RenderSection("scripts", required: false)
 </head>
 <body>
+
+    <!-- 顶部 -->
+    @Html.Partial("_WebHeader")
     <div class="main">
-        <!-- 顶部 -->
-        @Html.Partial("_WebHeader")
         @RenderBody()
-        @Html.Partial("_WebFooter")
     </div>
+    @Html.Partial("_WebFooter")
+
     <script>
         var element = layui.element;
     </script>

@@ -1,5 +1,163 @@
 ﻿@{
-    Layout = "~/Views/Shared/_WebLayout.cshtml";
+    Layout = null;
     ViewBag.Title = "首页";
 }
-
+@Styles.Render("~/Assets/Web/public/css/public.css")
+@Styles.Render("~/Assets/Console/common/layui/css/layui.css")
+@Scripts.Render("~/Assets/Console/common/jquery/jquery.min.js")
+@Scripts.Render("~/Assets/Console/common/layui/layui.all.js")
+@Scripts.Render("~/Assets/Web/public/js/public.js")
+@Styles.Render("~/Assets/Web/home/css/home.css")
+<div class="home-head">
+    <div class="logo"><img src="~/Assets/Web/public/images/logo.png" /></div>
+    <div class="desc">
+        <h2>建筑结构设计师将成为自由职业</h2>
+        <p>Building architects will become freelance</p>
+    </div>
+</div>
+<div class="home-login">
+    <input type="text" name="name" value="" placeholder="输入用户名马上体验" />
+    <p onclick="onLogin(this)">立即登录</p>
+</div>
+<div class="home-list">
+    <a href="/lookingFor/lookingFor"><i class="iconfont">&#xe666;</i> 寻找项目</a>
+    <a href="/PublishProject/PublishProject"><i class="iconfont">&#xe68d;</i> 发布项目</a>
+</div>
+<div class="home-main">
+    <ul class="layout-list1">
+        <li class="animated wow fadeInUp animated" style="visibility: visible; animation-name: fadeInUp;">
+            <div class="in">
+                <div class="icon icon-1"><i></i></div>
+                <h4>进行中项目</h4>
+                <p>
+                    快速抢单成为自由建筑
+                    <br>结构设计师的一员
+                </p>
+                <div class="desc">
+                    <a href="#"><span>中航维拉庄园规划中航维拉庄园规划</span> <em>124万平米</em></a>
+                    <a href="#"><span>中航维拉庄园规划</span> <em>124万平米</em></a>
+                    <a href="#"><span>中航维拉庄园规划</span> <em>124万平米</em></a>
+                    <a href="#"><span>中航维拉庄园规划</span> <em>124万平米</em></a>
+                </div>
+                <div class="dot-area">
+                    <i class="dot"></i>
+                    <i class="dot active"></i>
+                </div>
+            </div>
+        </li>
+        <li class="animated wow fadeInUp animated" data-wow-delay=".15s" style="visibility: visible; animation-delay: 0.15s; animation-name: fadeInUp;">
+            <div class="in">
+                <div class="icon icon-2"><i></i></div>
+                <h4>已完成项目</h4>
+                <p>
+                    平台服务确保项目落地及
+                    <br>项目圆满完成
+                </p>
+                <div class="desc">
+                    <a href="#"><span>中航维拉庄园规划中航维拉庄园规划</span> <em>124万平米</em></a>
+                    <a href="#"><span>中航维拉庄园规划</span> <em>124万平米</em></a>
+                    <a href="#"><span>中航维拉庄园规划</span> <em>124万平米</em></a>
+                    <a href="#"><span>中航维拉庄园规划</span> <em>124万平米</em></a>
+                </div>
+                <div class="dot-area">
+                    <i class="dot"></i>
+                    <i class="dot active"></i>
+                </div>
+            </div>
+        </li>
+        <li class="animated wow fadeInUp animated" data-wow-delay=".3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
+            <div class="in">
+                <div class="icon icon-3"><i></i></div>
+                <h4>人才列表</h4>
+                <p>
+                    工作台内含有平台认证专
+                    <br>业建筑设计师
+                </p>
+                <div class="desc">
+                    <a href="#"><span>中航维拉庄园规划中航维拉庄园规划</span> <em>124万平米</em></a>
+                    <a href="#"><span>中航维拉庄园规划</span> <em>124万平米</em></a>
+                    <a href="#"><span>中航维拉庄园规划</span> <em>124万平米</em></a>
+                    <a href="#"><span>中航维拉庄园规划</span> <em>124万平米</em></a>
+                </div>
+                <div class="dot-area">
+                    <i class="dot"></i>
+                    <i class="dot active"></i>
+                </div>
+            </div>
+        </li>
+        <li class="animated wow fadeInUp animated" data-wow-delay=".45s" style="visibility: visible; animation-delay: 0.45s; animation-name: fadeInUp;">
+            <div class="in">
+                <div class="icon icon-4"><i></i></div>
+                <h4>培训专栏</h4>
+                <p>
+                    专业课程帮助专业设计等
+                    <br>级的快速提升
+                </p>
+                <div class="desc">
+                    <a href="#"><span>中航维拉庄园规划中航维拉庄园规划</span> <em>124万平米</em></a>
+                    <a href="#"><span>中航维拉庄园规划</span> <em>124万平米</em></a>
+                    <a href="#"><span>中航维拉庄园规划</span> <em>124万平米</em></a>
+                    <a href="#"><span>中航维拉庄园规划</span> <em>124万平米</em></a>
+                </div>
+                <div class="dot-area">
+                    <i class="dot"></i>
+                    <i class="dot active"></i>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
+<div class="home-footer">
+    Copyright © 2019 建筑结构设计有限公司 | 粤ICP备1111111号
+</div>
+<script type="text/html" id="loginTemplate">
+    <div id="loginWin">
+        <h2>先登录后报名</h2>
+        <div class="logo"><img src="/Assets/Web/public/images/logo.png" /></div>
+        <div class="layui-form" >
+            <div class="layui-form-item">
+                <div class="layui-input-inline">
+                    <input type="text" name="account" verify="required" tips="用户名、手机或邮箱"
+                           autocomplete="off" placeholder="用户名/手机/邮箱" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <div class="layui-input-inline">
+                    <input type="password" name="password" verify="required" autocomplete="off" placeholder="密码"
+                           tips="密码" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <div class="layui-input-inline">
+                    <div class="login-box">
+                        <div class="l">
+                            <input type="checkbox" name="" title="下次自动登陆" lay-skin="primary">
+                        </div>
+                        <div class="r">
+                            <span onclick="forgetPw()">忘记密码？</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <div class="layui-input-inline">
+                    <button type="button" class="layui-btn layui-btn-fluid" lay-filter="login">登陆</button>
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <div class="layui-input-inline">
+                    <div class="link">还不是会员？<span onclick="register()">立即注册</span></div>
+                </div>
+            </div>
+        </div>
+        <div class="third-party" >
+            <h2><span>第三方登陆</span></h2>
+            <div>
+                <a href="#"><i class="iconfont">&#xe676;</i></a>
+                <a href="#"><i class="iconfont">&#xe611;</i></a>
+                <a href="#"><i class="iconfont">&#xe658;</i></a>
+            </div>
+        </div>
+    </div>
+</script>
+@Scripts.Render("~/Assets/Web/home/js/home.js")

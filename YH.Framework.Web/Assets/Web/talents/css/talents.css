@@ -1,0 +1,201 @@
+em,
+i {
+  font-style: normal;
+}
+.talents {
+  padding: 60px 0 0;
+}
+.talents div.title {
+  text-align: center;
+}
+.talents div.title h2 {
+  font-size: 24px;
+  font-weight: 500;
+  color: #333333;
+  line-height: 33px;
+}
+.talents div.title p {
+  margin-top: 12px;
+  font-size: 14px;
+  color: #868b9f;
+  line-height: 20px;
+}
+.talents div.content {
+  width: 1200px;
+  margin: 30px auto;
+  overflow: hidden;
+}
+.talents div.content div.l {
+  width: 200px;
+  float: left;
+}
+.talents div.content div.l div.t {
+  height: 76px;
+  line-height: 76px;
+  background: url(../../public/images/title_back.png) no-repeat right;
+  background-color: #4a68d2;
+  background-position-x: 160px;
+}
+.talents div.content div.l div.t h2 {
+  padding: 0 30px;
+  font-size: 18px;
+  color: #ffffff;
+}
+.talents div.content div.l div.b ul li {
+  height: 70px;
+  background: #ffffff;
+  line-height: 70px;
+  padding: 0 0 0 30px;
+  color: #666666;
+  font-size: 14px;
+  cursor: pointer;
+}
+.talents div.content div.l div.b ul li i {
+  font-size: 20px;
+  color: #489DFC;
+  float: left;
+  margin-right: 10px;
+}
+.talents div.content div.l div.b ul li.on {
+  color: #489DFC;
+}
+.talents div.content div.r {
+  margin-left: 210px;
+  overflow: hidden;
+  float: none;
+}
+.talents div.content div.r ul {
+  overflow: hidden;
+  min-height: 500px;
+}
+.talents div.content div.r ul li {
+  width: 31.33%;
+  float: left;
+  margin: 1%;
+  background: #ffffff;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.05);
+  padding: 23px 30px;
+}
+.talents div.content div.r ul li:first-child,
+.talents div.content div.r ul li:nth-child(2),
+.talents div.content div.r ul li:nth-child(3) {
+  margin-top: 0px;
+}
+.talents div.content div.r ul li div.t div.t-a {
+  overflow: hidden;
+}
+.talents div.content div.r ul li div.t div.t-a label {
+  float: left;
+  display: block;
+  font-size: 16px;
+  font-weight: 600;
+  color: #333333;
+  line-height: 22px;
+}
+.talents div.content div.r ul li div.t div.t-a p {
+  margin-left: 8px;
+  float: left;
+  background: url(../../public/images/icon_vip_back.jpg) no-repeat center;
+  width: 52px;
+  height: 24px;
+  background-size: cover;
+  position: relative;
+}
+.talents div.content div.r ul li div.t div.t-a p span {
+  font-size: 12px;
+  color: #489DFC;
+  position: absolute;
+  right: 0;
+  line-height: 26px;
+  display: block;
+  height: c;
+  width: 35px;
+  text-align: center;
+}
+.talents div.content div.r ul li div.t div.t-a > span {
+  font-size: 16px;
+  color: #DDDDDD;
+  cursor: pointer;
+  display: block;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  float: right;
+}
+.talents div.content div.r ul li div.t div.t-a > span i {
+  float: left;
+  display: block;
+  line-height: 24px;
+  font-size: 18px;
+  color: #666666;
+}
+.talents div.content div.r ul li div.t div.t-a > span i:first-child {
+  display: block;
+}
+.talents div.content div.r ul li div.t div.t-a > span i:nth-child(2) {
+  display: none;
+  color: #F7B500;
+}
+.talents div.content div.r ul li div.t div.t-a > span.on em {
+  color: #F7B500;
+}
+.talents div.content div.r ul li div.t div.t-a > span.on i:first-child {
+  display: none;
+}
+.talents div.content div.r ul li div.t div.t-a > span.on i:nth-child(2) {
+  display: block;
+}
+.talents div.content div.r ul li div.t div.t-a > span em {
+  font-size: 14px;
+  color: #666666;
+  line-height: 24px;
+  margin-left: 5px;
+}
+.talents div.content div.r ul li div.t div.t-b {
+  margin-top: 10px;
+  overflow: hidden;
+}
+.talents div.content div.r ul li div.t div.t-b label {
+  float: left;
+  font-size: 14px;
+  color: #666666;
+  line-height: 20px;
+}
+.talents div.content div.r ul li div.t div.t-b label span {
+  color: #489DFC;
+}
+.talents div.content div.r ul li div.t div.t-b p {
+  float: right;
+  font-size: 14px;
+  color: #666666;
+  line-height: 20px;
+}
+.talents div.content div.r ul li div.b {
+  margin-top: 12px;
+  padding-top: 16px;
+  border-top: 1px solid #f5f5f5;
+}
+.talents div.content div.r ul li div.b h2 {
+  font-size: 14px;
+  color: #666666;
+  line-height: 20px;
+}
+.talents div.content div.r ul li div.b p {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #666666;
+  line-height: 20px;
+}
+.talents div.content div.r ul li div.b p i {
+  float: left;
+  margin-right: 5px;
+  font-size: 16px;
+  color: #999999;
+}
+.talents div.content div.r #pages {
+  text-align: center;
+  margin-top: 40px;
+}
