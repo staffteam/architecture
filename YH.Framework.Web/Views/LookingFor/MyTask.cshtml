@@ -70,4 +70,14 @@
         </div>
     </div>
 </div>
-@Scripts.Render("~/Assets/Console/lookingFor/js/lookingFor.js")
+<script type="text/html" id="excelTp">
+    {{d.excel}}
+    <a download="{{d.excel}}.xls" href="~/Assets/Web/public/建筑条件消化确认表.xls" class="layui-btn layui-btn-xs">下载</a>
+</script>
+<script type="text/html" id="isUpTp">
+    {{#  if(!d.isUp){ }}
+    <a class="layui-btn layui-btn-xs notup">上传</a>
+    {{#  } }}
+</script>
+
+@Scripts.Render("~/Assets/Console/lookingFor/js/myTask.js")

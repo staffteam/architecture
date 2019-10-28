@@ -3,7 +3,7 @@ $(function () {
     table.render({
         elem: '#applyList',
         height: 569,
-        url: '/Assets/console/lookingFor/js/test.json' //数据接口
+        url: '/Assets/console/lookingFor/js/task.json' //数据接口
             ,
         page: true //开启分页
             ,
@@ -12,42 +12,51 @@ $(function () {
                 {type:'checkbox'},
                 {
                     field: 'id',
-                    width: 80,
                     title: 'ID'
                 }, {
-                    field: 'username',
-                    width: 80,
-                    title: '用户名'
+                    field: 'startTime',
+                    title: '开始时间'
                 }, {
-                    field: 'sex',
-                    width: 80,
-                    title: '性别'
+                    field: 'endTime',
+                    title: '截止时间'
                 }, {
-                    field: 'city',
-                    width: 80,
-                    title: '城市'
+                    field: 'content',
+                    title: '设计内容'
                 }, {
-                    field: 'sign',
-                    title: '签名',
-                    width: '30%',
-                    minWidth: 100
+                    field: 'jdr',
+                    title: '接单人',
                 } //minWidth：局部定义当前单元格的最小宽度，layui 2.2.1 新增
                 , {
-                    field: 'experience',
-                    title: '积分'
+                    field: 'excel',
+                    title: '格式图表样板',
+                    templet: '#excelTp'
                 }, {
-                    field: 'score',
-                    title: '评分'
+                    field: 'endExcel',
+                    title: '成果表'
                 }, {
-                    field: 'classify',
-                    title: '职业'
+                    field: 'isUp',
+                    title: '成果提交',
+                    templet: '#isUpTp'
                 }, {
-                    field: 'wealth',
-                    width: 137,
-                    title: '财富'
+                    field: 'file',
+                    title: '指引类资料'
+                }, {
+                    field: 'shr',
+                    title: '特殊接单人'
+                }, {
+                    field: 'shr',
+                    title: '把控人'
+                }, {
+                    field: 'shr',
+                    title: '费用分配'
                 }
             ]
         ],
+        done:function(){
+            $('a.notup').each(function(){
+                $(this).closest('tr').addClass('not-up-tr');
+            })
+        }
     });
     // 选择类别
     $('#myTaskform .l button').click(function(){
