@@ -362,55 +362,74 @@ body {
   top: -2px;
   margin: 0 2px 0 5px;
 }
-#loginWin > h2 {
+.fill-out > h2 {
   text-align: center;
   padding-top: 30px;
   font-size: 16px;
   color: #999999;
   line-height: 20px;
 }
-#loginWin > div.logo {
+.fill-out em,
+.fill-out i {
+  font-style: normal;
+}
+.fill-out > div.logo {
   text-align: center;
   width: 140px;
   margin: 23px auto;
 }
-#loginWin > div.layui-form {
+.fill-out > div.layui-form {
   width: 80%;
   margin: 30px auto;
 }
-#loginWin > div.layui-form .layui-form-item .layui-input-inline {
+.fill-out > div.layui-form .vcode {
+  position: relative;
+}
+.fill-out > div.layui-form .vcode .get-code {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #489DFC;
+}
+.fill-out > div.layui-form .layui-form-item .layui-input-inline {
   width: 100%;
 }
-#loginWin > div.layui-form .layui-form-item .layui-input-inline input {
+.fill-out > div.layui-form .layui-form-item .layui-input-inline input {
   border: 0px;
   border-bottom: 1px solid #979797;
 }
-#loginWin > div.layui-form .layui-form-item .layui-input-inline .login-box {
+.fill-out > div.layui-form .layui-form-item .layui-input-inline .login-box {
   overflow: hidden;
 }
-#loginWin > div.layui-form .layui-form-item .layui-input-inline .login-box div.l {
+.fill-out > div.layui-form .layui-form-item .layui-input-inline .login-box div.l {
   height: 38px;
 }
-#loginWin > div.layui-form .layui-form-item .layui-input-inline .link {
+.fill-out > div.layui-form .layui-form-item .layui-input-inline .link {
   text-align: right;
   font-size: 14px;
   color: #999999;
 }
-#loginWin > div.layui-form .layui-form-item .layui-input-inline .link span {
+.fill-out > div.layui-form .layui-form-item .layui-input-inline .link span {
   color: #489DFC;
   cursor: pointer;
 }
-#loginWin > div.third-party {
+.fill-out > div.layui-form .layui-form-item .layui-input-inline .layui-btn.off {
+  background-color: #999999;
+  cursor: no-drop;
+}
+.fill-out > div.third-party {
   width: 80%;
   margin: 0 auto;
 }
-#loginWin > div.third-party > h2 {
+.fill-out > div.third-party > h2 {
   position: relative;
   height: 20px;
   line-height: 20px;
   text-align: center;
 }
-#loginWin > div.third-party > h2 span {
+.fill-out > div.third-party > h2 span {
   display: inline-block;
   padding: 0 20px;
   font-size: 14px;
@@ -419,7 +438,7 @@ body {
   z-index: 9;
   background-color: white;
 }
-#loginWin > div.third-party > h2::before {
+.fill-out > div.third-party > h2::before {
   position: absolute;
   top: 50%;
   left: 0;
@@ -430,21 +449,28 @@ body {
   display: block;
   z-index: 0;
 }
-#loginWin > div.third-party > div {
+.fill-out > div.third-party > div {
   text-align: center;
   padding: 25px 0 0;
 }
-#loginWin > div.third-party > div a i {
+.fill-out > div.third-party > div a i {
   font-size: 25px;
   line-height: 40px;
   padding: 0 30px;
 }
-#loginWin > div.third-party > div a:first-child {
+.fill-out > div.third-party > div a:first-child {
   color: #7FBBE8;
 }
-#loginWin > div.third-party > div a:nth-child(2) {
+.fill-out > div.third-party > div a:nth-child(2) {
   color: #97D36B;
 }
-#loginWin > div.third-party > div a:nth-child(3) {
+.fill-out > div.third-party > div a:nth-child(3) {
   color: #E67772;
+}
+.agreement,
+.policy {
+  padding: 15px;
+}
+a.white {
+  color: white;
 }

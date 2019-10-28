@@ -27,17 +27,19 @@
     <ul class="layout-list1">
         <li class="animated wow fadeInUp animated" style="visibility: visible; animation-name: fadeInUp;">
             <div class="in">
-                <div class="icon icon-1"><i></i></div>
-                <h4>进行中项目</h4>
+                <a href="/Web/StartProject">
+                    <div class="icon icon-1"><i></i></div>
+                    <h4>进行中项目</h4>
+                </a>
                 <p>
                     快速抢单成为自由建筑
                     <br>结构设计师的一员
                 </p>
                 <div class="desc">
-                    <a href="#"><span>中航维拉庄园规划中航维拉庄园规划</span> <em>124万平米</em></a>
-                    <a href="#"><span>中航维拉庄园规划</span> <em>124万平米</em></a>
-                    <a href="#"><span>中航维拉庄园规划</span> <em>124万平米</em></a>
-                    <a href="#"><span>中航维拉庄园规划</span> <em>124万平米</em></a>
+                    <a href="/lookingFor/lookingForList"><span>中航维拉庄园规划中航维拉庄园规划</span> <em>124万平米</em></a>
+                    <a href="/lookingFor/lookingForList"><span>中航维拉庄园规划</span> <em>124万平米</em></a>
+                    <a href="/lookingFor/lookingForList"><span>中航维拉庄园规划</span> <em>124万平米</em></a>
+                    <a href="/lookingFor/lookingForList"><span>中航维拉庄园规划</span> <em>124万平米</em></a>
                 </div>
                 <div class="dot-area">
                     <i class="dot"></i>
@@ -47,8 +49,10 @@
         </li>
         <li class="animated wow fadeInUp animated" data-wow-delay=".15s" style="visibility: visible; animation-delay: 0.15s; animation-name: fadeInUp;">
             <div class="in">
-                <div class="icon icon-2"><i></i></div>
-                <h4>已完成项目</h4>
+                <a href="/Web/OverProject">
+                    <div class="icon icon-2"><i></i></div>
+                    <h4>已完成项目</h4>
+                </a>
                 <p>
                     平台服务确保项目落地及
                     <br>项目圆满完成
@@ -67,8 +71,10 @@
         </li>
         <li class="animated wow fadeInUp animated" data-wow-delay=".3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
             <div class="in">
-                <div class="icon icon-3"><i></i></div>
-                <h4>人才列表</h4>
+                <a href="/Web/Talents">
+                    <div class="icon icon-3"><i></i></div>
+                    <h4>人才列表</h4>
+                </a>
                 <p>
                     工作台内含有平台认证专
                     <br>业建筑设计师
@@ -87,8 +93,10 @@
         </li>
         <li class="animated wow fadeInUp animated" data-wow-delay=".45s" style="visibility: visible; animation-delay: 0.45s; animation-name: fadeInUp;">
             <div class="in">
-                <div class="icon icon-4"><i></i></div>
-                <h4>培训专栏</h4>
+                <a href="javascript:">
+                    <div class="icon icon-4"><i></i></div>
+                    <h4>培训专栏</h4>
+                </a>
                 <p>
                     专业课程帮助专业设计等
                     <br>级的快速提升
@@ -111,14 +119,14 @@
     Copyright © 2019 建筑结构设计有限公司 | 粤ICP备1111111号
 </div>
 <script type="text/html" id="loginTemplate">
-    <div id="loginWin">
+    <div id="login" class="fill-out">
         <h2>先登录后报名</h2>
         <div class="logo"><img src="/Assets/Web/public/images/logo.png" /></div>
-        <div class="layui-form" >
+        <div class="layui-form">
             <div class="layui-form-item">
                 <div class="layui-input-inline">
-                    <input type="text" name="account" verify="required" tips="用户名、手机或邮箱"
-                           autocomplete="off" placeholder="用户名/手机/邮箱" class="layui-input">
+                    <input type="text" name="phoneoremail" verify="required&&phone||email" tips="手机或邮箱"
+                           autocomplete="off" placeholder="手机/邮箱" class="layui-input">
                 </div>
             </div>
             <div class="layui-form-item">
@@ -141,7 +149,10 @@
             </div>
             <div class="layui-form-item">
                 <div class="layui-input-inline">
-                    <button type="button" class="layui-btn layui-btn-fluid" lay-filter="login">登陆</button>
+                    <button type="button" class="layui-btn layui-btn-fluid" lay-submit=""
+                            lay-filter="login">
+                        登录
+                    </button>
                 </div>
             </div>
             <div class="layui-form-item">
@@ -150,7 +161,7 @@
                 </div>
             </div>
         </div>
-        <div class="third-party" >
+        <div class="third-party">
             <h2><span>第三方登陆</span></h2>
             <div>
                 <a href="#"><i class="iconfont">&#xe676;</i></a>
@@ -160,4 +171,268 @@
         </div>
     </div>
 </script>
+
+<script type="text/html" id="registerTemplate">
+    <div id="register" class="fill-out">
+        <h2>注册</h2>
+        <div class="logo"><img src="/Assets/Web/public/images/logo.png" /></div>
+        <div class="layui-form">
+            <div class="layui-form-item">
+                <div class="layui-input-inline">
+                    <input type="text" name="phoneoremail" verify="required&&phone||email" tips="手机或邮箱"
+                           autocomplete="off" placeholder="手机/邮箱" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item vcode">
+                <div class="layui-input-inline">
+                    <input type="text" name="verifycode" verify="required" tips="验证码" autocomplete="off"
+                           placeholder="验证码" class="layui-input">
+                    <span class="get-code">获取验证码</span>
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <div class="layui-input-inline">
+                    <input type="password" name="password" verify="required" autocomplete="off" placeholder="密码"
+                           tips="密码" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <div class="layui-input-inline">
+                    <input type="password" name="second" verify="required" autocomplete="off" placeholder="确认密码"
+                           tips="两次密码" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <div class="layui-input-inline">
+                    <div class="login-box">
+                        <div class="l">
+                            <input type="checkbox" name="consent" lay-skin="primary"
+                                   title="我已同意<em id='agreement' >《用户协议》</em>及<em id='policy'>《隐私政策》</em>">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <div class="layui-input-inline">
+                    <button type="button" class="layui-btn layui-btn-fluid off" lay-submit="" lay-filter="register"
+                            id="registerBtn">
+                        注册
+                    </button>
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <div class="layui-input-inline">
+                    <div class="link">已注册？<span onclick="onLogin()">立即登录</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</script>
+
+<script type="text/html" id="editPassTemplate">
+    <div id="find" class="fill-out">
+        <h2>找回密码</h2>
+        <div class="logo"><img src="/Assets/Web/public/images/logo.png" /></div>
+        <div class="layui-form">
+            <div class="layui-form-item">
+                <div class="layui-input-inline">
+                    <input type="text" name="phoneoremail" verify="required" tips="用户名、手机或邮箱"
+                           autocomplete="off" placeholder="用户名/手机/邮箱" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item vcode">
+                <div class="layui-input-inline">
+                    <input type="text" name="verifycode" verify="required" tips="验证码" autocomplete="off"
+                           placeholder="验证码" class="layui-input">
+                    <span class="get-code">获取验证码</span>
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <div class="layui-input-inline">
+                    <input type="password" name="password" verify="required" autocomplete="off" placeholder="密码"
+                           tips="密码" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <div class="layui-input-inline">
+                    <input type="password" name="second" verify="required" autocomplete="off" placeholder="确认密码"
+                           tips="两次密码" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <div class="layui-input-inline">
+                    <button type="button" class="layui-btn layui-btn-fluid" lay-submit="" lay-filter="find"
+                            id="findBtn">
+                        完成
+                    </button>
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <div class="layui-input-inline">
+                    <div class="link">记得密码？<span onclick="onLogin()">立即登录</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</script>
+
+<!-- 用户协议 start -->
+<script type="text/html" id="agreementContent">
+    <div class="agreement">
+        <h5 style="font-weight:bold">特别提示：</h5>
+        <span style="font-weight:bold">您在使用百度公司提供的各项服务之前，请您务必审慎阅读、充分理解本协议各条款内容，特别是以粗体标注的部分，包括但不限于免除或者限制责任的条款。如您不同意本服务协议及/或随时对其的修改，您可以主动停止使用百度公司提供的服务；您一旦使用百度公司提供的服务，即视为您已了解并完全同意本服务协议各项内容，包括百度公司对服务协议随时所做的任何修改，并成为我们的用户。</span>
+        <h5 style="font-weight:bold">一、总则</h5>1.
+        用户可以使用百度各个频道、产品的单项服务，当用户使用百度各单项服务时，用户的使用行为视为其对该单项服务的服务条款以及百度在该单项服务中发出的各类公告的同意。
+        <br>2.
+        百度用户协议以及各个频道、产品单项服务条款和公告可由百度公司随时更新，且无需另行通知。您在使用相关服务时,应关注并遵守其所适用的相关条款。
+        <br>
+        <h5 style="font-weight:bold">二、帐号注册与使用</h5>
+        <p>您使用部分百度产品或服务时需要注册百度帐号，当您注册和使用百度帐号时应遵守下述要求：</p>1.
+        用户注册成功后，百度公司将给予每个用户一个用户帐号，用户可以自主设置帐号密码。该用户帐号和密码由用户负责保管；用户应当对以其用户帐号进行的所有活动和事件负法律责任。
+        <br>2.
+        您按照注册页面提示填写信息、阅读并同意本协议且完成全部注册程序后，除百度平台的具体产品对帐户有单独的注册要求外，您可获得百度平台（baidu.com网站及客户端）帐号并成为百度用户，可通过百度帐户使用百度平台的各项产品和服务。
+        <br>3.
+        为了方便您在百度产品中享有一致性的服务，如您已经在某一百度产品中登录百度帐号，在您首次使用其他百度产品时可能同步您的登录状态。此环节并不会额外收集、使用您的个人信息。如您想退出帐号登录，可在产品设置页面退出登录。
+        <br>4.
+        百度帐号（即百度用户ID）的所有权归百度公司，用户按注册页面引导填写信息，阅读并同意本协议且完成全部注册程序后，即可获得百度帐号并成为用户。用户应提供及时、详尽及准确的个人资料，并不断更新注册资料，符合及时、详尽准确的要求。所有原始键入的资料将引用为注册资料。如果因注册信息不真实或更新不及时而引发的相关问题，百度公司不负任何责任。您可以通过百度帐号设置页面查询、更正您的信息，百度帐号设置页面地址：
+        <a href="https://passport.baidu.com/center"
+        target="_blank">https://passport.baidu.com/center</a>用户应当通过真实身份信息认证注册帐号，且用户提交的帐号名称、头像和简介等注册信息中不得出现违法和不良信息，经百度公司审核，如存在上述情况，百度公司将不予注册；同时，在注册后，如发现用户以虚假信息骗取帐号名称注册，或其帐号头像、简介等注册信息存在违法和不良信息的，百度公司有权不经通知单方采取限期改正、暂停使用、注销登记、收回等措施。
+        <br>5.
+        基于国家法律法规的规定要求或者百度服务政策的要求，您在使用某些百度服务时需要填写真实的姓名、身份证号等信息。若您填写的信息不完整、不正确，则可能无法使用相应服务或在使用过程中受到限制。
+        <br>6.
+        当您使用刷脸登录、验证功能时，我们会收集并保存您的人脸照片和信息。您应按照页面的提示完成相应动作，百度系统判断您的动作符合要求后，即可完成脸部拍摄。您同意仅限您本人为您本人所持有的百度账户使用刷脸登录、验证服务。为了提高验证的准确性，您同意百度可在必要时将您向百度提供的人脸照片、脸部特征与法律法规允许的机构或政府机关授权的机构所保存的您的脸部特征进行比对核验。
+        <br>7.
+        百度帐号包括帐户名称和密码，您可使用设置的帐户名称（包括用户名、手机号、邮箱）和密码登录；在帐号使用过程中，为了保障您的帐号安全基于不同的终端以及您的使用习惯，我们可能采取不同的验证措施识别您的身份。例如您的帐户在新设备首次登录，我们可能通过密码加校验码的方式识别您的身份，验证方式包括但不限于短信验证码、服务使用信息验证。
+        <br>8.
+        用户不应将其帐号、密码转让、出售或出借予他人使用，帐号使用权仅属于初始申请注册人，用户应对帐号内的全部行为独立承担全部责任。如因帐号转让、买卖或出借导致的帐号纠纷或百度无法判断帐号归属等情况，百度有权拒绝提供帐号找回，并视情况采取冻结帐号、封禁帐号等措施。
+        <br>
+        <span style="font-weight:bold">
+            9.
+            因您个人原因导致的帐号无法使用，如需找回百度帐号，请按照百度帐号找回要求提供相应的信息，并确保提供的信息合法真实有效，若提供的信息不符合要求或帐号的唯一凭证不再有效，无法通过百度公司安全验证，因存在帐号被盗等安全风险导致无法判断帐号归属，百度公司有权拒绝提供帐号找回服务，并视情况采取冻结帐号、封禁帐号等措施。您百度帐号下绑定的手机号如因您个人原因停止使用，请尽快更改百度帐号的绑定手机，否则如遇运营商二次放号，二次放号的用户可以通过您原来的手机号进行验证登录，可查看到您的全部帐号信息及产品使用信息，您的百度帐号将无法继续使用，帐号内个人信息也有泄露的风险，请您务必及时更换绑定手机，如因未及时换绑手机号导致帐号丢失或个人信息泄露的责任由您自行承担，百度公司有权拒绝提供帐号找回服务，并视情况采取冻结帐号、封禁帐号等措施。
+        </span>
+        <br>10.
+        在需要终止使用百度帐号服务时，符合以下条件的，您可以申请注销您的百度帐号。
+        <br>（1）您仅能申请注销您本人的帐号，并依照百度公司的流程进行注销；
+        <br>（2）您仍应对您在注销帐号前且使用百度公司服务期间的行为承担相应责任，同时百度公司仍可保存您注销前的相关信息；
+        <br>（3）注销成功后，帐号信息、个人身份证信息、交易记录、会员权益等将无法恢复或提供；
+        <br>
+        <span style="font-weight:bold">
+            11.
+            为了防止资源占用，如您连续六个月未使用您的百度帐号或未通过百度公司认可的其他方式登录过您的百度帐户，百度公司有权对该帐户进行注销，您将不能再通过该帐号登录名登录本网站或使用相关服务。如该帐户有关联的理财产品、待处理交易或余额，百度公司会在合理范围内协助您处理，请您按照百度公司提示的方式进行操作。
+        </span>
+        <br>12.
+        我们将按照百度公司的隐私权保护声明（
+        <a href="http://privacy.baidu.com/mdetail?id=288"
+        target="_blank">http://privacy.baidu.com/mdetail?id=288</a>）使用您在注册百度帐户、使用百度服务中提交、留存的信息。您保证在您使用百度公司的所有产品和服务前，已经充分了解并同意百度公司可以据此处理用户信息。
+        <br>13.
+        为了满足相关法律法规的要求和保障您的帐号安全，尤其是您在进行帐号解绑、注销等敏感操作时，我们会将您提交的个人身份信息发送至银行、运营商等机构进行验证查询，以核实您身份的真实性。
+        <br>14.
+        当用户使用一键登录功能时，运营商会将用户的本机手机号传输给百度，用以百度判断您的手机号是否已注册百度帐号。如您的手机号已注册百度帐号，并通过安全验证，则您将无需填写手机号、验证码、帐户名、密码等，可直接完成帐号登录。如您不满足一键登录的要求，或者选取了其他登录方式，您可使用其他登录方式进行帐号登录。
+        <h5 style="font-weight:bold">三、使用规则</h5>1.
+        <span style="font-weight:bold">用户在使用百度公司的服务时，必须遵守《网络安全法》等中华人民共和国相关法律法规的规定，用户应同意将不会利用本服务进行任何违法或不正当的活动，包括但不限于下列行为:</span>
+        <br>（1）
+        <span style="font-weight:bold">上载、展示、张贴、传播或以其它方式传送含有下列内容之一的信息：</span>
+        <br>　　1）
+        <span style="font-weight:bold">反对宪法所确定的基本原则的；</span>
+        <br>　　2）
+        <span style="font-weight:bold">危害国家安全，泄露国家秘密，颠覆国家政权，破坏国家统一的；</span>
+        <br>　　3）
+        <span style="font-weight:bold">损害国家荣誉和利益的；</span>
+        <br>　　4）
+        <span style="font-weight:bold">煽动民族仇恨、民族歧视、破坏民族团结的；</span>
+        <br>　　5）
+        <span style="font-weight:bold">破坏国家宗教政策，宣扬邪教和封建迷信的；</span>
+        <br>　　6）
+        <span style="font-weight:bold">散布谣言，扰乱社会秩序，破坏社会稳定的；</span>
+        <br>　　7）
+        <span style="font-weight:bold">散布淫秽、色情、赌博、暴力、凶杀、恐怖或者教唆犯罪的；</span>
+        <br>　　8）
+        <span style="font-weight:bold">侮辱或者诽谤他人，侵害他人合法权利的；</span>
+        <br>　　9）
+        <span style="font-weight:bold">含有虚假、有害、胁迫、侵害他人隐私、骚扰、侵害、中伤、粗俗、猥亵、或其它道德上令人反感的内容；</span>
+        <br>　　10）
+        <span style="font-weight:bold">含有中国法律、法规、规章、条例以及任何具有法律效力之规范所限制或禁止的其它内容的；</span>
+    </div>
+</script>
+<!-- 用户协议 end -->
+<!-- 隐私政策 start -->
+<script type="text/html" id="policyContent">
+<div class="policy">
+    <h5 style="font-weight:bold">特别提示：</h5>
+    <span style="font-weight:bold">您在使用百度公司提供的各项服务之前，请您务必审慎阅读、充分理解本协议各条款内容，特别是以粗体标注的部分，包括但不限于免除或者限制责任的条款。如您不同意本服务协议及/或随时对其的修改，您可以主动停止使用百度公司提供的服务；您一旦使用百度公司提供的服务，即视为您已了解并完全同意本服务协议各项内容，包括百度公司对服务协议随时所做的任何修改，并成为我们的用户。</span>
+    <h5 style="font-weight:bold">一、总则</h5>1.
+    用户可以使用百度各个频道、产品的单项服务，当用户使用百度各单项服务时，用户的使用行为视为其对该单项服务的服务条款以及百度在该单项服务中发出的各类公告的同意。
+    <br>2.
+    百度用户协议以及各个频道、产品单项服务条款和公告可由百度公司随时更新，且无需另行通知。您在使用相关服务时,应关注并遵守其所适用的相关条款。
+    <br>
+    <h5 style="font-weight:bold">二、帐号注册与使用</h5>
+    <p>您使用部分百度产品或服务时需要注册百度帐号，当您注册和使用百度帐号时应遵守下述要求：</p>1.
+    用户注册成功后，百度公司将给予每个用户一个用户帐号，用户可以自主设置帐号密码。该用户帐号和密码由用户负责保管；用户应当对以其用户帐号进行的所有活动和事件负法律责任。
+    <br>2.
+    您按照注册页面提示填写信息、阅读并同意本协议且完成全部注册程序后，除百度平台的具体产品对帐户有单独的注册要求外，您可获得百度平台（baidu.com网站及客户端）帐号并成为百度用户，可通过百度帐户使用百度平台的各项产品和服务。
+    <br>3.
+    为了方便您在百度产品中享有一致性的服务，如您已经在某一百度产品中登录百度帐号，在您首次使用其他百度产品时可能同步您的登录状态。此环节并不会额外收集、使用您的个人信息。如您想退出帐号登录，可在产品设置页面退出登录。
+    <br>4.
+    百度帐号（即百度用户ID）的所有权归百度公司，用户按注册页面引导填写信息，阅读并同意本协议且完成全部注册程序后，即可获得百度帐号并成为用户。用户应提供及时、详尽及准确的个人资料，并不断更新注册资料，符合及时、详尽准确的要求。所有原始键入的资料将引用为注册资料。如果因注册信息不真实或更新不及时而引发的相关问题，百度公司不负任何责任。您可以通过百度帐号设置页面查询、更正您的信息，百度帐号设置页面地址：
+    <a href="https://passport.baidu.com/center"
+       target="_blank">https://passport.baidu.com/center</a>用户应当通过真实身份信息认证注册帐号，且用户提交的帐号名称、头像和简介等注册信息中不得出现违法和不良信息，经百度公司审核，如存在上述情况，百度公司将不予注册；同时，在注册后，如发现用户以虚假信息骗取帐号名称注册，或其帐号头像、简介等注册信息存在违法和不良信息的，百度公司有权不经通知单方采取限期改正、暂停使用、注销登记、收回等措施。
+    <br>5.
+    基于国家法律法规的规定要求或者百度服务政策的要求，您在使用某些百度服务时需要填写真实的姓名、身份证号等信息。若您填写的信息不完整、不正确，则可能无法使用相应服务或在使用过程中受到限制。
+    <br>6.
+    当您使用刷脸登录、验证功能时，我们会收集并保存您的人脸照片和信息。您应按照页面的提示完成相应动作，百度系统判断您的动作符合要求后，即可完成脸部拍摄。您同意仅限您本人为您本人所持有的百度账户使用刷脸登录、验证服务。为了提高验证的准确性，您同意百度可在必要时将您向百度提供的人脸照片、脸部特征与法律法规允许的机构或政府机关授权的机构所保存的您的脸部特征进行比对核验。
+    <br>7.
+    百度帐号包括帐户名称和密码，您可使用设置的帐户名称（包括用户名、手机号、邮箱）和密码登录；在帐号使用过程中，为了保障您的帐号安全基于不同的终端以及您的使用习惯，我们可能采取不同的验证措施识别您的身份。例如您的帐户在新设备首次登录，我们可能通过密码加校验码的方式识别您的身份，验证方式包括但不限于短信验证码、服务使用信息验证。
+    <br>8.
+    用户不应将其帐号、密码转让、出售或出借予他人使用，帐号使用权仅属于初始申请注册人，用户应对帐号内的全部行为独立承担全部责任。如因帐号转让、买卖或出借导致的帐号纠纷或百度无法判断帐号归属等情况，百度有权拒绝提供帐号找回，并视情况采取冻结帐号、封禁帐号等措施。
+    <br>
+    <span style="font-weight:bold">
+        9.
+        因您个人原因导致的帐号无法使用，如需找回百度帐号，请按照百度帐号找回要求提供相应的信息，并确保提供的信息合法真实有效，若提供的信息不符合要求或帐号的唯一凭证不再有效，无法通过百度公司安全验证，因存在帐号被盗等安全风险导致无法判断帐号归属，百度公司有权拒绝提供帐号找回服务，并视情况采取冻结帐号、封禁帐号等措施。您百度帐号下绑定的手机号如因您个人原因停止使用，请尽快更改百度帐号的绑定手机，否则如遇运营商二次放号，二次放号的用户可以通过您原来的手机号进行验证登录，可查看到您的全部帐号信息及产品使用信息，您的百度帐号将无法继续使用，帐号内个人信息也有泄露的风险，请您务必及时更换绑定手机，如因未及时换绑手机号导致帐号丢失或个人信息泄露的责任由您自行承担，百度公司有权拒绝提供帐号找回服务，并视情况采取冻结帐号、封禁帐号等措施。
+    </span>
+    <br>10.
+    在需要终止使用百度帐号服务时，符合以下条件的，您可以申请注销您的百度帐号。
+    <br>（1）您仅能申请注销您本人的帐号，并依照百度公司的流程进行注销；
+    <br>（2）您仍应对您在注销帐号前且使用百度公司服务期间的行为承担相应责任，同时百度公司仍可保存您注销前的相关信息；
+    <br>（3）注销成功后，帐号信息、个人身份证信息、交易记录、会员权益等将无法恢复或提供；
+    <br>
+    <span style="font-weight:bold">
+        11.
+        为了防止资源占用，如您连续六个月未使用您的百度帐号或未通过百度公司认可的其他方式登录过您的百度帐户，百度公司有权对该帐户进行注销，您将不能再通过该帐号登录名登录本网站或使用相关服务。如该帐户有关联的理财产品、待处理交易或余额，百度公司会在合理范围内协助您处理，请您按照百度公司提示的方式进行操作。
+    </span>
+    <br>12.
+    我们将按照百度公司的隐私权保护声明（
+    <a href="http://privacy.baidu.com/mdetail?id=288"
+       target="_blank">http://privacy.baidu.com/mdetail?id=288</a>）使用您在注册百度帐户、使用百度服务中提交、留存的信息。您保证在您使用百度公司的所有产品和服务前，已经充分了解并同意百度公司可以据此处理用户信息。
+    <br>13.
+    为了满足相关法律法规的要求和保障您的帐号安全，尤其是您在进行帐号解绑、注销等敏感操作时，我们会将您提交的个人身份信息发送至银行、运营商等机构进行验证查询，以核实您身份的真实性。
+    <br>14.
+    当用户使用一键登录功能时，运营商会将用户的本机手机号传输给百度，用以百度判断您的手机号是否已注册百度帐号。如您的手机号已注册百度帐号，并通过安全验证，则您将无需填写手机号、验证码、帐户名、密码等，可直接完成帐号登录。如您不满足一键登录的要求，或者选取了其他登录方式，您可使用其他登录方式进行帐号登录。
+    <h5 style="font-weight:bold">三、使用规则</h5>1.
+    <span style="font-weight:bold">用户在使用百度公司的服务时，必须遵守《网络安全法》等中华人民共和国相关法律法规的规定，用户应同意将不会利用本服务进行任何违法或不正当的活动，包括但不限于下列行为:</span>
+    <br>（1）
+    <span style="font-weight:bold">上载、展示、张贴、传播或以其它方式传送含有下列内容之一的信息：</span>
+    <br>　　1）
+    <span style="font-weight:bold">反对宪法所确定的基本原则的；</span>
+    <br>　　2）
+    <span style="font-weight:bold">危害国家安全，泄露国家秘密，颠覆国家政权，破坏国家统一的；</span>
+    <br>　　3）
+    <span style="font-weight:bold">损害国家荣誉和利益的；</span>
+    <br>　　4）
+    <span style="font-weight:bold">煽动民族仇恨、民族歧视、破坏民族团结的；</span>
+    <br>　　5）
+    <span style="font-weight:bold">破坏国家宗教政策，宣扬邪教和封建迷信的；</span>
+    <br>　　6）
+    <span style="font-weight:bold">散布谣言，扰乱社会秩序，破坏社会稳定的；</span>
+    <br>　　7）
+    <span style="font-weight:bold">散布淫秽、色情、赌博、暴力、凶杀、恐怖或者教唆犯罪的；</span>
+    <br>　　8）
+    <span style="font-weight:bold">侮辱或者诽谤他人，侵害他人合法权利的；</span>
+    <br>　　9）
+    <span style="font-weight:bold">含有虚假、有害、胁迫、侵害他人隐私、骚扰、侵害、中伤、粗俗、猥亵、或其它道德上令人反感的内容；</span>
+    <br>　　10）
+    <span style="font-weight:bold">含有中国法律、法规、规章、条例以及任何具有法律效力之规范所限制或禁止的其它内容的；</span>
+    </div>
+</script>
+<!-- 隐私政策 end -->
+
 @Scripts.Render("~/Assets/Web/home/js/home.js")

@@ -307,6 +307,7 @@
     <Compile Include="Controllers\IdentityControllers.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\LookingForController.cs" />
+    <Compile Include="Controllers\NoticeController.cs" />
     <Compile Include="Controllers\PublishProjectController.cs" />
     <Compile Include="Controllers\TalentPoolController.cs" />
     <Compile Include="Controllers\WebController.cs" />

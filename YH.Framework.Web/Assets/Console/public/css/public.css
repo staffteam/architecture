@@ -507,3 +507,9 @@ body {
   left: 0;
   top: 100%;
 }
+a.white {
+  color: white;
+}
+a.white:hover {
+  color: white;
+}

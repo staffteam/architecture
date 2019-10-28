@@ -348,13 +348,18 @@ body {
     }
 }
 
-#loginWin {
+.fill-out {
     &>h2 {
         text-align: center;
         padding-top: 30px;
         font-size: 16px;
         color: rgba(153, 153, 153, 1);
         line-height: 20px;
+    }
+
+    em,
+    i {
+        font-style: normal;
     }
 
     &>div.logo {
@@ -366,7 +371,17 @@ body {
     &>div.layui-form {
         width: 80%;
         margin: 30px auto;
-
+        .vcode{
+            position: relative;
+            .get-code{
+                position: absolute;
+                right: 10px;
+                top: 50%;
+                transform: translateY(-50%);
+                cursor: pointer;
+                color: @c;
+            }
+        }
         .layui-form-item .layui-input-inline {
             width: 100%;
 
@@ -394,17 +409,26 @@ body {
                     cursor: pointer;
                 }
             }
+            .layui-btn{
+                &.off{
+                    background-color: #999999;
+                    cursor: no-drop;
+                }
+            }
         }
     }
-    &>div.third-party{
+
+    &>div.third-party {
         width: 80%;
-        margin:0 auto;
-        &>h2{
+        margin: 0 auto;
+
+        &>h2 {
             position: relative;
             height: 20px;
             line-height: 20px;
             text-align: center;
-            span{
+
+            span {
                 display: inline-block;
                 padding: 0 20px;
                 font-size: 14px;
@@ -413,37 +437,52 @@ body {
                 z-index: 9;
                 background-color: white;
             }
-            &::before{
+
+            &::before {
                 position: absolute;
                 top: 50%;
                 left: 0;
                 transform: translateY(-50%);
-                width:100%;
+                width: 100%;
                 border-bottom: 1px solid #999999;
                 content: '';
                 display: block;
                 z-index: 0;
             }
         }
-        &>div{
+
+        &>div {
             text-align: center;
             padding: 25px 0 0;
-            a{
-                i{
-                    font-size:25px;
+
+            a {
+                i {
+                    font-size: 25px;
                     line-height: 40px;
                     padding: 0 30px;
                 }
-                &:first-child{
+
+                &:first-child {
                     color: #7FBBE8;
                 }
-                &:nth-child(2){
+
+                &:nth-child(2) {
                     color: #97D36B;
                 }
-                &:nth-child(3){
+
+                &:nth-child(3) {
                     color: #E67772;
                 }
             }
         }
     }
+}
+
+.agreement,
+.policy {
+    padding: 15px;
+}
+
+a.white{
+    color: white;
 }
