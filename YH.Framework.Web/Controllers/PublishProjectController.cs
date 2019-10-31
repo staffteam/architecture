@@ -9,7 +9,7 @@ namespace YH.Framework.Web.Controllers
 {
     public class PublishProjectController : BaseController
     {
-        //首页
+        //发布项目首页
         public ActionResult PublishProject()
         {
             return View();

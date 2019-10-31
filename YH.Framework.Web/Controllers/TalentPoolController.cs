@@ -9,7 +9,7 @@ namespace YH.Framework.Web.Controllers
 {
     public class TalentPoolController : BaseController
     {
-
+        //人才库
         public ActionResult TalentPoolList()
         {
             return View();

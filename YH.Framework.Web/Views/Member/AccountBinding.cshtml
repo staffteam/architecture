@@ -1,0 +1,46 @@
+﻿@{
+    ViewBag.Title = "账号绑定";
+}
+@Styles.Render("~/Assets/Console/member/css/info.css")
+
+<div class="breadcrumb">
+    <span class="layui-breadcrumb">
+        <a href="~/index/index">首页</a>
+        <a><cite>账号绑定</cite></a>
+    </span>
+</div>
+<div class="content" id="content">
+    <div class="container">
+        <div class="member-main">
+            <div class="member-l">
+                <ul>
+                    <li><a href="/Member/Info">基本资料</a></li>
+                    <li><a href="/Member/Security">安全设置</a></li>
+                    <li class="on"><a href="/Member/AccountBinding">账号绑定</a></li>
+                    <li><a href="/Member/BindingBankCard">银行卡绑定</a></li>
+                    <li><a href="/Member/Message">新消息通知</a></li>
+                </ul>
+            </div>
+            <div class="security account-binding">
+                <div class="title">账号绑定</div>
+                <div class="list">
+                    <ul>
+                        <li>
+                            <div class="icon" ><i class="iconfont">&#xe609;</i></div>
+                            <div class="l">
+                                <h2>绑定微信</h2>
+                                <p>当前未绑定微信账号</p>
+                            </div>
+                            <div class="r">
+                                <a href="/Member/BindingWeChat">绑定</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@Scripts.Render("~/Assets/Console/common/provinces/provincesPlus.js")
+@Scripts.Render("~/Assets/Console/member/js/info.js")

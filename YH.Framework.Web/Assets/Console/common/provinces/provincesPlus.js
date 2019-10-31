@@ -23,7 +23,7 @@ function Provinces(init){
             '<div class="layui-input-inline" style="width:150px;">'+
             '<select name="city" lay-filter="city" ><option value="">请选择</option>'+_html2+'</select>'+
             '</div>'+
-            '<div class="layui-input-inline" style="width:150px;">'+
+            '<div class="layui-input-inline" style="width:150px; margin-right:0px;">'+
             '<select name="district" lay-filter="district" ><option value="">请选择</option>'+_html3+'</select>'+
             '</div>'+
             '</div></div>');

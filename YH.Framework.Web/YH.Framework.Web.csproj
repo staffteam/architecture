@@ -307,6 +307,7 @@
     <Compile Include="Controllers\IdentityControllers.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\LookingForController.cs" />
+    <Compile Include="Controllers\MemberController.cs" />
     <Compile Include="Controllers\NoticeController.cs" />
     <Compile Include="Controllers\PublishProjectController.cs" />
     <Compile Include="Controllers\TalentPoolController.cs" />
@@ -598,6 +599,8 @@
     <Content Include="Assets\Console\login\css\login.css" />
     <Content Include="Assets\Console\login\js\login.js" />
     <Content Include="Assets\Console\lookingFor\js\postTheCertification.js" />
+    <Content Include="Assets\Console\member\css\info.css" />
+    <Content Include="Assets\Console\member\js\info.js" />
     <Content Include="Assets\Console\notice\css\notice.css" />
     <Content Include="Assets\Console\public\css\init.css" />
     <Content Include="Assets\Console\public\css\public.css" />
@@ -624,6 +627,20 @@
     <Content Include="Assets\Console\swiper\css\swiper.min.css" />
     <Content Include="Assets\Console\swiper\js\swiper.min.js" />
     <Content Include="Assets\Console\talentPool\js\TalentPool.js" />
+    <Content Include="Assets\Web\home\css\home.css" />
+    <Content Include="Assets\Web\home\images\govt-item2-iconbg.png" />
+    <Content Include="Assets\Web\home\images\govt-item2-line.png" />
+    <Content Include="Assets\Web\home\images\home_list1_1.png" />
+    <Content Include="Assets\Web\home\images\home_list1_2.png" />
+    <Content Include="Assets\Web\home\images\home_list2_1.png" />
+    <Content Include="Assets\Web\home\images\home_list2_2.png" />
+    <Content Include="Assets\Web\home\images\home_list3_1.png" />
+    <Content Include="Assets\Web\home\images\home_list3_2.png" />
+    <Content Include="Assets\Web\home\images\home_list4_1.png" />
+    <Content Include="Assets\Web\home\images\home_list4_2.png" />
+    <Content Include="Assets\Web\home\js\home.js" />
+    <Content Include="Assets\Web\project\css\project.css" />
+    <Content Include="Assets\Web\project\js\project.js" />
     <Content Include="Assets\Web\public\css\public.css" />
     <Content Include="Assets\Web\public\images\footer_logo.png" />
     <Content Include="Assets\Web\public\images\list.png" />
@@ -634,6 +651,8 @@
     <Content Include="Assets\Web\public\images\wechart.png" />
     <Content Include="Assets\Web\public\images\xq_back.png" />
     <Content Include="Assets\Web\public\js\public.js" />
+    <Content Include="Assets\Web\talents\css\talents.css" />
+    <Content Include="Assets\Web\talents\js\talents.js" />
     <Content Include="Content\adminlte.css" />
     <Content Include="Content\adminlte.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -739,6 +758,11 @@
     <Content Include="Assets\Console\Publish\less\submitInfo.less" />
     <Content Include="Assets\Console\released\css\released.less" />
     <Content Include="Assets\Web\public\less\public.less" />
+    <Content Include="Assets\Web\home\less\home.less" />
+    <Content Include="Assets\Web\project\less\project.less" />
+    <Content Include="Assets\Web\public\建筑条件消化确认表.xls" />
+    <Content Include="Assets\Web\talents\less\talents.less" />
+    <Content Include="Assets\Console\member\less\info.less" />
     <None Include="Properties\PublishProfiles\MyPublish.pubxml" />
     <Content Include="Quartz.config" />
     <Content Include="Quartz.Jobs.config" />
@@ -1139,6 +1163,16 @@
     <Content Include="Views\PublishProject\PublishProject.cshtml" />
     <Content Include="Views\Shared\_Header.cshtml" />
     <Content Include="Views\Web\OverProject.cshtml" />
+    <Content Include="Views\Member\Info.cshtml" />
+    <Content Include="Views\Member\Security.cshtml" />
+    <Content Include="Views\Member\Message.cshtml" />
+    <Content Include="Views\Member\BindingWeChat.cshtml" />
+    <Content Include="Views\Member\BindingBankCard.cshtml" />
+    <Content Include="Views\Member\EditPhone.cshtml" />
+    <Content Include="Views\Member\EditEmail.cshtml" />
+    <Content Include="Views\Member\EditPaddWord.cshtml" />
+    <Content Include="Views\Member\ProjectInterflow.cshtml" />
+    <Content Include="Views\Member\AccountBinding.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

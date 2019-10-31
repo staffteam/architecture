@@ -9,7 +9,7 @@ namespace YH.Framework.Web.Controllers
 {
     public class NoticeController : BaseController
     {
-
+        //资讯详情
         public ActionResult NoticeDetails()
         {
             return View();

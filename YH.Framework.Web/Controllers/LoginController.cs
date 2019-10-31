@@ -9,7 +9,7 @@ namespace YH.Framework.Web.Controllers
 {
     public class LoginController : BaseController
     {
-
+        //登录
         public ActionResult Login()
         {
             return View();

@@ -1,0 +1,63 @@
+﻿@{
+    ViewBag.Title = "新消息设置";
+}
+@Styles.Render("~/Assets/Console/member/css/info.css")
+
+<div class="breadcrumb">
+    <span class="layui-breadcrumb">
+        <a href="~/index/index">首页</a>
+        <a><cite>新消息设置</cite></a>
+    </span>
+</div>
+<div class="content" id="content">
+    <div class="container">
+        <div class="member-main">
+            <div class="member-l">
+                <ul>
+                    <li><a href="/Member/Info">基本资料</a></li>
+                    <li><a href="/Member/Security">安全设置</a></li>
+                    <li><a href="/Member/AccountBinding">账号绑定</a></li>
+                    <li><a href="/Member/BindingBankCard">银行卡绑定</a></li>
+                    <li class="on"><a href="/Member/Message">新消息通知</a></li>
+                </ul>
+            </div>
+            <div class="security layui-form">
+                <div class="title">安全设置</div>
+                <div class="list">
+                    <ul>
+                        <li>
+                            <div class="l">
+                                <h2>用户消息</h2>
+                                <p>其他用户的消息将以站内信的形式通知</p>
+                            </div>
+                            <div class="r">
+                                <input type="checkbox" checked="" name="open" lay-skin="switch" lay-filter="switchTest1" lay-text="ON|OFF">
+                            </div>
+                        </li>
+                        <li>
+                            <div class="l">
+                                <h2>系统消息</h2>
+                                <p>系统消息将以站内信的形式通知</p>
+                            </div>
+                            <div class="r">
+                                <input type="checkbox" checked="" name="open" lay-skin="switch" lay-filter="switchTest2" lay-text="ON|OFF">
+                            </div>
+                        </li>
+                        <li>
+                            <div class="l">
+                                <h2>待办任务</h2>
+                                <p>待办任务将以站内信的形式通知</p>
+                            </div>
+                            <div class="r">
+                                <input type="checkbox" checked="" name="open" lay-skin="switch" lay-filter="switchTest3" lay-text="ON|OFF">
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@Scripts.Render("~/Assets/Console/common/provinces/provincesPlus.js")
+@Scripts.Render("~/Assets/Console/member/js/info.js")

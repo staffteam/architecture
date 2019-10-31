@@ -9,17 +9,11 @@ namespace YH.Framework.Web.Controllers
 {
     public class HomeController : BaseController
     {
-        // GET: Home
+        //首页
         public ActionResult Index()
         {
             return View();
         }
 
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
-        }
     }
 }

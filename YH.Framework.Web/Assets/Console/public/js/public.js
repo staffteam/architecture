@@ -22,12 +22,15 @@ function $msg(o) {
         });
     }
 }
+
 function getQueryVariable(variable) {
     var query = window.location.search.substring(1);
     var vars = query.split("&");
     for (var i = 0; i < vars.length; i++) {
         var pair = vars[i].split("=");
-        if (pair[0] == variable) { return pair[1]; }
+        if (pair[0] == variable) {
+            return pair[1];
+        }
     }
     return (false);
 }
@@ -78,7 +81,7 @@ $(function () {
 });
 var isPhone = /^1[3456789]\d{9}$/;
 var isEmail = /^[A-Za-z0-9\u4e00-\u9fa5]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/;
-
+var isBank = /([\d]{4})([\d]{4})([\d]{4})([\d]{4})([\d]{0,})?/;
 var verify = {
     $fn: [],
     init: function () {
@@ -97,10 +100,17 @@ var verify = {
                             case 'required':
                                 the.$fn[_key].required = function (value) {
                                     if (value == "") {
-                                        $msg({
-                                            content: '请输入' + _tips,
-                                            icon: 2
-                                        });
+                                        if(_tips.indexOf('请再次')>=0){
+                                            $msg({
+                                                content: _tips,
+                                                icon: 2
+                                            });
+                                        }else{
+                                            $msg({
+                                                content: '请输入' + _tips,
+                                                icon: 2
+                                            });
+                                        }
                                         return false;
                                     } else {
                                         return true;
@@ -133,6 +143,19 @@ var verify = {
                                     }
                                 };
                                 break;
+                            case 'bank':
+                                the.$fn[_key].bank = function (value) {
+                                    if (value != '' && !isBank.test(value)) {
+                                        $msg({
+                                            content: _tips + '格式错误',
+                                            icon: 2
+                                        });
+                                        return false;
+                                    } else {
+                                        return true;
+                                    }
+                                };
+                                break;
                         }
                     } else {
                         the.$fn[_key].orList = value.split('||');
@@ -147,6 +170,11 @@ var verify = {
                                         break;
                                     case 'phone':
                                         if (value != '' && isPhone.test(value)) {
+                                            _is_ = true;
+                                        }
+                                        break;
+                                    case 'bank':
+                                        if (value != '' && isBank.test(value)) {
                                             _is_ = true;
                                         }
                                         break;
@@ -206,7 +234,12 @@ var verify = {
                             case 'required':
                                 the.$fn[_key].required = function (value, $this) {
                                     if (value == "") {
-                                        the.tips($this, ($($this).hasClass('upcode') ? '请上传' : $($this).hasClass('selects') ? '请选择' : '请输入') + _tips);
+                                        if(_tips.indexOf('请再次')>=0){
+                                            the.tips($this, _tips);
+                                        }else{
+                                            the.tips($this, ($($this).hasClass('upcode') ? '请上传' : $($this).hasClass('selects') ? '请选择' : '请输入') + _tips);
+                                        }
+                                        
                                         return false;
                                     } else {
                                         return true;
@@ -233,6 +266,16 @@ var verify = {
                                     }
                                 };
                                 break;
+                            case 'bank':
+                                the.$fn[_key].bank = function (value, $this) {
+                                    if (value != '' && !isBank.test(value)) {
+                                        the.tips($this, _tips + '格式错误');
+                                        return false;
+                                    } else {
+                                        return true;
+                                    }
+                                };
+                                break;
                         }
                     } else {
                         the.$fn[_key].orList = value.split('||');
@@ -247,6 +290,11 @@ var verify = {
                                         break;
                                     case 'phone':
                                         if (value != '' && isPhone.test(value)) {
+                                            _is_ = true;
+                                        }
+                                        break;
+                                    case 'bank':
+                                        if (value != '' && isBank.test(value)) {
                                             _is_ = true;
                                         }
                                         break;
@@ -281,7 +329,7 @@ var verify = {
                         $(this).parent().find('.verify-tips').remove();
                     }
                 })
-            }else{
+            } else {
                 $(_this).blur();
             }
         });

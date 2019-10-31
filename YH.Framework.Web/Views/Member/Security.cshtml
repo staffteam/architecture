@@ -1,0 +1,76 @@
+﻿@{
+    ViewBag.Title = "安全设置";
+}
+@Styles.Render("~/Assets/Console/member/css/info.css")
+
+<div class="breadcrumb">
+    <span class="layui-breadcrumb">
+        <a href="~/index/index">首页</a>
+        <a><cite>安全设置</cite></a>
+    </span>
+</div>
+<div class="content" id="content">
+    <div class="container">
+        <div class="member-main">
+            <div class="member-l">
+                <ul>
+                    <li><a href="/Member/Info">基本资料</a></li>
+                    <li class="on"><a href="/Member/Security">安全设置</a></li>
+                    <li><a href="/Member/AccountBinding">账号绑定</a></li>
+                    <li><a href="/Member/BindingBankCard">银行卡绑定</a></li>
+                    <li><a href="/Member/Message">新消息通知</a></li>
+                </ul>
+            </div>
+            <div class="security layui-form">
+                <div class="title">安全设置</div>
+                <div class="list">
+                    <ul>
+                        <li>
+                            <div class="l">
+                                <h2>账号密码</h2>
+                                <p>当前密码强度:: 强</p>
+                            </div>
+                            <div class="r">
+                                <span><i class="iconfont">&#xe654;</i>已设置</span>
+                                <a href="/Member/EditPaddWord">修改</a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="l">
+                                <h2>手机绑定</h2>
+                                <p>已绑定手机:: 138 **** 829</p>
+                            </div>
+                            <div class="r">
+                                <span><i class="iconfont">&#xe654;</i>已设置</span>
+                                <a href="/Member/EditPhone">修改</a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="l">
+                                <h2>邮箱绑定</h2>
+                                <p>已绑定邮箱:: lili_pers****@@163.com &#91发送的通知将发送到您的备用邮箱。]</p>
+                            </div>
+                            <div class="r">
+                                <span><i class="iconfont">&#xe654;</i>已设置</span>
+                                <a href="/Member/BindingWeChat">修改</a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="l">
+                                <h2>银行卡绑定</h2>
+                                <p>未绑定银行卡::&#91项目付款时将会直接转入您的银行卡内，请尽快绑定]</p>
+                            </div>
+                            <div class="r">
+                                <span class="off"><i class="iconfont">&#xe65f;</i>未设置</span>
+                                <a href="/Member/BindingBankCard">去设置</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@Scripts.Render("~/Assets/Console/common/provinces/provincesPlus.js")
+@Scripts.Render("~/Assets/Console/member/js/info.js")
