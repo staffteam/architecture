@@ -96,6 +96,10 @@
   border-bottom: 2px solid #489DFC;
   position: absolute;
 }
+.link-up > div.r div.link-up-content {
+  height: calc(100% - 50px);
+  display: none;
+}
 .link-up > div.r div.link-up-content div.top {
   overflow: hidden;
   padding: 20px 20px 0 20px;
@@ -296,6 +300,23 @@
 .link-up > div.r div.link-up-content div.link-up-import div.imports p {
   float: right;
   padding: 0 20px;
+}
+.link-up > div.r div.link-up-content div.link-up-flie {
+  margin: 20px;
+  height: calc(100% - 40px);
+  overflow-y: auto;
+}
+.link-up > div.r div.link-up-content div.link-up-flie ul li {
+  padding: 10px 20px;
+  border-bottom: 1px solid #dddddd;
+}
+.link-up > div.r div.link-up-content div.link-up-flie ul li h2 {
+  font-size: 16px;
+}
+.link-up > div.r div.link-up-content div.link-up-flie ul li p {
+  font-size: 14px;
+  margin-top: 10px;
+  color: #999999;
 }
 .project-member {
   position: fixed;

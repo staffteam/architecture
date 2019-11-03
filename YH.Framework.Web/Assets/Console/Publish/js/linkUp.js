@@ -78,6 +78,12 @@ $(function () {
     $('#pNav li').click(function(){
         $(this).addClass('on').siblings().removeClass('on');
     })
+    //切换消息与文件
+    $('.link-up-title ul li').click(function(){
+        $(this).addClass('on').siblings().removeClass('on');
+        $('div.link-up-content').hide();
+        $('div.link-up-content').eq($(this).index('.link-up-title ul li')).show();
+    })
 })
 //项目组数弹窗关闭
 function projectMemberClose(){
