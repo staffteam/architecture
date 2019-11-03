@@ -148,6 +148,9 @@
   line-height: 200px;
   margin-right: 5px;
 }
+.released-list ul li > div div.r div.b a {
+  color: #999999;
+}
 @media screen and (max-width: 1850px) {
   .released-list ul li > div div.l {
     width: 100%;

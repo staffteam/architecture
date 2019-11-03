@@ -18,7 +18,9 @@
  .breadcrumb {
      padding: 14px 24px;
      background: rgba(255, 255, 255, 1);
-     box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.05);
+     box-shadow: 0px 2px 4px 0 rgba(0, 0, 0, 0.05);
+     z-index: 99;
+     position: relative;
  }
 
  body {
@@ -57,16 +59,18 @@
          background-color: #e85445;
      }
  }
- .layui-layer-tips .layui-layer-content{
-    background-color:#444444 !important;
-    i{
-        border-bottom-color: #444444 !important;
-    }
-}
+
+ .layui-layer-tips .layui-layer-content {
+     background-color: #444444 !important;
+
+     i {
+         border-bottom-color: #444444 !important;
+     }
+ }
 
  // 顶部导航
  .main {
-     
+
      .layui-upload-drag.layui-upload-flow {
          width: 100%;
          padding: 20px;
@@ -543,10 +547,143 @@
      left: 0;
      top: 100%;
  }
- 
-a.white{
-    color: white;
-    &:hover{
-        color: white;
-    }
+
+ a.white {
+     color: white;
+
+     &:hover {
+         color: white;
+     }
+ }
+
+ .layui-layer-content {
+     width: 100%;
+a{
+    cursor: pointer;
 }
+     .msg1 {
+         .list {
+             padding: 15px 30px;
+             overflow: hidden;
+             height: 70px;
+             border-bottom: 1px solid #E5E5E5;
+            a{
+                height: 100%;
+                display: block;
+            }
+             &>a>p {
+                 float: left;
+                 width: 32px;
+                 height: 32px;
+                 line-height: 32px;
+                 text-align: center;
+                 background-color: #F55B5B;
+                 border-radius: 50%;
+                 position: relative;
+                 top: 50%;
+                 transform: translateY(-45%);
+
+                 i {
+                     font-size: 18px;
+                     color: white;
+                 }
+             }
+
+             div {
+                 margin-left: 45px;
+
+                 h2 {
+                     font-size: 14px;
+                     color: rgba(102, 102, 102, 1);
+                     line-height: 20px;
+                     .line();
+                 }
+
+                 p {
+                     font-size: 12px;
+                     color: rgba(153, 153, 153, 1);
+                     line-height: 17px;
+                     margin-top: 5px;
+                 }
+             }
+         }
+     }
+
+     .msg2 {
+         .list {
+            padding: 15px 30px;
+            overflow: hidden;
+            height: 70px;
+            border-bottom: 1px solid #E5E5E5;
+             div {
+                 h2 {
+                     font-size: 14px;
+                     color: rgba(102, 102, 102, 1);
+                     line-height: 20px;
+                     .line();
+                 }
+
+                 p {
+                     margin-top: 8px;
+                     font-size: 12px;
+                     color: rgba(153, 153, 153, 1);
+                     line-height: 17px;
+                     .line();
+                     em{
+                         font-style: normal;
+                     }
+                     span{
+                        float:right; 
+                     }
+                 }
+             }
+         }
+     }
+     .msg3 {
+        .list {
+           padding: 15px 30px;
+           overflow: hidden;
+           border-bottom: 1px solid #E5E5E5;
+            div {
+                h2 {
+                    font-size: 14px;
+                    color: rgba(102, 102, 102, 1);
+                    line-height: 20px;
+                    overflow: hidden;
+                    em{
+                        float:left;
+                        max-width: 60%;
+                        display: block;
+                        font-style: normal;
+                        .line();
+                    }
+                    span{
+                       border: 1px solid #F5222D; 
+                       padding: 0 10px;
+                       line-height: 20px;
+                       font-size:12px;
+                       color: #F5222D;
+                       border-radius: 4px;
+                       float:right;
+                       &.warning{
+                           border:1px solid #FFE48F;
+                           color: #FFE48F;
+                       }
+                    }
+                }
+
+                p {
+                    margin-top: 8px;
+                    font-size: 12px;
+                    color: rgba(153, 153, 153, 1);
+                    .lines();
+                    line-height: 17px;
+                }
+            }
+        }
+    }
+ }
+
+ .layui-layer-tab .layui-layer-title span.layui-this {
+     color: #489DFC;
+ }

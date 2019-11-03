@@ -74,5 +74,10 @@ namespace YH.Framework.Web.Controllers
         {
             return View();
         }
+        //项目沟通
+        public ActionResult projectLinkUp()
+        {
+            return View();
+        }
     }
 }

@@ -616,6 +616,7 @@
     <Content Include="Assets\Console\Publish\css\submitInfo.css" />
     <Content Include="Assets\Console\Publish\js\audit.js" />
     <Content Include="Assets\Console\Publish\js\history.js" />
+    <Content Include="Assets\Console\Publish\js\linkUp.js" />
     <Content Include="Assets\Console\Publish\js\payTheFees.js" />
     <Content Include="Assets\Console\Publish\js\publish.js" />
     <Content Include="Assets\Console\Publish\js\recruit.js" />
@@ -763,6 +764,7 @@
     <Content Include="Assets\Web\public\建筑条件消化确认表.xls" />
     <Content Include="Assets\Web\talents\less\talents.less" />
     <Content Include="Assets\Console\member\less\info.less" />
+    <Content Include="Assets\Console\Publish\less\linkUp.less" />
     <None Include="Properties\PublishProfiles\MyPublish.pubxml" />
     <Content Include="Quartz.config" />
     <Content Include="Quartz.Jobs.config" />
@@ -1173,6 +1175,7 @@
     <Content Include="Views\Member\EditPaddWord.cshtml" />
     <Content Include="Views\Member\ProjectInterflow.cshtml" />
     <Content Include="Views\Member\AccountBinding.cshtml" />
+    <Content Include="Views\PublishProject\projectLinkUp.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

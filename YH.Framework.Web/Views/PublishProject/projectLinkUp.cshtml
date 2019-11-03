@@ -1,0 +1,149 @@
+﻿@{
+    ViewBag.Title = "项目沟通";
+}
+@Styles.Render("~/Assets/Console/publish/css/linkUp.css")
+<div class="breadcrumb">
+    <span class="layui-breadcrumb">
+        <a href="~/Home">首页</a>
+        <a><cite>项目沟通</cite></a>
+    </span>
+</div>
+<div class="content" id="content">
+    <div class="container">
+        <div class="link-up">
+            <div class="l">
+                <h2>所有项目</h2>
+                <ul id="pNav">
+                    <li class="on"><p>万科龙岗</p></li>
+                    <li><p>中海寰宇天下</p></li>
+                </ul>
+            </div>
+            <div class="r">
+                <div class="link-up-r">
+                    <div class="link-up-title">
+                        <ul>
+                            <li class="on">消息</li>
+                            <li>文件</li>
+                        </ul>
+                    </div>
+                    <div class="link-up-content">
+                        <div class="top">
+                            <div class="l">
+                                <h2>中海寰宇天下项目</h2>
+                                <p>项目消息由系统自动创建，所有企业成员都会自动加入到当前群组，该群组无法删除。</p>
+                                <div>
+                                    <p onclick="qqCode()"><i class="iconfont">&#xe7af;</i> QQ沟通群</p>
+                                    <p onclick="weCode()"><i class="iconfont">&#xe60c;</i> 微信沟通群</p>
+                                </div>
+                            </div>
+                            <div class="r">
+                                <p onclick="projectMemberShow()"><i class="iconfont">&#xe7b0;</i> 团队成员</p>
+                                <p><i class="iconfont">&#xe685;</i> 常见问题</p>
+                            </div>
+                        </div>
+                        <div class="link-up-main">
+                            <div class="line-time"><span>8月7日 星期三</span></div>
+                            <div class="list">
+                                <div class="item">
+                                    <p><img src="~/Assets/Web/public/images/top.png" /></p>
+                                    <div class="c">
+                                        <div class="title">
+                                            <span>王总</span>
+                                            <em>05:14</em>
+                                            <i class="iconfont">&#xe604;</i>
+                                        </div>
+                                        <div class="con">
+                                            今天任务提交了
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <p><img src="~/Assets/Web/public/images/top.png" /></p>
+                                    <div class="c">
+                                        <div class="title">
+                                            <span>王总</span>
+                                            <em>05:14</em>
+                                            <i class="iconfont">&#xe604;</i>
+                                        </div>
+                                        <div class="con">
+                                            分享了：<a download="分缝示意图.jpg" href="~/Assets/Web/public/images/start_back_1.png">分缝示意图.jpg</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="link-up-import">
+                            <div class="top">
+                                <div id="face">
+                                    <i class="iconfont">&#xe632;</i>
+                                    <div id="qqe"></div>
+                                </div>
+                                <div id="linkUpFile"><i class="iconfont">&#xe60f;</i></div>
+
+                            </div>
+                            <div class="imports">
+                                <textarea placeholder="请输入内容" id="importsUp"></textarea>
+                                <p class="layui-btn layui-btn-sm layui-btn-normal" onclick="importsUp()">发送</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="projectMember" class="project-member">
+    <div class="title">
+        群组成员 <span>（10）</span>
+             <i class="iconfont" onclick="projectMemberClose()">&#xe603;</i>
+    </div>
+    <ul>
+        <li>
+            <div class="title"><i class="iconfont">&#xe620;</i> 项目负责人</div>
+            <div class="list">
+                <div class="list-member">
+                    <p><img src="~/Assets/Web/public/images/top.png" /></p>
+                    <h2>刘小姐</h2>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="title"><i class="iconfont">&#xe620;</i> 专业负责人</div>
+            <div class="list">
+                <div class="list-member">
+                    <p><img src="~/Assets/Web/public/images/top.png" /></p>
+                    <h2>赵小姐</h2>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="title"><i class="iconfont">&#xe620;</i> 设计师</div>
+            <div class="list">
+                <div class="list-member">
+                    <p><img src="~/Assets/Web/public/images/top.png" /></p>
+                    <h2>赵先生</h2>
+                </div>
+                <div class="list-member">
+                    <p><img src="~/Assets/Web/public/images/top.png" /></p>
+                    <h2>许先生</h2>
+                </div>
+                <div class="list-member">
+                    <p><img src="~/Assets/Web/public/images/top.png" /></p>
+                    <h2>万先生</h2>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="title"><i class="iconfont">&#xe620;</i> 助理设计师</div>
+            <div class="list">
+                <div class="list-member">
+                    <p><img src="~/Assets/Web/public/images/top.png" /></p>
+                    <h2>赵小姐</h2>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
+
+@Scripts.Render("~/Assets/Console/Publish/js/linkUp.js")

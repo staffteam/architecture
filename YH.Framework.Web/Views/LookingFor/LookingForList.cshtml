@@ -4,7 +4,7 @@
 @Styles.Render("~/Assets/Console/lookingFor/css/lookingFor.css")
 <div class="breadcrumb">
     <span class="layui-breadcrumb">
-        <a href="~/index/index">首页</a>
+        <a href="~/Home">首页</a>
         <a href="~/lookingFor/lookingFor">寻找项目</a>
         <a><cite>项目报名</cite></a>
     </span>
@@ -118,7 +118,7 @@
 
                                     <script type="text/html" id="table1Bar">
                                         <a class="layui-btn layui-btn-xs" lay-event="look">查看项目</a>
-                                        <a class="layui-btn layui-btn-danger layui-btn-xs"
+                                        <a href="/lookingFor/myTask" class="layui-btn layui-btn-danger layui-btn-xs"
                                            lay-event="task">查看任务</a>
                                         <a class="layui-btn layui-btn-danger layui-btn-xs"
                                            lay-event="collect">收藏</a>
