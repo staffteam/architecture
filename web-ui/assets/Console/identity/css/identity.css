@@ -1,0 +1,471 @@
+.identity .layui-card-body {
+  min-height: 80vh;
+}
+.identity .hint {
+  height: 46px;
+  background: #f5f5f5;
+  line-height: 46px;
+  font-size: 14px;
+  color: #666666;
+  padding: 0 10px;
+}
+.identity .entrance {
+  margin-top: 45px;
+}
+.identity .entrance > h2 {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333333;
+  line-height: 20px;
+}
+.identity .entrance > ul {
+  padding: 20px 0;
+  height: 256px;
+}
+.identity .entrance > ul li {
+  width: 442px;
+  height: 256px;
+  background: #ffffff;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+  float: left;
+  padding-top: 50px;
+  margin-right: 24px;
+  padding-bottom: 28px;
+  border: 2px solid white;
+}
+.identity .entrance > ul li:hover {
+  border: 2px solid #489DFC;
+}
+.identity .entrance > ul li p {
+  width: 135px;
+  height: 105px;
+  margin: 0 auto 0 auto;
+}
+.identity .entrance > ul li p img {
+  width: 100%;
+}
+.identity .entrance > ul li h2 {
+  font-size: 16px;
+  color: #489DFC;
+  line-height: 22px;
+  text-align: center;
+  margin-top: 35px;
+}
+.identity .entrance > ul li span {
+  display: block;
+  margin-top: 5px;
+  font-size: 12px;
+  color: #999999;
+  line-height: 17px;
+  text-align: center;
+}
+.identity .layui-card-body.auto {
+  min-height: auto;
+}
+.identity .identity-step {
+  overflow: hidden;
+}
+.identity .identity-step.error div.r li.on i {
+  background: #F55B5B;
+  color: white;
+  border: 1px solid #F55B5B;
+}
+.identity .identity-step div.l {
+  width: 450px;
+  height: 48px;
+  font-size: 14px;
+  color: #999999;
+  line-height: 24px;
+}
+.identity .identity-step div.r {
+  float: left;
+  font-size: 14px;
+  color: #666666;
+  line-height: 30px;
+  overflow: hidden;
+  padding: 5px 0;
+}
+.identity .identity-step div.r li {
+  float: left;
+  margin-right: 30px;
+  padding-right: 30px;
+  position: relative;
+}
+.identity .identity-step div.r li:last-child::before {
+  display: none;
+}
+.identity .identity-step div.r li::before {
+  content: '';
+  border-bottom: 1px solid #d8d8d8;
+  width: 30px;
+  right: -15px;
+  top: 50%;
+  transform: translateY(50%);
+  display: block;
+  position: absolute;
+}
+.identity .identity-step div.r li.on i {
+  background: #489DFC;
+  color: white;
+  border: 1px solid #489DFC;
+}
+.identity .identity-step div.r li i {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #979797;
+  text-align: center;
+  line-height: 30px;
+  display: block;
+  float: left;
+  font-size: 18px;
+  color: #979797;
+  border-radius: 50%;
+  font-style: normal;
+  margin-right: 10px;
+}
+.identity .identity-form .layui-form-item {
+  margin-bottom: 30px;
+}
+.identity .identity-form .layui-form-item .layui-input-inline {
+  width: 15vw;
+  position: relative;
+}
+.identity .identity-form .updata-tip {
+  height: 48px;
+  font-size: 14px;
+  color: #999999;
+  line-height: 24px;
+  display: inline-block;
+  margin-top: 10px;
+}
+.identity .identity-type {
+  min-height: 28vw;
+}
+.identity .identity-type > h2 {
+  font-size: 16px;
+  color: #333333;
+  line-height: 22px;
+  margin-top: 28px;
+  font-weight: 600;
+}
+.identity .identity-type div.type-content {
+  padding: 40px 28px 30px 28px;
+  overflow: hidden;
+}
+.identity .identity-type div.type-content div.l {
+  float: left;
+  height: 526px;
+  width: 75%;
+}
+.identity .identity-type div.type-content div.l ul li {
+  width: 31.33%;
+  height: 526px;
+  background: #ffffff;
+  border-radius: 5px;
+  border: 1px solid #dddddd;
+  float: left;
+  padding: 33px 40px;
+  margin-right: 3%;
+  transition: 0.3s all;
+}
+.identity .identity-type div.type-content div.l ul li:last-child {
+  margin-right: 0;
+}
+.identity .identity-type div.type-content div.l ul li:hover {
+  background: #ffffff;
+  box-shadow: 0px 0px 20px 0px rgba(72, 157, 252, 0.8);
+  border-radius: 6px;
+  border: 1px solid rgba(72, 157, 252, 0.8);
+}
+.identity .identity-type div.type-content div.l ul li > h2 {
+  font-size: 17px;
+  color: #333333;
+  line-height: 24px;
+  text-align: center;
+  font-weight: 600;
+}
+.identity .identity-type div.type-content div.l ul li > p {
+  max-width: 178px;
+  margin: 0 auto;
+  margin-top: 3.5vw;
+}
+.identity .identity-type div.type-content div.l ul li > div {
+  margin-top: 3vw;
+}
+.identity .identity-type div.type-content div.l ul li > div h2 {
+  font-size: 19px;
+  color: #333333;
+  line-height: 28px;
+}
+.identity .identity-type div.type-content div.l ul li > div div {
+  font-size: 15px;
+  color: #999999;
+  line-height: 21px;
+  margin-top: 12px;
+}
+.identity .identity-type div.type-content div.l ul li > a {
+  display: block;
+  width: 90%;
+  height: 40px;
+  margin: 0 auto;
+  margin-top: 2vw;
+}
+.identity .identity-type div.type-content div.r {
+  float: right;
+  width: 22.5%;
+}
+.identity .identity-type div.type-content div.r ul li {
+  width: 100%;
+  height: 160px;
+  background: #ffffff;
+  border-radius: 5px;
+  border: 1px solid #dddddd;
+  padding: 20px;
+  margin-top: 23px;
+}
+.identity .identity-type div.type-content div.r ul li:first-child {
+  margin-top: 0px;
+}
+.identity .identity-type div.type-content div.r ul li h2 {
+  font-size: 17px;
+  color: #333333;
+  line-height: 24px;
+  text-align: center;
+  font-weight: 600;
+}
+.identity .identity-type div.type-content div.r ul li p {
+  font-size: 13px;
+  color: #999999;
+  line-height: 18px;
+  margin-top: 10px;
+  text-align: center;
+}
+.identity .identity-type div.type-content div.r ul li a {
+  width: 60%;
+  display: block;
+  margin: 0 auto;
+  margin-top: 1vw;
+}
+.dientity-success {
+  min-height: 56vh;
+}
+.dientity-success div.t {
+  height: 46px;
+  background: #ffffff;
+  border: 1px solid #489DFC;
+  font-size: 14px;
+  color: #489DFC;
+  line-height: 46px;
+  padding: 0 15px;
+}
+.dientity-success div.b {
+  margin-top: 80px;
+  text-align: center;
+}
+.dientity-success div.b h2 {
+  display: inline-block;
+  font-size: 24px;
+  color: #666666;
+  line-height: 40px;
+}
+.dientity-success div.b h2 i {
+  width: 40px;
+  height: 40px;
+  color: #75d2b2;
+  border: 3px solid #75d2b2;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 36px;
+  display: block;
+  float: left;
+  font-size: 25px;
+  font-weight: 600;
+  margin-right: 13px;
+}
+.dientity-success div.b > span {
+  display: block;
+  margin-top: 25px;
+  text-align: center;
+  font-size: 14px;
+  color: #666666;
+  line-height: 20px;
+}
+.dientity-success div.b > div {
+  margin-top: 45px;
+  padding-right: 50px;
+}
+.dientity-success div.b > div button {
+  box-shadow: 0px 2px 10px 0px rgba(72, 157, 252, 0.5);
+  margin-right: 40px;
+}
+.icon-add {
+  display: inline-block;
+  font-size: 14px;
+  color: #666666;
+  line-height: 24px;
+  cursor: pointer;
+}
+.icon-add i {
+  font-size: 16px;
+  float: left;
+  color: #666666;
+  line-height: 24px;
+  display: block;
+  margin-right: 5px;
+  font-weight: 600;
+}
+.delCertify {
+  display: inline-block;
+  font-size: 14px;
+  color: #666666;
+  line-height: 24px;
+  cursor: pointer;
+}
+.delCertify i {
+  font-size: 12px;
+  text-align: center;
+  float: left;
+  color: #666666;
+  width: 15px;
+  height: 15px;
+  margin: 4.5px 0;
+  line-height: 13px;
+  display: block;
+  margin-right: 5px;
+  font-weight: 600;
+  border: 1px solid #666666;
+  border-radius: 50%;
+}
+.main .layui-card.assess {
+  background-color: #dddddd;
+}
+.main .layui-card.assess .layui-card-header {
+  border-bottom: 0px;
+}
+.main .layui-card.assess .assess-content {
+  padding: 20px 0;
+}
+.main .layui-card.assess .assess-content div.title {
+  font-size: 28px;
+  color: #333333;
+  line-height: 40px;
+  text-align: center;
+}
+.main .layui-card.assess .assess-content div.tab {
+  width: 1100px;
+  margin: 0 auto;
+  margin-top: 33px;
+}
+.main .layui-card.assess .assess-content div.tab div.t {
+  overflow: hidden;
+  text-align: center;
+  height: 62px;
+}
+.main .layui-card.assess .assess-content div.tab div.t ul li {
+  display: inline-block;
+  padding: 10px 35px 8px 35px;
+  overflow: hidden;
+  text-align: center;
+  line-height: 1.5;
+  font-size: 16px;
+  color: #ffffff;
+  line-height: 22px;
+  width: 150px;
+  position: relative;
+  cursor: pointer;
+}
+.main .layui-card.assess .assess-content div.tab div.t ul li span {
+  position: relative;
+  z-index: 9;
+}
+.main .layui-card.assess .assess-content div.tab div.t ul li:before {
+  content: '';
+  position: absolute;
+  width: 150%;
+  left: 0%;
+  top: -65%;
+  height: 300%;
+  transform: rotate(-45deg);
+  background-color: #A1B1C4;
+  display: block;
+  z-index: 1;
+}
+.main .layui-card.assess .assess-content div.tab div.t ul li.on::before {
+  background-color: #489DFC;
+}
+.main .layui-card.assess .assess-content div.tab div.b {
+  background: white;
+  border-radius: 15px;
+  border: 4px solid #a1b1c4;
+  overflow: hidden;
+}
+.main .layui-card.assess .assess-content div.tab div.b div.list {
+  padding: 30px;
+  overflow-y: auto;
+  height: 400px;
+}
+.main .layui-card.assess .assess-content div.tab div.b div.list div.title {
+  text-align: center;
+}
+.main .layui-card.assess .assess-content div.tab div.b div.list div.title h2 {
+  font-size: 20px;
+  color: #333333;
+  line-height: 28px;
+  display: inline-block;
+}
+.main .layui-card.assess .assess-content div.tab div.b div.list div.title p.title-notice {
+  float: right;
+  font-size: 14px;
+  color: #489DFC;
+  line-height: 20px;
+  cursor: pointer;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.main .layui-card.assess .assess-content div.tab div.b div.list div.title p.title-notice i {
+  float: left;
+  font-size: 16px;
+  color: #489DFC;
+  margin-right: 5px;
+}
+.main .layui-card.assess .assess-content div.tab div.b div.list div.details {
+  width: 80%;
+  margin: 0 auto;
+}
+.main .layui-card.assess .assess-content div.tab div.b div.list div.details div.ol {
+  margin-top: 37px;
+}
+.main .layui-card.assess .assess-content div.tab div.b div.list div.details div.ol > h2 {
+  font-size: 16px;
+  color: #333333;
+  line-height: 22px;
+  position: relative;
+  padding: 5px 16px;
+}
+.main .layui-card.assess .assess-content div.tab div.b div.list div.details div.ol > h2:before {
+  position: absolute;
+  content: '';
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: block;
+  background-color: #489DFC;
+}
+.main .layui-card.assess .assess-content div.tab div.b div.list div.details div.ol div.ol-list p {
+  font-size: 14px;
+  color: #333333;
+  line-height: 20px;
+  padding: 8px 0;
+  border-top: 1px solid #dddddd;
+}
+.main .layui-card.assess .assess-btn {
+  margin-top: 40px;
+  text-align: center;
+}

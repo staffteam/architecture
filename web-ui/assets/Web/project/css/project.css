@@ -1,0 +1,362 @@
+em,
+i {
+  font-style: normal;
+}
+.start-project {
+  width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 40px 0;
+}
+.start-project > div.l {
+  width: 850px;
+  float: left;
+}
+.start-project > div.l #pages {
+  text-align: center;
+  margin-top: 50px;
+}
+.start-project > div.l > div.t {
+  background: #ffffff;
+  border: 1px solid #f0f0f0;
+  padding: 24px;
+}
+.start-project > div.l > div.t div.list {
+  overflow: hidden;
+  margin-top: 24px;
+}
+.start-project > div.l > div.t div.list:first-child {
+  margin-top: 0;
+}
+.start-project > div.l > div.t div.list label {
+  font-size: 14px;
+  color: #333333;
+  line-height: 20px;
+  display: block;
+  float: left;
+}
+.start-project > div.l > div.t div.list p {
+  margin-left: 100px;
+}
+.start-project > div.l > div.t div.list p span {
+  font-size: 14px;
+  color: #999999;
+  line-height: 20px;
+  cursor: pointer;
+  margin-right: 30px;
+}
+.start-project > div.l > div.t div.list p span:hover,
+.start-project > div.l > div.t div.list p span.on {
+  color: #489DFC;
+}
+.start-project > div.l > div.b {
+  margin-top: 20px;
+}
+.start-project > div.l > div.b div.title {
+  height: 58px;
+  line-height: 58px;
+  background: #ffffff;
+}
+.start-project > div.l > div.b div.title span {
+  margin: 0 24px;
+  display: block;
+  float: left;
+  font-size: 14px;
+  color: #333333;
+  cursor: pointer;
+}
+.start-project > div.l > div.b div.title span:hover,
+.start-project > div.l > div.b div.title span.on {
+  color: #489DFC;
+}
+.start-project > div.l > div.b div.title em {
+  display: block;
+  float: left;
+  line-height: 55px;
+}
+.start-project > div.l > div.b div.b-list {
+  background-color: white;
+}
+.start-project > div.l > div.b div.b-list ul li {
+  padding: 24px 30px;
+  overflow: hidden;
+  border-top: 1px solid #e5e5e5;
+}
+.start-project > div.l > div.b div.b-list ul li div.l {
+  float: left;
+  width: 88%;
+}
+.start-project > div.l > div.b div.b-list ul li div.l h2 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333333;
+  line-height: 25px;
+}
+.start-project > div.l > div.b div.b-list ul li div.l h2 span {
+  display: inline-block;
+  width: 34px;
+  height: 18px;
+  line-height: 18px;
+  background: #f55b5b;
+  border-radius: 4px;
+  font-size: 12px;
+  text-align: center;
+  color: white;
+  position: relative;
+  top: -2px;
+}
+.start-project > div.l > div.b div.b-list ul li div.l div {
+  margin-top: 20px;
+}
+.start-project > div.l > div.b div.b-list ul li div.l div p {
+  margin-top: 10px;
+}
+.start-project > div.l > div.b div.b-list ul li div.l div p:first-child {
+  margin-top: 0px;
+}
+.start-project > div.l > div.b div.b-list ul li div.l div p span {
+  margin-right: 40px;
+  font-size: 14px;
+  color: #999999;
+  line-height: 20px;
+}
+.start-project > div.l > div.b div.b-list ul li div.l div p span em {
+  color: #666666;
+}
+.start-project > div.l > div.b div.b-list ul li div.l div p span i {
+  color: #489DFC;
+}
+.start-project > div.l > div.b div.b-list ul li div.r {
+  float: right;
+  width: 12%;
+  text-align: center;
+}
+.start-project > div.l > div.b div.b-list ul li div.r span {
+  font-size: 16px;
+  color: #DDDDDD;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.start-project > div.l > div.b div.b-list ul li div.r span i {
+  float: left;
+  display: block;
+  line-height: 20px;
+}
+.start-project > div.l > div.b div.b-list ul li div.r span i:first-child {
+  display: block;
+}
+.start-project > div.l > div.b div.b-list ul li div.r span i:nth-child(2) {
+  display: none;
+  color: #F7B500;
+}
+.start-project > div.l > div.b div.b-list ul li div.r span.on em {
+  color: #F7B500;
+}
+.start-project > div.l > div.b div.b-list ul li div.r span.on i:first-child {
+  display: none;
+}
+.start-project > div.l > div.b div.b-list ul li div.r span.on i:nth-child(2) {
+  display: block;
+}
+.start-project > div.l > div.b div.b-list ul li div.r span em {
+  font-size: 14px;
+  color: #666666;
+  line-height: 20px;
+  margin-left: 5px;
+}
+.start-project > div.l > div.b div.b-list ul li div.r a {
+  width: 100px;
+  height: 32px;
+  background: #489DFC;
+  box-shadow: 0px 2px 10px 0px #489DFC;
+  border-radius: 16px;
+  display: block;
+  margin-top: 28px;
+  font-size: 14px;
+  color: #ffffff;
+  line-height: 32px;
+}
+.start-project > div.r {
+  width: 330px;
+  float: right;
+}
+.start-project > div.r div.up div {
+  padding: 16px 30px 23px;
+}
+.start-project > div.r div.up div h2 {
+  font-size: 14px;
+  color: #999999;
+  line-height: 20px;
+}
+.start-project > div.r div.up div a {
+  width: 250px;
+  height: 38px;
+  background: #489DFC;
+  border-radius: 2px;
+  border: 1px solid #489DFC;
+  margin-top: 13px;
+  display: block;
+  font-size: 14px;
+  color: #ffffff;
+  line-height: 38px;
+  text-align: center;
+}
+.start-project > div.r > div {
+  background-color: white;
+  margin-top: 20px;
+}
+.start-project > div.r > div:first-child {
+  margin-top: 0px;
+}
+.start-project > div.r > div > h2 {
+  margin: 0 30px;
+  border-bottom: 1px solid #e5e5e5;
+  height: 50px;
+  line-height: 50px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #333333;
+}
+.start-project > div.r div.t > div {
+  overflow: hidden;
+  padding: 23px 50px;
+}
+.start-project > div.r div.t > div div h2 {
+  font-size: 12px;
+  color: #666666;
+  line-height: 22px;
+}
+.start-project > div.r div.t > div div h2 span {
+  font-size: 18px;
+  font-weight: bold;
+  color: #489dfc;
+  line-height: 22px;
+}
+.start-project > div.r div.t > div div p {
+  font-size: 12px;
+  color: #666666;
+  line-height: 17px;
+}
+.start-project > div.r div.t > P {
+  font-size: 14px;
+  color: #999999;
+  line-height: 20px;
+  padding: 5px 30px 44px;
+}
+.start-project > div.r div.c {
+  padding-bottom: 35px;
+}
+.start-project > div.r div.c ul li {
+  margin-top: 20px;
+}
+.start-project > div.r div.c ul li a {
+  display: block;
+  overflow: hidden;
+  padding: 0 30px;
+}
+.start-project > div.r div.c ul li a img {
+  width: 41px;
+  height: 41px;
+  float: left;
+  display: block;
+}
+.start-project > div.r div.c ul li a h2 {
+  float: left;
+  font-size: 14px;
+  color: #666666;
+  line-height: 41px;
+  margin-left: 20px;
+}
+.start-project > div.r div.help ul {
+  padding: 30px 35px 35px;
+}
+.start-project > div.r div.help ul li {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #666666;
+  line-height: 20px;
+}
+.start-project > div.r div.help ul li:first-child {
+  margin-top: 0;
+}
+.start-project > div.r div.help ul li a:hover {
+  color: #489DFC;
+}
+.tablelist table {
+  width: 100%;
+  margin-top: 20px;
+}
+.tablelist table:first-child {
+  margin-top: 0;
+}
+.tablelist table:first-child tr {
+  border-bottom: 0px;
+}
+.tablelist table tr {
+  background-color: white;
+  border-bottom: 1px solid #e5e5e5;
+}
+.tablelist table tr th {
+  padding: 10px 30px;
+  line-height: 30px;
+  text-align: left;
+  font-size: 16px;
+  color: #333333;
+}
+.tablelist table tr td {
+  font-size: 14px;
+  color: #666666;
+  padding: 10px 30px;
+  line-height: 30px;
+}
+.tablelist table tr td:first-child {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333333;
+  line-height: 25px;
+}
+.tablelist table tr td span {
+  font-size: 16px;
+  color: #DDDDDD;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.tablelist table tr td span i {
+  float: left;
+  display: block;
+  line-height: 30px;
+}
+.tablelist table tr td span i:first-child {
+  display: block;
+}
+.tablelist table tr td span i:nth-child(2) {
+  display: none;
+  color: #F7B500;
+}
+.tablelist table tr td span.on em {
+  color: #F7B500;
+}
+.tablelist table tr td span.on i:first-child {
+  display: none;
+}
+.tablelist table tr td span.on i:nth-child(2) {
+  display: block;
+}
+.tablelist table tr td span em {
+  font-size: 14px;
+  color: #666666;
+  line-height: 30px;
+  margin-left: 5px;
+}

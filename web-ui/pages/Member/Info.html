@@ -1,0 +1,97 @@
+﻿<link rel="stylesheet" href="/assets/Console/member/css/info.css" />
+
+<div class="breadcrumb">
+    <span class="layui-breadcrumb">
+        <a href="~/Home">首页</a>
+        <a><cite>基本资料</cite></a>
+    </span>
+</div>
+<div class="content" id="content">
+    <div class="container">
+        <div class="member-main">
+            <div class="member-l">
+                <ul>
+                    <li class="on"><a href="/Member/Info">基本资料</a></li>
+                    <li><a href="/Member/Security">安全设置</a></li>
+                    <li><a href="/Member/AccountBinding">账号绑定</a></li>
+                    <li><a href="/Member/BindingBankCard">银行卡绑定</a></li>
+                    <li><a href="/Member/Message">新消息通知</a></li>
+                </ul>
+            </div>
+            <div class="member-r" id="memberR">
+                <div class="title">基本资料</div>
+                <div class="info">
+                    <h2>基本信息</h2>
+                    <div class="layui-form">
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">会员身份 <i style="color:red;">*</i></label>
+                            <div class="layui-input-block">
+                                <input type="radio" name="sex" value="男" title="男">
+                                <input type="radio" name="sex" value="女" title="女" checked>
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">真实姓名 <i style="color:red;">*</i></label>
+                            <div class="layui-input-block">
+                                <input type="text" name="title" verifys="required" tips="请输入姓名" placeholder="请输入姓名" autocomplete="off" class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label"></label>
+                            <div class="layui-input-block">
+                                <h2 class="desc">请务必准确填写本人的真实姓名，提交后不能更改。 实名认证后，该处将被替换为实名认证所使用的姓名。</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="link-info">
+                    <h2>联系信息</h2>
+                    <div class="layui-form">
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">国家/地区</label>
+                            <div class="layui-input-block">
+                                <select name="city" lay-verify="">
+                                    <option value="001">中国</option>
+                                    <option value="010">美国</option>
+                                    <option value="021">英国</option>
+                                    <option value="0571">法国</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="layui-form-item" id="provinces" style="margin-bottom:30px;">
+
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">街道地址</label>
+                            <div class="layui-input-block">
+                                <input type="text" name="address" placeholder="请输入街道地址" autocomplete="off" class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">联系电话</label>
+                            <div class="layui-input-block">
+                                <input type="text" name="phone" required verifys="phone" tips="联系人手机"
+                                       placeholder="联系人手机" autocomplete="off" class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <div class="layui-input-block">
+                                <button class="layui-btn" lay-submit onclick="submitInfo()">保存</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="member-top" >
+                <div class="title">头像</div>
+                <div class="member-top-img" >
+                    <p><img src="/assets/Console/public/images/top.png" alt="" /></p>
+                    <button type="button" class="layui-btn layui-btn-primary" id="tops">更换头像</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="/assets/Console/common/provinces/provincesPlus"></script>
+<script src="/assets/Console/member/js/info"></script>

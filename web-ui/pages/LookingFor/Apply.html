@@ -1,0 +1,58 @@
+﻿<link rel="stylesheet" href="/assets/Console/lookingFor/css/lookingFor.css" />
+<div class="breadcrumb">
+    <span class="layui-breadcrumb">
+        <a href="~/Home">首页</a>
+        <a href="~/lookingFor/lookingFor">寻找项目</a>
+        <a><cite>项目报名</cite></a>
+    </span>
+</div>
+<div class="content" id="content">
+    <div class="container">
+        <div class="apply-details">
+            <div class="layui-card">
+                <div class="layui-card-header">任务详情 </div>
+                <div class="layui-card-body">
+                    <div class="apply-info">
+                        <div class="title">
+                            <h2>世茂五里河超高层住宅</h2>
+                            <span>项目招募中</span>
+                        </div>
+                        <div class="form layui-form" id="applyForm">
+                            <div class="l">
+                                <div class="layui-btn-group">
+                                    <button type="button" data-id="0" class="layui-btn">初步设计阶段</button>
+                                    <button type="button" data-id="1"
+                                            class="layui-btn layui-btn-white">
+                                        施工图阶段
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="r">
+                                <span>岗位选择：</span>
+                                <div class="layui-input-block">
+                                    <input type="checkbox" name="station" title="助理设计师"
+                                           lay-skin="primary" checked>
+                                    <input type="checkbox" name="station" title="设计师"
+                                           lay-skin="primary">
+                                    <input type="checkbox" name="station" title="项目负责人"
+                                           lay-skin="primary">
+                                    <input type="checkbox" name="station" title="校对员" lay-skin="primary"
+                                           disabled>
+                                </div>
+                                <div class="money">
+                                    合计赏金：<span>8328.00</span>元
+                                </div>
+                                <button type="button" class="layui-btn">立即报名</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="apply-list">
+                        <table id="applyList" lay-filter="applyList"></table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="/assets/Console/lookingFor/js/apply"></script>

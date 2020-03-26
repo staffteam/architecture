@@ -1,0 +1,87 @@
+﻿<link rel="stylesheet" href="/assets/Console/identity/css/identity.css" />
+<link rel="stylesheet" href="/assets/Console/publish/css/publish.css" />
+<link rel="stylesheet" href="/assets/Console/member/css/info.css" />
+<div class="breadcrumb">
+    <span class="layui-breadcrumb">
+        <a href="~/Home">首页</a>
+        <a><cite>修改密码</cite></a>
+    </span>
+</div>
+<div class="content" id="content">
+    <div class="container">
+        <div class="identity">
+            <div class="layui-card">
+                <div class="layui-card-header">修改密码</div>
+                <div class="layui-card-body auto">
+                    <div class="identity-step">
+                        <div class="r">
+                            <ul>
+                                <li class="on"><i>1</i>验证身份</li>
+                                <li><i>2</i>修改密码</li>
+                                <li><i>3</i>完成</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="tips">手机验证码验证 为确认是本人操作，请完成以下验证</div>
+                    <div class="layui-form" id="editPass">
+                        <div class="layui-form-item item-phone">
+                            <label class="layui-form-label">手机号码 </label>
+                            <div class="layui-input-block">
+                                <input type="text" name="phone" style="border:0px; padding-left:0px;" value="150****1615" autocomplete="off" class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-form-item get-code">
+                            <label class="layui-form-label">验证码 <i style="color:red;">*</i></label>
+                            <div class="layui-input-block">
+                                <input type="text" name="code" verifys="required" tips="验证码" placeholder="请输入验证码" autocomplete="off" class="layui-input">
+                                <span id="getCode">获取短验证码</span>
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <div class="layui-input-block">
+                                <button class="layui-btn" lay-submit onclick="submitPassNext()">下一步</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="layui-form" id="editPass2">
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">新的登录密码 <i style="color:red;">*</i></label>
+                            <div class="layui-input-block">
+                                <input type="password" name="pass" verifys="required" tips="新的登录密码" placeholder="请输入登录密码" autocomplete="off" class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">确认新的登录密码 <i style="color:red;">*</i></label>
+                            <div class="layui-input-block">
+                                <input type="password" name="pass2" verifys="required" tips="请再次输入新的登录密码" placeholder="请再次输入新的登录密码" autocomplete="off" class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <div class="layui-input-block">
+                                <button class="layui-btn" lay-submit onclick="submitPassNext2()">确认</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="edit-success">
+                        <div class="l" >
+                            <i class="iconfont">&#xe654;</i>
+                        </div>
+                        <div class="r" >
+                            <h2>密码修改成功</h2>
+                            <p>请牢记新的登录密码</p>
+                            <a href="/login/login"><button class="layui-btn layui-btn-normal">重新登录</button></a>
+                        </div>
+                    </div>
+                    <div class="tips-bottom" >
+                        <h2>没收到短信验证码？</h2>
+                        <p>1、网络通讯异常可能会造成短信丢失，请重新获取或稍后再试。 <br/>
+                        2、请核实手机是否已欠费停机，或者屏蔽了系统短信。 <br />
+                        3、如果手机已丢失或停用， 请选择其他验证方式 。 <br />
+                        4、您也可以尝试将SIM卡移动到另一部手机，然后重试。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="/assets/Console/member/js/info"></script>

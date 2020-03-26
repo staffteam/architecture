@@ -1,0 +1,342 @@
+.member-main {
+  overflow: hidden;
+  background-color: white;
+}
+.member-main .member-l {
+  float: left;
+  width: 200px;
+  padding: 20px 0;
+  height: 85vh;
+}
+.member-main .member-l ul {
+  height: 100%;
+  border-right: 1px solid #dddddd;
+}
+.member-main .member-l ul li {
+  height: 40px;
+  line-height: 40px;
+  font-size: 14px;
+  padding-left: 50px;
+  cursor: pointer;
+}
+.member-main .member-l ul li:hover,
+.member-main .member-l ul li.on {
+  background-color: #E6F7FF;
+  color: #489DFC;
+  border-right: 2px solid #489DFC;
+}
+.member-main .member-r {
+  padding: 30px 60px;
+  float: left;
+  width: 700px;
+}
+.member-main .member-r div.title {
+  font-size: 20px;
+  color: #333333;
+  line-height: 28px;
+  font-weight: 600;
+}
+.member-main .member-r .layui-form {
+  width: 580px;
+}
+.member-main .member-r .layui-form-item {
+  margin-bottom: 25px;
+}
+.member-main .member-r .layui-form-item,
+.member-main .member-r .layui-form-item:after {
+  clear: none;
+}
+.member-main .member-r .info > h2 {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 22px;
+  padding-bottom: 20px;
+  margin-top: 20px;
+}
+.member-main .member-r .info .desc {
+  font-size: 12px;
+  color: #666666;
+  line-height: 17px;
+  margin-top: 0;
+}
+.member-main .member-r .link-info > h2 {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 22px;
+  padding-bottom: 20px;
+  margin-top: 20px;
+}
+.member-main .member-top {
+  float: left;
+  padding-top: 80px;
+}
+.member-main .member-top .title {
+  font-size: 16px;
+  line-height: 22px;
+}
+.member-main .member-top .member-top-img {
+  text-align: center;
+}
+.member-main .member-top .member-top-img p {
+  width: 145px;
+  height: 145px;
+  box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.05);
+  border-radius: 50%;
+  overflow: hidden;
+}
+.member-main .member-top .member-top-img p img {
+  width: 100%;
+}
+.member-main .member-top .member-top-img button {
+  margin-top: 30px;
+}
+.security {
+  padding: 30px 60px;
+  margin-left: 200px;
+}
+.security div.title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #333333;
+  line-height: 28px;
+  padding-bottom: 20px;
+}
+.security div.list ul li {
+  overflow: hidden;
+  padding: 15px 0;
+  width: 100%;
+  border-bottom: 1px solid #E8E8E8;
+}
+.security div.list ul li div.l {
+  float: left;
+}
+.security div.list ul li div.l h2 {
+  font-size: 14px;
+  line-height: 20px;
+}
+.security div.list ul li div.l p {
+  font-size: 14px;
+  color: #999999;
+  line-height: 20px;
+  margin-top: 8px;
+}
+.security div.list ul li div.r {
+  margin-top: 20px;
+  float: right;
+}
+.security div.list ul li div.r .layui-form-switch,
+.security div.list ul li div.r .layui-form-switch * {
+  box-sizing: initial;
+}
+.security div.list ul li div.r span {
+  font-size: 14px;
+  color: #52c41a;
+  line-height: 20px;
+}
+.security div.list ul li div.r span i {
+  font-size: 14px;
+  margin-right: 5px;
+}
+.security div.list ul li div.r span.off {
+  color: #999999;
+}
+.security div.list ul li div.r a {
+  font-size: 14px;
+  color: #489dfc;
+  line-height: 20px;
+  margin-left: 20px;
+  display: inline-block;
+  width: 50px;
+  text-align: center;
+}
+.account-binding div.icon {
+  float: left;
+  width: 48px;
+  height: 48px;
+  text-align: center;
+  line-height: 48px;
+  background: #50b674;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.account-binding div.icon i {
+  font-size: 25px;
+  color: white;
+}
+.bank-card {
+  padding: 30px 10px;
+}
+.bank-card .layui-form {
+  width: 480px;
+}
+.bank-card div.title {
+  padding-left: 60px;
+}
+.bank-card .layui-form-item {
+  margin-bottom: 25px;
+}
+.bank-card .layui-form-item .layui-form-label {
+  width: 160px;
+}
+.bank-card .layui-form-item .layui-input-block {
+  margin-left: 160px;
+}
+.bank-card .layui-form-item.get-code .layui-input {
+  width: 50%;
+  float: left;
+}
+.bank-card .layui-form-item.get-code span#getCode {
+  display: block;
+  float: right;
+  width: 40%;
+  height: 38px;
+  background: #ffffff;
+  border: 1px solid #489dfc;
+  font-size: 14px;
+  color: #489dfc;
+  line-height: 38px;
+  text-align: center;
+  cursor: pointer;
+}
+.bank-card .layui-form-item,
+.bank-card .layui-form-item:after {
+  clear: none;
+}
+.we-price {
+  position: relative;
+  width: 800px;
+  margin: 100px auto;
+}
+.we-price h2 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 50%;
+  height: 40px;
+  background-color: white;
+  padding-left: 100px;
+}
+.we-price span {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 50%;
+  height: 80px;
+  background-color: white;
+}
+.identity .identity-step {
+  width: 700px;
+  margin: 0 auto;
+  margin-top: 60px;
+}
+.identity .identity-step div.r li {
+  width: 280px;
+}
+.identity .identity-step div.r li::before {
+  width: 170px !important;
+}
+.identity .identity-step div.r li:last-child {
+  width: 70px;
+  margin-right: 0;
+  padding-right: 0;
+}
+.identity .tips {
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.85);
+  line-height: 22px;
+  padding: 10px 0;
+  border-bottom: 1px solid #E9E9E9;
+  padding-left: 70px;
+  width: 700px;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+.identity #editPass2 {
+  display: none;
+}
+.identity #editPass2 .layui-form-label {
+  width: 160px;
+}
+.identity #editPass2 .layui-input-block {
+  margin-left: 160px;
+}
+.identity .layui-form {
+  width: 400px;
+  margin: 0 auto;
+  margin-top: 60px;
+}
+.identity .layui-form .layui-form-item {
+  margin-bottom: 25px;
+}
+.identity .layui-form .layui-form-item.get-code .layui-input {
+  width: 50%;
+  float: left;
+}
+.identity .layui-form .layui-form-item.get-code span#getCode {
+  display: block;
+  float: right;
+  width: 40%;
+  height: 38px;
+  background: #ffffff;
+  border: 1px solid #489dfc;
+  font-size: 14px;
+  color: #489dfc;
+  line-height: 38px;
+  text-align: center;
+  cursor: pointer;
+}
+.identity .tips-bottom {
+  border-top: 1px solid #E9E9E9;
+  padding-top: 24px;
+  width: 800px;
+  margin: 0 auto;
+  margin-top: 80px;
+  padding-bottom: 60px;
+}
+.identity .tips-bottom h2 {
+  font-size: 16px;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.45);
+  line-height: 24px;
+}
+.identity .tips-bottom p {
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.45);
+  line-height: 22px;
+  margin-top: 8px;
+}
+.identity .edit-success {
+  width: 400px;
+  margin: 0 auto;
+  padding: 100px 0;
+  overflow: hidden;
+  display: none;
+}
+.identity .edit-success div.l {
+  float: left;
+  margin-top: 50px;
+  padding-left: 5px;
+}
+.identity .edit-success div.l i {
+  font-size: 70px;
+  color: #52C41A;
+}
+.identity .edit-success div.r {
+  float: left;
+  margin-left: 30px;
+}
+.identity .edit-success div.r h2 {
+  font-size: 24px;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.85);
+  line-height: 32px;
+}
+.identity .edit-success div.r p {
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.43);
+  line-height: 22px;
+  margin-top: 8px;
+}
+.identity .edit-success div.r .layui-btn {
+  margin-top: 20px;
+}

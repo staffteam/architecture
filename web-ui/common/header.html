@@ -1,0 +1,67 @@
+<div class="layui-header">
+    <div class="layui-logo"><span>Architecture Pro</span></div>
+    <ul class="layui-nav layui-layout-left">
+        <li class="layui-nav-item layadmin-flexible" lay-unselect="">
+            <a href="javascript:;" layadmin-event="flexible" title="">
+                <i class="layui-icon flexible layui-icon-shrink-right"></i>
+            </a>
+        </li>
+        <span class="layui-nav-bar" style="left: 38px; top: 48px; width: 0px; opacity: 0;"></span>
+    </ul>
+    <ul class="layui-nav layui-layout-right">
+        <!--<li class="layui-nav-item" lay-unselect="">
+            <a href="">
+                <i class="layui-icon layui-icon-tips"></i>
+            </a>
+        </li>-->
+        <li class="layui-nav-item message" lay-unselect="">
+            <a href="javascript:" onclick="msgs()">
+                <i class="layui-icon layui-icon-notice"></i>
+                <span class="layui-badge-dot"></span>
+            </a>
+        </li>
+        <li class="layui-nav-item" lay-unselect="">
+            <a href="/Web/Home">
+                <i class="layui-icon layui-icon-home"></i>
+            </a>
+        </li>
+        <li class="layui-nav-item">
+            <a href="javascript:;">
+                <img src="/assets/Console/public/images/top.png" class="layui-nav-img">
+                admin
+            </a>
+            <dl class="layui-nav-child">
+                <dd><a href="/Member/Info">设置</a></dd>
+                <dd><a href="/Login/Login">退出</a></dd>
+            </dl>
+        </li>
+        <li class="layui-nav-item"><a href=""></a></li>
+    </ul>
+</div>
+<script>
+    var _html1 = "<div class='msg1'>";
+    _html1 += '<div class="list" ><a href="/lookingFor/myTask"><p><i class="iconfont" >&#xe617;</i></p><div><h2>你收到了4条新消息</h2><p>两天前</p></div></a></div>';
+    _html1 += '</div>';
+    var _html2 = "<div class='msg2'>";
+    _html2 += '<div class="list" ><a href="/lookingFor/myTask"><div><h2>建筑结构设计项目名称建筑结构设计项目名称</h2><p><em>你收到了16条新消息</em><span>两天前</span></p></div></a></div>';
+    _html2 += '</div>';
+    var _html3 = "<div class='msg3'>";
+    _html3 += '<div class="list" ><a href="/lookingFor/myTask"><div><h2><em>项目A</em><span class="close" >5小时后结束</span></h2><p>任务所需《嵌固端判定与数据表》上传后审核未通过，请在5小时内重新上传</p></div></a></div>';
+    _html3 += '</div>';
+    function msgs() {
+        layer.tab({
+            area: ['400px', '600px'],
+            tab: [{
+                title: '通知（5）',
+                content: _html1
+            }, {
+                title: '消息（3）',
+                content: _html2
+            }, {
+                title: '待办（2）',
+                content: _html3
+            }],
+            btn: ['查看更多', '清空消息']
+        });
+    }
+</script>

@@ -1,0 +1,36 @@
+{
+    "code":0,
+    "data": [{
+        "id":0,
+        "gender": "男",
+        "recentWork": "2015.04-2017.05（2年1个月） 深圳建筑结构设计公司#2015.04-2017.05（2年1个月） 深圳建筑结构设计公司",
+        "currentIndustry": "建筑设计",
+        "fullEducation": "2015.04-2017.05（2年1个月） 深圳建筑结构设计公司#2015.04-2017.05（2年1个月） 深圳建筑结构设计公司",
+        "name": "姓名",
+        "position": "职位",
+        "address": "地址",
+        "age": "年龄",
+        "yearsOfWork": "工作年限",
+        "degree": "学历",
+        "graduatedInstitution": "毕业院校",
+        "platformPost": "平台岗位",
+        "creditScore": "信誉积分",
+        "undefined": "收藏简历"
+    },{
+        "id":1,
+        "gender": "男",
+        "recentWork": "2015.04-2017.05（2年1个月） 深圳建筑结构设计公司#2015.04-2017.05（2年1个月） 深圳建筑结构设计公司",
+        "currentIndustry": "建筑设计",
+        "fullEducation": "2015.04-2017.05（2年1个月） 深圳建筑结构设计公司#2015.04-2017.05（2年1个月） 深圳建筑结构设计公司",
+        "name": "姓名",
+        "position": "职位",
+        "address": "地址",
+        "age": "年龄",
+        "yearsOfWork": "工作年限",
+        "degree": "学历",
+        "graduatedInstitution": "毕业院校",
+        "platformPost": "平台岗位",
+        "creditScore": "信誉积分",
+        "undefined": "收藏简历"
+    }]
+}

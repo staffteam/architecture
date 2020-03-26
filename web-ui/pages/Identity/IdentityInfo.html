@@ -1,0 +1,96 @@
+﻿<link rel="stylesheet" href="/assets/Console/identity/css/identity.css" />
+<div class="breadcrumb">
+    <span class="layui-breadcrumb">
+        <a href="~/Home">首页</a>
+        <a><cite>身份认证</cite></a>
+    </span>
+</div>
+<div class="content" id="content">
+    <div class="container">
+        <div class="identity">
+            <div class="layui-card">
+                <div class="layui-card-header">企业认证</div>
+                <div class="layui-card-body auto">
+                    <div class="identity-step">
+                        <div class="l">
+                            1.企业信息请严格按照相关证件信息进行确认填写； <br />2.以下所需上传电子版自制仅支持JPG、PNG，大小不超过1M。
+                        </div>
+                        <div class="r">
+                            <ul>
+                                <li class="on"><i class="layui-icon layui-icon-ok"></i>选择身份类型</li>
+                                <li class="on"><i>2</i>完善企业资料</li>
+                                <li><i>3</i>等待平台审核</li>
+                                <li><i>4</i>入驻成功</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="layui-card">
+                <div class="layui-card-header">企业信息</div>
+                <div class="layui-card-body auto">
+                    <div class="layui-form identity-form" id="identityApply">
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">企业名称</label>
+                            <div class="layui-input-inline">
+                                <input type="text" name="name" required verifys="required" tips="企业名称"
+                                       placeholder="企业名称" autocomplete="off" class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">所在地区</label>
+                            <div class="layui-input-inline">
+                                <input type="text" name="site" required verifys="required" tips="所在地区"
+                                       placeholder="所在地区" autocomplete="off" class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">详细地址</label>
+                            <div class="layui-input-inline">
+                                <input type="text" name="sitedetails" required verifys="required" tips="详细地址"
+                                       placeholder="详细地址" autocomplete="off" class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">营业执照</label>
+                            <div class="layui-input-inline" style="width: auto;">
+                                <div class="updata" id="test1">
+                                    <i class="layui-icon layui-icon-add-1"></i>
+                                    <span>点击上传</span>
+                                </div>
+                                <input type="hidden" name="license" class="upcode" verifys="required" tips="营业执照">
+                                <div class="updata-tip">
+                                    1.请上传清晰的营业执照原件或加盖公司公章的营业执照复印件扫描上传； <br />
+                                    2.图片尺寸请确保在800px * 800px，大小在1M以内，支持JPG、PNG格式。
+                                </div>
+                            </div>
+                        </div>
+                        <div class="layui-card" style="margin-bottom: 50px;">
+                            <div class="layui-card-header">联系信息</div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">联系人手机</label>
+                            <div class="layui-input-inline">
+                                <input type="text" name="phone" required verifys="required&&phone" tips="联系人手机"
+                                       placeholder="联系人手机" autocomplete="off" class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">联系人邮箱</label>
+                            <div class="layui-input-inline">
+                                <input type="text" name="email" required verifys="required&&email" tips="联系人邮箱"
+                                       placeholder="联系人邮箱" autocomplete="off" class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <div class="layui-input-block">
+                                <button class="layui-btn" lay-submit lay-filter="identityApply">提交认证申请</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="/assets/Console/identity/js/identity"></script>

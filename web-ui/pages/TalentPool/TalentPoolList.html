@@ -1,0 +1,157 @@
+﻿<link rel="stylesheet" href="/assets/Console/talentPool/css/talentPool.css" />
+<div class="breadcrumb">
+    <span class="layui-breadcrumb">
+        <a href="~/Home">首页</a>
+        <a><cite>身份认证</cite></a>
+    </span>
+</div>
+<div class="content" id="content">
+    <div class="container">
+        <div class="identity">
+            <div class="layui-card">
+                <div class="layui-card-header">人才库</div>
+                <div class="layui-card-body">
+                    <div class="import-search">
+                        <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入关键字..." class="layui-input">
+                        <p onclick="importSearch(this)" >岗位搜索</p>
+                    </div>
+                    <div class="layui-tab talent-pool-list">
+                        <ul class="layui-tab-title">
+                            <li class="layui-this">全部人才</li>
+                            <li>已收藏人才</li>
+                        </ul>
+                        <div class="layui-tab-content">
+                            <div class="layui-tab-item layui-show">
+                                <script type="text/html" id="table1Btn">
+                                    <div class="layui-form-item" style="margin-bottom:15px;">
+                                        <div class="layui-inline">
+                                            <div class="layui-input-inline" style="width:350px;">
+                                                <label class="layui-form-label">平台岗位</label>
+                                                <div class="layui-input-block">
+                                                    <select name="quiz">
+                                                        <option value="">项目阶段</option>
+                                                        <option value="0">开始</option>
+                                                        <option value="1">结束</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="layui-inline">
+                                            <div class="layui-input-inline" style="width:350px;">
+                                                <label class="layui-form-label">年龄</label>
+                                                <div class="layui-input-block">
+                                                    <select name="quiz">
+                                                        <option value="">项目阶段</option>
+                                                        <option value="0">开始</option>
+                                                        <option value="1">结束</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="layui-inline">
+                                            <div class="layui-input-inline" style="width:350px;">
+                                                <label class="layui-form-label">职位类别</label>
+                                                <div class="layui-input-block">
+                                                    <select name="quiz">
+                                                        <option value="">项目阶段</option>
+                                                        <option value="0">开始</option>
+                                                        <option value="1">结束</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="layui-form-item">
+                                        <div class="layui-inline">
+                                            <div class="layui-input-inline" style="width: 217px;">
+                                                <label class="layui-form-label">工作年限</label>
+                                                <div class="layui-input-block">
+                                                    <select name="quiz">
+                                                        <option value="">项目阶段</option>
+                                                        <option value="0">开始</option>
+                                                        <option value="1">结束</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="layui-form-mid">-</div>
+                                            <div class="layui-input-inline" style="width: 108px;">
+                                                <select name="quiz">
+                                                    <option value="">项目阶段</option>
+                                                    <option value="0">开始</option>
+                                                    <option value="1">结束</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="layui-inline">
+                                            <div class="layui-input-inline" style="width: 217px;">
+                                                <label class="layui-form-label">工作年限</label>
+                                                <div class="layui-input-block">
+                                                    <select name="quiz">
+                                                        <option value="">项目阶段</option>
+                                                        <option value="0">开始</option>
+                                                        <option value="1">结束</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="layui-form-mid">-</div>
+                                            <div class="layui-input-inline" style="width: 109px;">
+                                                <select name="quiz">
+                                                    <option value="">项目阶段</option>
+                                                    <option value="0">开始</option>
+                                                    <option value="1">结束</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="layui-inline">
+                                            <div class="layui-input-inline" style="width:350px;">
+                                                <label class="layui-form-label">现居住地</label>
+                                                <div class="layui-input-block">
+                                                    <select name="quiz">
+                                                        <option value="">项目阶段</option>
+                                                        <option value="0">开始</option>
+                                                        <option value="1">结束</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="layui-inline">
+                                            <div class="layui-btn-container">
+                                                <button class="layui-btn"
+                                                        lay-event="getCheckData">
+                                                    <i class="layui-icon layui-icon-search"></i>&nbsp;&nbsp;筛选简历
+                                                </button>
+                                                <button class="layui-btn"
+                                                        lay-event="getSc">
+                                                        <i class="layui-icon layui-icon-rate"></i>&nbsp;&nbsp;全部收藏
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </script>
+
+                                <script type="text/html" id="table1Bar">
+                                    <p style="padding-left:20px; color:#489DFC;"><i class="layui-icon layui-icon-rate-solid"></i></p>
+                                </script>
+                                <table id="table1" lay-filter="table1"></table>
+                            </div>
+                            <div class="layui-tab-item">
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/html" id="serviceWin" >
+   <div class="serviceWin" >
+        <h2>想观看完整版简历</h2>
+        <p>请与客服联系！</p>
+        <div>
+            <p><img src="/Assets/Console/public/images/icon_service.jpg" /></p>
+            <h2>400-2137-2388</h2>
+        </div>
+   </div>
+</script>
+<script src="/assets/Console/talentPool/js/talentPool"></script>

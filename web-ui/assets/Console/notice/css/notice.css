@@ -1,0 +1,52 @@
+.notice-details {
+  background: white;
+  border-radius: 4px;
+}
+.notice-details div.title {
+  padding: 24px 20px 0 20px;
+}
+.notice-details div.title h2 {
+  font-size: 24px;
+  color: #333333;
+  line-height: 33px;
+  font-weight: 600;
+}
+.notice-details div.title span {
+  display: block;
+  font-size: 14px;
+  color: #999999;
+  line-height: 20px;
+  margin-top: 16px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #dddddd;
+}
+.notice-details .notice-body {
+  padding: 25px;
+  line-height: 1.5;
+  border-bottom: 1px solid #dddddd;
+  min-height: 63vh;
+}
+.notice-details .notice-page {
+  padding: 30px 2%;
+  overflow: hidden;
+}
+.notice-details .notice-page a {
+  height: 38px;
+  background: #ffffff;
+  border: 1px solid #dbdbdb;
+  display: block;
+  line-height: 38px;
+  font-size: 14px;
+  color: #333333;
+  padding: 0 10px;
+}
+.notice-details .notice-page a:first-child {
+  float: left;
+}
+.notice-details .notice-page a:last-child {
+  float: right;
+}
+.notice-details .notice-page a:hover {
+  color: #489DFC;
+  border: 1px solid #489DFC;
+}

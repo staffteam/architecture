@@ -1,0 +1,61 @@
+﻿<link rel="stylesheet" href="/assets/Console/lookingFor/css/lookingFor.css" />
+<div class="breadcrumb">
+    <span class="layui-breadcrumb">
+        <a href="~/Home">首页</a>
+        <a href="~/lookingFor/lookingFor">寻找项目</a>
+        <a><cite>项目报名</cite></a>
+    </span>
+</div>
+<div class="content" id="content">
+    <div class="container">
+        <div class="look-details">
+            <div class="layui-card">
+                <div class="layui-card-header">项目信息</div>
+                <div class="layui-card-body">
+                    <div class="project-info">
+                        <div class="title">
+                            <p>项目名称：<span>酒店结构设计项目</span></p>
+                            <p>项目规模：<span>329平方米</span></p>
+                            <p>项目地址：<span>深圳工专路交叉路口 </span></p>
+                            <p>项目预算：<span>100万元 </span></p>
+                        </div>
+                        <div class="desc">
+                            <span>项目描述：</span>
+                            <p>这是一段描述文字这是一段描述文字这是一段描述文字这是一段描述文字这是一段描述文字这是一段描述文字这是一段描述文字这是一段描述文字</p>
+                        </div>
+                        <div class="state">
+                            <span>项目状态：</span>
+                            <!-- be 招募中 off 停止招募 pass 待招募  -->
+                            <p class="be">招募中</p>
+                        </div>
+                        <div class="obj">
+                            <span>招募对象：</span>
+                            <p>
+                                助理设计师<span>2</span>名&nbsp;&nbsp;&nbsp;&nbsp;设计师<span>1</span>名
+                            </p>
+                        </div>
+                        <div class="btn">
+                            <a href="~/lookingFor/apply"><button class="layui-btn layui-btn-lg layui-btn-normal">项目报名</button></a>
+                            <span>（温馨提示：为保障服务质量，报名任务前需要完成建筑结构设计师身份认证）</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="layui-card" style="margin-top: 15px;">
+                <div class="layui-card-header">项目附件</div>
+                <div class="layui-card-body">
+                    <div class="project-file">
+                        <script type="text/html" id="lookDetailsListBar">
+                            <a class="layui-btn" lay-event="down">
+                                <i class="layui-icon layui-icon-download-circle"></i>
+                            </a>
+                        </script>
+                        <table id="lookDetailsList" lay-filter="lookDetailsList"></table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="/assets/Console/lookingFor/js/lookDetails"></script>

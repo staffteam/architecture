@@ -1,0 +1,195 @@
+@import '../../public/less/puls.less';
+
+.released-list {
+    margin-top: 30px;
+
+    ul {
+        li {
+            padding: 40px;
+
+            h2 {
+                font-size: 18px;
+                color: rgba(51, 51, 51, 1);
+                line-height: 25px;
+            }
+
+            &>div {
+                margin-top: 20px;
+                overflow: hidden;
+
+                div.l {
+                    float: left;
+                    width: 1025px;
+                    overflow: hidden;
+
+                    label {
+                        font-size: 14px;
+                        color: rgba(51, 51, 51, 1);
+                        line-height: 200px;
+                        float: left;
+                        height: 200px;
+                    }
+
+                    div.sliding {
+                        overflow: hidden;
+
+                        div.li {
+                            float: left;
+                            height: 200px;
+                            width: 140px;
+                            position: relative;
+                            padding-top: 59px;
+
+                            &:first-child {
+                                margin-left: -2vw;
+
+                                &::before {
+                                    display: none;
+                                }
+                            }
+
+                            &::before {
+                                content: '';
+                                left: -35%;
+                                top: 50%;
+                                height: 0px;
+                                transform: translateY(-50%);
+                                border-top: 1px dashed rgba(153, 153, 153, 1);
+                                display: block;
+                                width: 70%;
+                                position: absolute;
+                            }
+
+                            h2 {
+                                font-size: 14px;
+                                color: rgba(153, 153, 153, 1);
+                                line-height: 20px;
+                                height: 20px;
+                                text-align: center;
+                            }
+
+                            &>p {
+                                font-size: 14px;
+                                color: rgba(102, 102, 102, 1);
+                                line-height: 20px;
+                                text-align: center;
+                                margin-top: 16px;
+
+                                span {
+                                    color: @c;
+                                }
+                            }
+
+                            &.on {
+                                &:before {
+                                    border-top: 1px dashed @c;
+                                }
+
+                                div.t {
+                                    background: rgba(41, 120, 255, 0.5);
+
+                                    p {
+                                        background: rgba(41, 120, 255, 1);
+                                    }
+                                }
+                            }
+
+                            div.t {
+                                width: 28px;
+                                height: 28px;
+                                background: rgba(240, 240, 240, 1);
+                                border-radius: 50%;
+                                margin: 0 auto;
+                                margin-top: 7px;
+
+                                p {
+                                    width: 16px;
+                                    height: 16px;
+                                    margin: 6px;
+                                    float: left;
+                                    background: rgba(204, 204, 204, 1);
+                                    border-radius: 50%;
+
+                                }
+                            }
+                        }
+                    }
+                }
+
+                div.r {
+                    float: right;
+
+                    label {
+                        font-size: 14px;
+                        color: rgba(51, 51, 51, 1);
+                        line-height: 200px;
+                        float: left;
+                        height: 200px;
+                    }
+
+                    &>span {
+                        font-size: 14px;
+                        color: rgba(51, 51, 51, 1);
+                        line-height: 200px;
+                        float: left;
+                        height: 200px;
+                        margin-left: 15px;
+                    }
+
+                    div.a {
+                        float: left;
+                        margin-left: 20px;
+                        font-size: 12px;
+                        color: rgba(51, 51, 51, 1);
+                        line-height: 36px;
+                        margin-top: 82px;
+
+                        p {
+                            width: 36px;
+                            height: 36px;
+                            text-align: center;
+                            line-height: 36px;
+                            color: white;
+                            float: left;
+                            background: rgba(72, 157, 252, 1);
+                            border-radius: 50%;
+                            margin-right: 10px;
+                        }
+                    }
+
+                    div.b {
+                        float: left;
+                        margin-left: 15px;
+                        margin-top: 0px;
+                        i {
+                            font-size: 24px;
+                            color: @c;
+                            float: left;
+                            display: block;
+                            line-height: 200px;
+                            margin-right: 5px;
+                        }
+                        a{
+                            color:rgba(153, 153, 153, 1);
+                        }
+                        margin-left: 10px;
+                        font-size:14px;
+                        color:rgba(153, 153, 153, 1);
+                        line-height:200px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width:1850px){
+    .released-list ul li > div div.l{
+        width: 100%;
+    }
+    .released-list ul li > div div.l div.sliding div.li{
+        width: 10vw;
+    }
+    .released-list ul li > div div.r{
+        width: 100%;
+    }
+}

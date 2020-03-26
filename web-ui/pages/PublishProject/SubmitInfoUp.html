@@ -1,0 +1,88 @@
+﻿<link rel="stylesheet" href="/assets/Console/identity/css/identity.css" />
+<link rel="stylesheet" href="/assets/Console/publish/css/publish.css" />
+<link rel="stylesheet" href="/assets/Console/publish/css/submitInfo.css" />
+<div class="breadcrumb">
+    <span class="layui-breadcrumb">
+        <a href="~/Home">首页</a>
+        <a><cite>上传资料</cite></a>
+    </span>
+</div>
+<div class="content" id="content">
+    <div class="container">
+        <div class="identity">
+            <div class="layui-card">
+                <div class="layui-card-header">发布流程</div>
+                <div class="layui-card-body auto">
+                    <div class="identity-step">
+                        <div class="r">
+                            <ul>
+                                <li class="on"><i>1</i>填写项目初审信息</li>
+                                <li class="on"><i>2</i>上传项目资料附件</li>
+                                <li><i>3</i>平台审核</li>
+                                <li><i>4</i>签署项目合同/缴纳费用</li>
+                                <li><i>5</i>招募项目人员</li>
+                                <li><i>6</i>项目发布成功</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="layui-card">
+                <div class="layui-card-header">上传项目资料附件</div>
+                <div class="layui-card-body auto">
+                    <p>点击项目资料附件进行下载，线下填写完成后</p>
+                    <div class="matter-remind" style="margin-top:20px;">
+                        <label>官方文档：</label>
+                        <a>项目申请报告.docx</a>
+                        <a>项目资料附件2.docx</a>
+                        <a>项目资料附件3.docx</a>
+                    </div>
+                    <div class="layui-upload-drag layui-upload-flow" id="updatas">
+                        <div class="upload-content"><i class="iconfont">&#xe61b;</i>
+                        <p>点击上传，或将文件拖拽到此处</p></div>
+                        <div class="else"><i class="iconfont">&#xe600;</i></div>
+                    </div>
+                    <div class="updatalist" ></div>
+                </div>
+                <div class="layui-card-header">选择样图</div>
+                <div class="up-img-main">
+                    <p>双击图库可进入图库查看全部图库信息。</p>
+                    <div class="layui-form up-img-list">
+                        <ul>
+                            <li ondblclick="upimgChange(this)">
+                                <div>
+                                    <p><img src="/assets/console/identity/images/icon_personal_list_1.jpg" /></p>
+                                    <input type="checkbox" name="up-img-item" lay-filter="upimgitem" value="01298" lay-skin="primary">
+                                </div>
+                                <h2>图库编号：01298</h2>
+                            </li>
+                            <li ondblclick="upimgChange(this)">
+                                <div>
+                                    <p><img src="/assets/console/identity/images/icon_personal_list_1.jpg" /></p>
+                                    <input type="checkbox" name="up-img-item" lay-filter="upimgitem" value="01299" lay-skin="primary">
+                                </div>
+                                <h2>图库编号：01299</h2>
+                            </li>
+                            <li ondblclick="upimgChange(this)">
+                                <div>
+                                    <p><img src="/assets/console/identity/images/icon_personal_list_1.jpg" /></p>
+                                    <input type="checkbox" name="up-img-item" lay-filter="upimgitem" value="01220" lay-skin="primary">
+                                </div>
+                                <h2>图库编号：01220</h2>
+                            </li>
+                        </ul>
+                        <div class="up-img-notcheck"><input type="checkbox" name="up-img-notcheck" lay-filter="upimgnotcheck" lay-skin="primary" title="暂无合适图库"> </div>
+                        <div class="up-img-check">已选择 <span></span></div>
+                        <div class="layui-input-block">
+                            <button class="layui-btn" onclick="upBefore()">上一步</button>
+                            <button class="layui-btn" onclick="upAfter()">下一步</button>
+                            <button  id="upAfter" style="display:none;" >上传</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="/assets/Console/common/provinces/provincesPlus"></script>
+<script src="/assets/Console/Publish/js/submitInfoUp"></script>

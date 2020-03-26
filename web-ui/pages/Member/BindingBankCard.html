@@ -1,0 +1,67 @@
+﻿<link rel="stylesheet" href="/assets/Console/member/css/info.css" />
+
+<div class="breadcrumb">
+    <span class="layui-breadcrumb">
+        <a href="~/Home">首页</a>
+        <a><cite>银行卡绑定</cite></a>
+    </span>
+</div>
+<div class="content" id="content">
+    <div class="container">
+        <div class="member-main">
+            <div class="member-l">
+                <ul>
+                    <li><a href="/Member/Info">基本资料</a></li>
+                    <li><a href="/Member/Security">安全设置</a></li>
+                    <li><a href="/Member/AccountBinding">账号绑定</a></li>
+                    <li class="on"><a href="/Member/BindingBankCard">银行卡绑定</a></li>
+                    <li><a href="/Member/Message">新消息通知</a></li>
+                </ul>
+            </div>
+            <div class="security bank-card" id="bankCard">
+                <div class="title">银行卡绑定</div>
+                <div class="layui-form">
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">会员身份 <i style="color:red;">*</i></label>
+                        <div class="layui-input-block">
+                            <select name="city" verifys="required" tips="请选择开户银行">
+                                <option value="0">中国</option>
+                                <option value="1">工商</option>
+                                <option value="2">建设</option>
+                                <option value="3">农业</option>
+                                <option value="4">邮政</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">银行卡号 <i style="color:red;">*</i></label>
+                        <div class="layui-input-block">
+                            <input type="text" name="bank" verifys="required&&bank" tips="银行卡号" placeholder="请输入银行卡号" autocomplete="off" class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-form-item item-phone">
+                        <label class="layui-form-label">银行预留手机号码 <i style="color:red;">*</i></label>
+                        <div class="layui-input-block">
+                            <input type="text" name="phone" verifys="required&&phone" tips="银行预留手机号码" placeholder="请输入银行预留手机号码" autocomplete="off" class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-form-item get-code">
+                        <label class="layui-form-label">验证码 <i style="color:red;">*</i></label>
+                        <div class="layui-input-block">
+                            <input type="text" name="code" verifys="required" tips="验证码" placeholder="请输入验证码" autocomplete="off" class="layui-input">
+                            <span id="getCode">获取短验证码</span>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <div class="layui-input-block">
+                            <button class="layui-btn" lay-submit onclick="submitBankCard()">确定</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="/assets/Console/common/provinces/provincesPlus"></script>
+<script src="/assets/Console/member/js/info"></script>

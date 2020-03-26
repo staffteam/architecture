@@ -1,0 +1,476 @@
+body,
+ul,
+ol,
+li,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+form,
+table,
+td,
+img,
+div {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+body {
+  background: #fff;
+  color: #333;
+  font-size: 14px;
+  font-family: "微软雅黑";
+}
+ul,
+ol {
+  list-style-type: none;
+}
+select,
+input,
+img,
+select {
+  vertical-align: middle;
+}
+a {
+  text-decoration: none;
+}
+a:link {
+  color: #333;
+}
+a:visited {
+  color: #333;
+}
+a:hover,
+a:active,
+a:focus {
+  color: #333;
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+@font-face {
+  font-family: 'iconfont';
+  /* project id 1343358 */
+  src: url('//at.alicdn.com/t/font_1343358_up72a2bjhj8.eot');
+  src: url('//at.alicdn.com/t/font_1343358_up72a2bjhj8.eot?#iefix') format('embedded-opentype'), url('//at.alicdn.com/t/font_1343358_up72a2bjhj8.woff2') format('woff2'), url('//at.alicdn.com/t/font_1343358_up72a2bjhj8.woff') format('woff'), url('//at.alicdn.com/t/font_1343358_up72a2bjhj8.ttf') format('truetype'), url('//at.alicdn.com/t/font_1343358_up72a2bjhj8.svg#iconfont') format('svg');
+}
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+input {
+  border: 1px solid #dddddd;
+  outline: none;
+  font-family: "微软雅黑";
+}
+input:focus {
+  border: 1px solid #dddddd;
+}
+.l {
+  float: left;
+}
+.r {
+  float: right;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: #F7F7F7;
+}
+.layui-btn .layui-icon {
+  float: left;
+}
+textarea {
+  resize: none !important;
+}
+.breadcrumb {
+  padding: 14px 24px;
+  background: #ffffff;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.05);
+}
+.main {
+  background: url(../images/main-back.png) no-repeat right bottom;
+}
+body {
+  min-width: 1400px;
+}
+.layui-layer.layui-layer-msg {
+  min-width: 200px;
+  border: 0px;
+}
+.layui-layer.layui-layer-msg .layui-layer-content {
+  color: white;
+  font-size: 14px;
+  line-height: 30px;
+  padding: 10px;
+}
+.layui-layer.layui-layer-msg .layui-layer-content i {
+  color: white;
+  font-size: 18px;
+  float: left;
+  margin-right: 8px;
+}
+.layui-layer.layer-ext-tips {
+  background-color: #f39b12;
+}
+.layui-layer.layer-ext-success {
+  background-color: #00ba9b;
+}
+.layui-layer.layer-ext-error {
+  background-color: #e85445;
+}
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  z-index: 999;
+  background: #ffffff;
+  box-shadow: 0px 5px 12px 0px rgba(0, 0, 0, 0.05);
+}
+.header div.content {
+  width: 1200px;
+  margin: 0 auto;
+  height: 100%;
+}
+.header div.content div.logo {
+  float: left;
+  width: 116px;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.header div.content div.nav {
+  float: left;
+  margin-left: 40px;
+}
+.header div.content div.nav ul li {
+  float: left;
+}
+.header div.content div.nav ul li:hover,
+.header div.content div.nav ul li.on {
+  border-bottom: 2px solid #489DFC;
+}
+.header div.content div.nav ul li:hover a,
+.header div.content div.nav ul li.on a {
+  color: #489DFC;
+}
+.header div.content div.nav ul li a {
+  display: block;
+  font-size: 14px;
+  color: #333333;
+  line-height: 70px;
+  padding: 0 20px;
+}
+.header div.content div.search {
+  width: 300px;
+  height: 36px;
+  background: #ffffff;
+  border-radius: 21px;
+  border: 1px solid #cccccc;
+  float: right;
+  overflow: hidden;
+  margin-top: 17px;
+}
+.header div.content div.search input {
+  width: 250px;
+  float: left;
+  border: 0px;
+  font-size: 14px;
+  height: 36px;
+  padding: 0 15px;
+}
+.header div.content div.search i {
+  display: block;
+  float: right;
+  width: 45px;
+  height: 36px;
+  text-align: center;
+  line-height: 34px;
+  font-size: 18px;
+  color: #777777;
+}
+.header div.content div.user {
+  float: right;
+  height: 100%;
+  padding: 17px 0;
+  line-height: 36px;
+  margin-left: 40px;
+}
+.header div.content div.user span {
+  display: block;
+  color: #489DFC;
+  cursor: pointer;
+}
+.header div.content div.user span em {
+  font-style: normal;
+}
+.header div.content div.user p {
+  display: none;
+}
+.header div.content div.user ul {
+  display: none;
+}
+.header-h {
+  height: 70px;
+}
+.footer {
+  background: #252a2e;
+  padding: 20px 0;
+}
+.footer div.content {
+  width: 1200px;
+  margin: 0 auto;
+}
+.footer div.content div.t {
+  overflow: hidden;
+  border-bottom: 1px solid #333333;
+}
+.footer div.content div.t div.l {
+  width: 250px;
+  padding: 60px 0;
+  border-right: 1px solid #333333;
+  padding-right: 50px;
+}
+.footer div.content div.t div.l p {
+  width: 200px;
+}
+.footer div.content div.t div.l p img {
+  display: block;
+  margin: 0 auto;
+}
+.footer div.content div.t div.l h2 {
+  font-size: 14px;
+  color: #888888;
+  line-height: 20px;
+  margin-top: 15px;
+}
+.footer div.content div.t div.l-list {
+  width: 170px;
+  float: left;
+  text-align: center;
+  border-right: 1px solid #333333;
+}
+.footer div.content div.t div.l-list ul {
+  padding: 37px 0;
+}
+.footer div.content div.t div.l-list ul li {
+  margin-top: 15px;
+}
+.footer div.content div.t div.l-list ul li:first-child {
+  margin-top: 0px;
+}
+.footer div.content div.t div.l-list ul li a {
+  display: block;
+  font-size: 14px;
+  color: #999999;
+  line-height: 20px;
+}
+.footer div.content div.t div.l-list ul li a:hover {
+  text-decoration: underline;
+}
+.footer div.content div.t div.l-text {
+  float: left;
+  width: 490px;
+  padding: 37px 57px;
+}
+.footer div.content div.t div.l-text p {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #999999;
+  line-height: 20px;
+}
+.footer div.content div.t div.l-text p:first-child {
+  margin-top: 0px;
+}
+.footer div.content div.t div.r {
+  float: right;
+  padding: 25px 0;
+  overflow: hidden;
+}
+.footer div.content div.t div.r div {
+  float: left;
+  width: 110px;
+  text-align: center;
+  margin-right: 70px;
+}
+.footer div.content div.t div.r div:last-child {
+  margin-right: 0;
+}
+.footer div.content div.t div.r div p {
+  width: 108px;
+  height: 108px;
+  margin: 0 auto;
+}
+.footer div.content div.t div.r div p img {
+  width: 100%;
+}
+.footer div.content div.t div.r div h2 {
+  margin-top: 18px;
+  display: inline-block;
+  font-size: 14px;
+  color: #999999;
+  line-height: 21px;
+}
+.footer div.content div.t div.r div h2 i {
+  float: left;
+  color: white;
+  font-size: 22px;
+  margin-right: 10px;
+}
+.footer div.content div.b {
+  padding: 17px 0 0;
+}
+.footer div.content div.b div {
+  text-align: center;
+}
+.footer div.content div.b div label {
+  font-size: 14px;
+  color: #888888;
+  line-height: 20px;
+}
+.footer div.content div.b div a {
+  font-size: 14px;
+  color: #888888;
+  line-height: 20px;
+}
+.footer div.content div.b div a:hover {
+  text-decoration: underline;
+}
+.footer div.content div.b p {
+  margin-top: 22px;
+  font-size: 14px;
+  color: #888888;
+  line-height: 21px;
+  text-align: center;
+}
+.footer div.content div.b p img {
+  position: relative;
+  top: -2px;
+  margin: 0 2px 0 5px;
+}
+.fill-out > h2 {
+  text-align: center;
+  padding-top: 30px;
+  font-size: 16px;
+  color: #999999;
+  line-height: 20px;
+}
+.fill-out em,
+.fill-out i {
+  font-style: normal;
+}
+.fill-out > div.logo {
+  text-align: center;
+  width: 140px;
+  margin: 23px auto;
+}
+.fill-out > div.layui-form {
+  width: 80%;
+  margin: 30px auto;
+}
+.fill-out > div.layui-form .vcode {
+  position: relative;
+}
+.fill-out > div.layui-form .vcode .get-code {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #489DFC;
+}
+.fill-out > div.layui-form .layui-form-item .layui-input-inline {
+  width: 100%;
+}
+.fill-out > div.layui-form .layui-form-item .layui-input-inline input {
+  border: 0px;
+  border-bottom: 1px solid #979797;
+}
+.fill-out > div.layui-form .layui-form-item .layui-input-inline .login-box {
+  overflow: hidden;
+}
+.fill-out > div.layui-form .layui-form-item .layui-input-inline .login-box div.l {
+  height: 38px;
+}
+.fill-out > div.layui-form .layui-form-item .layui-input-inline .link {
+  text-align: right;
+  font-size: 14px;
+  color: #999999;
+}
+.fill-out > div.layui-form .layui-form-item .layui-input-inline .link span {
+  color: #489DFC;
+  cursor: pointer;
+}
+.fill-out > div.layui-form .layui-form-item .layui-input-inline .layui-btn.off {
+  background-color: #999999;
+  cursor: no-drop;
+}
+.fill-out > div.third-party {
+  width: 80%;
+  margin: 0 auto;
+}
+.fill-out > div.third-party > h2 {
+  position: relative;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+}
+.fill-out > div.third-party > h2 span {
+  display: inline-block;
+  padding: 0 20px;
+  font-size: 14px;
+  color: #999999;
+  position: relative;
+  z-index: 9;
+  background-color: white;
+}
+.fill-out > div.third-party > h2::before {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 100%;
+  border-bottom: 1px solid #999999;
+  content: '';
+  display: block;
+  z-index: 0;
+}
+.fill-out > div.third-party > div {
+  text-align: center;
+  padding: 25px 0 0;
+}
+.fill-out > div.third-party > div a i {
+  font-size: 25px;
+  line-height: 40px;
+  padding: 0 30px;
+}
+.fill-out > div.third-party > div a:first-child {
+  color: #7FBBE8;
+}
+.fill-out > div.third-party > div a:nth-child(2) {
+  color: #97D36B;
+}
+.fill-out > div.third-party > div a:nth-child(3) {
+  color: #E67772;
+}
+.agreement,
+.policy {
+  padding: 15px;
+}
+a.white {
+  color: white;
+}

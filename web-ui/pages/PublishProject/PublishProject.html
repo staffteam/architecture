@@ -1,0 +1,138 @@
+﻿<link rel="stylesheet" href="/assets/Console/lookingFor/css/lookingFor.css" />
+<div class="breadcrumb">
+    <span class="layui-breadcrumb">
+        <a href="~/Home">首页</a>
+        <a><cite>发布项目</cite></a>
+    </span>
+</div>
+<div class="content" id="content">
+    <div class="container">
+        <div class="looking-for">
+            <div class="t">
+                <div class="l">
+                    <div class="layui-card">
+                        <div class="layui-card-header">个人信息</div>
+                        <div class="layui-card-body">
+                            <div class="usermsg">
+                                <div class="username">
+                                    <h2>刘小姐</h2>
+                                    <p><span>111</span></p>
+                                </div>
+                                <div class="grade">
+                                    岗位等级
+                                    <a href="javascript:">设计师助理</a>
+                                </div>
+                                <div class="grade">
+                                    联系方式
+                                    <a href="javascript:">15073231615</a>
+                                </div>
+                            </div>
+                            <div class="link">
+                                <a href="javascript:">参与项目 <span>5</span></a>
+                                <a href="javascript:">发布项目 <span>0</span></a>
+                                <a href="javascript:">收藏项目 <span>13</span></a>
+                                <a href="javascript:">关注人才 <span>5</span></a>
+                            </div>
+                            <div class="btn">
+                                <button type="button" class="layui-btn">
+                                    <a href="~/identity/identityEntrance" class="white"><i class="layui-icon layui-icon-username"></i> 身份认证</a>
+                                </button>
+                                <button type="button" class="layui-btn">
+                                    <i class="layui-icon layui-icon-list"></i> 完善资料
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="r">
+                    <div class="layui-card">
+                        <div class="layui-card-header">公告栏</div>
+                        <div class="layui-card-body">
+                            <ul class="notice">
+                                <li>
+                                    <a href="~/notice/noticeDetails" target="_blank">
+                                        <h2>
+                                            开化县1101工程及城市档案馆 / 浙江大学建筑设计研究院<font>置顶</font>
+                                        </h2>
+                                        <span>2019/12/14</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="~/notice/noticeDetails" target="_blank">
+                                        <h2>
+                                            粼”岛 – 泾河景观竞赛方案
+                                        </h2>
+                                        <span>2019/12/14</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="~/notice/noticeDetails" target="_blank">
+                                        <h2>
+                                            汤山矿坑公园，江苏 / 张唐景观
+                                        </h2>
+                                        <span>2019/12/14</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="~/notice/noticeDetails" target="_blank">
+                                        <h2>
+                                            BnA Alter Museum美术馆酒店
+                                        </h2>
+                                        <span>2019/12/14</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="b">
+                <div class="listContent">
+                    <div class="list">
+                        <h2>发布项目</h2>
+                        <p>
+                            <img src="/assets/console/lookingFor/images/icon_look_list_1.jpg" alt="">
+                        </p>
+                        <span>适用于个人进行报名项目</span>
+                        <div class="tip">
+                            <h2>提醒：</h2>
+                            <p>A建筑结构设计项目可报名！</p>
+                            <p>B建筑结构设计项目还有5个任务可报名！</p>
+                            <p>C建筑结构设计项目还有4个任务可报名！</p>
+                        </div>
+                        <div class="btn">
+                            <a href="~/PublishProject/Publish">
+                                <button type="button"
+                                        class="layui-btn layui-btn-fluid">
+                                    进入
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="list">
+                        <h2>已发布项目</h2>
+                        <p>
+                            <img src="/assets/console/lookingFor/images/icon_look_list_2.jpg" alt="">
+                        </p>
+                        <span>管理参与的任务，即时进行任务提交</span>
+                        <div class="tip">
+                            <h2>提醒：</h2>
+                            <p>A建筑结构设计项目中还有1个成果未提交！</p>
+                            <p>B建筑结构设计项目中还有3个成果未提交！</p>
+                            <p>C建筑结构设计项目中还有1个任务未提交！</p>
+                        </div>
+                        <div class="btn">
+                            <a href="~/PublishProject/Released"><button type="button" class="layui-btn layui-btn-fluid">进入</button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="/assets/Console/lookingFor/js/lookingFor"></script>
+<script>
+    $(function(){
+        $('.layui-nav.layui-nav-tree .layui-nav-item').eq(2).addClass('layui-this');
+    })
+</script>
