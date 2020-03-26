@@ -228,6 +228,7 @@ var verify = {
             if (_verify != "" && !$(this).hasClass('not-verifys')) {
                 $(this).addClass('not-verifys');
                 var _list = _verify.split('&&');
+                the.$fn[_key] = {};
                 _list.forEach(function (value, index) {
                     if (value.indexOf('||') == -1) {
                         switch (value) {

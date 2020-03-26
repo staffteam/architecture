@@ -1,0 +1,130 @@
+<div class="breadcrumb">
+    <span class="layui-breadcrumb">
+        <a href="/Home">首页</a>
+        <a href="/lookingFor/lookingFor">寻找项目</a>
+        <a><cite>我的收藏</cite></a>
+    </span>
+</div>
+<div class="content" id="content">
+    <div class="container">
+        <div class="looking-for-list">
+            <div class="t">
+                <div class="layui-card">
+                    <div class="layui-card-header">个人信息</div>
+                    <div class="layui-card-body">
+                        <div class="l">
+                            <a href="javascript:">
+                                <p>
+                                    <img src="/assets/console/public/images/top.png" alt="">
+                                </p>
+                            </a>
+                        </div>
+                        <div class="r">
+                            <h2>早安，欢迎来到工作台，祝你开心每一天！</h2>
+                            <div class="usermsg">
+                                <div class="username">
+                                    <h2>刘小姐</h2>
+                                    <p><span>111</span></p>
+                                </div>
+                                <div class="grade">
+                                    岗位等级
+                                    <a href="javascript:">设计师助理</a>
+                                </div>
+                                <div class="grade">
+                                    联系方式
+                                    <a href="javascript:">15073231615</a>
+                                </div>
+                            </div>
+                            <div class="btn">
+                                <button type="button" class="layui-btn">
+                                    <a href="/identity/identityEntrance" class="white"><i
+                                            class="layui-icon layui-icon-username"></i> 身份认证</a>
+                                </button>
+                                <button type="button" class="layui-btn">
+                                    <i class="layui-icon layui-icon-list"></i> 完善资料
+                                </button>
+                            </div>
+                        </div>
+                        <div class="num">
+                            <a href="javascript:">
+                                <span>项目数</span>
+                                <h2>15</h2>
+                            </a>
+                            <a href="javascript:">
+                                <span>发布项目</span>
+                                <h2>15</h2>
+                            </a>
+                            <a href="/Collect">
+                                <span>收藏项目</span>
+                                <h2>15</h2>
+                            </a>
+                            <a href="/FocusTalent">
+                                <span>关注人才</span>
+                                <h2>15</h2>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="b">
+                <div class="layui-card">
+                    <div class="layui-card-header">寻找项目</div>
+                    <div class="layui-card-body">
+                        <div class="layui-tab">
+                            <div class="layui-tab-content">
+                                <script type="text/html" id="table1Bar">
+                                    <a class="layui-btn layui-btn-xs" lay-event="look">查看项目</a>
+                                    <a href="/lookingFor/myTask" class="layui-btn layui-btn-danger layui-btn-xs"
+                                       lay-event="task">查看任务</a>
+                                    <a class="layui-btn layui-btn-danger layui-btn-xs"
+                                       lay-event="collect">取消收藏</a>
+                                </script>
+                                <table id="table1" lay-filter="table1"></table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<style>
+    .looking-for-list div.b .layui-card-body{
+        padding: 0 0;
+    }
+</style>
+<script>
+    table.render({
+        elem: '#table1',
+        height: 378,
+        url: '/Assets/console/lookingFor/js/test.json' //数据接口
+            ,
+        page: true //开启分页
+            ,
+        cols: [
+            [ //表头
+                {
+                    field: 'id',
+                    title: '项目名称'
+                }, {
+                    field: 'username',
+                    title: '项目规模'
+                }, {
+                    field: 'sex',
+                    title: '项目阶段'
+                }, {
+                    field: 'city',
+                    title: '岗位需求'
+                }, {
+                    field: 'sign',
+                    title: '发布时间',
+                }, {
+                    fixed: 'right',
+                    title: '操作',
+                    toolbar: '#table1Bar',
+                    width: 300
+                }
+            ]
+        ],
+    });
+</script>

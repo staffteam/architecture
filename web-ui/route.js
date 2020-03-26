@@ -182,5 +182,13 @@ let route = [{
     title: '人才列表',
     route: '/Web/Talents',
     page: '/Web/Talents.html'
+}, {
+    title: '收藏项目',
+    route: '/Collect',
+    page: '/Collect/index.html'
+}, {
+    title: '关注人才',
+    route: '/FocusTalent',
+    page: '/FocusTalent/index.html'
 }];
 module.exports = route;

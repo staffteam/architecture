@@ -80,6 +80,14 @@ function Provinces(init){
                 $('#'+init.elem).find('input[name="site"]').val(_val);
                 form.render('select');
             });
+            var _name1Val = _name1[$('#' + init.elem).find('select[name="province"]').val()],
+                _name2Val = _name2[$('#' + init.elem).find('select[name="province"]').val()],
+                _name3Val = _name3[$('#' + init.elem).find('select[name="province"]').val()];
+            if (_name1Val && _name2Val && _name3Val) {
+                var _val = _name1Val.name + ' ' + _name2Val.name + ' ' + _name3Val.name;
+                $('#' + init.elem).find('input[name="site"]').val(_val);
+                form.render('select');
+            }
             typeof init.call === 'function'?init.call():null;
         }
     });
