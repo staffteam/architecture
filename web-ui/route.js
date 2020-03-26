@@ -2,6 +2,10 @@ let route = [{
     title: '首页',
     route: '/',
     page: '/Home/index.html'
+},{
+    title: '首页',
+    route: '/Home',
+    page: '/Home/index.html'
 }, {
     title: '专业审核',
     route: '/Identity/Assess',

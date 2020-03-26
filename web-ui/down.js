@@ -28,7 +28,6 @@ http.createServer(function (request, response) {
     if (_url != '' && _url.split('.').length >= 1) {
         _url = _url.split('?')[0];
         let _suffix = _url.split('.')[_url.split('.').length - 1];
-        console.log(_suffix);
         if (contentType[_suffix]) {
             response.setHeader("Content-Type", contentType[_suffix]);
             //格式必须为 binary 否则会出错
@@ -49,10 +48,10 @@ http.createServer(function (request, response) {
     //根据路由返回对应页面
     let _urlArr = _url.split('?');
     route.forEach(value => {
-        if (_urlArr[0] == value.route) {
-            console.log(_urlArr[0]);
+        if (_urlArr[0].toLowerCase() == value.route.toLowerCase()) {
             //获取公共页面
             fs.readFile(`${__dirname}/leader/${_urlArr[0].indexOf('/Web')==0?'webLeader.html':_urlArr[0].indexOf('/Login')==0 || _urlArr[0].indexOf('/Web/Home')==0?'login.html':'leader.html'}`, 'utf-8', function (err, data) {
+                console.log(err);
                 if (err) {
                     response.writeHead(404, "Error");
                     response.end();
