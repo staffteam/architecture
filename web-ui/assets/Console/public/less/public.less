@@ -558,19 +558,23 @@
 
  .layui-layer-content {
      width: 100%;
-a{
-    cursor: pointer;
-}
+
+     a {
+         cursor: pointer;
+     }
+
      .msg1 {
          .list {
              padding: 15px 30px;
              overflow: hidden;
              height: 70px;
              border-bottom: 1px solid #E5E5E5;
-            a{
-                height: 100%;
-                display: block;
-            }
+
+             a {
+                 height: 100%;
+                 display: block;
+             }
+
              &>a>p {
                  float: left;
                  width: 32px;
@@ -611,10 +615,11 @@ a{
 
      .msg2 {
          .list {
-            padding: 15px 30px;
-            overflow: hidden;
-            height: 70px;
-            border-bottom: 1px solid #E5E5E5;
+             padding: 15px 30px;
+             overflow: hidden;
+             height: 70px;
+             border-bottom: 1px solid #E5E5E5;
+
              div {
                  h2 {
                      font-size: 14px;
@@ -629,61 +634,102 @@ a{
                      color: rgba(153, 153, 153, 1);
                      line-height: 17px;
                      .line();
-                     em{
+
+                     em {
                          font-style: normal;
                      }
-                     span{
-                        float:right; 
+
+                     span {
+                         float: right;
                      }
                  }
              }
          }
      }
-     .msg3 {
-        .list {
-           padding: 15px 30px;
-           overflow: hidden;
-           border-bottom: 1px solid #E5E5E5;
-            div {
-                h2 {
-                    font-size: 14px;
-                    color: rgba(102, 102, 102, 1);
-                    line-height: 20px;
-                    overflow: hidden;
-                    em{
-                        float:left;
-                        max-width: 60%;
-                        display: block;
-                        font-style: normal;
-                        .line();
-                    }
-                    span{
-                       border: 1px solid #F5222D; 
-                       padding: 0 10px;
-                       line-height: 20px;
-                       font-size:12px;
-                       color: #F5222D;
-                       border-radius: 4px;
-                       float:right;
-                       &.warning{
-                           border:1px solid #FFE48F;
-                           color: #FFE48F;
-                       }
-                    }
-                }
 
-                p {
-                    margin-top: 8px;
-                    font-size: 12px;
-                    color: rgba(153, 153, 153, 1);
-                    .lines();
-                    line-height: 17px;
-                }
-            }
-        }
-    }
+     .msg3 {
+         .list {
+             padding: 15px 30px;
+             overflow: hidden;
+             border-bottom: 1px solid #E5E5E5;
+
+             div {
+                 h2 {
+                     font-size: 14px;
+                     color: rgba(102, 102, 102, 1);
+                     line-height: 20px;
+                     overflow: hidden;
+
+                     em {
+                         float: left;
+                         max-width: 60%;
+                         display: block;
+                         font-style: normal;
+                         .line();
+                     }
+
+                     span {
+                         border: 1px solid #F5222D;
+                         padding: 0 10px;
+                         line-height: 20px;
+                         font-size: 12px;
+                         color: #F5222D;
+                         border-radius: 4px;
+                         float: right;
+
+                         &.warning {
+                             border: 1px solid #FFE48F;
+                             color: #FFE48F;
+                         }
+                     }
+                 }
+
+                 p {
+                     margin-top: 8px;
+                     font-size: 12px;
+                     color: rgba(153, 153, 153, 1);
+                     .lines();
+                     line-height: 17px;
+                 }
+             }
+         }
+     }
  }
 
  .layui-layer-tab .layui-layer-title span.layui-this {
      color: #489DFC;
+ }
+
+ .win-progress {
+     padding: 20px;
+
+     .title {
+         font-size: 16px;
+     }
+
+     .list {
+         margin-top: 20px;
+
+         .list-progress {
+             .label {
+                 width: 45%;
+                 float: left;
+                 height: 15px;
+                 line-height: 15px;
+                 font-size: 12px;
+                 .line();
+             }
+
+             .layui-progress-big,
+             .layui-progress-big .layui-progress-bar {
+                 height: 15px;
+                 line-height: 15px;
+             }
+
+             .layui-progress {
+                 width: 55%;
+                 float: right;
+             }
+         }
+     }
  }

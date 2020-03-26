@@ -142,7 +142,7 @@ body {
     left: 0;
     width: 100%;
     padding: 40px 0;
-
+    z-index: 99999;
     div.t {
         text-align: center;
 
@@ -164,5 +164,72 @@ body {
         font-size: 12px;
         color: rgba(153, 153, 153, 1);
         line-height: 17px;
+    }
+}
+
+
+.water-group {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 999;
+    height: 130px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.water-group .water {
+    position: absolute;
+    width: 200%;
+    height: 100%;
+}
+
+.water-group .water1 {
+    background:url('/assets/Console/public/images/wave2.png');
+    background-size: 100% 150%;
+    top: 20px;
+    left: -100%;
+    opacity: 0.2;
+    animation: water-right 10s infinite linear;
+}
+
+.water-group .water2 {
+    background:url('/assets/Console/public/images/wave2.png');
+    background-size: 100% 150%;
+    top: 30px;
+    left: 0;
+    opacity: 0.4;
+    animation: water-left 15s infinite linear;
+}
+
+.water-group .water3 {
+    background:url('/assets/Console/public/images/wave2.png');
+    background-size: 100% 150%;
+    top: 44px;
+    left: -100%;
+    animation: water-right 20s infinite linear;
+}
+
+@keyframes water-right {
+    0% {
+        transform: translateX(0) translateZ(0) scaleY(1)
+    }
+
+    50% {
+        transform: translateX(25%) translateZ(0) scaleY(0.85)
+    }
+
+    100% {
+        transform: translateX(50%) translateZ(0) scaleY(1)
+    }
+}
+
+@keyframes water-left {
+    from {
+        transform: translate(0%, 0px);
+    }
+
+    to {
+        transform: translate(-50%, 0px);
     }
 }

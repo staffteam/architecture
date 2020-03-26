@@ -34,8 +34,8 @@
                         <div class="title">
                             最系统的建筑施工图知识体系，亲身体验甲级大院工作流程
                         </div>
-                        <div class="tab" >
-                            <div class="t" >
+                        <div class="tab">
+                            <div class="t">
                                 <ul>
                                     <li class="on">
                                         <span>设计流程及制图标准</span>
@@ -53,16 +53,16 @@
                                         <span>办公楼案例设计与实操</span>
                                     </li>
                                     <li>
-                                       <span>超高层案例设计与实操</span>
+                                        <span>超高层案例设计与实操</span>
                                     </li>
                                     <li>
                                         <span>打印出图及图纸审查</span>
                                     </li>
                                 </ul>
                             </div>
-                            <div class="b" >
-                                <div class="list" >
-                                    <div class="title" >
+                            <div class="b">
+                                <div class="list">
+                                    <div class="title">
                                         <h2>前期准备及专业配合</h2>
                                         <p class="title-notice"><i class="layui-icon layui-icon-about"></i>岗位考核须知</p>
                                     </div>
@@ -91,13 +91,61 @@
                         </div>
                     </div>
                     <div class="assess-btn">
-                        <button class="layui-btn">下载考核试题</button>
-                        <button class="layui-btn">上传认证试题</button>
+                        <button class="layui-btn" id="downWord">下载考核试题</button>
+                        <button class="layui-btn" id="upWord">上传认证试题</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <a style="display: none;" id="down" href="/assets/前期准备及专业配合.docx" download="前期准备及专业配合.docx"><span>down</span></a>
 </div>
-<script src="/assets/Console/common/provinces/provinces"></script>
-<script src="/assets/Console/Identity/js/postTheCertification"></script>
+<script>
+    let file_name = "";
+    $(function () {
+        $('#downWord').click(function () {
+            $('#down span').click();
+        })
+        var upload = layui.upload;
+        //普通图片上传
+        var uploadInst = upload.render({
+            elem: '#upWord',
+            url: 'http://localhost:8083/api/image',
+            progress: function (n, elem) {
+                upWin.percent(file_name, n);
+                console.log(elem); //得到当前触发的元素 DOM 对象。可通过该元素定义的属性值匹配到对应的进度条。
+            },
+            before: function (obj) {
+                //预读本地文件示例，不支持ie8
+                obj.preview(function (index, file, result) {
+                    upWin.init(function () {
+                        file_name = file.name;
+                        upWin.start(file.name);
+                    });
+                });
+            },
+            done: function (res) {
+                //如果上传失败
+                if (res.code > 0) {
+                    return $msg({
+                        content: '上传失败',
+                        icon: 0
+                    });
+                }
+                return $msg({
+                    content: '成功',
+                    icon: 1
+                });
+                //上传成功
+            },
+            error: function () {
+                $msg({
+                    content: '上传失败',
+                    icon: 0
+                });
+            }
+        });
+    });
+</script>
+<script src="/assets/Console/common/provinces/provinces.js"></script>
+<script src="/assets/Console/Identity/js/postTheCertification.js"></script>

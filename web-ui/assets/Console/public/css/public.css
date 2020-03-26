@@ -647,3 +647,31 @@ a.white:hover {
 .layui-layer-tab .layui-layer-title span.layui-this {
   color: #489DFC;
 }
+.win-progress {
+  padding: 20px;
+}
+.win-progress .title {
+  font-size: 16px;
+}
+.win-progress .list {
+  margin-top: 20px;
+}
+.win-progress .list .list-progress .label {
+  width: 45%;
+  float: left;
+  height: 15px;
+  line-height: 15px;
+  font-size: 12px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.win-progress .list .list-progress .layui-progress-big,
+.win-progress .list .list-progress .layui-progress-big .layui-progress-bar {
+  height: 15px;
+  line-height: 15px;
+}
+.win-progress .list .list-progress .layui-progress {
+  width: 55%;
+  float: right;
+}
