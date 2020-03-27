@@ -13,28 +13,35 @@
             <div class="layui-card">
                 <div class="layui-card-header">任务及费用拆分表</div>
                 <div class="layui-card-body">
-                    <div class="task-split" >
+                    <div class="task-split">
                         <div class="title">
                             世茂五里河超高层住宅
                         </div>
                         <div class="btns">
-                            <button class="layui-btn"><i class="iconfont">&#xe600;</i> 新增</button>
-                            <button class="layui-btn"><i class="iconfont">&#xe601;</i> 新增</button>
+                            <button class="layui-btn" onclick="taskAdd()"><i
+                                    class="layui-icon layui-icon-add-circle"></i> 新增</button>
+                            <button class="layui-btn"><i class="layui-icon layui-icon-delete"></i> 删除</button>
                             <button class="layui-btn">导入excel</button>
                             <button class="layui-btn">导出excel</button>
                         </div>
                         <div class="list">
                             <script type="text/html" id="table1Bar">
-                                <a class="layui-btn layui-btn-xs" lay-event="look" title="编辑"><i class="iconfont">&#xe791;</i></a>
-                                <a class="layui-btn layui-btn-xs" lay-event="look" title="上移"><i class="iconfont">&#xe690;</i> </a>
-                                <a class="layui-btn layui-btn-xs" lay-event="look" title="下移"><i class="iconfont">&#xe605;</i> </a>
-                                <a class="layui-btn layui-btn-xs" lay-event="look" title="置顶"><i class="iconfont">&#xe640;</i> </a>
-                                <a class="layui-btn layui-btn-xs" lay-event="look" title="置底"><i class="iconfont">&#xe604;</i> </a>
-                                <a class="layui-btn layui-btn-xs" lay-event="del" title="删除"><i class="iconfont">&#xe601;</i> </a>
+                                <a class="layui-btn layui-btn-xs" lay-event="look" title="编辑"><i
+                                        class="layui-icon layui-icon-edit"></i></a>
+                                <a class="layui-btn layui-btn-xs" lay-event="look" title="上移"><i
+                                        class="layui-icon layui-icon-up"></i> </a>
+                                <a class="layui-btn layui-btn-xs" lay-event="look" title="下移"><i
+                                        class="layui-icon layui-icon-down"></i> </a>
+                                <a class="layui-btn layui-btn-xs" lay-event="look" title="置顶"><i
+                                        class="layui-icon layui-icon-upload-circle"></i> </a>
+                                <a class="layui-btn layui-btn-xs" lay-event="look" title="置底"><i
+                                        class="layui-icon layui-icon-download-circle"></i> </a>
+                                <a class="layui-btn layui-btn-xs" lay-event="del" title="删除"><i
+                                        class="layui-icon layui-icon-delete"></i> </a>
                             </script>
                             <table id="table1" lay-filter="table1"></table>
                         </div>
-                        <div class="add-task" >
+                        <div class="add-task">
                             <a href="#"><i class="iconfont">&#xe74a;</i> 添加新的任务</a>
                         </div>
                     </div>
@@ -43,5 +50,172 @@
         </div>
     </div>
 </div>
+<style>
+    .task-add-form {
+        padding: 20px;
+    }
+
+    .task-add-form .layui-form-label {
+        width: 100px;
+        padding: 9px 0;
+    }
+
+    .task-add-form .layui-input-block {
+        margin-left: 110px;
+    }
+
+    .task-add-form .layui-form-item {
+        margin-bottom: 25px;
+    }
+
+    .task-add-form .up-file .layui-input {
+        display: inline-block;
+        width: 120px;
+        margin-right: 10px;
+    }
+
+    .layui-btn-xs i.layui-icon-download-circle {
+        font-size: 18px !important;
+    }
+</style>
+<script type="text/html" id="taskAdd">
+    <form class="layui-form task-add-form" action="">
+        <div class="layui-form-item">
+            <label class="layui-form-label">时间范围：</label>
+            <div class="layui-input-block">
+                <input type="text" class="layui-input" verifys="required" tips="请选择时间范围" id="dateArea"
+                    placeholder="开始时间-结束时间" />
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">设计内容：</label>
+            <div class="layui-input-block">
+                <input type="hidden" name="city_val" verifys="required" tips="请选择设计内容">
+                <select name="city" lay-filter="cityChange">
+                    <option value=""></option>
+                    <option value="0">北京</option>
+                    <option value="1">上海</option>
+                    <option value="2">广州</option>
+                    <option value="3">深圳</option>
+                    <option value="4">杭州</option>
+                </select>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">任务属性：</label>
+            <div class="layui-input-block">
+                <input type="text" name="title" verifys="required" tips="请输入任务属性" placeholder="请输入任务属性"
+                    autocomplete="off" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">把控人：</label>
+            <div class="layui-input-block">
+                <input type="text" name="title" verifys="required" tips="请输入把控人" placeholder="请输入把控人" autocomplete="off"
+                    class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">实际费用：</label>
+            <div class="layui-input-block">
+                <input type="text" name="title" verifys="required" tips="请输入实际费用" placeholder="请输入实际费用"
+                    autocomplete="off" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item up-file">
+            <label class="layui-form-label">上传文件：</label>
+            <div class="layui-input-block">
+                <input type="text" name="fileName" verifys="required" tips="请上传文件" placeholder="上传文件" autocomplete="off"
+                    class="layui-input">
+                <button type="button" class="layui-btn" id="upWord">
+                    <i class="layui-icon layui-icon-upload-circle"></i> 上传文件
+                </button>
+            </div>
+        </div>
+    </form>
+</script>
+<script>
+    var file_name = "";
+
+    function taskAdd() {
+        var upload = layui.upload;
+        layer.open({
+            type: 1,
+            title: "新增",
+            content: $('#taskAdd').html(),
+            area: ['400px', '550px'],
+            btn: ['确定', '取消'],
+            success: function (layero, index) {
+                //日期范围选择
+                laydate.render({
+                    elem: $(layero).find('#dateArea')[0],
+                    range: true //或 range: '~' 来自定义分割字符
+                        ,
+                    change: function (value, date) { //监听日期被切换
+                        alert(JSON.stringify(value.split(' - ')));
+                        $(layero).find('#dateArea').val(value).blur();
+                    }
+                });
+
+                layui.use(['form'], function () {
+                    var form = layui.form;
+                    form.render();
+                    form.on('select(cityChange)', function (data) {
+                        $('input[name="city_val"]').val(data.value);
+                        $('input[name="city_val"]').blur();
+                    });
+                });
+                verify.upgradesInit();
+                var uploadInst = upload.render({
+                    elem: '#upWord',
+                    url: 'http://localhost:8083/api/image',
+                    progress: function (n, elem) {
+                        upWin.percent(file_name, n);
+                        console.log(elem); //得到当前触发的元素 DOM 对象。可通过该元素定义的属性值匹配到对应的进度条。
+                    },
+                    before: function (obj) {
+                        //预读本地文件示例，不支持ie8
+                        obj.preview(function (index, file, result) {
+                            upWin.init(function () {
+                                $('input[name="fileName"]').val(file.name);
+                                file_name = file.name;
+                                upWin.start(file.name);
+                            });
+                        });
+                    },
+                    done: function (res) {
+                        //如果上传失败
+                        if (res.code > 0) {
+                            upWin.close();
+                            return $msg({
+                                content: '上传失败',
+                                icon: 0
+                            });
+                        }
+                        $('.task-add-form input').blur();
+                        return $msg({
+                            content: '成功',
+                            icon: 1
+                        });
+                        //上传成功
+                    },
+                    error: function () {
+                        upWin.close();
+                        $msg({
+                            content: '上传失败',
+                            icon: 0
+                        });
+                    }
+                });
+            },
+            btn1: function (layero, index) {
+                $('.task-add-form input').blur();
+                if ($('.task-add-form .verify-tips').length == 0) {
+                    alert('ok');
+                }
+            }
+        })
+    }
+</script>
 <script src="/assets/Console/common/provinces/provincesPlus.js"></script>
 <script src="/assets/Console/Publish/js/taskSplit.js"></script>

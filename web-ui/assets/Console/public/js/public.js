@@ -8,16 +8,19 @@ function $msg(o) {
     if (o.icon == 0) {
         layer.msg('<i class="layui-icon layui-icon-tips" ></i>' + o.content, {
             time: o.time || 2000,
+            tipsMore: true,
             skin: 'layer-ext-tips'
         });
     } else if (o.icon == 1) {
         layer.msg('<i class="layui-icon layui-icon-ok-circle" ></i>' + o.content, {
             time: o.time || 2000,
+            tipsMore: true,
             skin: 'layer-ext-success'
         });
     } else if (o.icon == 2) {
         layer.msg('<i class="layui-icon layui-icon-tips" ></i>' + o.content, {
             time: o.time || 2000,
+            tipsMore: true,
             skin: 'layer-ext-error'
         });
     }
@@ -100,12 +103,12 @@ var verify = {
                             case 'required':
                                 the.$fn[_key].required = function (value) {
                                     if (value == "") {
-                                        if(_tips.indexOf('请再次')>=0){
+                                        if (_tips.indexOf('请再次') >= 0) {
                                             $msg({
                                                 content: _tips,
                                                 icon: 2
                                             });
-                                        }else{
+                                        } else {
                                             $msg({
                                                 content: '请输入' + _tips,
                                                 icon: 2
@@ -235,12 +238,12 @@ var verify = {
                             case 'required':
                                 the.$fn[_key].required = function (value, $this) {
                                     if (value == "") {
-                                        if(_tips.indexOf('请再次')>=0){
+                                        if (_tips.indexOf('请再次') >= 0) {
                                             the.tips($this, _tips);
-                                        }else{
+                                        } else {
                                             the.tips($this, ($($this).hasClass('upcode') ? '请上传' : $($this).hasClass('selects') ? '请选择' : '请输入') + _tips);
                                         }
-                                        
+
                                         return false;
                                     } else {
                                         return true;
@@ -400,7 +403,10 @@ var upWin = {
             _this.i + '" lay-showPercent="true">' +
             '<div class="layui-progress-bar" lay-percent="0%"></div>' +
             '</div></div>');
-        _this.progresss[name] = {name:'winprogress' + _this.i,index:_this.i};
+        _this.progresss[name] = {
+            name: 'winprogress' + _this.i,
+            index: _this.i
+        };
         element.init();
     },
     percent: function (name, progress) {
@@ -408,10 +414,14 @@ var upWin = {
         setTimeout(function () {
             element.progress(_this.progresss[name].name, progress + '%');
             setTimeout(function () {
-                if (progress == 100 && _this.progresss[name].index==_this.i) {
+                if (progress == 100 && _this.progresss[name].index == _this.i) {
                     layer.close(_this.layerObj);
                 }
             }, 300)
         }, 300)
+    },
+    close:function(){
+        let _this = this;
+        layer.close(_this.layerObj);
     }
 }
