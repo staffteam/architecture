@@ -615,17 +615,57 @@
 
      .msg2 {
          .list {
-             padding: 15px 30px;
              overflow: hidden;
-             height: 70px;
-             border-bottom: 1px solid #E5E5E5;
-
-             div {
+             &.on{
+                 div.msg-desc{
+                     h2{
+                         em{
+                             i{
+                                color: @c;
+                             }
+                         }
+                     }
+                 }
+             }
+             div.msg-desc {
+                padding: 15px 30px;
+                border-bottom: 1px solid #E5E5E5;
                  h2 {
-                     font-size: 14px;
-                     color: rgba(102, 102, 102, 1);
-                     line-height: 20px;
-                     .line();
+                     height: 20px;
+                     em{
+                        font-size: 14px;
+                        color: rgba(102, 102, 102, 1);
+                        line-height: 20px;
+                        .line();
+                        font-style: normal;
+                        width: 90%;
+                        float:left;
+                        display: block;
+                        i{
+                            font-style: normal;
+                            font-size: 14px;
+                            color: #999999;
+                        }
+                     }
+                     span{
+                        float: right;
+                        font-size: 14px;
+                        color: rgba(102, 102, 102, 1);
+                        line-height: 20px;
+                        cursor: pointer;
+                        &.on{
+                            i{
+                                transform: rotate(180deg);
+                            }
+                        }
+                        i{
+                            font-size:13px;
+                            margin-left: 5px;
+                            transition: 0.3s transform;
+                            display: block;
+                            float: right;
+                        }
+                     }
                  }
 
                  p {
@@ -634,7 +674,6 @@
                      color: rgba(153, 153, 153, 1);
                      line-height: 17px;
                      .line();
-
                      em {
                          font-style: normal;
                      }
@@ -643,6 +682,11 @@
                          float: right;
                      }
                  }
+             }
+             div.msg-content{
+                 padding:15px 20px;
+                 border-bottom: 1px solid #E5E5E5;
+                 display: none;
              }
          }
      }
@@ -709,7 +753,6 @@
 
      .list {
          margin-top: 20px;
-
          .list-progress {
              .label {
                  width: 45%;

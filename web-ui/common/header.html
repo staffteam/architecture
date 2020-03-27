@@ -39,29 +39,34 @@
     </ul>
 </div>
 <script>
-    var _html1 = "<div class='msg1'>";
-    _html1 += '<div class="list" ><a href="/lookingFor/myTask"><p><i class="iconfont" >&#xe617;</i></p><div><h2>你收到了4条新消息</h2><p>两天前</p></div></a></div>';
-    _html1 += '</div>';
     var _html2 = "<div class='msg2'>";
-    _html2 += '<div class="list" ><a href="/lookingFor/myTask"><div><h2>建筑结构设计项目名称建筑结构设计项目名称</h2><p><em>你收到了16条新消息</em><span>两天前</span></p></div></a></div>';
+    _html2 +=
+        '<div class="list on" ><div class="msg-desc"><h2><em>建筑结构设计项目名称建筑结构设计项目名称 <i>未读</i></em><span >展开<i class="layui-icon layui-icon-down" ></i></span></h2><p><em>亲爱的用户：平台将对部分功能进行维护，维护期间维护期间维护…</em><span>2020-02-02 15:15:15</span></p></div>' +
+        '<div class="msg-content">亲爱的用户： 即日起至18日期间，需要对站内内容进行调整升级，因此部分功能将受到影响，敬请谅解。 受影响功能如下： 1、这是一条内容这是一条内容； 2、这是一条内容这是一条内容这是一条内容； 3、这是一条内容； 4、这是一条内容这是一条内容。 站内其他功能不受影响，届时网站将恢复正常使用，感谢您的支持与理解。</div>' +
+        '</div>';
     _html2 += '</div>';
-    var _html3 = "<div class='msg3'>";
-    _html3 += '<div class="list" ><a href="/lookingFor/myTask"><div><h2><em>项目A</em><span class="close" >5小时后结束</span></h2><p>任务所需《嵌固端判定与数据表》上传后审核未通过，请在5小时内重新上传</p></div></a></div>';
-    _html3 += '</div>';
+
     function msgs() {
         layer.tab({
-            area: ['400px', '600px'],
+            area: ['800px', '600px'],
             tab: [{
-                title: '通知（5）',
-                content: _html1
-            }, {
                 title: '消息（3）',
                 content: _html2
-            }, {
-                title: '待办（2）',
-                content: _html3
             }],
-            btn: ['查看更多', '清空消息']
+            btn: ['清空消息'],
+            success: function (layero, index) {
+                $('.msg2 .list').click(function () {
+                    if ($(this).find('.msg-desc h2 span').hasClass('on')) {
+                        $(this).find('.msg-desc h2 span').removeClass('on');
+                        $(this).find('.msg-content').slideUp(300);
+                    } else {
+                        $(this).find('.msg-desc h2 span').addClass('on');
+                        $(this).find('.msg-content').slideDown(300);
+                        $(this).find('.msg-desc h2 em i').html('已读');
+                        $(this).removeClass('on');
+                    }
+                })
+            }
         });
     }
 </script>

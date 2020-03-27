@@ -571,20 +571,53 @@ a.white:hover {
   margin-top: 5px;
 }
 .layui-layer-content .msg2 .list {
-  padding: 15px 30px;
   overflow: hidden;
-  height: 70px;
+}
+.layui-layer-content .msg2 .list.on div.msg-desc h2 em i {
+  color: #489DFC;
+}
+.layui-layer-content .msg2 .list div.msg-desc {
+  padding: 15px 30px;
   border-bottom: 1px solid #E5E5E5;
 }
-.layui-layer-content .msg2 .list div h2 {
+.layui-layer-content .msg2 .list div.msg-desc h2 {
+  height: 20px;
+}
+.layui-layer-content .msg2 .list div.msg-desc h2 em {
   font-size: 14px;
   color: #666666;
   line-height: 20px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  font-style: normal;
+  width: 90%;
+  float: left;
+  display: block;
 }
-.layui-layer-content .msg2 .list div p {
+.layui-layer-content .msg2 .list div.msg-desc h2 em i {
+  font-style: normal;
+  font-size: 14px;
+  color: #999999;
+}
+.layui-layer-content .msg2 .list div.msg-desc h2 span {
+  float: right;
+  font-size: 14px;
+  color: #666666;
+  line-height: 20px;
+  cursor: pointer;
+}
+.layui-layer-content .msg2 .list div.msg-desc h2 span.on i {
+  transform: rotate(180deg);
+}
+.layui-layer-content .msg2 .list div.msg-desc h2 span i {
+  font-size: 13px;
+  margin-left: 5px;
+  transition: 0.3s transform;
+  display: block;
+  float: right;
+}
+.layui-layer-content .msg2 .list div.msg-desc p {
   margin-top: 8px;
   font-size: 12px;
   color: #999999;
@@ -593,11 +626,16 @@ a.white:hover {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-.layui-layer-content .msg2 .list div p em {
+.layui-layer-content .msg2 .list div.msg-desc p em {
   font-style: normal;
 }
-.layui-layer-content .msg2 .list div p span {
+.layui-layer-content .msg2 .list div.msg-desc p span {
   float: right;
+}
+.layui-layer-content .msg2 .list div.msg-content {
+  padding: 15px 20px;
+  border-bottom: 1px solid #E5E5E5;
+  display: none;
 }
 .layui-layer-content .msg3 .list {
   padding: 15px 30px;
