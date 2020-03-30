@@ -2,7 +2,7 @@ let route = [{
     title: '首页',
     route: '/',
     page: '/Home/index.html'
-},{
+}, {
     title: '首页',
     route: '/Home',
     page: '/Home/index.html'
@@ -190,5 +190,9 @@ let route = [{
     title: '关注人才',
     route: '/FocusTalent',
     page: '/FocusTalent/index.html'
+}, {
+    title: '审核人',
+    route: '/Auditor',
+    page: '/Auditor/Auditor.html'
 }];
 module.exports = route;

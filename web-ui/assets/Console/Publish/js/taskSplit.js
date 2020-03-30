@@ -1,7 +1,7 @@
 ﻿$(function () {
     table.render({
         elem: '#table1',
-        height: 578,
+        height: 467,
         url: '/Assets/console/lookingFor/js/test.json' //数据接口
         ,
         page: true //开启分页

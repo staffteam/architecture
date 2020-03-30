@@ -26,18 +26,24 @@
                         </div>
                         <div class="list">
                             <script type="text/html" id="table1Bar">
-                                <a class="layui-btn layui-btn-xs" lay-event="look" title="编辑"><i
-                                        class="layui-icon layui-icon-edit"></i></a>
-                                <a class="layui-btn layui-btn-xs" lay-event="look" title="上移"><i
-                                        class="layui-icon layui-icon-up"></i> </a>
-                                <a class="layui-btn layui-btn-xs" lay-event="look" title="下移"><i
-                                        class="layui-icon layui-icon-down"></i> </a>
-                                <a class="layui-btn layui-btn-xs" lay-event="look" title="置顶"><i
-                                        class="layui-icon layui-icon-upload-circle"></i> </a>
-                                <a class="layui-btn layui-btn-xs" lay-event="look" title="置底"><i
-                                        class="layui-icon layui-icon-download-circle"></i> </a>
-                                <a class="layui-btn layui-btn-xs" lay-event="del" title="删除"><i
-                                        class="layui-icon layui-icon-delete"></i> </a>
+                                <a class="layui-btn layui-btn-xs" lay-event="look" title="编辑">
+                                    <i class="iconfont">&#xe791;</i>
+                                </a>
+                                <a class="layui-btn layui-btn-xs" lay-event="look" title="上移">
+                                    <i class="iconfont">&#xe690;</i>
+                                </a>
+                                <a class="layui-btn layui-btn-xs" lay-event="look" title="下移">
+                                    <i class="iconfont">&#xe605;</i>
+                                </a>
+                                <a class="layui-btn layui-btn-xs" lay-event="look" title="置顶">
+                                    <i class="iconfont">&#xe640;</i>
+                                </a>
+                                <a class="layui-btn layui-btn-xs" lay-event="look" title="置底">
+                                    <i class="iconfont">&#xe604;</i>
+                                </a>
+                                <a class="layui-btn layui-btn-xs" lay-event="del" title="删除">
+                                    <i class="iconfont">&#xe601;</i> 
+                                </a>
                             </script>
                             <table id="table1" lay-filter="table1"></table>
                         </div>
@@ -45,12 +51,35 @@
                             <a href="#"><i class="iconfont">&#xe74a;</i> 添加新的任务</a>
                         </div>
                     </div>
+                    <div class="footer-btn">
+                        <button class="layui-btn layui-btn-normal" onclick="goSplit()">保存</button>
+                        <button class="layui-btn layui-btn-primary" onclick="goSplit()">提交</button>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
 <style>
+    .split-yes{
+        float: left;
+        font-size: 14px;
+        line-height: 30px;
+        color: #999999;
+    }
+    .split-yes i{
+        color: #489DFC;
+        margin-right: 5px;
+        font-size: 20px;
+        float:left;
+        line-height: 30px;
+    }
+    .go-split{
+        padding: 20px 30px;
+    }
+    .footer-btn{
+        text-align: right;
+    }
     .task-add-form {
         padding: 20px;
     }
@@ -134,9 +163,27 @@
         </div>
     </form>
 </script>
+<script type="text/html" id="goSplit">
+    <div class="go-split">
+        <p style="line-height:1.5;font-size:14px;">1、用户理解并同意，商标圈仅为用户提供信息分享、传送及获取的平台，用户必须为自己注册帐号下的一切行为负责，包括用户所传送的任何内容以及由此产生的任何后果。用户应对商标圈及本服务中的内容自行加以判断，并承担因使用内容而引起的所有风险，包括因对内容的正确性、完整性或实用性的依赖而产生的风险商标圈无法且不会对因用户行为而导致的任何损失或损害承担责任。 如果用户发现任何人违反本协议约定或以其他不当的方式使用本服务，请立即向商标圈举报或投诉，商标圈将依本协议约定进行处理。 </p>
+        <p style="margin-top:30px;line-height:1.5;font-size:14px;">2、用户理解并同意，因业务发展需要，商标圈保留单方面对本服务的全部或部分服务内容变更、暂停、终止或撤销的权利，用户需承担此风险。</p>
+    </div>
+</script>
 <script>
     var file_name = "";
-
+    function goSplit() {
+        layer.open({
+            type: 1,
+            title: "拆分注意事项",
+            content: $('#goSplit').html(),
+            btn: ['同意'],
+            area: ['780px', '530px'],
+            skin: 'split-class',
+            success: function () {
+               $('.split-class .layui-layer-btn').append('<p class="split-yes"><i class="layui-icon layui-icon-ok-circle" ></i>已阅读注意事项</p>')
+            },
+        })
+    }
     function taskAdd() {
         var upload = layui.upload;
         layer.open({

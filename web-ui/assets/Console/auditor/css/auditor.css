@@ -1,0 +1,129 @@
+.main .layui-table-cell .layui-btn.nottg {
+  color: #F9B721 !important;
+}
+.white-class.layui-layer-tips .layui-layer-content span {
+  color: #FD6055;
+  font-size: 14px;
+}
+.white-class.layui-layer-tips .layui-layer-content {
+  background-color: white !important;
+  color: #333333;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  font-size: 14px;
+}
+.white-class.layui-layer-tips .layui-layer-content i {
+  border-bottom-color: white !important;
+}
+.main .layui-table-cell .layui-btn.tg {
+  color: #3ABC8F !important;
+}
+.auditor-class .layui-layer-btn1 {
+  background-color: rgba(253, 96, 85, 0.2);
+  color: #FD6055;
+}
+.auditor-win {
+  padding: 20px 30px;
+}
+.auditor-win div.t {
+  overflow: hidden;
+}
+.auditor-win div.t .l {
+  width: 50%;
+  float: left;
+}
+.auditor-win div.t .l h2 {
+  font-size: 16px;
+  font-weight: 500;
+  color: #666666;
+  line-height: 16px;
+}
+.auditor-win div.t .l h2 i {
+  font-size: 16px;
+  color: #489DFC;
+  margin-right: 10px;
+}
+.auditor-win div.t .l div {
+  margin-top: 15px;
+}
+.auditor-win div.t .l div p {
+  font-size: 14px;
+}
+.auditor-win div.t .l div p a {
+  color: #489DFC;
+  margin-left: 5px;
+}
+.auditor-win div.t .r {
+  width: 50%;
+  float: right;
+}
+.auditor-win div.t .r h2 {
+  font-size: 16px;
+  font-weight: 500;
+  color: #666666;
+  line-height: 16px;
+}
+.auditor-win div.t .r h2 i {
+  font-size: 16px;
+  color: #489DFC;
+  margin-right: 10px;
+}
+.auditor-win div.t .r div {
+  margin-top: 15px;
+}
+.auditor-win div.t .r div p {
+  font-size: 14px;
+}
+.auditor-win div.b {
+  margin-top: 40px;
+}
+.auditor-win div.b h2 {
+  font-size: 16px;
+  font-weight: 500;
+  color: #666666;
+  line-height: 16px;
+}
+.auditor-win div.b h2 i {
+  font-size: 16px;
+  color: #489DFC;
+  margin-right: 10px;
+}
+.auditor-win div {
+  margin-top: 15px;
+}
+.auditor-win div textarea {
+  width: 100%;
+  height: 234px;
+  background: #f7f7f7;
+  border-radius: 1px;
+  border: 1px solid #e5e5e5;
+  font-size: 14px;
+  padding: 10px;
+}
+.split-yes {
+  float: left;
+  font-size: 14px;
+  line-height: 30px;
+  color: #999999;
+}
+.split-yes i {
+  color: #489DFC;
+  margin-right: 5px;
+  font-size: 20px;
+  float: left;
+  line-height: 30px;
+}
+.go-split {
+  padding: 20px 30px;
+}
+.footer-btn {
+  text-align: right;
+  padding-bottom: 20px;
+}
+.split-class .layui-layer-title {
+  text-align: center;
+  color: #FD6055;
+}
+.split-class .layui-layer-title i {
+  font-size: 14px;
+  margin-right: 5px;
+}

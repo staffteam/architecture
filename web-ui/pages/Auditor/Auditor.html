@@ -1,0 +1,265 @@
+<link rel="stylesheet" href="/assets/Console/lookingFor/css/lookingFor.css" />
+<div class="breadcrumb">
+    <span class="layui-breadcrumb">
+        <a href="/Home">首页</a>
+        <a><cite>审核人</cite></a>
+    </span>
+</div>
+<div class="content" id="content">
+    <div class="container">
+        <div class="apply-details">
+            <div class="layui-card" style="margin-bottom: 0px;">
+                <div class="layui-card-header">我的任务栏 </div>
+                <div class="layui-card-body" style="padding-bottom:0px;">
+                    <div class="apply-info">
+                        <div class="title">
+                            <h2>世茂五里河超高层住宅</h2>
+                            <span>项目进行中</span>
+                        </div>
+                        <div class="hint">
+                            <i class="layui-icon layui-icon-about"></i>
+                            提醒：今日还有成果表未提交！距离最后提交时间还剩
+                            <span>5</span>
+                            小时
+                        </div>
+                        <div class="form layui-form" id="myTaskform">
+                            <div class="l mytaskl">
+                                <div class="layui-btn-group">
+                                    <button type="button" data-id="0" class="layui-btn">初步设计阶段</button>
+                                    <button type="button" data-id="1" class="layui-btn layui-btn-white">
+                                        施工图阶段
+                                    </button>
+                                </div>
+                                <div class="rbtn">
+                                    <button class="layui-btn layui-btn-normal">显示我的任务</button>
+                                </div>
+                            </div>
+                            <div class="r">
+                                <div class="link">
+                                    <p><a href="/PublishProject/projectLinkUp"><i
+                                                class="layui-icon layui-icon-dialogue"></i>项目沟通</a></p>
+                                    <p><a href="javascript:"><i class="layui-icon layui-icon-user"></i>项目成员</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="apply-list">
+                        <table id="applyList" lay-filter="applyList"></table>
+                    </div>
+                </div>
+            </div>
+            <div class="layui-card">
+                <div class="layui-card-header">公共成果附件 </div>
+                <div class="layui-card-body">
+                    <div class="mytask-file">
+                        <ul>
+                            <li><a href="javascript:">建筑条件消化确认表（一）.docx</a></li>
+                            <li><a href="javascript:">建筑条件消化确认表（一）.docx</a></li>
+                            <li><a href="javascript:">建筑条件消化确认表（一）.docx</a></li>
+                            <li><a href="javascript:">建筑条件消化确认表（一）.docx</a></li>
+                            <li><a href="javascript:">建筑条件消化确认表（一）.docx</a></li>
+                            <li><a href="javascript:">建筑条件消化确认表（一）.docx</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-btn">
+                    <button class="layui-btn layui-btn-normal" onclick="goSplit()">重新拆分</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/html" id="excelTp">
+    {{d.excel}}
+    <a download="{{d.excel}}.xls" href="/Assets/Web/public/建筑条件消化确认表.xls" class="layui-btn layui-btn-xs">下载</a>
+</script>
+<script type="text/html" id="isUpTp">
+    {{#  if(d.type==1){ }}
+    <p class="layui-btn layui-btn-xs notup" onclick="goAuditor('{{d.excel}}',17512840813)">
+        未审核
+    </p>
+    {{#  } }}
+    {{#  if(d.type==2){ }}
+    <p class="layui-btn layui-btn-warm nottg" lay-tips="{{d.desc}}">
+        审核未通过
+    </p>
+    {{#  } }}
+    {{#  if(d.type==3){ }}
+    <p class="layui-btn layui-btn-xs tg">
+        审核通过
+    </p>
+    {{#  } }}
+</script>
+<script type="text/html" id="auditorWin">
+    <div class="auditor-win">
+        <div class="t">
+            <div class="l">
+                <h2><i class="iconfont">&#xe60f;</i>成果附件：</h2>
+                <div>
+                </div>
+            </div>
+            <div class="r">
+                <h2><i class="layui-icon layui-icon-cellphone"></i>联系方式：</h2>
+                <div>
+                </div>
+            </div>
+        </div>
+        <div class="b">
+            <h2><i class="iconfont">&#xe78a;</i>未通过原因：</h2>
+            <div>
+                <textarea name="" id="" cols="30" rows="10" placeholder="若成果不通过，请填写未通过理由"></textarea>
+            </div>
+        </div>
+    </div>
+</script>
+<script type="text/html" id="goSplit">
+    <div class="go-split">
+        <p style="line-height:1.5;font-size:14px;">1、用户理解并同意，商标圈仅为用户提供信息分享、传送及获取的平台，用户必须为自己注册帐号下的一切行为负责，包括用户所传送的任何内容以及由此产生的任何后果。用户应对商标圈及本服务中的内容自行加以判断，并承担因使用内容而引起的所有风险，包括因对内容的正确性、完整性或实用性的依赖而产生的风险商标圈无法且不会对因用户行为而导致的任何损失或损害承担责任。 如果用户发现任何人违反本协议约定或以其他不当的方式使用本服务，请立即向商标圈举报或投诉，商标圈将依本协议约定进行处理。 </p>
+        <p style="margin-top:30px;line-height:1.5;font-size:14px;">2、用户理解并同意，因业务发展需要，商标圈保留单方面对本服务的全部或部分服务内容变更、暂停、终止或撤销的权利，用户需承担此风险。</p>
+    </div>
+</script>
+<script>
+    let file_name = "",
+        auditorWin = {};
+
+    function goSplit() {
+        layer.open({
+            type: 1,
+            title: "<span><i class='layui-icon layui-icon-tips' ></i>重新拆分提醒</span>",
+            content: $('#goSplit').html(),
+            btn: ['同意'],
+            area: ['780px', '530px'],
+            skin: 'split-class',
+            success: function () {
+                $('.split-class .layui-layer-btn').append(
+                    '<p class="split-yes"><i class="layui-icon layui-icon-ok-circle" ></i>已阅读注意事项</p>')
+            },
+        })
+    }
+
+    function goAuditor(excel, phone) {
+        auditorWin = layer.open({
+            type: 1,
+            title: "成果审核",
+            content: $('#auditorWin').html(),
+            btn: ['通过', '不通过'],
+            area: ['780px', '530px'],
+            skin: 'auditor-class',
+            success: function () {
+                $('.auditor-win .t .l div').append('<p>' + excel + '<a download="' + excel +
+                    '.xls" href="/Assets/Web/public/建筑条件消化确认表.xls">下载</a></p>'
+                );
+                $('.auditor-win .t .r div').append('<p>专业负责人：' + phone + '</p>');
+            },
+            btn1: function () {
+                layer.confirm('提交附件是否为最终成果', {
+                    icon: 0,
+                    title: '询问',
+                    btn: ['是', '否']
+                }, function () {
+                    layer.closeAll();
+                    alert('嬲虽');
+                }, function () {
+                    layer.closeAll();
+                    alert('不嬲虽');
+                });
+            },
+            btn2: function () {
+                if ($('.auditor-win .b textarea').val() == "") {
+                    $msg({
+                        content: '请输入不通过的原因',
+                        icon: 0
+                    });
+                    return false;
+                }
+            }
+        })
+    }
+    $(function () {
+        var element = layui.element;
+        table.render({
+            elem: '#applyList',
+            height: 400,
+            url: '/assets/console/lookingFor/js/auditor.json' //数据接口
+                ,
+            page: true //开启分页
+                ,
+            cols: [
+                [ //表头
+                    {
+                        type: 'checkbox'
+                    },
+                    {
+                        field: 'id',
+                        title: 'ID'
+                    }, {
+                        field: 'startTime',
+                        title: '开始时间'
+                    }, {
+                        field: 'endTime',
+                        title: '截止时间'
+                    }, {
+                        field: 'content',
+                        title: '设计内容'
+                    }, {
+                        field: 'jdr',
+                        title: '接单人',
+                    } //minWidth：局部定义当前单元格的最小宽度，layui 2.2.1 新增
+                    , {
+                        field: 'excel',
+                        title: '格式图表样板',
+                        templet: '#excelTp'
+                    }, {
+                        field: 'endExcel',
+                        title: '成果表'
+                    }, {
+                        field: 'isUp',
+                        title: '成果提交',
+                        templet: '#isUpTp'
+                    }, {
+                        field: 'file',
+                        title: '指引类资料'
+                    }, {
+                        field: 'shr',
+                        title: '特殊接单人'
+                    }, {
+                        field: 'shr',
+                        title: '把控人'
+                    }, {
+                        field: 'shr',
+                        title: '费用分配'
+                    }
+                ]
+            ],
+            done: function () {
+                $('.layui-btn.layui-btn-warm.nottg').hover(function () {
+                    _layer = layer.tips('原因<br/><span>' + $(this)[0].getAttribute(
+                        'lay-tips') + '</span>', this, {
+                        tips: [3, '#ffffff'],
+                        time: 0,
+                        skin: 'white-class'
+                    });
+                }, function () {
+                    // layui.layer.close(_layer);
+                })
+                $('p.notup').each(function () {
+                    $(this).closest('tr').addClass('not-up-tr');
+                })
+
+                $('#downWord').click(function () {
+                    $('#down span').click();
+                })
+            }
+        });
+        // 选择类别
+        $('#myTaskform .l button').click(function () {
+            if ($(this)[0].getAttribute('data-id') == 0) {
+                //初步设计阶段
+            } else {
+                //施工图阶段
+            }
+            $(this).removeClass('layui-btn-white').siblings().addClass('layui-btn-white');
+        })
+    })
+</script>
+<link rel="stylesheet" href="/assets/Console/auditor/css/auditor.css" />
