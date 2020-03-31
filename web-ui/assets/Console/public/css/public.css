@@ -713,3 +713,6 @@ a.white:hover {
   width: 55%;
   float: right;
 }
+.layui-btn.layui-btn-success {
+  background-color: #00ba9b;
+}

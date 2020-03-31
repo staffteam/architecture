@@ -194,5 +194,9 @@ let route = [{
     title: '审核人',
     route: '/Auditor',
     page: '/Auditor/Auditor.html'
+}, {
+    title: '项目绑定',
+    route: '/ProjectBinding',
+    page: '/ProjectBinding/ProjectBinding.html'
 }];
 module.exports = route;

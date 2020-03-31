@@ -1,0 +1,84 @@
+<link rel="stylesheet" href="/assets/Console/identity/css/identity.css" />
+<link rel="stylesheet" href="/assets/Console/publish/css/publish.css" />
+<link rel="stylesheet" href="/assets/Console/publish/css/submitInfo.css" />
+<div class="breadcrumb">
+    <span class="layui-breadcrumb">
+        <a href="/Home">首页</a>
+        <a><cite>绑定项目</cite></a>
+    </span>
+</div>
+<div class="content" id="content">
+    <div class="container">
+        <div class="identity">
+            <div class="layui-card">
+                <div class="layui-card-header">绑定项目</div>
+                <div class="layui-card-body" style="min-height:80vh;">
+                    <div class="layui-form identity-form" id="identityApply" style="margin-top:30px;">
+                        <div class="layui-form-item">
+                            <div class="layui-inline">
+                                <label class="layui-form-label">项目合同编号</label>
+                                <div class="layui-input-inline">
+                                    <input type="text" placeholder="项目合同编号" autocomplete="off" class="layui-input">
+                                </div>
+                            </div>
+                            <div class="layui-inline">
+                                <div class="layui-input-inline">
+                                    <button class="layui-btn recruit-btn">搜索</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table-project">
+                            <table id="tableProject" lay-filter="tableProject"></table>
+                        </div>
+                        <div class="footer-btn">
+                            <button class="layui-btn layui-btn-normal" onclick="binds(this)">立即绑定</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<style>
+     .main .layui-table th{
+         font-weight: 600;
+     }
+    .main .layui-table td {
+        background-color: #f5f5f5;
+    }
+    .footer-btn{
+        margin-top: 20px;
+    }
+</style>
+<script>
+    function binds(obj) {
+        $(obj).html('绑定成功').addClass('layui-btn-success');
+    }
+    let tableData = [{
+        id: 1
+    }];
+    var tableIns = {};
+    $(function () {
+        tableIns = table.render({
+            elem: '#tableProject',
+            data: tableData,
+            cols: [
+                [ //表头
+                    {
+                        field: 'id',
+                        title: '项目名称',
+                        align: 'center'
+                    }, {
+                        field: 'id',
+                        title: '项目编号',
+                        align: 'center'
+                    }, {
+                        field: 'id',
+                        title: '合同编号',
+                        align: 'center'
+                    }
+                ]
+            ],
+        });
+    })
+</script>

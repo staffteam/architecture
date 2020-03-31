@@ -85,7 +85,7 @@ function zmClick(obj) {
     var _is = $('#fzrList').css('display') != 'none' && $('#shrList').css('display') != 'none';
     if (_is) {
         if (!$(obj).hasClass('success')) {
-            $(obj).html('绑定中').addClass('on');
+            $(obj).html('招募中').addClass('on');
             setTimeout(function () {
                 $(obj).html('招募成功').addClass('success').removeClass('on');
                 $('#zmList').show();
