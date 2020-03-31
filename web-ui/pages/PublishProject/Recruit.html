@@ -112,7 +112,7 @@
                     </div>
                 </div>
             </div>
-            <div class="layui-card recruit-step-two" style="display:none;">
+            <div class="layui-card recruit-step-two">
                 <div class="layui-card-header">四方主体确认</div>
                 <div class="layui-card-body">
                     <div class="recreit-two-list">
@@ -135,7 +135,7 @@
                                 <p><i class="iconfont not">&#xe685;</i><span>项目细节未确定</span></p>
                                 <div>
                                     <a href="/lookingFor/myTask">查看任务详情</a>
-                                    <a href="#">查看方案报告</a>
+                                    <button class="layui-btn" id="upFile" >提交方案</button>
                                     <button class="layui-btn" onclick="recruitTwoAffirm(this)">提交确认</button>
                                 </div>
                             </li>
@@ -150,3 +150,47 @@
 </div>
 <script src="/assets/Console/common/provinces/provincesPlus.js"></script>
 <script src="/assets/Console/Publish/js/recruit.js"></script>
+<script>
+    let file_name = "";
+    $(function () {
+        var upload = layui.upload;
+        //普通图片上传
+        var uploadInst = upload.render({
+            elem: '#upFile',
+            url: 'http://localhost:8083/api/image',
+            progress: function (n, elem) {
+                upWin.percent(file_name, n);
+                console.log(elem); //得到当前触发的元素 DOM 对象。可通过该元素定义的属性值匹配到对应的进度条。
+            },
+            before: function (obj) {
+                //预读本地文件示例，不支持ie8
+                obj.preview(function (index, file, result) {
+                    upWin.init(function () {
+                        file_name = file.name;
+                        upWin.start(file.name);
+                    });
+                });
+            },
+            done: function (res) {
+                //如果上传失败
+                if (res.code > 0) {
+                    return $msg({
+                        content: '上传失败',
+                        icon: 0
+                    });
+                }
+                return $msg({
+                    content: '成功',
+                    icon: 1
+                });
+                //上传成功
+            },
+            error: function () {
+                $msg({
+                    content: '上传失败',
+                    icon: 0
+                });
+            }
+        });
+    });
+</script>

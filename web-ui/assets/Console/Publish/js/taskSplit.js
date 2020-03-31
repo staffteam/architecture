@@ -115,6 +115,7 @@ $(function () {
             tableIns.reload({
                 data: tableData
             });
+            
         } else if (obj.event === 'collect') {
             location.href = location.protocol + '//' + location.host + "/PublishProject/History"
         }
