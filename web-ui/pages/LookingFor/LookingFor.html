@@ -35,7 +35,8 @@
                             </div>
                             <div class="btn">
                                 <button type="button" class="layui-btn">
-                                    <a href="/identity/identityEntrance" class="white"><i class="layui-icon layui-icon-username"></i> 身份认证</a>
+                                    <a href="/identity/identityEntrance" class="white"><i
+                                            class="layui-icon layui-icon-username"></i> 身份认证</a>
                                 </button>
                                 <button type="button" class="layui-btn">
                                     <i class="layui-icon layui-icon-list"></i> 完善资料
@@ -89,11 +90,13 @@
             <div class="b">
                 <div class="listContent">
                     <div class="list">
-                        <h2>项目报名</h2>
-                        <p>
-                            <img src="/assets/console/lookingFor/images/icon_look_list_1.jpg" alt="">
-                        </p>
-                        <span>适用于个人进行报名项目</span>
+                        <a href="/lookingFor/myProject">
+                            <h2>项目报名</h2>
+                            <p>
+                                <img src="/assets/console/lookingFor/images/icon_look_list_1.jpg" alt="">
+                            </p>
+                            <span>适用于个人进行报名项目</span>
+                        </a>
                         <div class="tip">
                             <h2>提醒：</h2>
                             <p>A建筑结构设计项目可报名！</p>
@@ -102,19 +105,20 @@
                         </div>
                         <div class="btn">
                             <a href="/lookingFor/lookingForList">
-                                <button type="button"
-                                        class="layui-btn layui-btn-fluid">
+                                <button type="button" class="layui-btn layui-btn-fluid">
                                     进入
                                 </button>
                             </a>
                         </div>
                     </div>
                     <div class="list">
-                        <h2>我参与的任务</h2>
-                        <p>
-                            <img src="/assets/console/lookingFor/images/icon_look_list_2.jpg" alt="">
-                        </p>
-                        <span>管理参与的任务，即时进行任务提交</span>
+                        <a href="/lookingFor/myProject">
+                            <h2>我参与的任务</h2>
+                            <p>
+                                <img src="/assets/console/lookingFor/images/icon_look_list_2.jpg" alt="">
+                            </p>
+                            <span>管理参与的任务，即时进行任务提交</span>
+                        </a>
                         <div class="tip">
                             <h2>提醒：</h2>
                             <p>A建筑结构设计项目中还有1个成果未提交！</p>
@@ -122,7 +126,8 @@
                             <p>C建筑结构设计项目中还有1个任务未提交！</p>
                         </div>
                         <div class="btn">
-                            <a href="/lookingFor/myProject"><button type="button" class="layui-btn layui-btn-fluid">进入</button></a>
+                            <a href="/lookingFor/myProject"><button type="button"
+                                    class="layui-btn layui-btn-fluid">进入</button></a>
                         </div>
                     </div>
                 </div>
@@ -133,7 +138,7 @@
 <script src="/assets/Console/lookingFor/js/lookingFor.js"></script>
 
 <script>
-    $(function(){
+    $(function () {
         $('.layui-nav.layui-nav-tree .layui-nav-item').eq(1).addClass('layui-this');
     })
 </script>

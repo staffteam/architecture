@@ -287,32 +287,34 @@
                     border: 2px solid @c;
                 }
 
-                &>h2 {
-                    font-size: 24px;
-                    color: @c;
-                    line-height: 33px;
-                    text-align: center;
-                }
-
-                &>p {
-                    width: 135px;
-                    height: 105px;
-                    margin: 30px auto 0 auto;
-
-                    img {
-                        width: 100%;
+                a{
+                    &>h2 {
+                        font-size: 24px;
+                        color: @c;
+                        line-height: 33px;
+                        text-align: center;
                     }
+    
+                    &>p {
+                        width: 135px;
+                        height: 105px;
+                        margin: 30px auto 0 auto;
+    
+                        img {
+                            width: 100%;
+                        }
+                    }
+    
+                    &>span {
+                        display: block;
+                        margin-top: 25px;
+                        text-align: center;
+                        color: rgba(153, 153, 153, 1);
+                        line-height: 20px;
+                        font-size: 14px;
+                    }
+    
                 }
-
-                &>span {
-                    display: block;
-                    margin-top: 25px;
-                    text-align: center;
-                    color: rgba(153, 153, 153, 1);
-                    line-height: 20px;
-                    font-size: 14px;
-                }
-
                 div.tip {
                     margin-top: 50px;
                     text-align: left;

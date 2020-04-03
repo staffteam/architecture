@@ -79,7 +79,8 @@
                         <div class="layui-card-header">人才库</div>
                         <div class="layui-card-body">
                             <div class="talentsContent">
-                                <p><a href="/TalentPool/TalentPoolList"><i class="layui-icon layui-icon-form"></i>寻找项目</a></p>
+                                <p><a href="/TalentPool/TalentPoolList"><i
+                                            class="layui-icon layui-icon-form"></i>寻找项目</a></p>
                                 <span>已有25万个人才加入！</span>
                             </div>
                         </div>
@@ -89,11 +90,13 @@
             <div class="b">
                 <div class="listContent">
                     <div class="list">
-                        <h2>我参与的项目</h2>
-                        <p>
-                            <img src="/assets/Console/lookingFor/images/icon_look_list_1.jpg" alt="">
-                        </p>
-                        <span>适用于个人进行报名项目</span>
+                        <a href="/lookingFor/myProject">
+                            <h2>我参与的项目</h2>
+                            <p>
+                                <img src="/assets/Console/lookingFor/images/icon_look_list_1.jpg" alt="">
+                            </p>
+                            <span>适用于个人进行报名项目</span>
+                        </a>
                         <div class="tip">
                             <h2>提醒：</h2>
                             <p>A建筑结构设计项目可报名！</p>
@@ -102,19 +105,20 @@
                         </div>
                         <div class="btn">
                             <a href="/lookingFor/myProject">
-                                <button type="button"
-                                        class="layui-btn layui-btn-fluid">
+                                <button type="button" class="layui-btn layui-btn-fluid">
                                     进入
                                 </button>
                             </a>
                         </div>
                     </div>
                     <div class="list">
-                        <h2>我发布的项目</h2>
-                        <p>
-                            <img src="/assets/Console/lookingFor/images/icon_look_list_2.jpg" alt="">
-                        </p>
-                        <span>管理参与的任务，即时进行任务提交</span>
+                        <a href="/lookingFor/myProject">
+                            <h2>我发布的项目</h2>
+                            <p>
+                                <img src="/assets/Console/lookingFor/images/icon_look_list_2.jpg" alt="">
+                            </p>
+                            <span>管理参与的任务，即时进行任务提交</span>
+                        </a>
                         <div class="tip">
                             <h2>提醒：</h2>
                             <p>A建筑结构设计项目中还有1个成果未提交！</p>
@@ -123,8 +127,7 @@
                         </div>
                         <div class="btn">
                             <a href="/lookingFor/myProject">
-                                <button type="button"
-                                        class="layui-btn layui-btn-fluid">
+                                <button type="button" class="layui-btn layui-btn-fluid">
                                     进入
                                 </button>
                             </a>
@@ -137,7 +140,7 @@
 </div>
 
 <script>
-    $(function(){
+    $(function () {
         $('.layui-nav.layui-nav-tree .layui-nav-item').eq(0).addClass('layui-this');
     })
 </script>

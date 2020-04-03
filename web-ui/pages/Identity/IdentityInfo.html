@@ -29,26 +29,26 @@
             <div class="layui-card">
                 <div class="layui-card-header">企业信息</div>
                 <div class="layui-card-body auto">
-                    <div class="layui-form identity-form" id="identityApply">
+                    <div class="layui-form identity-form form-get-code" id="identityApply">
                         <div class="layui-form-item">
                             <label class="layui-form-label">企业名称</label>
                             <div class="layui-input-inline">
                                 <input type="text" name="name" required verifys="required" tips="企业名称"
-                                       placeholder="企业名称" autocomplete="off" class="layui-input">
+                                    placeholder="企业名称" autocomplete="off" class="layui-input">
                             </div>
                         </div>
                         <div class="layui-form-item">
                             <label class="layui-form-label">所在地区</label>
                             <div class="layui-input-inline">
                                 <input type="text" name="site" required verifys="required" tips="所在地区"
-                                       placeholder="所在地区" autocomplete="off" class="layui-input">
+                                    placeholder="所在地区" autocomplete="off" class="layui-input">
                             </div>
                         </div>
                         <div class="layui-form-item">
                             <label class="layui-form-label">详细地址</label>
                             <div class="layui-input-inline">
                                 <input type="text" name="sitedetails" required verifys="required" tips="详细地址"
-                                       placeholder="详细地址" autocomplete="off" class="layui-input">
+                                    placeholder="详细地址" autocomplete="off" class="layui-input">
                             </div>
                         </div>
                         <div class="layui-form-item">
@@ -68,29 +68,41 @@
                         <div class="layui-card" style="margin-bottom: 50px;">
                             <div class="layui-card-header">联系信息</div>
                         </div>
-                        <div class="layui-form-item">
+                        <div class="layui-form-item item-phone">
                             <label class="layui-form-label">联系人手机</label>
+
                             <div class="layui-input-inline">
                                 <input type="text" name="phone" required verifys="required&&phone" tips="联系人手机"
-                                       placeholder="联系人手机" autocomplete="off" class="layui-input">
+                                    placeholder="联系人手机" autocomplete="off" class="layui-input">
+
                             </div>
                         </div>
-                        <div class="layui-form-item">
-                            <label class="layui-form-label">联系人邮箱</label>
+                        <div class="layui-form-item get-code">
+                            <label class="layui-form-label" style="width: 100px;">验 证 码</label>
                             <div class="layui-input-inline">
-                                <input type="text" name="email" required verifys="required&&email" tips="联系人邮箱"
-                                       placeholder="联系人邮箱" autocomplete="off" class="layui-input">
+                                <input type="text" name="code" verifys="required" tips="验证码" placeholder="请输入验证码"
+                                    autocomplete="off" class="layui-input">
+                                <span id="getCode">获取短验证码</span>
                             </div>
                         </div>
-                        <div class="layui-form-item">
-                            <div class="layui-input-block">
-                                <button class="layui-btn" lay-submit lay-filter="identityApply">提交认证申请</button>
-                            </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">联系人邮箱</label>
+                        <div class="layui-input-inline">
+                            <input type="text" name="email" required verifys="required&&email" tips="联系人邮箱"
+                                placeholder="联系人邮箱" autocomplete="off" class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-form-item" style="margin-top: 30px;">
+                        <label class="layui-form-label" style="width:100px;"></label>
+                        <div class="layui-input-inline">
+                            <button class="layui-btn" lay-submit lay-filter="identityApply">提交认证申请</button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+</div>
 </div>
 <script src="/assets/Console/identity/js/identity.js"></script>

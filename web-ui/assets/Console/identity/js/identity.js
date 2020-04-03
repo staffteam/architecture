@@ -39,3 +39,22 @@ $(function () {
         }
     });
 })
+
+$('#getCode').click(function () {
+    $('#identityApply input[name="phone"]').blur();
+    if ($('.item-phone .verify-tips').length == 0) {
+        $(this).html('60s后重新获取');
+        var _this = this;
+        var _i = 60;
+        var _set = setInterval(function () {
+            if (_i == 1) {
+                clearInterval(_set);
+                $(_this).html('重新获取验证码');
+            } else {
+                _i--;
+                $(_this).html(_i + 's后重新获取');
+            }
+        }, 1000)
+
+    }
+})

@@ -65,6 +65,31 @@ body {
   text-align: center;
   font-size: 15px;
 }
+.home-user {
+  text-align: center;
+  margin-top: 30px;
+}
+.home-user > div {
+  display: inline-block;
+}
+.home-user > div h2 {
+  display: inline-block;
+  font-size: 16px;
+  line-height: 40px;
+  vertical-align: middle;
+}
+.home-user > div p {
+  display: inline-block;
+  vertical-align: middle;
+  width: 120px;
+  height: 40px;
+  margin-left: 15px;
+}
+.home-user > div span {
+  margin-left: 5px;
+  vertical-align: middle;
+  cursor: pointer;
+}
 .home-list {
   margin-top: 50px;
   text-align: center;
@@ -75,13 +100,17 @@ body {
   color: #1b73e8;
   line-height: 22px;
   margin: 0 50px;
-  padding: 10px;
+  padding: 10px 20px;
+  border-radius: 20px;
+  transition: 0.3s all;
 }
 .home-list a:hover {
-  background-color: #F6FAFE;
+  background-color: #1b73e8;
+  color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 .home-list a i {
-  margin-right: 10px;
+  margin-right: 5px;
 }
 .layout-list1 {
   overflow: hidden;
@@ -269,7 +298,7 @@ body {
 }
 .dot-area .dot.active:after,
 .dot-area .dot.active:before {
-  opacity: .3;
+  opacity: 0.3;
   border: 1px solid #489DFC;
   -webkit-animation: scaleForEver2 3s linear infinite;
   -moz-animation: scaleForEver2 3s linear infinite;
@@ -482,7 +511,7 @@ body {
 }
 @-webkit-keyframes opacity {
   from {
-    opacity: .6;
+    opacity: 0.6;
     filter: alpha(opacity=60);
     -webkit-transform: scale(1, 1);
     -moz-transform: scale(1, 1);
@@ -498,7 +527,7 @@ body {
     transform: scale(0.8);
   }
   to {
-    opacity: .6;
+    opacity: 0.6;
     filter: alpha(opacity=60);
     -webkit-transform: scale(1, 1);
     -moz-transform: scale(1, 1);
@@ -510,12 +539,12 @@ body {
   0% {
     transform: scale(0.6);
     -webkit-transform: scale(0.6);
-    opacity: .9;
+    opacity: 0.9;
   }
   70% {
     transform: scale(1.5);
     -webkit-transform: scale(1.5);
-    opacity: .2;
+    opacity: 0.2;
   }
   100% {
     transform: scale(1.8);
@@ -527,12 +556,12 @@ body {
   0% {
     transform: scale(0.6);
     -webkit-transform: scale(0.6);
-    opacity: .9;
+    opacity: 0.9;
   }
   70% {
     transform: scale(1.5);
     -webkit-transform: scale(1.5);
-    opacity: .2;
+    opacity: 0.2;
   }
   100% {
     transform: scale(1.8);

@@ -77,7 +77,31 @@ body {
         font-size: 15px;
     }
 }
-
+.home-user{
+    text-align: center;
+    margin-top: 30px;
+    &>div{
+        display: inline-block;
+        h2{
+            display: inline-block;
+            font-size: 16px;
+            line-height: 40px;
+            vertical-align: middle;
+        }
+        p{
+            display: inline-block;
+            vertical-align: middle;
+            width: 120px;
+            height: 40px;
+            margin-left: 15px;
+        }
+        span{
+            margin-left: 5px;
+            vertical-align: middle;
+            cursor: pointer;
+        }
+    }
+}
 .home-list {
     margin-top: 50px;
     text-align: center;
@@ -88,14 +112,17 @@ body {
         color: rgba(27, 115, 232, 1);
         line-height: 22px;
         margin: 0 50px;
-        padding: 10px;
-
+        padding: 10px 20px;
+        border-radius: 20px;
+        transition: 0.3s all;
         &:hover {
-            background-color: #F6FAFE;
+            background-color: rgba(27, 115, 232, 1);
+            color: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
         }
 
         i {
-            margin-right: 10px;
+            margin-right: 5px;
         }
     }
 }

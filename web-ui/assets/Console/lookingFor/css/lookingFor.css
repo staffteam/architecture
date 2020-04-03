@@ -236,21 +236,21 @@
 .looking-for div.b div.listContent div.list:hover {
   border: 2px solid #489DFC;
 }
-.looking-for div.b div.listContent div.list > h2 {
+.looking-for div.b div.listContent div.list a > h2 {
   font-size: 24px;
   color: #489DFC;
   line-height: 33px;
   text-align: center;
 }
-.looking-for div.b div.listContent div.list > p {
+.looking-for div.b div.listContent div.list a > p {
   width: 135px;
   height: 105px;
   margin: 30px auto 0 auto;
 }
-.looking-for div.b div.listContent div.list > p img {
+.looking-for div.b div.listContent div.list a > p img {
   width: 100%;
 }
-.looking-for div.b div.listContent div.list > span {
+.looking-for div.b div.listContent div.list a > span {
   display: block;
   margin-top: 25px;
   text-align: center;
