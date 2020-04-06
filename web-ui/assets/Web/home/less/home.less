@@ -82,6 +82,30 @@ body {
     margin-top: 30px;
     &>div{
         display: inline-block;
+        position: relative;
+        .user-down{
+            position: absolute;
+            width: 100px;
+            right: -50px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+            background-color: white;
+            height: 0;
+            top: 100%;
+            overflow: hidden;
+            transition: 0.3s height;
+            &:hover{
+                height: 60px;
+            }
+            a{
+                display: block;
+                line-height: 30px;
+                height: 30px;
+                font-size: 14px;
+                &:hover{
+                    color: @c;
+                }
+            }
+        }
         h2{
             display: inline-block;
             font-size: 16px;
@@ -99,6 +123,12 @@ body {
             margin-left: 5px;
             vertical-align: middle;
             cursor: pointer;
+            height: 40px;
+            line-height: 40px;
+            display: inline-block;
+            &:hover+div{
+                height: 60px;
+            }
         }
     }
 }

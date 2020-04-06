@@ -71,6 +71,30 @@ body {
 }
 .home-user > div {
   display: inline-block;
+  position: relative;
+}
+.home-user > div .user-down {
+  position: absolute;
+  width: 100px;
+  right: -50px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  background-color: white;
+  height: 0;
+  top: 100%;
+  overflow: hidden;
+  transition: 0.3s height;
+}
+.home-user > div .user-down:hover {
+  height: 60px;
+}
+.home-user > div .user-down a {
+  display: block;
+  line-height: 30px;
+  height: 30px;
+  font-size: 14px;
+}
+.home-user > div .user-down a:hover {
+  color: #489DFC;
 }
 .home-user > div h2 {
   display: inline-block;
@@ -89,6 +113,12 @@ body {
   margin-left: 5px;
   vertical-align: middle;
   cursor: pointer;
+  height: 40px;
+  line-height: 40px;
+  display: inline-block;
+}
+.home-user > div span:hover + div {
+  height: 60px;
 }
 .home-list {
   margin-top: 50px;
