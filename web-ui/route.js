@@ -198,5 +198,9 @@ let route = [{
     title: '项目绑定',
     route: '/ProjectBinding',
     page: '/ProjectBinding/ProjectBinding.html'
+}, {
+    title: '我的积分',
+    route: '/Integral',
+    page: '/Integral/Integral.html'
 }];
 module.exports = route;

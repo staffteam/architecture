@@ -1,0 +1,278 @@
+<link rel="stylesheet" href="/assets/Console/lookingFor/css/lookingFor.css" />
+<link rel="stylesheet" href="/assets/Console/integral/css/integral.css" />
+<script src="/assets/Console/integral/js/vue.js"></script>
+<!-- 引入样式 -->
+<link rel="stylesheet" href="/assets/Console/integral/css/index.css">
+<!-- 引入组件库 -->
+<script src="/assets/Console/integral/js/index.js"></script>
+<div class="breadcrumb">
+    <span class="layui-breadcrumb">
+        <a href="/Home">首页</a>
+        <a href="/lookingFor/lookingFor">寻找项目</a>
+        <a><cite>项目报名</cite></a>
+    </span>
+</div>
+<div class="content" id="content">
+    <div class="container">
+        <div class="looking-for-list">
+            <div class="t">
+                <div class="layui-card">
+                    <div class="layui-card-header">个人信息</div>
+                    <div class="layui-card-body">
+                        <div class="l">
+                            <a href="javascript:">
+                                <p>
+                                    <img src="/assets/console/public/images/top.png" alt="">
+                                </p>
+                            </a>
+                        </div>
+                        <div class="r">
+                            <h2>早安，欢迎来到工作台，祝你开心每一天！</h2>
+                            <div class="usermsg">
+                                <div class="username">
+                                    <h2>刘小姐</h2>
+                                    <p><span>111</span></p>
+                                </div>
+                                <div class="grade">
+                                    岗位等级
+                                    <a href="javascript:">设计师助理</a>
+                                </div>
+                                <div class="grade">
+                                    联系方式
+                                    <a href="javascript:">15073231615</a>
+                                </div>
+                            </div>
+                            <div class="btn">
+                                <button type="button" class="layui-btn">
+                                    <a href="/identity/identityEntrance" class="white"><i
+                                            class="layui-icon layui-icon-username"></i> 身份认证</a>
+                                </button>
+                                <button type="button" class="layui-btn">
+                                    <i class="layui-icon layui-icon-list"></i> 完善资料
+                                </button>
+                            </div>
+                        </div>
+                        <div class="num">
+                            <a href="javascript:">
+                                <span>项目数</span>
+                                <h2>15</h2>
+                            </a>
+                            <a href="javascript:">
+                                <span>发布项目</span>
+                                <h2>15</h2>
+                            </a>
+                            <a href="/Collect">
+                                <span>收藏项目</span>
+                                <h2>15</h2>
+                            </a>
+                            <a href="/FocusTalent">
+                                <span>关注人才</span>
+                                <h2>15</h2>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="b integral-main">
+                <div class="layui-card">
+                    <div class="layui-card-header">我的等级</div>
+                    <div class="layui-card-body" style="height: 450px;">
+                        <div class="dj-t">
+                            <p><img src="/assets/Console/integral/images/zl-img.png" alt=""></p>
+                            <p><img src="/assets/Console/integral/images/sjs-img.png" alt=""></p>
+                            <p><img src="/assets/Console/integral/images/zyfzr-img.png" alt=""></p>
+                            <h2>总积分：<span>25</span></h2>
+                        </div>
+                        <div class="dj-b">
+                            <ul>
+                                <li class="the">
+                                    <p><img src="/assets/Console/integral/images/zl-icon.png" alt=""></p>
+                                    <h2>设计师助理</h2>
+                                    <span>所需积分：0</span>
+                                </li>
+                                <li class="line">
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                </li>
+                                <li class="the">
+                                    <p><img src="/assets/Console/integral/images/sjs-icon.png" alt=""></p>
+                                    <!-- <p><img src="/assets/Console/integral/images/sjs-icon-on.png" alt=""></p>等级达到 -->
+                                    <h2>设计师</h2>
+                                    <span>所需积分：50</span>
+                                </li>
+                                <li class="line">
+                                    <div>
+                                        <span></span>
+                                    </div>
+                                </li>
+                                <li class="the">
+                                    <p><img src="/assets/Console/integral/images/zyfzr-icon.png" alt=""></p>
+                                    <!-- <p><img src="/assets/Console/integral/images/zyfzr-icon-on.png" alt=""></p>等级达到 -->
+                                    <h2>专业负责人</h2>
+                                    <span>所需积分：50</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="layui-card">
+                    <div class="layui-card-header">我的积分</div>
+                    <div class="layui-card-body" style="height: 450px;">
+                        <div id="app">
+                            <div class="jf-main">
+                                <div class="jf-list jf1">
+                                    <el-progress type="circle" :stroke-width="10" :percentage="75" color="#5B8FF9">
+                                    </el-progress>
+                                    <h2>基础底板施工图及计算书</h2>
+                                </div>
+                                <div class="jf-list jf2">
+                                    <el-progress type="circle" :stroke-width="10" :percentage="60" color="#5AD8A6">
+                                    </el-progress>
+                                    <h2>地下室外墙及计算书</h2>
+                                </div>
+                                <div class="jf-list jf3">
+                                    <el-progress type="circle" :stroke-width="10" :percentage="75" color="#E8684A">
+                                    </el-progress>
+                                    <h2>墙身大样配筋</h2>
+                                </div>
+                            </div>
+                            <a href="/lookingFor/lookingForList" class="jf-btn">立即报名项目</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="b mx-main">
+                <div class="layui-card">
+                    <div class="layui-card-header">我的积分明细</div>
+                    <div class="layui-card-body">
+                        <div class="mx-down">
+                            <p><i class="layui-icon layui-icon-down"></i></p>
+                        </div>
+                        <table id="table1" lay-filter="table1" style="display:none;"></table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    //我的积分
+    new Vue({
+        el: '#app',
+        data: function () {
+            return {
+                visible: false,
+            }
+        },
+        mounted: function () {
+            $('.jf1 .el-progress__text').html('<span>6</span><em> / </em>8');
+            $('.jf2 .el-progress__text').html('<span>15</span><em> / </em>20');
+            $('.jf3 .el-progress__text').html('<span>6</span><em> / </em>8');
+        }
+    })
+    $(function () {
+        //默认高亮我的积分
+        $('.layui-nav.layui-nav-tree .layui-nav-item').eq(3).addClass('layui-this');
+        //我的积分明细展开/收缩
+        $('.mx-down p').click(function () {
+            if ($(this).hasClass('on')) {
+                $(this).removeClass('on');
+                $('div[lay-id="table1"]').remove();
+            } else {
+                $(this).addClass('on');
+                $('#table1').show();
+                table.render({
+                    elem: '#table1',
+                    height: 378,
+                    url: '/Assets/console/lookingFor/js/test.json' //数据接口
+                        ,
+                    page: true //开启分页
+                        ,
+                    cols: [
+                        [ //表头
+                            {
+                                field: 'id',
+                                width: 80,
+                                title: 'ID'
+                            }, {
+                                field: 'username',
+                                width: 80,
+                                title: '用户名'
+                            }, {
+                                field: 'sex',
+                                width: 80,
+                                title: '性别'
+                            }, {
+                                field: 'city',
+                                width: 80,
+                                title: '城市'
+                            }, {
+                                field: 'sign',
+                                title: '签名',
+                                width: '30%',
+                                minWidth: 100
+                            } //minWidth：局部定义当前单元格的最小宽度，layui 2.2.1 新增
+                            , {
+                                field: 'experience',
+                                title: '积分'
+                            }, {
+                                field: 'score',
+                                title: '评分'
+                            }, {
+                                field: 'classify',
+                                title: '职业'
+                            }, {
+                                field: 'wealth',
+                                width: 137,
+                                title: '财富'
+                            }, {
+                                fixed: 'right',
+                                title: '操作',
+                                toolbar: '#table1Bar',
+                                width: 250
+                            }
+                        ]
+                    ],
+                    done: function (res, curr, count) {
+                        $('#content').scrollTop($('div[lay-id="table1"]').offset().top);
+                    }
+                });
+
+            }
+        })
+        // 我的等级
+        var jf = 40; //现有积分
+        var dj = [0, 50, 80]; //积分等级
+        var is = true;
+        dj.forEach(function (item, index) {
+            if (!is) return;
+            if (item > jf) {
+                is = false;
+                //现有积分小于等级
+                setTimeout(function () {
+                    layer.tips('总共' + jf + '分 还需' + (dj[index] - jf) + '分', $(
+                        '.dj-b ul li.line').eq(index - 1), {
+                        tips: [1, '#333333'],
+                        skin: 'dj-tips',
+                        time: 0
+                    });
+                    $('.dj-tips').css({'left':parseInt($('.dj-tips').css('left'))-220,'top':parseInt($('.dj-tips').css('top'))-110})
+                    $('#content .container').append($('.dj-tips'))
+                }, 100)
+                $('.dj-t p').eq(index - 1).show();
+            } else {
+                $('.dj-b ul li.line').removeClass('on');
+                $('.dj-b ul li.line').eq(index).addClass('on');
+                if (index <= $('.dj-b ul li.line').length - 1) {
+                    $('.dj-b ul li.line').eq(index).find('span').width(((jf - item) / (dj[index + 1] -
+                            dj[index])) *
+                        100 + '%');
+                }
+                if (index == dj.length - 1) {
+                    $('.dj-t p').eq(index - 1).show();
+                }
+            }
+        });
+    })
+</script>

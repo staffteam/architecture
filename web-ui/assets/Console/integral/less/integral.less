@@ -1,0 +1,277 @@
+@import '../../public/less/puls.less';
+
+.integral-main {
+    overflow: hidden;
+
+    &>.layui-card {
+        width: 49.5%;
+        float: left;
+        margin-bottom: 0;
+
+        &:last-child {
+            float: right;
+        }
+
+        .dj-t {
+            p {
+                width: 160px;
+                margin: 0 auto;
+                display: none;
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            h2 {
+                text-align: center;
+                font-size: 14px;
+                font-weight: 500;
+                margin-top: 15px;
+
+                span {
+                    color: @c;
+                }
+            }
+        }
+
+        .dj-b {
+            margin-top: 80px;
+            text-align: center;
+            padding-bottom: 50px;
+
+            ul {
+                display: inline-block;
+                overflow: hidden;
+
+                li {
+                    float: left;
+
+                    &.the {
+                        p {
+                            width: 82px;
+                            height: 82px;
+                            border-radius: 50%;
+                            border: 2px solid rgba(72, 157, 252, 0.1);
+                            position: relative;
+
+                            img {
+                                .center();
+                            }
+                        }
+
+                        h2 {
+                            margin-top: 15px;
+                            font-size: 14px;
+                            font-weight: 500;
+                            line-height: 14px;
+                        }
+
+                        span {
+                            display: block;
+                            margin-top: 10px;
+                            font-size: 14px;
+                            line-height: 14px;
+                            color: @c;
+                        }
+                    }
+
+                    &.line {
+                        padding-top: 39px;
+                        margin: 0 10px;
+
+                        &.on {
+                            span {
+                                &:before {
+                                    content: "";
+                                    display: block;
+                                    border-radius: 50%;
+                                    position: absolute;
+                                    right: 0;
+                                    top: 50%;
+                                    transform: translate(50%, -50%);
+                                    width: 10px;
+                                    height: 10px;
+                                    background: rgba(255, 255, 255, 1);
+                                    border: 1px solid rgba(72, 157, 252, 1);
+                                }
+                            }
+                        }
+
+                        div {
+                            width: 110px;
+                            height: 4px;
+                            background: rgba(72, 157, 252, 0.2);
+                            border-radius: 2px;
+                            position: relative;
+
+                            span {
+                                height: 4px;
+                                background: rgba(72, 157, 252, 1);
+                                border-radius: 2px;
+                                border: 1px solid rgba(72, 157, 252, 1);
+                                display: block;
+                                position: absolute;
+                                left: 0;
+                                top: 0;
+
+                                &::before {
+                                    display: none;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.dj-tips.layui-layer-tips .layui-layer-content i {
+    border-bottom-color: #333333 !important;
+    transform: rotate(180deg);
+    border-right-color: rgba(0, 0, 0, 0) !important;
+    bottom: -15px;
+    left: 40%;
+}
+
+.jf-main {
+    padding: 60px 0 80px;
+    text-align: center;
+
+    .jf-list {
+        display: inline-block;
+        margin: 0 2vw;
+
+        &.jf1 {
+            .el-progress__text {
+                color: #CCCCCC;
+                font-weight: 600;
+                font-size: 18px;
+
+                span {
+                    font-size: 28px;
+                    color: #5B8FF9;
+                }
+
+                em {
+                    font-size: 22px;
+                }
+            }
+        }
+
+        &.jf2 {
+            .el-progress__text {
+                color: #CCCCCC;
+                font-weight: 600;
+                font-size: 18px;
+
+                span {
+                    font-size: 28px;
+                    color: #5AD8A6;
+                }
+
+                em {
+                    font-size: 22px;
+                }
+            }
+        }
+
+        &.jf3 {
+            .el-progress__text {
+                color: #CCCCCC;
+                font-weight: 600;
+                font-size: 18px;
+
+                span {
+                    font-size: 28px;
+                    color: #E8684A;
+                }
+
+                em {
+                    font-size: 22px;
+                }
+            }
+        }
+
+        &>h2 {
+            font-size: 14px;
+            line-height: 14px;
+            margin-top: 10px;
+        }
+    }
+}
+
+.jf-btn {
+    width: 128px;
+    height: 38px;
+    background: rgba(72, 157, 252, 1);
+    border-radius: 2px;
+    margin: 0 auto;
+    line-height: 38px;
+    font-size: 14px;
+    color: white !important;
+    text-align: center;
+    display: block;
+}
+
+.main {
+    .mx-main {
+        .layui-card {
+            .layui-card-header {
+                border-bottom: 0px;
+            }
+        }
+
+        .layui-card-body {
+            padding-bottom: 20px !important;
+        }
+
+        .mx-down {
+            position: relative;
+            height: 24px;
+
+            p {
+                position: relative;
+                z-index: 9;
+                width: 24px;
+                height: 24px;
+                background: rgba(212, 226, 251, 1);
+                border-radius: 4px;
+                border: 1px solid rgba(72, 157, 252, 1);
+                text-align: center;
+                line-height: 24px;
+                font-size: 16px;
+                color: #489DFC;
+                margin: 0 auto;
+                cursor: pointer;
+                &.on{
+                    transform: rotate(180deg);
+                }
+            }
+
+            &:before {
+                content: "";
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                left: 0;
+                width: 100%;
+                z-index: 9;
+                height: 2px;
+                display: block;
+                background: rgba(230, 236, 246, 1);
+            }
+        }
+    }
+}
+
+
+@media (max-width:1200px) {
+    .jf-main {
+
+        .jf-list {
+            margin: 0 1vw;
+        }
+    }
+}
