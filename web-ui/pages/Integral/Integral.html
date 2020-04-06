@@ -97,7 +97,8 @@
                                 </li>
                                 <li class="the">
                                     <p><img src="/assets/Console/integral/images/sjs-icon.png" alt=""></p>
-                                    <!-- <p><img src="/assets/Console/integral/images/sjs-icon-on.png" alt=""></p>等级达到 -->
+                                    <p style="display: none;"><img src="/assets/Console/integral/images/sjs-icon-on.png"
+                                            alt=""></p>
                                     <h2>设计师</h2>
                                     <span>所需积分：50</span>
                                 </li>
@@ -108,7 +109,8 @@
                                 </li>
                                 <li class="the">
                                     <p><img src="/assets/Console/integral/images/zyfzr-icon.png" alt=""></p>
-                                    <!-- <p><img src="/assets/Console/integral/images/zyfzr-icon-on.png" alt=""></p>等级达到 -->
+                                    <p style="display: none;"><img
+                                            src="/assets/Console/integral/images/zyfzr-icon-on.png" alt=""></p>
                                     <h2>专业负责人</h2>
                                     <span>所需积分：50</span>
                                 </li>
@@ -242,7 +244,7 @@
             }
         })
         // 我的等级
-        var jf = 40; //现有积分
+        var jf = 50; //现有积分
         var dj = [0, 50, 80]; //积分等级
         var is = true;
         dj.forEach(function (item, index) {
@@ -257,20 +259,27 @@
                         skin: 'dj-tips',
                         time: 0
                     });
-                    $('.dj-tips').css({'left':parseInt($('.dj-tips').css('left'))-220,'top':parseInt($('.dj-tips').css('top'))-110})
+                    $('.dj-tips').css({
+                        'left': parseInt($('.dj-tips').css('left')) - 220,
+                        'top': parseInt($('.dj-tips').css('top')) - 110
+                    })
                     $('#content .container').append($('.dj-tips'))
                 }, 100)
                 $('.dj-t p').eq(index - 1).show();
             } else {
                 $('.dj-b ul li.line').removeClass('on');
                 $('.dj-b ul li.line').eq(index).addClass('on');
+                if (index > 0) {
+                    $('.dj-b ul li.the').eq(index).find('p').eq(0).hide();
+                    $('.dj-b ul li.the').eq(index).find('p').eq(1).show();
+                }
                 if (index <= $('.dj-b ul li.line').length - 1) {
                     $('.dj-b ul li.line').eq(index).find('span').width(((jf - item) / (dj[index + 1] -
                             dj[index])) *
                         100 + '%');
                 }
                 if (index == dj.length - 1) {
-                    $('.dj-t p').eq(index - 1).show();
+                    $('.dj-t p').eq(index).show();
                 }
             }
         });
