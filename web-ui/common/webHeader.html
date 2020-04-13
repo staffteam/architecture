@@ -10,12 +10,19 @@
             </ul>
         </div>
 
-        <div class="user">
-            <span  ><em  onclick="onLogin(this)">登录</em> | <em  onclick="register(this)">注册</em></span>
-            <p><img src="/assets/Web/public/images/top.png" /></p>
-            <ul>
-                <li>退出</li>
-            </ul>
+        <div class="user on">
+            <span><em onclick="onLogin(this)">登录</em> | <em onclick="register(this)">注册</em></span>
+            <div class="top-user-info">
+                <div>
+                    <p><img src="/assets/Web/public/images/top.png" /></p>
+                    <span>17512840813</span>
+                    <span class="layui-icon layui-icon-triangle-d"></span>
+                </div>
+                <ul>
+                    <li><a href="/Member/Info">个人中心</a></li>
+                    <li><a href="/Login">退出</a></li>
+                </ul>
+            </div>
         </div>
         <div class="search">
             <p><input type="text" name="searchs" value="" placeholder="请输入关键字" /><i class="iconfont">&#xe627;</i></p>
@@ -32,13 +39,13 @@
             <div class="layui-form-item">
                 <div class="layui-input-inline">
                     <input type="text" name="phoneoremail" verify="required&&phone||email" tips="手机或邮箱"
-                           autocomplete="off" placeholder="手机/邮箱" class="layui-input">
+                        autocomplete="off" placeholder="手机/邮箱" class="layui-input">
                 </div>
             </div>
             <div class="layui-form-item">
                 <div class="layui-input-inline">
                     <input type="password" name="password" verify="required" autocomplete="off" placeholder="密码"
-                           tips="密码" class="layui-input">
+                        tips="密码" class="layui-input">
                 </div>
             </div>
             <div class="layui-form-item">
@@ -55,8 +62,7 @@
             </div>
             <div class="layui-form-item">
                 <div class="layui-input-inline">
-                    <button type="button" class="layui-btn layui-btn-fluid" lay-submit=""
-                            lay-filter="login">
+                    <button type="button" class="layui-btn layui-btn-fluid" lay-submit="" lay-filter="login">
                         登录
                     </button>
                 </div>
@@ -86,26 +92,26 @@
             <div class="layui-form-item">
                 <div class="layui-input-inline">
                     <input type="text" name="phoneoremail" verify="required&&phone||email" tips="手机或邮箱"
-                           autocomplete="off" placeholder="手机/邮箱" class="layui-input">
+                        autocomplete="off" placeholder="手机/邮箱" class="layui-input">
                 </div>
             </div>
             <div class="layui-form-item vcode">
                 <div class="layui-input-inline">
                     <input type="text" name="verifycode" verify="required" tips="验证码" autocomplete="off"
-                           placeholder="验证码" class="layui-input">
+                        placeholder="验证码" class="layui-input">
                     <span class="get-code">获取验证码</span>
                 </div>
             </div>
             <div class="layui-form-item">
                 <div class="layui-input-inline">
                     <input type="password" name="password" verify="required" autocomplete="off" placeholder="密码"
-                           tips="密码" class="layui-input">
+                        tips="密码" class="layui-input">
                 </div>
             </div>
             <div class="layui-form-item">
                 <div class="layui-input-inline">
                     <input type="password" name="second" verify="required" autocomplete="off" placeholder="确认密码"
-                           tips="两次密码" class="layui-input">
+                        tips="两次密码" class="layui-input">
                 </div>
             </div>
             <div class="layui-form-item">
@@ -113,7 +119,7 @@
                     <div class="login-box">
                         <div class="l">
                             <input type="checkbox" name="consent" lay-skin="primary"
-                                   title="我已同意<em id='agreement' >《用户协议》</em>及<em id='policy'>《隐私政策》</em>">
+                                title="我已同意<em id='agreement' >《用户协议》</em>及<em id='policy'>《隐私政策》</em>">
                         </div>
                     </div>
                 </div>
@@ -121,7 +127,7 @@
             <div class="layui-form-item">
                 <div class="layui-input-inline">
                     <button type="button" class="layui-btn layui-btn-fluid off" lay-submit="" lay-filter="register"
-                            id="registerBtn">
+                        id="registerBtn">
                         注册
                     </button>
                 </div>
@@ -142,33 +148,33 @@
         <div class="layui-form">
             <div class="layui-form-item">
                 <div class="layui-input-inline">
-                    <input type="text" name="phoneoremail" verify="required" tips="用户名、手机或邮箱"
-                           autocomplete="off" placeholder="用户名/手机/邮箱" class="layui-input">
+                    <input type="text" name="phoneoremail" verify="required" tips="用户名、手机或邮箱" autocomplete="off"
+                        placeholder="用户名/手机/邮箱" class="layui-input">
                 </div>
             </div>
             <div class="layui-form-item vcode">
                 <div class="layui-input-inline">
                     <input type="text" name="verifycode" verify="required" tips="验证码" autocomplete="off"
-                           placeholder="验证码" class="layui-input">
+                        placeholder="验证码" class="layui-input">
                     <span class="get-code">获取验证码</span>
                 </div>
             </div>
             <div class="layui-form-item">
                 <div class="layui-input-inline">
                     <input type="password" name="password" verify="required" autocomplete="off" placeholder="密码"
-                           tips="密码" class="layui-input">
+                        tips="密码" class="layui-input">
                 </div>
             </div>
             <div class="layui-form-item">
                 <div class="layui-input-inline">
                     <input type="password" name="second" verify="required" autocomplete="off" placeholder="确认密码"
-                           tips="两次密码" class="layui-input">
+                        tips="两次密码" class="layui-input">
                 </div>
             </div>
             <div class="layui-form-item">
                 <div class="layui-input-inline">
                     <button type="button" class="layui-btn layui-btn-fluid" lay-submit="" lay-filter="find"
-                            id="findBtn">
+                        id="findBtn">
                         完成
                     </button>
                 </div>
@@ -185,7 +191,8 @@
 <!-- 用户协议 start -->
 <script type="text/html" id="agreementContent">
     <h5 style="font-weight:bold">特别提示：</h5>
-    <span style="font-weight:bold">您在使用百度公司提供的各项服务之前，请您务必审慎阅读、充分理解本协议各条款内容，特别是以粗体标注的部分，包括但不限于免除或者限制责任的条款。如您不同意本服务协议及/或随时对其的修改，您可以主动停止使用百度公司提供的服务；您一旦使用百度公司提供的服务，即视为您已了解并完全同意本服务协议各项内容，包括百度公司对服务协议随时所做的任何修改，并成为我们的用户。</span>
+    <span
+        style="font-weight:bold">您在使用百度公司提供的各项服务之前，请您务必审慎阅读、充分理解本协议各条款内容，特别是以粗体标注的部分，包括但不限于免除或者限制责任的条款。如您不同意本服务协议及/或随时对其的修改，您可以主动停止使用百度公司提供的服务；您一旦使用百度公司提供的服务，即视为您已了解并完全同意本服务协议各项内容，包括百度公司对服务协议随时所做的任何修改，并成为我们的用户。</span>
     <h5 style="font-weight:bold">一、总则</h5>1.
     用户可以使用百度各个频道、产品的单项服务，当用户使用百度各单项服务时，用户的使用行为视为其对该单项服务的服务条款以及百度在该单项服务中发出的各类公告的同意。
     <br>2.
@@ -201,7 +208,7 @@
     <br>4.
     百度帐号（即百度用户ID）的所有权归百度公司，用户按注册页面引导填写信息，阅读并同意本协议且完成全部注册程序后，即可获得百度帐号并成为用户。用户应提供及时、详尽及准确的个人资料，并不断更新注册资料，符合及时、详尽准确的要求。所有原始键入的资料将引用为注册资料。如果因注册信息不真实或更新不及时而引发的相关问题，百度公司不负任何责任。您可以通过百度帐号设置页面查询、更正您的信息，百度帐号设置页面地址：
     <a href="https://passport.baidu.com/center"
-       target="_blank">https://passport.baidu.com/center</a>用户应当通过真实身份信息认证注册帐号，且用户提交的帐号名称、头像和简介等注册信息中不得出现违法和不良信息，经百度公司审核，如存在上述情况，百度公司将不予注册；同时，在注册后，如发现用户以虚假信息骗取帐号名称注册，或其帐号头像、简介等注册信息存在违法和不良信息的，百度公司有权不经通知单方采取限期改正、暂停使用、注销登记、收回等措施。
+        target="_blank">https://passport.baidu.com/center</a>用户应当通过真实身份信息认证注册帐号，且用户提交的帐号名称、头像和简介等注册信息中不得出现违法和不良信息，经百度公司审核，如存在上述情况，百度公司将不予注册；同时，在注册后，如发现用户以虚假信息骗取帐号名称注册，或其帐号头像、简介等注册信息存在违法和不良信息的，百度公司有权不经通知单方采取限期改正、暂停使用、注销登记、收回等措施。
     <br>5.
     基于国家法律法规的规定要求或者百度服务政策的要求，您在使用某些百度服务时需要填写真实的姓名、身份证号等信息。若您填写的信息不完整、不正确，则可能无法使用相应服务或在使用过程中受到限制。
     <br>6.
@@ -228,13 +235,14 @@
     <br>12.
     我们将按照百度公司的隐私权保护声明（
     <a href="http://privacy.baidu.com/mdetail?id=288"
-       target="_blank">http://privacy.baidu.com/mdetail?id=288</a>）使用您在注册百度帐户、使用百度服务中提交、留存的信息。您保证在您使用百度公司的所有产品和服务前，已经充分了解并同意百度公司可以据此处理用户信息。
+        target="_blank">http://privacy.baidu.com/mdetail?id=288</a>）使用您在注册百度帐户、使用百度服务中提交、留存的信息。您保证在您使用百度公司的所有产品和服务前，已经充分了解并同意百度公司可以据此处理用户信息。
     <br>13.
     为了满足相关法律法规的要求和保障您的帐号安全，尤其是您在进行帐号解绑、注销等敏感操作时，我们会将您提交的个人身份信息发送至银行、运营商等机构进行验证查询，以核实您身份的真实性。
     <br>14.
     当用户使用一键登录功能时，运营商会将用户的本机手机号传输给百度，用以百度判断您的手机号是否已注册百度帐号。如您的手机号已注册百度帐号，并通过安全验证，则您将无需填写手机号、验证码、帐户名、密码等，可直接完成帐号登录。如您不满足一键登录的要求，或者选取了其他登录方式，您可使用其他登录方式进行帐号登录。
     <h5 style="font-weight:bold">三、使用规则</h5>1.
-    <span style="font-weight:bold">用户在使用百度公司的服务时，必须遵守《网络安全法》等中华人民共和国相关法律法规的规定，用户应同意将不会利用本服务进行任何违法或不正当的活动，包括但不限于下列行为:</span>
+    <span
+        style="font-weight:bold">用户在使用百度公司的服务时，必须遵守《网络安全法》等中华人民共和国相关法律法规的规定，用户应同意将不会利用本服务进行任何违法或不正当的活动，包括但不限于下列行为:</span>
     <br>（1）
     <span style="font-weight:bold">上载、展示、张贴、传播或以其它方式传送含有下列内容之一的信息：</span>
     <br>　　1）
@@ -262,7 +270,8 @@
 <!-- 隐私政策 start -->
 <script type="text/html" id="policyContent">
     <h5 style="font-weight:bold">特别提示：</h5>
-    <span style="font-weight:bold">您在使用百度公司提供的各项服务之前，请您务必审慎阅读、充分理解本协议各条款内容，特别是以粗体标注的部分，包括但不限于免除或者限制责任的条款。如您不同意本服务协议及/或随时对其的修改，您可以主动停止使用百度公司提供的服务；您一旦使用百度公司提供的服务，即视为您已了解并完全同意本服务协议各项内容，包括百度公司对服务协议随时所做的任何修改，并成为我们的用户。</span>
+    <span
+        style="font-weight:bold">您在使用百度公司提供的各项服务之前，请您务必审慎阅读、充分理解本协议各条款内容，特别是以粗体标注的部分，包括但不限于免除或者限制责任的条款。如您不同意本服务协议及/或随时对其的修改，您可以主动停止使用百度公司提供的服务；您一旦使用百度公司提供的服务，即视为您已了解并完全同意本服务协议各项内容，包括百度公司对服务协议随时所做的任何修改，并成为我们的用户。</span>
     <h5 style="font-weight:bold">一、总则</h5>1.
     用户可以使用百度各个频道、产品的单项服务，当用户使用百度各单项服务时，用户的使用行为视为其对该单项服务的服务条款以及百度在该单项服务中发出的各类公告的同意。
     <br>2.
@@ -278,7 +287,7 @@
     <br>4.
     百度帐号（即百度用户ID）的所有权归百度公司，用户按注册页面引导填写信息，阅读并同意本协议且完成全部注册程序后，即可获得百度帐号并成为用户。用户应提供及时、详尽及准确的个人资料，并不断更新注册资料，符合及时、详尽准确的要求。所有原始键入的资料将引用为注册资料。如果因注册信息不真实或更新不及时而引发的相关问题，百度公司不负任何责任。您可以通过百度帐号设置页面查询、更正您的信息，百度帐号设置页面地址：
     <a href="https://passport.baidu.com/center"
-       target="_blank">https://passport.baidu.com/center</a>用户应当通过真实身份信息认证注册帐号，且用户提交的帐号名称、头像和简介等注册信息中不得出现违法和不良信息，经百度公司审核，如存在上述情况，百度公司将不予注册；同时，在注册后，如发现用户以虚假信息骗取帐号名称注册，或其帐号头像、简介等注册信息存在违法和不良信息的，百度公司有权不经通知单方采取限期改正、暂停使用、注销登记、收回等措施。
+        target="_blank">https://passport.baidu.com/center</a>用户应当通过真实身份信息认证注册帐号，且用户提交的帐号名称、头像和简介等注册信息中不得出现违法和不良信息，经百度公司审核，如存在上述情况，百度公司将不予注册；同时，在注册后，如发现用户以虚假信息骗取帐号名称注册，或其帐号头像、简介等注册信息存在违法和不良信息的，百度公司有权不经通知单方采取限期改正、暂停使用、注销登记、收回等措施。
     <br>5.
     基于国家法律法规的规定要求或者百度服务政策的要求，您在使用某些百度服务时需要填写真实的姓名、身份证号等信息。若您填写的信息不完整、不正确，则可能无法使用相应服务或在使用过程中受到限制。
     <br>6.
@@ -305,13 +314,14 @@
     <br>12.
     我们将按照百度公司的隐私权保护声明（
     <a href="http://privacy.baidu.com/mdetail?id=288"
-       target="_blank">http://privacy.baidu.com/mdetail?id=288</a>）使用您在注册百度帐户、使用百度服务中提交、留存的信息。您保证在您使用百度公司的所有产品和服务前，已经充分了解并同意百度公司可以据此处理用户信息。
+        target="_blank">http://privacy.baidu.com/mdetail?id=288</a>）使用您在注册百度帐户、使用百度服务中提交、留存的信息。您保证在您使用百度公司的所有产品和服务前，已经充分了解并同意百度公司可以据此处理用户信息。
     <br>13.
     为了满足相关法律法规的要求和保障您的帐号安全，尤其是您在进行帐号解绑、注销等敏感操作时，我们会将您提交的个人身份信息发送至银行、运营商等机构进行验证查询，以核实您身份的真实性。
     <br>14.
     当用户使用一键登录功能时，运营商会将用户的本机手机号传输给百度，用以百度判断您的手机号是否已注册百度帐号。如您的手机号已注册百度帐号，并通过安全验证，则您将无需填写手机号、验证码、帐户名、密码等，可直接完成帐号登录。如您不满足一键登录的要求，或者选取了其他登录方式，您可使用其他登录方式进行帐号登录。
     <h5 style="font-weight:bold">三、使用规则</h5>1.
-    <span style="font-weight:bold">用户在使用百度公司的服务时，必须遵守《网络安全法》等中华人民共和国相关法律法规的规定，用户应同意将不会利用本服务进行任何违法或不正当的活动，包括但不限于下列行为:</span>
+    <span
+        style="font-weight:bold">用户在使用百度公司的服务时，必须遵守《网络安全法》等中华人民共和国相关法律法规的规定，用户应同意将不会利用本服务进行任何违法或不正当的活动，包括但不限于下列行为:</span>
     <br>（1）
     <span style="font-weight:bold">上载、展示、张贴、传播或以其它方式传送含有下列内容之一的信息：</span>
     <br>　　1）

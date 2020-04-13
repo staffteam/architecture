@@ -206,23 +206,72 @@ body {
 .header div.content div.user {
   float: right;
   height: 100%;
-  padding: 17px 0;
   line-height: 36px;
   margin-left: 40px;
 }
-.header div.content div.user span {
+.header div.content div.user > span {
+  padding: 17px 0;
   display: block;
   color: #489DFC;
   cursor: pointer;
 }
-.header div.content div.user span em {
+.header div.content div.user > span em {
   font-style: normal;
 }
-.header div.content div.user p {
+.header div.content div.user .top-user-info {
+  display: none;
+  position: relative;
+  padding: 17px 0;
+}
+.header div.content div.user .top-user-info:hover ul {
+  height: 60px;
+}
+.header div.content div.user .top-user-info div {
+  cursor: pointer;
+}
+.header div.content div.user .top-user-info div p {
+  width: 36px;
+  height: 36px;
+  float: left;
+}
+.header div.content div.user .top-user-info div span {
+  font-size: 14px;
+  line-height: 36px;
+  display: inline-block;
+  margin-left: 10px;
+}
+.header div.content div.user .top-user-info div span:last-child {
+  margin-left: 5px;
+}
+.header div.content div.user .top-user-info ul {
+  position: absolute;
+  width: 120px;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  background-color: white;
+  height: 0;
+  top: 70px;
+  overflow: hidden;
+  transition: 0.3s height;
+}
+.header div.content div.user .top-user-info ul li {
+  text-align: center;
+}
+.header div.content div.user .top-user-info ul li a {
+  display: block;
+  line-height: 30px;
+  height: 30px;
+  font-size: 14px;
+}
+.header div.content div.user .top-user-info ul li a:hover {
+  color: #489DFC;
+}
+.header div.content div.user.on > span {
   display: none;
 }
-.header div.content div.user ul {
-  display: none;
+.header div.content div.user.on .top-user-info {
+  display: block;
 }
 .header-h {
   height: 70px;

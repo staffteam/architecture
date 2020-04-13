@@ -152,11 +152,11 @@ body {
         div.user {
             float: right;
             height: 100%;
-            padding: 17px 0;
             line-height: 36px;
             margin-left: 40px;
 
-            span {
+            &>span {
+                padding: 17px 0;
                 display: block;
                 color: @c;
                 cursor: pointer;
@@ -166,12 +166,73 @@ body {
                 }
             }
 
-            p {
+            .top-user-info {
                 display: none;
+                position: relative;
+                padding: 17px 0;
+                &:hover {
+                    ul {
+                        height: 60px;
+                    }
+                }
+
+                div {
+                    cursor: pointer;
+
+                    p {
+                        width: 36px;
+                        height: 36px;
+                        float: left;
+                    }
+
+                    span {
+                        font-size: 14px;
+                        line-height: 36px;
+                        display: inline-block;
+                        margin-left: 10px;
+
+                        &:last-child {
+                            margin-left: 5px;
+                        }
+                    }
+                }
+
+                ul {
+                    position: absolute;
+                    width: 120px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+                    background-color: white;
+                    height: 0;
+                    top: 70px;
+                    overflow: hidden;
+                    transition: 0.3s height;
+
+                    li {
+                        text-align: center;
+                        a {
+                            display: block;
+                            line-height: 30px;
+                            height: 30px;
+                            font-size: 14px;
+
+                            &:hover {
+                                color: @c;
+                            }
+                        }
+                    }
+                }
             }
 
-            ul {
-                display: none;
+            &.on {
+                &>span {
+                    display: none;
+                }
+
+                .top-user-info {
+                    display: block;
+                }
             }
         }
     }
@@ -371,9 +432,11 @@ body {
     &>div.layui-form {
         width: 80%;
         margin: 30px auto;
-        .vcode{
+
+        .vcode {
             position: relative;
-            .get-code{
+
+            .get-code {
                 position: absolute;
                 right: 10px;
                 top: 50%;
@@ -382,6 +445,7 @@ body {
                 color: @c;
             }
         }
+
         .layui-form-item .layui-input-inline {
             width: 100%;
 
@@ -409,8 +473,9 @@ body {
                     cursor: pointer;
                 }
             }
-            .layui-btn{
-                &.off{
+
+            .layui-btn {
+                &.off {
                     background-color: #999999;
                     cursor: no-drop;
                 }
@@ -483,6 +548,6 @@ body {
     padding: 15px;
 }
 
-a.white{
+a.white {
     color: white;
 }

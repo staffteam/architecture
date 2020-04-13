@@ -92,7 +92,6 @@
   height: 4px;
   background: #489dfc;
   border-radius: 2px;
-  border: 1px solid #489dfc;
   display: block;
   position: absolute;
   left: 0;
@@ -107,6 +106,9 @@
   border-right-color: rgba(0, 0, 0, 0) !important;
   bottom: -15px;
   left: 40%;
+}
+.dj-tips.layui-layer-tips .layui-layer-content {
+  padding: 5px 15px;
 }
 .jf-main {
   padding: 60px 0 80px;

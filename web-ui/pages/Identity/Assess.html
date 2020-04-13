@@ -103,6 +103,15 @@
 <script>
     let file_name = "";
     $(function () {
+        // 提示框
+        layer.confirm('请在规定时间内上传认证试题<br/>联系电话：<span style="color:#489DFC;">400-2137-2388</span>', {
+            btn: ['下载'] //按钮
+        }, function () {
+            $('#down span').click();
+            layer.closeAll();
+        });
+
+
         $('#downWord').click(function () {
             $('#down span').click();
         })

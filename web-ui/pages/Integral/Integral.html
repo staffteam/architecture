@@ -41,6 +41,10 @@
                                     联系方式
                                     <a href="javascript:">15073231615</a>
                                 </div>
+                                <div class="grade">
+                                    账号ID
+                                    <a href="javascript:">15073231615</a>
+                                </div>
                             </div>
                             <div class="btn">
                                 <button type="button" class="layui-btn">
@@ -173,6 +177,9 @@
             $('.jf3 .el-progress__text').html('<span>6</span><em> / </em>8');
         }
     })
+    function goTops(){
+        
+    }
     $(function () {
         //默认高亮我的积分
         $('.layui-nav.layui-nav-tree .layui-nav-item').eq(3).addClass('layui-this');
@@ -252,35 +259,56 @@
             if (item > jf) {
                 is = false;
                 //现有积分小于等级
-                setTimeout(function () {
-                    layer.tips('总共' + jf + '分 还需' + (dj[index] - jf) + '分', $(
-                        '.dj-b ul li.line').eq(index - 1), {
-                        tips: [1, '#333333'],
-                        skin: 'dj-tips',
-                        time: 0
-                    });
-                    $('.dj-tips').css({
-                        'left': parseInt($('.dj-tips').css('left')) - 220,
-                        'top': parseInt($('.dj-tips').css('top')) - 110
-                    })
-                    $('#content .container').append($('.dj-tips'))
-                }, 100)
-                $('.dj-t p').eq(index - 1).show();
+                if (dj[index - 1] == jf && jf != 0 && jf != dj[dj.length - 1]) {
+                    setTimeout(function () {
+                        layer.tips('<span style="color:#FADA8A;" onclick="goTops()">立即岗位升级</span>', $(
+                            '.dj-b ul li.the').eq(index - 1), {
+                            tips: [1, '#333333'],
+                            skin: 'dj-tips',
+                            time: 0
+                        });
+                        $('.dj-tips').css({
+                            'left': parseInt($('.dj-tips').css('left')) - 210,
+                            'top': parseInt($('.dj-tips').css('top')) - 110
+                        })
+                        $('#content .container').append($('.dj-tips'))
+                    }, 100)
+                    $('.dj-t p').eq(index - 2).show();
+                } else {
+                    setTimeout(function () {
+                        layer.tips('总共' + jf + '分 还需' + (dj[index] - jf) + '分', $(
+                            '.dj-b ul li.line').eq(index - 1), {
+                            tips: [1, '#333333'],
+                            skin: 'dj-tips',
+                            time: 0
+                        });
+                        $('.dj-tips').css({
+                            'left': parseInt($('.dj-tips').css('left')) - 220,
+                            'top': parseInt($('.dj-tips').css('top')) - 110
+                        })
+                        $('#content .container').append($('.dj-tips'))
+                    }, 100)
+                    $('.dj-t p').eq(index - 1).show();
+                }
             } else {
-                $('.dj-b ul li.line').removeClass('on');
-                $('.dj-b ul li.line').eq(index).addClass('on');
-                if (index > 0) {
-                    $('.dj-b ul li.the').eq(index).find('p').eq(0).hide();
-                    $('.dj-b ul li.the').eq(index).find('p').eq(1).show();
+                if (jf != item) {
+                    $('.dj-b ul li.line').removeClass('on');
+                    $('.dj-b ul li.line').eq(index).addClass('on');
+                    if (index > 0) {
+                        $('.dj-b ul li.the').eq(index).find('p').eq(0).hide();
+                        $('.dj-b ul li.the').eq(index).find('p').eq(1).show();
+                    }
+                    if (index <= $('.dj-b ul li.line').length - 1) {
+                        $('.dj-b ul li.line').eq(index).find('span').width(((jf - item) / (dj[index +
+                                    1] -
+                                dj[index])) *
+                            100 + '%');
+                    }
+                    if (index == dj.length - 1) {
+                        $('.dj-t p').eq(index).show();
+                    }
                 }
-                if (index <= $('.dj-b ul li.line').length - 1) {
-                    $('.dj-b ul li.line').eq(index).find('span').width(((jf - item) / (dj[index + 1] -
-                            dj[index])) *
-                        100 + '%');
-                }
-                if (index == dj.length - 1) {
-                    $('.dj-t p').eq(index).show();
-                }
+
             }
         });
     })
