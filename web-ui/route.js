@@ -202,5 +202,9 @@ let route = [{
     title: '我的积分',
     route: '/Integral',
     page: '/Integral/Integral.html'
+}, {
+    title: '收支明细',
+    route: '/Income',
+    page: '/Income/Income.html'
 }];
 module.exports = route;
