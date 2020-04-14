@@ -741,3 +741,135 @@ a.white:hover {
 .layui-btn.layui-btn-success {
   background-color: #00ba9b;
 }
+.rz-tc {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+}
+.rz-tc.sjs-tc .tc-main .desc p {
+  color: #395887;
+}
+.rz-tc.sjs-tc .tc-main .desc p:before {
+  background: #395887;
+}
+.rz-tc.sjs-tc .tc-main .desc div span {
+  color: #a6c0e5;
+}
+.rz-tc.sjs-tc .tc-main .btn a {
+  border: 1px solid #a6c0e5;
+  color: #395887;
+}
+.rz-tc.sjs-tc .tc-main .btn a:hover {
+  background: linear-gradient(90deg, #d6e6fe 0%, #abc9f4 100%);
+}
+.rz-tc.fzr-tc .tc-main .desc p {
+  color: #7E5C2E;
+}
+.rz-tc.fzr-tc .tc-main .desc p:before {
+  background: #395887;
+}
+.rz-tc.fzr-tc .tc-main .desc div span {
+  color: #BDAD96;
+}
+.rz-tc.fzr-tc .tc-main .btn a {
+  border: 1px solid #BDAD96;
+  color: #7E5C2E;
+}
+.rz-tc.fzr-tc .tc-main .btn a:hover {
+  background: linear-gradient(90deg, #fae7bd 0%, #dfbd8a 100%);
+}
+.rz-tc .back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.25);
+}
+.rz-tc .tc-main {
+  position: relative;
+  top: 40%;
+  transform: translateY(-50%);
+  width: 316px;
+  background: #ffffff;
+  border-radius: 10px;
+  margin: 0 auto;
+}
+.rz-tc .tc-main .t {
+  margin-top: -130px;
+  float: left;
+}
+.rz-tc .tc-main .t img {
+  width: 100%;
+}
+.rz-tc .tc-main .close {
+  position: absolute;
+  right: 0;
+  top: -70px;
+  z-index: 9;
+  color: white;
+  cursor: pointer;
+}
+.rz-tc .tc-main .close i {
+  font-size: 28px;
+}
+.rz-tc .tc-main .desc {
+  padding: 150px 0 20px;
+  text-align: center;
+}
+.rz-tc .tc-main .desc p {
+  font-size: 15px;
+  font-weight: 600;
+  color: #7e5c2e;
+  line-height: 15px;
+  position: relative;
+  width: 130px;
+  margin: 0 auto;
+}
+.rz-tc .tc-main .desc p span {
+  background-color: white;
+  display: inline-block;
+  padding: 0 5px;
+  position: relative;
+  z-index: 9;
+}
+.rz-tc .tc-main .desc p:before {
+  content: "";
+  height: 1px;
+  background: #7e5c2e;
+  width: 100%;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 50%;
+}
+.rz-tc .tc-main .desc div {
+  margin-top: 15px;
+}
+.rz-tc .tc-main .desc div span {
+  font-size: 16px;
+  color: #bdad96;
+  line-height: 22px;
+}
+.rz-tc .tc-main .btn {
+  padding: 24px 0;
+  text-align: center;
+}
+.rz-tc .tc-main .btn a {
+  display: inline-block;
+  width: 122px;
+  height: 40px;
+  background: #ffffff;
+  border-radius: 2px;
+  border: 1px solid #bdad96;
+  font-size: 14px;
+  font-weight: 600;
+  color: #7e5c2e;
+  line-height: 38px;
+  margin: 0 8px;
+}
+.rz-tc .tc-main .btn a:hover {
+  background: linear-gradient(90deg, #fbd5c7 0%, #fbc2a3 100%);
+  border: 1px solid rgba(189, 173, 150, 0);
+}

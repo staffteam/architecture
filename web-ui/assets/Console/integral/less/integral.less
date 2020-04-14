@@ -48,11 +48,49 @@
                     float: left;
 
                     &.the {
-                        p {
-                            width: 82px;
-                            height: 82px;
+                        position: relative;
+                        &>div{
                             border-radius: 50%;
-                            border: 2px solid rgba(72, 157, 252, 0.1);
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 90px;
+                            box-sizing: border-box;
+                            height: 90px;
+                            border: 2px solid rgba(72,157,252,0.1);
+                            -moz-animation: rotate 2.5s infinite linear;
+                            -webkit-animation: rotate 2.5s infinite linear;
+                            animation: rotate 2.5s infinite linear;
+                        }
+                        &.the1.success>div{
+                            border: 4px solid #F2A087;
+                        }
+                        &.the2.success>div{
+                            border: 4px solid #8bb3ed;
+                        }
+                        &.the3.success>div{
+                            border: 4px solid #8bb3ed;
+                        }
+                        &.the2.on>div{
+                            border: 0px solid rgba(72,157,252,0.1);
+                            background:url(/assets/Console/integral/images/sjq.png);
+                            background-size: cover;
+                        }
+                        &.the3.on>div{
+                            border: 0px solid rgba(72,157,252,0.1);
+                            background:url(/assets/Console/integral/images/zyq.png);
+                            background-size: cover;
+                        }
+                        &.the1.on>div {
+                            border: 0px solid rgba(72,157,252,0.1);
+                            background:url(/assets/Console/integral/images/zyq.png);
+                            background-size: cover;
+                        }
+
+                        p {
+                            width: 90px;
+                            height: 90px;
+                            border-radius: 50%;
                             position: relative;
 
                             img {
@@ -104,6 +142,7 @@
                             background: rgba(72, 157, 252, 0.2);
                             border-radius: 2px;
                             position: relative;
+
                             span {
                                 height: 4px;
                                 background: rgba(72, 157, 252, 1);
@@ -112,6 +151,7 @@
                                 position: absolute;
                                 left: 0;
                                 top: 0;
+
                                 &::before {
                                     display: none;
                                 }
@@ -131,9 +171,11 @@
     bottom: -15px;
     left: 40%;
 }
-.dj-tips.layui-layer-tips .layui-layer-content{
+
+.dj-tips.layui-layer-tips .layui-layer-content {
     padding: 5px 15px;
 }
+
 .jf-main {
     padding: 60px 0 80px;
     text-align: center;
@@ -244,7 +286,8 @@
                 color: #489DFC;
                 margin: 0 auto;
                 cursor: pointer;
-                &.on{
+
+                &.on {
                     transform: rotate(180deg);
                 }
             }
@@ -265,6 +308,35 @@
     }
 }
 
+@-moz-keyframes rotate {
+    0% {
+        -moz-transform: rotate(0deg);
+    }
+
+    100% {
+        -moz-transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes rotate {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
 
 @media (max-width:1200px) {
     .jf-main {

@@ -38,11 +38,50 @@
 .integral-main > .layui-card .dj-b ul li {
   float: left;
 }
-.integral-main > .layui-card .dj-b ul li.the p {
-  width: 82px;
-  height: 82px;
+.integral-main > .layui-card .dj-b ul li.the {
+  position: relative;
+}
+.integral-main > .layui-card .dj-b ul li.the > div {
   border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 90px;
+  box-sizing: border-box;
+  height: 90px;
   border: 2px solid rgba(72, 157, 252, 0.1);
+  -moz-animation: rotate 2.5s infinite linear;
+  -webkit-animation: rotate 2.5s infinite linear;
+  animation: rotate 2.5s infinite linear;
+}
+.integral-main > .layui-card .dj-b ul li.the.the1.success > div {
+  border: 4px solid #F2A087;
+}
+.integral-main > .layui-card .dj-b ul li.the.the2.success > div {
+  border: 4px solid #8bb3ed;
+}
+.integral-main > .layui-card .dj-b ul li.the.the3.success > div {
+  border: 4px solid #8bb3ed;
+}
+.integral-main > .layui-card .dj-b ul li.the.the2.on > div {
+  border: 0px solid rgba(72, 157, 252, 0.1);
+  background: url(/assets/Console/integral/images/sjq.png);
+  background-size: cover;
+}
+.integral-main > .layui-card .dj-b ul li.the.the3.on > div {
+  border: 0px solid rgba(72, 157, 252, 0.1);
+  background: url(/assets/Console/integral/images/zyq.png);
+  background-size: cover;
+}
+.integral-main > .layui-card .dj-b ul li.the.the1.on > div {
+  border: 0px solid rgba(72, 157, 252, 0.1);
+  background: url(/assets/Console/integral/images/zyq.png);
+  background-size: cover;
+}
+.integral-main > .layui-card .dj-b ul li.the p {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
   position: relative;
 }
 .integral-main > .layui-card .dj-b ul li.the p img {
@@ -210,6 +249,30 @@
   height: 2px;
   display: block;
   background: #e6ecf6;
+}
+@-moz-keyframes rotate {
+  0% {
+    -moz-transform: rotate(0deg);
+  }
+  100% {
+    -moz-transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 @media (max-width: 1200px) {
   .jf-main .jf-list {

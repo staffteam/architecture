@@ -89,7 +89,11 @@
                         </div>
                         <div class="dj-b">
                             <ul>
-                                <li class="the">
+                                <li class="the the1">
+                                    <div>
+                                        <div></div>
+                                        <div></div>
+                                    </div>
                                     <p><img src="/assets/Console/integral/images/zl-icon.png" alt=""></p>
                                     <h2>设计师助理</h2>
                                     <span>所需积分：0</span>
@@ -99,7 +103,11 @@
                                         <span></span>
                                     </div>
                                 </li>
-                                <li class="the">
+                                <li class="the the2">
+                                    <div>
+                                        <div></div>
+                                        <div></div>
+                                    </div>
                                     <p><img src="/assets/Console/integral/images/sjs-icon.png" alt=""></p>
                                     <p style="display: none;"><img src="/assets/Console/integral/images/sjs-icon-on.png"
                                             alt=""></p>
@@ -111,7 +119,11 @@
                                         <span></span>
                                     </div>
                                 </li>
-                                <li class="the">
+                                <li class="the the3">
+                                    <div>
+                                        <div></div>
+                                        <div></div>
+                                    </div>
                                     <p><img src="/assets/Console/integral/images/zyfzr-icon.png" alt=""></p>
                                     <p style="display: none;"><img
                                             src="/assets/Console/integral/images/zyfzr-icon-on.png" alt=""></p>
@@ -177,8 +189,13 @@
             $('.jf3 .el-progress__text').html('<span>6</span><em> / </em>8');
         }
     })
-    function goTops(){
-        
+
+    function goTops(index) {
+        if (index == 1) {
+            //设计师
+        } else if (index == 2) {
+            //专业负责人
+        }
     }
     $(function () {
         //默认高亮我的积分
@@ -253,63 +270,265 @@
         // 我的等级
         var jf = 50; //现有积分
         var dj = [0, 50, 80]; //积分等级
+        var isUpgrade = false; //是否已升级
         var is = true;
-        dj.forEach(function (item, index) {
-            if (!is) return;
-            if (item > jf) {
-                is = false;
-                //现有积分小于等级
-                if (dj[index - 1] == jf && jf != 0 && jf != dj[dj.length - 1]) {
-                    setTimeout(function () {
-                        layer.tips('<span style="color:#FADA8A;" onclick="goTops()">立即岗位升级</span>', $(
-                            '.dj-b ul li.the').eq(index - 1), {
-                            tips: [1, '#333333'],
-                            skin: 'dj-tips',
-                            time: 0
-                        });
-                        $('.dj-tips').css({
-                            'left': parseInt($('.dj-tips').css('left')) - 210,
-                            'top': parseInt($('.dj-tips').css('top')) - 110
-                        })
-                        $('#content .container').append($('.dj-tips'))
-                    }, 100)
-                    $('.dj-t p').eq(index - 2).show();
-                } else {
-                    setTimeout(function () {
-                        layer.tips('总共' + jf + '分 还需' + (dj[index] - jf) + '分', $(
-                            '.dj-b ul li.line').eq(index - 1), {
-                            tips: [1, '#333333'],
-                            skin: 'dj-tips',
-                            time: 0
-                        });
-                        $('.dj-tips').css({
-                            'left': parseInt($('.dj-tips').css('left')) - 220,
-                            'top': parseInt($('.dj-tips').css('top')) - 110
-                        })
-                        $('#content .container').append($('.dj-tips'))
-                    }, 100)
-                    $('.dj-t p').eq(index - 1).show();
+        if (jf >= dj[dj.length - 1]) {
+            //积分等于最大等级
+            var _index = dj.length - 2;
+            if (isUpgrade) {
+                //如果已升级，同上
+                $('.dj-b ul li.the').eq(dj.length - 1).addClass('on');
+                $('.dj-b ul li.the').eq(dj.length - 1).find('p').eq(0).hide();
+                $('.dj-b ul li.the').eq(dj.length - 1).find('p').eq(1).show();
+                for (var i = 0; i < dj.length - 1; i++) {
+                    $('.dj-b ul li.the').eq(i).addClass('success');
+                    $('.dj-b ul li.line').eq(i).find('span').width('100%');
+                    if (i != 0) {
+                        $('.dj-b ul li.the').eq(i).find('p').eq(0).hide();
+                        $('.dj-b ul li.the').eq(i).find('p').eq(1).show();
+                    }
                 }
+                setTimeout(function () {
+                    layer.tips('总共' + jf + '分', $(
+                        '.dj-b ul li.the').eq(dj.length - 1), {
+                        tips: [1, '#333333'],
+                        skin: 'dj-tips',
+                        time: 0
+                    });
+                    $('.dj-tips').css({
+                        'left': parseInt($('.dj-tips').css('left')) - 195,
+                        'top': parseInt($('.dj-tips').css('top')) - 110
+                    })
+                    $('#content .container').append($('.dj-tips'))
+                }, 100);
+                $('.dj-t p').eq(dj.length - 1).show();
             } else {
-                if (jf != item) {
-                    $('.dj-b ul li.line').removeClass('on');
-                    $('.dj-b ul li.line').eq(index).addClass('on');
-                    if (index > 0) {
-                        $('.dj-b ul li.the').eq(index).find('p').eq(0).hide();
-                        $('.dj-b ul li.the').eq(index).find('p').eq(1).show();
-                    }
-                    if (index <= $('.dj-b ul li.line').length - 1) {
-                        $('.dj-b ul li.line').eq(index).find('span').width(((jf - item) / (dj[index +
-                                    1] -
-                                dj[index])) *
-                            100 + '%');
-                    }
-                    if (index == dj.length - 1) {
-                        $('.dj-t p').eq(index).show();
+                //如果没有升级，不显示当前等级动画，不显示当前等级徽章
+                $('.dj-b ul li.the').eq(_index).addClass('on');
+                //高亮当前等级徽章
+                $('.dj-b ul li.the').eq(dj.length - 1).find('p').eq(0).hide();
+                $('.dj-b ul li.the').eq(dj.length - 1).find('p').eq(1).show();
+                for (var i = 0; i < dj.length - 1; i++) {
+                    $('.dj-b ul li.the').eq(i).addClass('success');
+                    $('.dj-b ul li.line').eq(i).find('span').width('100%');
+                    if (i != 0) {
+                        $('.dj-b ul li.the').eq(i).find('p').eq(0).hide();
+                        $('.dj-b ul li.the').eq(i).find('p').eq(1).show();
                     }
                 }
-
+                setTimeout(function () {
+                    layer.tips(
+                        '<span style="color:#FADA8A;cursor:pointer;" onclick="goTops(' + (dj
+                            .length - 1) + ')">立即岗位升级</span>',
+                        $(
+                            '.dj-b ul li.the').eq(dj.length - 1), {
+                            tips: [1, '#333333'],
+                            skin: 'dj-tips',
+                            time: 0
+                        });
+                    $('.dj-tips').css({
+                        'left': parseInt($('.dj-tips').css('left')) - 210,
+                        'top': parseInt($('.dj-tips').css('top')) - 110
+                    })
+                    $('#content .container').append($('.dj-tips'))
+                }, 100)
+                $('.dj-t p').eq(_index).show();
             }
-        });
+        } else {
+            //积分没有超过且等于最大等级
+            dj.forEach(function (item, index) {
+                if (!is) return;
+                //判断当前积分是否小于当前等级积分线
+                if (jf < item) {
+                    is = false;
+                    //如果小于当前等级积分线,则确认用户积分未到当前等级，且最大等级是上一级
+                    var _index = index - 1;
+                    if (isUpgrade) {
+                        //上一等级添加动画效果
+                        $('.dj-b ul li.the').eq(_index).addClass('on');
+                        //上一级必须大于一级，之前的等级才填充颜色，并高亮图标
+                        if (_index > 0) {
+                            //上一等级图标高亮
+                            $('.dj-b ul li.the').eq(_index).find('p').eq(0).hide();
+                            $('.dj-b ul li.the').eq(_index).find('p').eq(1).show();
+                            $('.dj-b ul li.line').eq(_index).find('span').width((((jf - dj[_index]) / (
+                                item - dj[_index])) * 100) + '%');
+                            for (var i = 0; i < _index; i++) {
+                                $('.dj-b ul li.the').eq(i).addClass('success');
+                                $('.dj-b ul li.line').eq(i).find('span').width('100%');
+                                if (i != 0) {
+                                    $('.dj-b ul li.the').eq(i).find('p').eq(0).hide();
+                                    $('.dj-b ul li.the').eq(i).find('p').eq(1).show();
+                                }
+                            }
+                        } else {
+                            $('.dj-b ul li.line').eq(_index).find('span').width((((jf - dj[_index]) / (
+                                item - dj[_index])) * 100) + '%');
+                        }
+                        //提示离这一个等级还需多少分
+                        setTimeout(function () {
+                            layer.tips('总共' + jf + '分 还需' + (dj[index] - jf) + '分', $(
+                                '.dj-b ul li.line').eq(_index), {
+                                tips: [1, '#333333'],
+                                skin: 'dj-tips',
+                                time: 0
+                            });
+                            $('.dj-tips').css({
+                                'left': parseInt($('.dj-tips').css('left')) - 220,
+                                'top': parseInt($('.dj-tips').css('top')) - 110
+                            })
+                            $('#content .container').append($('.dj-tips'))
+                        }, 100);
+                        //显示上一级的徽章
+                        $('.dj-t p').eq(_index).show();
+                    } else {
+                        //如果没有升级，不显示当前等级动画，不显示当前等级徽章
+                        //高亮当前等级徽章
+                        if (_index > 0) {
+                            $('.dj-b ul li.the').eq(_index - 1).addClass('on');
+                            $('.dj-b ul li.the').eq(_index).find('p').eq(0).hide();
+                            $('.dj-b ul li.the').eq(_index).find('p').eq(1).show();
+                            $('.dj-b ul li.line').eq(_index).find('span').width((((jf - dj[_index]) / (
+                                item - dj[_index])) * 100) + '%');
+                            for (var i = 0; i < _index; i++) {
+                                $('.dj-b ul li.the').eq(i).addClass('success');
+                                $('.dj-b ul li.line').eq(i).find('span').width('100%');
+                                if (i != 0) {
+                                    $('.dj-b ul li.the').eq(i).find('p').eq(0).hide();
+                                    $('.dj-b ul li.the').eq(i).find('p').eq(1).show();
+                                }
+                            }
+                            setTimeout(function () {
+                                layer.tips(
+                                    '<span style="color:#FADA8A;cursor:pointer;" onclick="goTops(' +
+                                    (_index) + ')">立即岗位升级</span>',
+                                    $(
+                                        '.dj-b ul li.the').eq(_index), {
+                                        tips: [1, '#333333'],
+                                        skin: 'dj-tips',
+                                        time: 0
+                                    });
+                                $('.dj-tips').css({
+                                    'left': parseInt($('.dj-tips').css('left')) - 210,
+                                    'top': parseInt($('.dj-tips').css('top')) - 110
+                                })
+                                $('#content .container').append($('.dj-tips'))
+                            }, 100)
+                            $('.dj-t p').eq(_index - 1).show();
+                        } else {
+                            $('.dj-b ul li.the').eq(_index).addClass('on');
+                            $('.dj-b ul li.line').eq(_index).find('span').width((((jf - dj[_index]) / (
+                                item - dj[_index])) * 100) + '%');
+                            //提示离这一个等级还需多少分
+                            setTimeout(function () {
+                                layer.tips('总共' + jf + '分 还需' + (dj[index] - jf) + '分', $(
+                                    '.dj-b ul li.line').eq(_index), {
+                                    tips: [1, '#333333'],
+                                    skin: 'dj-tips',
+                                    time: 0
+                                });
+                                $('.dj-tips').css({
+                                    'left': parseInt($('.dj-tips').css('left')) - 220,
+                                    'top': parseInt($('.dj-tips').css('top')) - 110
+                                })
+                                $('#content .container').append($('.dj-tips'))
+                            }, 100);
+                            //显示上一级的徽章
+                            $('.dj-t p').eq(_index).show();
+                        }
+                    }
+                } else if (jf == item) {
+                    is = false;
+                    //如果当前积分等级当前等级积分线
+                    //判断是否已升级
+                    var _index = index;
+                    if (isUpgrade) {
+                        //如果已升级
+                        if (_index > 0) {
+                            $('.dj-b ul li.the').eq(_index).addClass('on');
+                            $('.dj-b ul li.the').eq(_index).find('p').eq(0).hide();
+                            $('.dj-b ul li.the').eq(_index).find('p').eq(1).show();
+                            for (var i = 0; i < _index; i++) {
+                                $('.dj-b ul li.the').eq(i).addClass('success');
+                                if (i != 0) {
+                                    $('.dj-b ul li.the').eq(i).find('p').eq(0).hide();
+                                    $('.dj-b ul li.the').eq(i).find('p').eq(1).show();
+                                }
+                            }
+                        } else {
+                            $('.dj-b ul li.line').eq(_index).find('span').width((((jf - dj[_index]) / (
+                                item - dj[_index])) * 100) + '%');
+                            $('.dj-b ul li.the').eq(_index).addClass('on');
+                        }
+                        //提示离下一个等级还需多少分
+                        setTimeout(function () {
+                            layer.tips('总共' + jf + '分 还需' + (dj[_index + 1] - jf) + '分', $(
+                                '.dj-b ul li.line').eq(_index), {
+                                tips: [1, '#333333'],
+                                skin: 'dj-tips',
+                                time: 0
+                            });
+                            $('.dj-tips').css({
+                                'left': parseInt($('.dj-tips').css('left')) - 220,
+                                'top': parseInt($('.dj-tips').css('top')) - 110
+                            })
+                            $('#content .container').append($('.dj-tips'))
+                        }, 100);
+                        $('.dj-t p').eq(_index).show();
+                    } else {
+                        //如果没有升级，不显示当前等级动画，不显示当前等级徽章
+                        //高亮当前等级徽章
+                        if (_index > 0) {
+                            $('.dj-b ul li.the').eq(_index - 1).addClass('on');
+                            $('.dj-b ul li.the').eq(_index).find('p').eq(0).hide();
+                            $('.dj-b ul li.the').eq(_index).find('p').eq(1).show();
+                            for (var i = 0; i < _index; i++) {
+                                $('.dj-b ul li.the').eq(i).addClass('success');
+                                if (i != 0) {
+                                    $('.dj-b ul li.the').eq(i).find('p').eq(0).hide();
+                                    $('.dj-b ul li.the').eq(i).find('p').eq(1).show();
+                                }
+                            }
+                            setTimeout(function () {
+                                layer.tips(
+                                    '<span style="color:#FADA8A;cursor:pointer;" onclick="goTops(' +
+                                    (_index) + ')">立即岗位升级</span>',
+                                    $(
+                                        '.dj-b ul li.the').eq(_index), {
+                                        tips: [1, '#333333'],
+                                        skin: 'dj-tips',
+                                        time: 0
+                                    });
+                                $('.dj-tips').css({
+                                    'left': parseInt($('.dj-tips').css('left')) - 210,
+                                    'top': parseInt($('.dj-tips').css('top')) - 110
+                                })
+                                $('#content .container').append($('.dj-tips'))
+                            }, 100)
+                            $('.dj-t p').eq(_index - 1).show();
+                        } else {
+                            $('.dj-b ul li.the').eq(_index).addClass('on');
+                            $('.dj-b ul li.line').eq(_index).find('span').width((((jf - dj[_index]) / (
+                                item - dj[_index])) * 100) + '%');
+                            //提示离下一个等级还需多少分
+                            setTimeout(function () {
+                                layer.tips('总共' + jf + '分 还需' + (dj[_index + 1] - jf) + '分', $(
+                                    '.dj-b ul li.line').eq(_index), {
+                                    tips: [1, '#333333'],
+                                    skin: 'dj-tips',
+                                    time: 0
+                                });
+                                $('.dj-tips').css({
+                                    'left': parseInt($('.dj-tips').css('left')) - 220,
+                                    'top': parseInt($('.dj-tips').css('top')) - 110
+                                })
+                                $('#content .container').append($('.dj-tips'))
+                            }, 100);
+                            $('.dj-t p').eq(_index).show();
+                        }
+                    }
+                }
+            });
+        }
     })
 </script>

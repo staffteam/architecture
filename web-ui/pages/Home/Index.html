@@ -138,8 +138,73 @@
         </div>
     </div>
 </div>
-
+<div class="rz-tc zl-tc">
+    <div class="back"></div>
+    <div class="tc-main">
+        <div class="close" onclick="closeTc(this)"><i class="iconfont">&#xe610;</i></div>
+        <div class="t">
+            <img src="/assets/Console/integral/images/zlt.png" alt="">
+        </div>
+        <div class="desc">
+            <p><span>新增权限</span></p>
+            <div>
+                <span>可以进行自由接单</span>
+            </div>
+        </div>
+        <div class="btn">
+            <a href="/Integral">查看积分</a>
+            <a href="/lookingFor/lookingForList">马上接单</a>
+        </div>
+    </div>
+</div>
+<div class="rz-tc sjs-tc">
+    <div class="back"></div>
+    <div class="tc-main">
+        <div class="close" onclick="closeTc(this)"><i class="iconfont">&#xe610;</i></div>
+        <div class="t">
+            <img src="/assets/Console/integral/images/sjst.png" alt="">
+        </div>
+        <div class="desc">
+            <p><span>新增权限</span></p>
+            <div>
+                <span>可以接更多类型的项目</span>
+            </div>
+        </div>
+        <div class="btn">
+            <a href="/Integral">查看积分</a>
+            <a href="/lookingFor/lookingForList">马上接单</a>
+        </div>
+    </div>
+</div>
+<div class="rz-tc fzr-tc">
+    <div class="back"></div>
+    <div class="tc-main">
+        <div class="close" onclick="closeTc(this)"><i class="iconfont">&#xe610;</i></div>
+        <div class="t">
+            <img src="/assets/Console/integral/images/fzrt.png" alt="">
+        </div>
+        <div class="desc">
+            <p><span>新增权限</span></p>
+            <div>
+                <span>可以接更多类型的项目</span>
+            </div>
+        </div>
+        <div class="btn">
+            <a href="/Integral">查看积分</a>
+            <a href="/lookingFor/lookingForList">马上接单</a>
+        </div>
+    </div>
+</div>
 <script>
+    function closeTc(obj){
+        $(obj).closest('.rz-tc').hide();
+    }
+    //助理设计师认证成功提示
+    $('.rz-tc.zl-tc').show();
+    //设计师认证成功提示
+    $('.rz-tc.sjs-tc').show();
+    //专业负责人认证成功提示
+    $('.rz-tc.fzr-tc').show();
     $(function () {
         $('.layui-nav.layui-nav-tree .layui-nav-item').eq(0).addClass('layui-this');
     })
