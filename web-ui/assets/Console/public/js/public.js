@@ -373,7 +373,7 @@ var upWin = {
     layero: {},
     progresss: {},
     i: 0,
-    layerObj: {},
+    layerObj: 0,
     init: function (success) {
         let _this = this;
         _this.layerObj = layer.open({
@@ -394,7 +394,7 @@ var upWin = {
             }
         });
     },
-    start: function (name) {
+    start: function (name,index) {
         let _this = this;
         _this.i++;
         $(_this.layero).find('.list').append(
@@ -403,7 +403,7 @@ var upWin = {
             _this.i + '" lay-showPercent="true">' +
             '<div class="layui-progress-bar" lay-percent="0%"></div>' +
             '</div></div>');
-        _this.progresss[name] = {
+        _this.progresss[index || name] = {
             name: 'winprogress' + _this.i,
             index: _this.i
         };
@@ -416,6 +416,7 @@ var upWin = {
             setTimeout(function () {
                 if (progress == 100 && _this.progresss[name].index == _this.i) {
                     layer.close(_this.layerObj);
+                    _this.layerObj = 0;
                 }
             }, 300)
         }, 300)

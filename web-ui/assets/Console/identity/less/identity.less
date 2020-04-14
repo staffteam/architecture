@@ -567,4 +567,48 @@
         }
     }
 }
-
+.zz-up-main{
+    &>div{
+        overflow: hidden;
+        .updata{
+            display: inline-block;
+        }
+        .file-list{
+            p{
+                width: 120px;
+                height: 120px;
+                background: white;
+                border: 1px dashed #dddddd;
+                padding-top: 30px;
+                position: relative;
+                overflow: hidden;
+                margin-right: 10px;
+                float:left;
+                &:hover{
+                    span{
+                        top: 0;
+                    }
+                }
+                span{
+                    position: absolute;
+                    top: -30px;
+                    left: 0;
+                    width: 100%;
+                    height: 30px;
+                    transition: 0.3s top;
+                    line-height: 30px;
+                    text-align: right;
+                    padding: 0 5%;
+                    background-color: rgba(0,0,0,0.4);
+                    color: white;
+                    cursor: pointer;
+                }
+                img{
+                    max-width: 100%;
+                    max-height: 100%;
+                    .center();
+                }
+            }
+        }
+    }
+}

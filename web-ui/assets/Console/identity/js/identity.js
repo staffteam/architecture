@@ -1,32 +1,44 @@
+var file_name = "",fileJson={};
 $(function () {
     verify.upgradesInit();
     var upload = layui.upload;
     //普通图片上传
+    //普通图片上传
     var uploadInst = upload.render({
-        elem: '#test1',
-        url: '/upload/',
+        elem: '#upWord',
+        url: 'http://localhost:8083/api/image',
+        multiple: true,
+        done: function (res, index, upload) {
+            upWin.percent(index, 100);
+            $('.file-list').prepend('<p id="img1"><img src="' + fileJson[index] + '"><span onclick="delImg(this)">删除</span></p>');
+        },
         before: function (obj) {
             //预读本地文件示例，不支持ie8
             obj.preview(function (index, file, result) {
-                $('#demo1').attr('src', result); //图片链接（base64）
+                fileJson[index] = result;
+                if (upWin.layerObj) {
+                    upWin.start(file.name,index);
+                    
+                } else {
+                    upWin.init(function () {
+                        upWin.start(file.name,index);
+                    });
+                }
+
             });
         },
-        done: function (res) {
+        allDone: function (obj) { //当文件全部被提交后，才触发
             //如果上传失败
-            if (res.code > 0) {
-                return $msg({
-                    content: '上传失败',
-                    icon: 0
-                });
-            }
-            //上传成功
+            $('input[name="license"]').val(obj.successfu);
+            return $msg({
+                content: '共上传' + obj.total + '个文件，成功' + obj.successful + '个，失败' + obj.aborted,
+                icon: 1
+            });
         },
         error: function () {
-            //演示失败状态，并实现重传
-            var demoText = $('#demoText');
-            demoText.html('<span style="color: #FF5722;">上传失败</span> <a class="layui-btn layui-btn-xs demo-reload">重试</a>');
-            demoText.find('.demo-reload').on('click', function () {
-                uploadInst.upload();
+            $msg({
+                content: '上传失败',
+                icon: 0
             });
         }
     });
@@ -39,6 +51,10 @@ $(function () {
         }
     });
 })
+
+function delImg(obj) {
+    $(obj).parent().remove();
+}
 
 $('#getCode').click(function () {
     $('#identityApply input[name="phone"]').blur();

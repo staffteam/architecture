@@ -712,6 +712,13 @@ a.white:hover {
 .win-progress .list {
   margin-top: 20px;
 }
+.win-progress .list .list-progress {
+  margin-top: 10px;
+  overflow: hidden;
+}
+.win-progress .list .list-progress:first-child {
+  margin-top: 0;
+}
 .win-progress .list .list-progress .label {
   width: 45%;
   float: left;
