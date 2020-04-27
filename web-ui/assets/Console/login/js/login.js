@@ -8,12 +8,12 @@ form.on('submit(login)', function (data) {
 });
 form.on('submit(register)', function (data) {
     if (!$('#registerBtn').hasClass('off') && verify.find('register')) {
-        if($('#register input[name="verifycode"]').val() != '123456'){
+        if ($('#register input[name="verifycode"]').val() != '123456') {
             $msg({
                 content: '验证码错误',
                 icon: 2
             });
-        }else if ($('#register input[name="second"]').val() != $('#register input[name="password"]').val()) {
+        } else if ($('#register input[name="second"]').val() != $('#register input[name="password"]').val()) {
             $msg({
                 content: '两次密码不一致',
                 icon: 2
@@ -28,12 +28,12 @@ form.on('submit(register)', function (data) {
 });
 form.on('submit(find)', function (data) {
     if (verify.find('find')) {
-        if($('#find input[name="verifycode"]').val() != '123456'){
+        if ($('#find input[name="verifycode"]').val() != '123456') {
             $msg({
                 content: '验证码错误',
                 icon: 2
             });
-        }else if ($('#find input[name="second"]').val() != $('#find input[name="password"]').val()) {
+        } else if ($('#find input[name="second"]').val() != $('#find input[name="password"]').val()) {
             $msg({
                 content: '两次密码不一致',
                 icon: 2
@@ -116,7 +116,7 @@ $(function () {
 
     $('.get-code').click(function () {
         var _val = $(this).closest('.fill-out').find('input[name="phoneoremail"]').val();
-        if(_val != '' && isPhone.test(_val)){
+        if (_val != '' && isPhone.test(_val)) {
             if (!$(this).hasClass('on')) {
                 $(this).addClass('on');
                 $(this).html('60s后重新获取');
@@ -133,16 +133,18 @@ $(function () {
                     }
                 }, 1000)
             }
-        }else if(_val == ''){
+        } else if (_val == '') {
             $msg({
                 content: '请输入手机或邮箱',
                 icon: 2
             });
-        }else if(isPhone.test(_val)){
+        } else if (isPhone.test(_val)) {
             $msg({
                 content: '请输入有效的手机或邮箱',
                 icon: 2
             });
         }
     });
+    var form = layui.form;
+    form.render();
 })

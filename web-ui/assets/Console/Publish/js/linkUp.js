@@ -51,7 +51,7 @@ $(function () {
 
     //表情初始化
     qqe.forEach(function (value) {
-        $('#qqe').append('<img title="[' + value + ']" src="/Assets/Console/public/images/qqe/' + value + '.gif" />');
+        $('#qqe').append('<img title="[' + value + ']" src="/assets/Console/public/images/qqe/' + value + '.gif" />');
     })
     //表情点击事件
     $('#qqe img').click(function () {
