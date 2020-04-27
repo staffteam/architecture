@@ -33,7 +33,7 @@ $(function () {
 })
 
 function getCode(obj) {
-    var formObj = $('.lowin-box-inner');
+    var formObj = $(obj).closest('.lowin-box-inner');
     var phone = formObj.find('input[name="phone"]');
     if (phone != '' && (isPhone.test(phone.val()) || isEmail.test(phone.val()))) {
         if (!$(obj).hasClass('on')) {
