@@ -43,7 +43,8 @@
                             </div>
                             <div class="btn">
                                 <button type="button" class="layui-btn">
-                                    <a href="/identity/identityEntrance" class="white"><i class="layui-icon layui-icon-username"></i> 身份认证</a>
+                                    <a href="/identity/identityEntrance" class="white"><i
+                                            class="layui-icon layui-icon-username"></i> 身份认证</a>
                                 </button>
                                 <button type="button" class="layui-btn">
                                     <i class="layui-icon layui-icon-list"></i> 完善资料
@@ -88,20 +89,19 @@
                                 </div>
                                 <div class="layui-inline">
                                     <div class="layui-input-inline">
-                                        <input type="text" name="date" id="date" lay-verify="date"
-                                               placeholder="发布时间" autocomplete="off" class="layui-input">
+                                        <input type="text" name="date" id="date" lay-verify="date" placeholder="发布时间"
+                                            autocomplete="off" class="layui-input">
                                     </div>
                                 </div>
                                 <div class="layui-inline">
                                     <div class="layui-input-inline">
                                         <input type="text" name="" placeholder="岗位需求" autocomplete="off"
-                                               class="layui-input">
+                                            class="layui-input">
                                     </div>
                                 </div>
                                 <div class="layui-inline">
                                     <div class="layui-input-inline">
-                                        <button class="layui-btn"
-                                                lay-event="getCheckData">
+                                        <button class="layui-btn" lay-event="getCheckData">
                                             搜索
                                         </button>
                                     </div>
@@ -114,60 +114,76 @@
                                 <li>
                                     <h2>世茂龙河D地块商业项目</h2>
                                     <div>
-                                        <div class="l" >
+                                        <div class="l">
                                             <label>项目进展：</label>
-                                            <div class="sliding" >
-                                                <div class="li on" >
+                                            <div class="sliding">
+                                                <div class="li on">
                                                     <h2></h2>
-                                                    <div class="t" ><p></p></div>
+                                                    <div class="t">
+                                                        <p></p>
+                                                    </div>
                                                     <p>项目启动</p>
                                                 </div>
-                                                <div class="li on" >
+                                                <div class="li on">
                                                     <h2></h2>
-                                                    <div class="t" ><p></p></div>
+                                                    <div class="t">
+                                                        <p></p>
+                                                    </div>
                                                     <p>项目启动</p>
                                                 </div>
-                                                <div class="li on" >
+                                                <div class="li on">
                                                     <h2></h2>
-                                                    <div class="t" ><p></p></div>
+                                                    <div class="t">
+                                                        <p></p>
+                                                    </div>
                                                     <p>项目启动</p>
                                                 </div>
-                                                <div class="li on" >
+                                                <div class="li on">
                                                     <h2>已打款</h2>
-                                                    <div class="t" ><p></p></div>
+                                                    <div class="t">
+                                                        <p></p>
+                                                    </div>
                                                     <p>项目启动</p>
                                                 </div>
-                                                <div class="li on" >
+                                                <div class="li on">
                                                     <h2>已打款</h2>
-                                                    <div class="t" ><p></p></div>
-                                                    <p>施工图设计 <span>进行中</span><br/>预计 2019-09-01 完成</p>
+                                                    <div class="t">
+                                                        <p></p>
+                                                    </div>
+                                                    <p>施工图设计 <span>进行中</span><br />预计 2019-09-01 完成</p>
                                                 </div>
-                                                <div class="li" >
+                                                <div class="li">
                                                     <h2>未打款</h2>
-                                                    <div class="t" ><p></p></div>
+                                                    <div class="t">
+                                                        <p></p>
+                                                    </div>
                                                     <p>施工配合 未完成</p>
                                                 </div>
-                                                <div class="li" >
+                                                <div class="li">
                                                     <h2>未打款</h2>
-                                                    <div class="t" ><p></p></div>
+                                                    <div class="t">
+                                                        <p></p>
+                                                    </div>
                                                     <p>竣工图 未完成</p>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="r" >
+                                        <div class="r">
                                             <label>参与人员：</label>
                                             <span>专业负责人</span>
-                                            <div class="a" >
+                                            <div class="a">
                                                 <p>刘</p>
                                                 刘小姐
                                             </div>
-                                            <div class="b" >
-                                                <a href="/PublishProject/projectLinkUp" ><i class="layui-icon layui-icon-dialogue" ></i>
-                                                <span>项目沟通</span></a>
+                                            <div class="b">
+                                                <a href="/PublishProject/projectLinkUp"><i
+                                                        class="layui-icon layui-icon-dialogue"></i>
+                                                    <span>项目沟通</span></a>
                                             </div>
-                                            <div class="b" >
-                                                <a href="/PublishProject/projectLinkUp" ><i class="layui-icon layui-icon-user" ></i>
-                                                <span>团队成员</span></a>
+                                            <div class="b">
+                                                <a href="javascript:" onclick="projectMemberShow()"><i
+                                                        class="layui-icon layui-icon-user"></i>
+                                                    <span>团队成员</span></a>
                                             </div>
                                         </div>
                                     </div>
@@ -180,4 +196,86 @@
         </div>
     </div>
 </div>
+<div id="projectMember" class="project-member">
+    <div class="title">
+        项目成员 <span>（10）</span>
+        <i class="iconfont" onclick="projectMemberClose()">&#xe603;</i>
+    </div>
+    <ul>
+        <li>
+            <div class="title"><i class="iconfont">&#xe620;</i> 项目负责人</div>
+            <div class="list">
+                <div class="list-member">
+                    <p><img src="/assets/Web/public/images/top.png" /></p>
+                    <h2>刘小姐
+                        <span onclick="del(this)">踢出</span>
+                    </h2>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="title"><i class="iconfont">&#xe620;</i> 专业负责人</div>
+            <div class="list">
+                <div class="list-member">
+                    <p><img src="/assets/Web/public/images/top.png" /></p>
+                    <h2>赵小姐<span onclick="del(this)">踢出</span></h2>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="title"><i class="iconfont">&#xe620;</i> 设计师</div>
+            <div class="list">
+                <div class="list-member">
+                    <p><img src="/assets/Web/public/images/top.png" /></p>
+                    <h2>赵先生<span onclick="del(this)">踢出</span></h2>
+                </div>
+                <div class="list-member">
+                    <p><img src="/assets/Web/public/images/top.png" /></p>
+                    <h2>许先生<span onclick="del(this)">踢出</span></h2>
+                </div>
+                <div class="list-member">
+                    <p><img src="/assets/Web/public/images/top.png" /></p>
+                    <h2>万先生<span onclick="del(this)">踢出</span></h2>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="title"><i class="iconfont">&#xe620;</i> 助理设计师</div>
+            <div class="list">
+                <div class="list-member">
+                    <p><img src="/assets/Web/public/images/top.png" /></p>
+                    <h2>赵小姐<span onclick="del(this)">踢出</span></h2>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
+<script>
+    //踢出项目成员
+    function del(obj) {
+        layer.confirm('次子虽顽劣不堪，但其骨骼惊奇，天赋异禀，是可塑之才，望三思！', {
+            btn: ['逐出宗门', '留下，重点培养'] //按钮
+        }, function () {
+            $(obj).closest('.list-member').remove();
+            layer.closeAll();
+        });
+
+    }
+    //项目组数弹窗开启
+    function projectMemberShow() {
+        $('#projectMember').show();
+    }
+    $(function () {
+        //项目成员树结构展开收缩
+        $('.project-member ul li div.title').click(function () {
+            if ($(this).hasClass('on')) {
+                $(this).removeClass('on');
+                $(this).parent().find('.list').hide();
+            } else {
+                $(this).addClass('on');
+                $(this).parent().find('.list').show();
+            }
+        })
+    })
+</script>
 <script src="/assets/Console/lookingFor/js/lookingFor.js"></script>
