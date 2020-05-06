@@ -94,7 +94,8 @@
                         <label class="layui-form-label">联系人邮箱</label>
                         <div class="layui-input-inline">
                             <input type="text" name="email" required verifys="required&&email" tips="联系人邮箱"
-                                placeholder="联系人邮箱" autocomplete="off" class="layui-input">
+                                placeholder="联系人邮箱" autocomplete="off" class="layui-input" list="input_list">
+                            <datalist class="email-list" id="input_list"></datalist>
                         </div>
                     </div>
                     <div class="layui-form-item" style="margin-top: 30px;">
@@ -109,4 +110,9 @@
     </div>
 </div>
 </div>
+<script>
+    $(function () {
+        inputList($("input[name='email']"), $("#input_list"));
+    })
+</script>
 <script src="/assets/Console/identity/js/identity.js"></script>
