@@ -151,6 +151,102 @@
 .released-list ul li > div div.r div.b a {
   color: #999999;
 }
+.project-member {
+  position: fixed;
+  top: 200px;
+  width: 320px;
+  bottom: 10px;
+  right: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  background-color: white;
+  display: none;
+}
+.project-member > .title {
+  height: 60px;
+  line-height: 60px;
+  font-size: 16px;
+  padding: 0 24px;
+  color: #333333;
+  border-bottom: 1px solid #dddddd;
+}
+.project-member > .title span {
+  color: #999999;
+}
+.project-member > .title i {
+  width: 30px;
+  height: 30px;
+  margin-top: 15px;
+  float: right;
+  display: block;
+  line-height: 30px;
+  text-align: center;
+  cursor: pointer;
+}
+.project-member ul {
+  overflow-y: auto;
+}
+.project-member ul li {
+  margin-top: 10px;
+  padding: 0 20px;
+}
+.project-member ul li div.title {
+  cursor: pointer;
+  font-size: 14px;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.project-member ul li div.title.on i {
+  transform: rotate(90deg);
+}
+.project-member ul li div.title i {
+  font-size: 14px;
+  margin-right: 5px;
+  display: inline-block;
+}
+.project-member ul li div.list {
+  padding: 5px 0;
+  display: none;
+}
+.project-member ul li div.list div.list-member {
+  overflow: hidden;
+  padding: 5px 0;
+}
+.project-member ul li div.list div.list-member > p {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  overflow: hidden;
+  float: left;
+}
+.project-member ul li div.list div.list-member > p img {
+  width: 100%;
+}
+.project-member ul li div.list div.list-member h2 {
+  margin-left: 45px;
+  font-size: 14px;
+  line-height: 36px;
+  font-weight: 600;
+}
+.project-member ul li div.list div.list-member h2 span {
+  display: block;
+  width: 48px;
+  height: 24px;
+  margin-top: 5px;
+  background: rgba(72, 157, 252, 0.1);
+  border-radius: 4px;
+  margin-right: 5px;
+  float: right;
+  text-align: center;
+  line-height: 24px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #489DFC;
+  cursor: pointer;
+}
 @media screen and (max-width: 1850px) {
   .released-list ul li > div div.l {
     width: 100%;

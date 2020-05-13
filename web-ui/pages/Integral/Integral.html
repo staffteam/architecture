@@ -35,7 +35,7 @@
                                 </div>
                                 <div class="grade">
                                     岗位等级
-                                    <a href="javascript:">设计师助理</a>
+                                    <a href="javascript:">未认证</a>
                                 </div>
                                 <div class="grade">
                                     联系方式
@@ -47,7 +47,7 @@
                                 </div>
                             </div>
                             <div class="btn">
-                                <button type="button" class="layui-btn">
+                                <button type="button" class="layui-btn" id="sfrz">
                                     <a href="/identity/identityEntrance" class="white"><i
                                             class="layui-icon layui-icon-username"></i> 身份认证</a>
                                 </button>
@@ -197,7 +197,22 @@
             //专业负责人
         }
     }
+    let sfrzTips = null;
     $(function () {
+        $('#sfrz').hover(function () {
+            sfrzTips = layer.tips('恭喜您已经实名认证成功！ 现在您可以成为发包人、审核人、项目负责人了。', '#sfrz', {
+                tips: 3,
+                time: 0,
+                skin: 'sf-tips',
+                tipsMore: true
+            });
+            $('.sf-tips').css({
+                'left': parseInt($('.sf-tips').css('left')) - 35
+            })
+        }, function () {
+            layer.close(sfrzTips);
+        })
+
         //默认高亮我的积分
         $('.layui-nav.layui-nav-tree .layui-nav-item').eq(3).addClass('layui-this');
         //我的积分明细展开/收缩
@@ -293,6 +308,7 @@
                         '.dj-b ul li.the').eq(dj.length - 1), {
                         tips: [1, '#333333'],
                         skin: 'dj-tips',
+                        tipsMore: true,
                         time: 0
                     });
                     $('.dj-tips').css({
@@ -324,6 +340,7 @@
                             '.dj-b ul li.the').eq(dj.length - 1), {
                             tips: [1, '#333333'],
                             skin: 'dj-tips',
+                            tipsMore: true,
                             time: 0
                         });
                     $('.dj-tips').css({
@@ -371,6 +388,7 @@
                                 '.dj-b ul li.line').eq(_index), {
                                 tips: [1, '#333333'],
                                 skin: 'dj-tips',
+                                tipsMore: true,
                                 time: 0
                             });
                             $('.dj-tips').css({
@@ -406,6 +424,7 @@
                                         '.dj-b ul li.the').eq(_index), {
                                         tips: [1, '#333333'],
                                         skin: 'dj-tips',
+                                        tipsMore: true,
                                         time: 0
                                     });
                                 $('.dj-tips').css({
@@ -425,6 +444,7 @@
                                     '.dj-b ul li.line').eq(_index), {
                                     tips: [1, '#333333'],
                                     skin: 'dj-tips',
+                                    tipsMore: true,
                                     time: 0
                                 });
                                 $('.dj-tips').css({
@@ -466,6 +486,7 @@
                                 '.dj-b ul li.line').eq(_index), {
                                 tips: [1, '#333333'],
                                 skin: 'dj-tips',
+                                tipsMore: true,
                                 time: 0
                             });
                             $('.dj-tips').css({
@@ -497,6 +518,7 @@
                                         '.dj-b ul li.the').eq(_index), {
                                         tips: [1, '#333333'],
                                         skin: 'dj-tips',
+                                        tipsMore: true,
                                         time: 0
                                     });
                                 $('.dj-tips').css({
@@ -516,6 +538,7 @@
                                     '.dj-b ul li.line').eq(_index), {
                                     tips: [1, '#333333'],
                                     skin: 'dj-tips',
+                                    tipsMore: true,
                                     time: 0
                                 });
                                 $('.dj-tips').css({
