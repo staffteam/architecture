@@ -48,6 +48,7 @@
 
     function msgs() {
         layer.tab({
+            skin: 'msg-tab-main',
             area: ['800px', '600px'],
             tab: [{
                 title: '消息（3）',
@@ -65,6 +66,9 @@
                         $(this).find('.msg-desc h2 em i').html('已读');
                         $(this).removeClass('on');
                     }
+                });
+                $('.msg-tab-main .layui-layer-title>span').on('click',function(){
+                    alert($(this).html().split('（')[0])
                 })
             }
         });
