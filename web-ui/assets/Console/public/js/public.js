@@ -85,6 +85,7 @@ $(function () {
 var isPhone = /^1[3456789]\d{9}$/;
 var isEmail = /^[A-Za-z0-9\u4e00-\u9fa5]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/;
 var isBank = /([\d]{4})([\d]{4})([\d]{4})([\d]{4})([\d]{0,})?/;
+var isId = /^[1-9]\d{7}((0\d)|(1[0-2]))(([0|1|2]\d)|3[0-1])\d{3}$|^[1-9]\d{5}[1-9]\d{3}((0\d)|(1[0-2]))(([0|1|2]\d)|3[0-1])\d{3}([0-9]|X)$/;
 var verify = {
     $fn: [],
     init: function () {
@@ -133,6 +134,32 @@ var verify = {
                                     }
                                 };
                                 break;
+                            case 'id':
+                                the.$fn[_key].id = function (value) {
+                                    if (value != '' && !isId.test(value)) {
+                                        $msg({
+                                            content: _tips + '格式错误',
+                                            icon: 2
+                                        });
+                                        return false;
+                                    } else {
+                                        return true;
+                                    }
+                                };
+                                break;
+                            case 'password':
+                                the.$fn[_key].id = function (value) {
+                                    if (value.length < 6 || value.length > 12) {
+                                        $msg({
+                                            content: _tips + '长度需大于6并小于12个字符',
+                                            icon: 2
+                                        });
+                                        return false;
+                                    } else {
+                                        return true;
+                                    }
+                                };
+                                break;
                             case 'phone':
                                 the.$fn[_key].phone = function (value) {
                                     if (value != '' && !isPhone.test(value)) {
@@ -169,6 +196,17 @@ var verify = {
                                     case 'email':
                                         if (value != '' && isEmail.test(value)) {
                                             _is_ = true;
+                                        }
+                                        break;
+                                    case 'id':
+                                        if (value != '' && isId.test(value)) {
+                                            _is_ = true;
+                                        }
+                                        break;
+                                    case 'password':
+                                        if (value.length >= 6 && value.length <= 12) {
+                                            _is_ = true;
+                                            return false;
                                         }
                                         break;
                                     case 'phone':
@@ -260,6 +298,27 @@ var verify = {
                                     }
                                 };
                                 break;
+
+                            case 'id':
+                                the.$fn[_key].id = function (value, $this) {
+                                    if (value != '' && !isId.test(value)) {
+                                        the.tips($this, _tips + '格式错误');
+                                        return false;
+                                    } else {
+                                        return true;
+                                    }
+                                };
+                                break;
+                            case 'password':
+                                the.$fn[_key].id = function (value, $this) {
+                                    if (value.length < 6 || value.length > 12) {
+                                        the.tips($this, _tips + '长度需大于6并小于12个字符');
+                                        return false;
+                                    } else {
+                                        return true;
+                                    }
+                                };
+                                break;
                             case 'phone':
                                 the.$fn[_key].phone = function (value, $this) {
                                     if (value != '' && !isPhone.test(value)) {
@@ -290,6 +349,17 @@ var verify = {
                                     case 'email':
                                         if (value != '' && isEmail.test(value)) {
                                             _is_ = true;
+                                        }
+                                        break;
+                                    case 'id':
+                                        if (value != '' && isId.test(value)) {
+                                            _is_ = true;
+                                        }
+                                        break;
+                                    case 'password':
+                                        if (value.length >= 6 && value.length <= 12) {
+                                            _is_ = true;
+                                            return false;
                                         }
                                         break;
                                     case 'phone':

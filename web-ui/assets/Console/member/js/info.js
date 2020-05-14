@@ -91,11 +91,15 @@ function submitPassNext() {
     }
 }
 //确认密码 --密码
-function submitPassNext2(){
+function submitPassNext2() {
     $('#editPass2 input').blur();
-    if ($('#editPass2 .verify-tips').length == 0) {
-        $('#editPass2').hide();
-        $('.identity-step li').eq(2).addClass('on');
-        $('.edit-success,.tips-bottom').show();
+    if ($('input[name="pass"]').length==1 && $('input[name="pass"]').val() !== $('input[name="pass2"]').val()) {
+        $('input[name="pass2"]').parent().find('.verify-tips').length == 0 ? $('input[name="pass2"]').after("<p class='verify-tips' >两次密码不一致，请重新输入</p>") : $('input[name="pass2"]').parent().find('.verify-tips').html('两次密码不一致，请重新输入');
+    }else{
+        if ($('#editPass2 .verify-tips').length == 0) {
+            $('#editPass2').hide();
+            $('.identity-step li').eq(2).addClass('on');
+            $('.edit-success,.tips-bottom').show();
+        }
     }
 }

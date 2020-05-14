@@ -250,16 +250,40 @@
         </li>
     </ul>
 </div>
+
 <script>
+    //项目组数弹窗关闭
+    function projectMemberClose() {
+        $('#projectMember').hide();
+    }
     //踢出项目成员
     function del(obj) {
-        layer.confirm('次子虽顽劣不堪，但其骨骼惊奇，天赋异禀，是可塑之才，望三思！', {
-            btn: ['逐出宗门', '留下，重点培养'] //按钮
-        }, function () {
-            $(obj).closest('.list-member').remove();
-            layer.closeAll();
-        });
-
+        // layer.confirm('次子虽顽劣不堪，但其骨骼惊奇，天赋异禀，是可塑之才，望三思！', {
+        //     btn: ['逐出宗门', '留下，重点培养'] //按钮
+        // }, function () {
+        //     $(obj).closest('.list-member').remove();
+        //     layer.closeAll();
+        // });
+        layer.open({
+            type: 1,
+            content: "<div class='bind-user' ><span>新项目成员ID</span><input type='text' placeholder='请输入'></div>",
+            btn: ['重新发布招聘', '绑定'],
+            skin: "bind-open",
+            btn1: function () {
+                location.href = '/PublishProject/SubmitInfo';
+            },
+            btn2: function () {
+                if ($('.bind-user input').val() == '') {
+                    $msg({
+                        content: '请输入项目成员ID',
+                        icon: 2
+                    });
+                    return false;
+                }
+                alert('绑定成功' + $('.bind-user input').val());
+                return true;
+            }
+        })
     }
     //项目组数弹窗开启
     function projectMemberShow() {
